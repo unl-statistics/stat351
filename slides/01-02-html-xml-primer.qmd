@@ -1,0 +1,232 @@
+---
+title: "HTML, XML, CSS, and XPath"
+subtitle: "The Building Blocks of the Internet"
+echo: true
+---
+
+## Why?
+
+- So much data is online!
+- But, ...
+    - Manually copying information is error prone
+    - Stuff is updated in real time
+    - I'm lazy
+
+- We can automate gathering data using scripts
+
+## Examples {.smaller}
+
+- Gather the price of something every morning at 8am to determine whether it's cheap enough to buy
+
+- Estimate what you could sell your house for, given recent sales of comparable houses in the same city
+
+- Create a database of adoptable pets in your area (with pics) and determine how long it takes for different pets to be adopted
+
+- Assemble a database of profiles on dating sites to determine whether gender and sexual orientation is related to emoticon/emoji use
+
+- Assemble a directory of contact information for all faculty at UNL to conduct an unofficial faculty survey
+
+## XML
+
+- relatively common data storage format
+- Fields are delimited by tags `<tagName attr1=value1 ...>`. All tags are closed with `</tagName>`
+
+- Tags may contain attribute-value pairs
+
+- Tags may have children nested between `<tagName>` and `</tagName>`
+
+- Tags may also contain "content" between the tags -- plain text information
+
+
+## XML Terms {.smaller}
+
+```
+<family name="Vanderplas">
+    <person given-name="Susan">Mother</person>
+    <person given-name="Ryan">Father</person>
+    <person given-name="Alex" nickname='Bug'>Son</person>
+    <person given-name="Zoey" nickname='Zozo, Lovebug'>Daughter</person>
+    <pet type="dog" given-name="Edison" nickname="Eddie">Security detail, Cleanup crew</pet>
+    <pet type="dog" given-name="Ivy" nickname="Flufferina, Q-tip">Snuggle agent, Cleanup crew, Comic relief</pet>
+</family>
+```
+
+- `given-name` and `family-name` are **attributes** with values for each person and pet. `nickname` is an attribute, but is not present for all nodes
+
+- `<person>...</person>` and `<pet>...</pet>` are **child nodes** of `<family></family>`
+
+- The content of each child node is the entity's role in the family
+
+- XML data is **nested** and does not always translate to tabular form easily
+
+## HTML vs. XML
+
+::: columns
+::: column
+
+- Tags **display** information
+- Tags are pre-defined
+- Tags aren't always closed    
+[`<br/>`, `<img/>`]{.smaller}
+- Not case-sensitive
+- Ignores white-space
+:::
+::: column
+- Tags **describe** information
+- Data schema defines tags
+- Tags must be closed    
+&nbsp;
+- Case-sensitive
+- May ignore white space
+:::
+:::
+
+
+## Your Turn: Web Page Anatomy {.smaller .inverse}
+
+1. Open [the textbook chapter](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/03-web-scraping.html)
+2. Access Developer Tools for your browser
+    - right-click + select "Inspect" 
+    - OR, Ctrl/Cmd + J
+
+3. Find the following elements. What attributes and content do they have?
+    - Document type declaration
+    - `<html>` node
+    - `<head>` and `<body>` nodes
+    - `<h2>`, `<h3>`, `<h4>` and `<p>` nodes
+    - `<table>`, `<tr>`, `<th>`, and `<td>` nodes
+    - `<a>` node(s)
+    
+## Selecting Nodes (CSS)
+
+- [SelectorGadget](https://selectorgadget.com/) extension can be helpful
+
+- `.xxx` = "has class xxx"
+- `#xxx` = "has ID xxx"
+- `xxx` = "node xxx"
+- `xxx yyy` = "node yyy, a  descendant of xxx"
+- `xxx > yyy` = "node yyy, a direct descendant of xxx"
+
+## Your Turn: CSS Selectors {.inverse}
+
+Construct a CSS selector that will get all mathematicians from [this list](https://en.wikipedia.org/wiki/List_of_mathematicians_born_in_the_19th_century) without any extra links.
+
+
+## Example: Mathematicians
+
+::: panel-tabset
+### R {-}
+
+```{r}
+library(xml2)
+library(rvest)
+library(purrr)
+library(dplyr)
+library(tibble)
+
+url<-"https://en.wikipedia.org/wiki/List_of_mathematicians_born_in_the_19th_century"
+ppl <- read_html(url) |>
+    html_nodes(".mw-body-content ul li")
+ppl[[1]]
+```
+
+### Python {-}
+
+```{python}
+from bs4 import BeautifulSoup, SoupStrainer
+import urllib.request
+import pandas as pd
+
+url = "https://en.wikipedia.org/wiki/List_of_mathematicians_born_in_the_19th_century"
+req = urllib.request.Request(url)
+page_bytearray = urllib.request.urlopen(req)
+page = page_bytearray.read()
+page_bytearray.close()
+
+soup = BeautifulSoup(page)
+ppl = soup.select(".mw-body-content ul li")
+ppl[0]
+```
+
+:::
+
+## Example: Mathematicians
+
+Not all HTML nodes have the same attributes/children.
+
+Preemptive error handling can be helpful.
+::: panel-tabset
+### R {-}
+
+```{r}
+try_na <- function(i, fn, ...) {
+    res <- try(fn(i, ...))
+    if( "try-error" %in% class(res)) {
+        res <- NA
+    }
+    if(length(res) == 0) {
+        res <- NA
+    }
+    res
+}
+```
+
+`try_na()` will return
+
+- the value if one exists, 
+- NA if the command results in an error
+- NA if the result has 0 length
+
+### Python {-}
+
+```{python}
+def try_na(x, expression):
+  # If x is NA, then the result must also be NA
+  # for most HTML-parsing expressions... NOT FOOLPROOF
+  if pd.isna(x):
+    return pd.NA
+  else:
+    try:
+      res = eval(expression, {}, {"x": x})
+    except:
+      return pd.NA
+    if res is None: # Tests for an empty return value
+      return pd.NA
+    if len(res) == 0:
+      return pd.NA
+  return res
+
+```
+
+:::
+
+
+## Example: Mathematicians
+
+::: panel-tabset
+### R {-}
+
+```{r}
+math_ppl <- tibble(
+    content = html_text(ppl),
+    link_info = map(ppl, ~try_na(., fn = html_children)),
+    name = map_chr(link_info, ~try_na(., fn = html_text)),
+    name2 = map_chr(link_info, ~try_na(., fn = html_attr, "title")),
+    link = map_chr(link_info, ~try_na(., fn = html_attr, "href"))
+) |>
+    select(-link_info)
+head(math_ppl)
+```
+
+### Python {-}
+
+```{python}
+content = [try_na(i, "x.text") for i in ppl]
+link_info = [try_na(i, "x.find('a')") for i in ppl]
+name = [try_na(i, 'x.text') for i in link_info]
+name2 = [try_na(i, 'x.attrs["title"]') for i in link_info]
+link = [try_na(i, 'x.attrs["href"]') for i in link_info]
+math_ppl = pd.DataFrame({'content': content, 'name': name, 'name2': name2, 'link': link})
+```
+
+:::

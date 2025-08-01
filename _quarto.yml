@@ -1,0 +1,113 @@
+project:
+  type: website
+  output-dir: docs
+  # pre-render:
+  #   - code/gen-week-files-from-course-schedule.R
+  render:
+    - index.qmd
+    - syllabus.qmd
+    - course-links.qmd
+    - course-overview.qmd
+    - course-support.qmd
+    # - weeks/*.qmd
+    # - activities/*.qmd
+    # - assignment-repos/*/*.qmd
+    # - assignment-repos/*/*/*.qmd
+    # - instructions/*.qmd
+    # - homework/*.qmd
+    # - slides/*.qmd
+
+engine: knitr
+website:
+  page-navigation: true
+  title: "STAT 351 - Fall 2025"
+  description: "Homepage for STAT 351 - Advanced Computing II: Data Management and Visualization"
+  site-url: "https://unl-statistics.github.io/stat351"
+
+  repo-url: https://github.com/unl-statistics/stat351
+  repo-actions: [issue]
+
+  open-graph: true
+
+  twitter-card:
+    creator: "@srvanderplas"
+    image: "images/twitter-card.png"
+
+  page-footer:
+    left: "&copy; Copyright 2025, Susan Vanderplas"
+    background: "$secondary"
+
+  sidebar:
+    background: "$secondary"
+    aria-label: "Sidebar nagivation"
+    logo: "images/logo.png"
+    pinned: true
+    align: center
+
+    style: "docked"
+    search: false
+    collapse-level: 2
+    contents:
+      - section: "Course information"
+        aria-label: "Course information"
+        contents:
+          - href: course-overview.qmd
+            text: Overview
+          - href: syllabus.qmd
+            text: Syllabus
+          - href: course-support.qmd
+            text: Support
+          - href: index.qmd
+            text: Schedule
+          - href: course-links.qmd
+            text: Useful links
+      # - section: "Weekly materials"
+      #   aria-label: "Weekly materials"
+      #   contents:
+      #     - href: weeks/week-01.qmd
+      #       text: "Week 1 - Getting Started"
+      #     - href: weeks/week-02.qmd
+      #       text: "Week 2 - Resumes"
+      #     - href: weeks/week-03.qmd
+      #       text: "Week 3 - References"
+      #     - href: weeks/week-04.qmd
+      #       text: "Week 4 - Organization"
+      #     - href: weeks/week-05.qmd
+      #       text: "Week 5 - Arguments"
+      #     - href: weeks/week-06.qmd
+      #       text: "Week 6 - Problems & Data"
+      #     - href: weeks/week-07.qmd
+      #       text: "Week 7 - Methods"
+      #     - href: weeks/week-08.qmd
+      #       text: "Week 8 - Graphics"
+      #     - href: weeks/week-09.qmd
+      #       text: "Week 9 - Results"
+      #     - href: weeks/week-10.qmd
+      #       text: "Week 10 - Intro & Conclusions"
+      #     - href: weeks/week-11.qmd
+      #       text: "Week 11 - Summaries"
+      #     - href: weeks/week-12.qmd
+      #       text: "Week 12 - Fallacies"
+      #     - href: weeks/week-13.qmd
+      #       text: "Week 13 - Reports"
+      #     - href: weeks/week-14.qmd
+      #       text: "Week 14 - Editing"
+      #     - href: weeks/week-15.qmd
+      #       text: "Week 15 - Presentations"
+
+format:
+  html:
+    page-layout: full
+    grid:
+      sidebar-width: 400px
+      body-width: 800px
+      margin-width: 0px
+    theme:
+      light: [flatly, theme.scss, _variables-flatly.scss]
+      dark: [darkly, theme.scss, _variables-darkly.scss]
+    mainfont: "Atkinson Hyperlegible"
+    toc: true
+
+execute:
+  freeze: auto  # re-render only when source changes
+

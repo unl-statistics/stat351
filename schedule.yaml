@@ -1,0 +1,333 @@
+schedule:
+    - week:
+        id: 1
+        name: Web Scraping
+        start: 2025-08-24
+        end: 2025-08-30
+        reading: |
+            - [Syllabus](syllabus.qmd)
+            - [Web Scraping](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/03-web-scraping.html)
+        prepare: |
+            - Ensure R, python, quarto, RStudio are installed on your machine ([Computer setup help](https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html))
+            - Print out and bring cheat sheets for R and python (if you need them)
+        class1: |
+            - Discussion: Syllabus
+            - Lecture: [HTML/XML primer](slides/01-02-html-xml-primer.qmd)
+        class2: |
+            - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
+            - [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
+        assignments: |
+            - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
+
+    - week:
+        id: 2
+        name:
+        start: 2025-08-31
+        end: 2025-09-06
+        reading: |
+          - [Record-based Data and List Processing](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/04-xml-json-list-processing.html)
+        class1: |
+          - Lecture: [Record based Data and List Processing](slides/02-01-lists.qmd)
+        class2: |
+          - Lab: [Parsing XML Files](assignment-repos/xml-parsing/index.qmd)
+        assignments: |
+          - Lab: [Parsing XML Files](assignment-repos/xml-parsing/index.qmd)
+    - week:
+        id: 3
+        name: Application Programming Interfaces
+        start: 2025-09-07
+        end: 2025-09-13
+        reading: |
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 4
+        start: 2025-09-14
+        end: 2025-09-20
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 5
+        start: 2025-09-21
+        end: 2025-09-27
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 6
+        start: 2025-09-28
+        end: 2025-10-04
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 7
+        start: 2025-10-05
+        end: 2025-10-11
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 8
+        start: 2025-10-12
+        end: 2025-10-18
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 9
+        start: 2025-10-19
+        end: 2025-10-25
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 10
+        start: 2025-10-26
+        end: 2025-11-01
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 11
+        start: 2025-11-02
+        end: 2025-11-08
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 12
+        start: 2025-11-09
+        end: 2025-11-15
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 13
+        start: 2025-11-16
+        end: 2025-11-22
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 14
+        start: 2025-11-23
+        end: 2025-11-29
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 15
+        start: 2025-11-30
+        end: 2025-12-06
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+    - week:
+        id: 16
+        start: 2025-12-07
+        end: 2025-12-13
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+
+    - week:
+        id: 17
+        start: 2025-12-14
+        end: 2025-12-20
+        reading: |
+
+        prepare: |
+
+        class1: |
+
+        class2: |
+
+        assignments: |
+
+#     - Week 7
+#         - start:
+#         - end: 2025-10-11
+#         - reading:
+#         - prepare:
+#         - class1:
+#         - class2:
+#         - assignments:
+#     - Week 8
+#         - start:
+#         - end: 2025-10-18
+#         - reading:
+#         - prepare:
+#         - class1:
+#         - class2:
+#         - assignments:
+#     - Week 9
+#         - start: 2025-10-19
+#         - end: 2025-10-25
+#         - reading:
+#         - prepare:
+#         - class1: Fall Break, no class!
+#         - class2:
+#         - assignments:
+#     - Week 10
+#         - start: 2025-10-26
+#         - end: 2025-11-01
+#         - reading:
+#         - prepare:
+#         - class1:
+#         - class2:
+#         - assignments:
+#     - Week 11
+#         - start: 2025-11-02
+#         - end: 2025-11-08
+#         - reading:
+#         - prepare:
+#         - class1:
+#         - class2:
+#         - assignments:
+#     - Week 12
+#         - start: 2025-11-09
+#         - end: 2025-11-15
+#         - reading:
+#         - prepare:
+#         - class1:
+#         - class2:
+#         - assignments:
+#     - Week 13
+#         - start: 2025-11-16
+#         - end: 2025-11-22
+#         - reading:
+#         - prepare:
+#         - class1:
+#         - class2:
+#         - assignments:
+#     - Week 14
+#         - start: 2025-11-23
+#         - end: 2025-11-29
+#         - reading:
+#         - prepare:
+#         - class1: Project work day, no class
+#         - class2: Thanksgiving, no class
+#         - assignments:
+#     - Week 15
+#         - start: 2025-11-30
+#         - end: 2025-12-06
+#         - reading:
+#         - prepare:
+#         - class1:
+#         - class2:
+#         - assignments:
+#     - Week 16 ("15th" week UNL policy in effect)
+#         - start: 2025-12-07
+#         - end: 2025-12-13
+#         - reading:
+#         - prepare:
+#         - class1:
+#         - class2:
+#         - assignments:
+#     - Week 17 (Finals)
+#         - start: 2025-12-14
+#         - end: 2025-12-20
+#         - reading:
+#         - prepare:
+#         - class1:
+#         - class2:
+#         - assignments:
