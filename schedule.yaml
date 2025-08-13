@@ -16,8 +16,10 @@ schedule:
         class2: |
             - Lecture: [HTML/XML primer](slides/01-02-html-xml-primer.qmd)
         assignments: |
-            - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
-
+            - Get familiar with HTML and web-based vocabulary:
+              - Watch [HTTP and HTML](https://youtu.be/kBXQZMmiA4s) explanation
+              - Watch [Web Scraping with BeautifulSoup and Requests](https://www.youtube.com/watch?v=ng2o98k983k)
+              - Watch [Control a web browser from R to web scrape static and dynamic websites using {chromote}](https://www.youtube.com/watch?v=30AOpjLeOyI)
 
     - week:
         id: 2
@@ -33,9 +35,9 @@ schedule:
             - [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
         class2: |
             - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
-            - [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
         assignments: |
             - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
+            - [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
 
     - week:
         id: 3
@@ -46,11 +48,12 @@ schedule:
           - [Functional Programming](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/08-functional-prog.html)
           - [Record-based Data and List Processing](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/04-xml-json-list-processing.html)
         class1: |
-          - Lecture: [Record based Data and List Processing](slides/02-01-lists.qmd)
+          - Lecture: [Record based Data and List Processing](slides/03-01-lists.qmd)
         class2: |
-          - Lab: [Parsing XML Files](assignment-repos/xml-parsing/index.qmd)
+          - Lab: [Parsing XML Files](assignment-repos/02-list-processing/index.qmd)
         assignments: |
-          - Lab: [Parsing XML Files](assignment-repos/xml-parsing/index.qmd)
+          - Lab: [Parsing XML Files](assignment-repos/02-list-processing/index.qmd)
+          - [Lab goals](assignment-repos/02-list-processing/tilt.qmd)
 
     - week:
         id: 4
@@ -62,27 +65,33 @@ schedule:
         prepare: |
           -
         class1: |
-
+          - Lecture: [API requests](04-01-apis.qmd)
         class2: |
-
+          - Lab: [APIs](assignment-repos/04-apis/index.qmd)
         assignments: |
+          - Lab: [APIs](assignment-repos/04-apis/index.qmd)
+          - [Lab goals](assignment-repos/04-apis/tilt.qmd)
 
     - week:
         id: 5
+        name: PDF Tools
         start: 2025-09-21
         end: 2025-09-27
         reading: |
           - [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
         prepare: |
-
+          - Find examples of image-based and text-based PDFs
         class1: |
-
+          - Lecture: [PDF Tools](slides/05-01-pdfs.qmd)
         class2: |
-
+          - Lab: [PDF/OCR](assignment-repos/05-pdf-parsing/index.qmd)
         assignments: |
+          - Lab: [PDF/OCR](assignment-repos/05-pdf-parsing/index.qmd)
+          - [Lab goals](assignment-repos/05-pdf-parsing/tilt.qmd)
 
     - week:
         id: 6
+        name: Using Appropriate Graphics
         start: 2025-09-28
         end: 2025-10-04
         reading: |
@@ -90,53 +99,66 @@ schedule:
         prepare: |
 
         class1: |
-
+          - Lecture: [Appropriate Graphics](slides/06-01-graphics.qmd)
         class2: |
-
+          - Lab: [Appropriate Graphics](assignment-repos/appropriate-graphics/index.qmd)
         assignments: |
+          - Lab: [Appropriate Graphics](assignment-repos/appropriate-graphics/index.qmd)
 
     - week:
         id: 7
+        name: Dynamic Communication with Shiny
         start: 2025-10-05
         end: 2025-10-11
         reading: |
-          - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Plotly and Leaflet)
+          - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
         prepare: |
-
+          - Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
         class1: |
-
+          - Lecture: [Shiny](slides/06-01-shiny.qmd)
         class2: |
-
+          - Lab: [Shiny Applets](assignment-repos/shiny-interactive/index.qmd)
         assignments: |
+          - Lab: [Shiny Applets](assignment-repos/shiny-interactive/index.qmd)
+          - Lab: [Shiny Applets](assignment-repos/shiny-interactive/index.qmd)
+
 
     - week:
         id: 8
+        name: Interactive JavaScript Graphics
         start: 2025-10-12
         end: 2025-10-18
         reading: |
-          - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
-          - [Shiny documentation](https://shiny.posit.co/) ([R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) or [python](https://shiny.posit.co/py/get-started/))
+          - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Plotly)
+          - [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
+          - [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
         prepare: |
-
+          - [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
+          - [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
         class1: |
-
+          - Lecture: [Interactive Graphics using Plotly and Observable](slides/07-01-interactive-graphics.qmd)
         class2: |
-
+          - Lab: [Interactive Graphics with Plotly and Observable](assignment-repos/interactive-graphics-js)
         assignments: |
+          - Lab: [Interactive Graphics with Plotly and Observable](assignment-repos/interactive-graphics-js)
 
     - week:
         id: 9
+        name: Linked Interactive Graphics
         start: 2025-10-19
         end: 2025-10-25
         reading: |
-
-        prepare: |
-
+          - [Cubble vignette](https://cran.r-project.org/web/packages/cubble/vignettes/cb6interactive.html)
+          - mpld3 in python?
         class1: |
-
+          - Lecture: [Interactive Linked Graphics](slides/08-01-linked-graphics.qmd)
         class2: |
+          - Lab: [Interactive Linked Graphics](assignment-repos/linked-graphics/index.qmd)
 
         assignments: |
+          - Lab: [Interactive Linked Graphics](assignment-repos/linked-graphics/index.qmd)
+
+          - Lab: [Interactive Linked Graphics](assignment-repos/linked-graphics/index.qmd)
 
     - week:
         id: 10
@@ -250,92 +272,3 @@ schedule:
         class2: |
 
         assignments: |
-
-#     - Week 7
-#         - start:
-#         - end: 2025-10-11
-#         - reading:
-#         - prepare:
-#         - class1:
-#         - class2:
-#         - assignments:
-#     - Week 8
-#         - start:
-#         - end: 2025-10-18
-#         - reading:
-#         - prepare:
-#         - class1:
-#         - class2:
-#         - assignments:
-#     - Week 9
-#         - start: 2025-10-19
-#         - end: 2025-10-25
-#         - reading:
-#         - prepare:
-#         - class1: Fall Break, no class!
-#         - class2:
-#         - assignments:
-#     - Week 10
-#         - start: 2025-10-26
-#         - end: 2025-11-01
-#         - reading:
-#         - prepare:
-#         - class1:
-#         - class2:
-#         - assignments:
-#     - Week 11
-#         - start: 2025-11-02
-#         - end: 2025-11-08
-#         - reading:
-#         - prepare:
-#         - class1:
-#         - class2:
-#         - assignments:
-#     - Week 12
-#         - start: 2025-11-09
-#         - end: 2025-11-15
-#         - reading:
-#         - prepare:
-#         - class1:
-#         - class2:
-#         - assignments:
-#     - Week 13
-#         - start: 2025-11-16
-#         - end: 2025-11-22
-#         - reading:
-#         - prepare:
-#         - class1:
-#         - class2:
-#         - assignments:
-#     - Week 14
-#         - start: 2025-11-23
-#         - end: 2025-11-29
-#         - reading:
-#         - prepare:
-#         - class1: Project work day, no class
-#         - class2: Thanksgiving, no class
-#         - assignments:
-#     - Week 15
-#         - start: 2025-11-30
-#         - end: 2025-12-06
-#         - reading:
-#         - prepare:
-#         - class1:
-#         - class2:
-#         - assignments:
-#     - Week 16 ("15th" week UNL policy in effect)
-#         - start: 2025-12-07
-#         - end: 2025-12-13
-#         - reading:
-#         - prepare:
-#         - class1:
-#         - class2:
-#         - assignments:
-#     - Week 17 (Finals)
-#         - start: 2025-12-14
-#         - end: 2025-12-20
-#         - reading:
-#         - prepare:
-#         - class1:
-#         - class2:
-#         - assignments:
