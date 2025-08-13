@@ -1,0 +1,6 @@
+[submodule "assignment-repos/01-web-scraping"]
+	path = assignment-repos/01-web-scraping
+	url = git@github.com:unl-stat351/stat351-unl-2025c-web-scraping-and-rss-web-scraping-rss.git
+[submodule "assignment-repos/02-list-processing"]
+	path = assignment-repos/02-list-processing
+	url = git@github.com:unl-stat351/stat351-unl-2025c-list-processing-list-processing-drwho.git

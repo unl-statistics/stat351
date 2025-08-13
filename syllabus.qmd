@@ -17,15 +17,15 @@ format:
     - partials/before-body.tex
     - partials/graphics.tex
     dev: cairo_pdf
-title: Syllabus
+title: Syllabus - Stat 351 
 instructor: Susan Vanderplas
-semester: Spring 2025
+semester: Fall 2025
 email: susan.vanderplas@unl.edu
 web: srvanderplas.github.io
 officehours: "[Schedule here](https://calendly.com/vanderplas/office-hours)"
 office: Hardin 343D
-classroom: Hardin ANSC A228-East
-classhours: MW 10:00 - 11:15
+classroom: KEIM 214
+classhours: TR 11:00-12:15
 ---
 
 ```{r setup, include=FALSE}
@@ -47,28 +47,31 @@ source("schedule.R")
 
 # Course Description
 
-Creation of research reports, business reports, and executive summaries. Presentation strategies, consequences of statistical modeling for real-world decision making, and countering common misconceptions and errors in statistical reasoning. Focus on real-world applications in research, business, and public service.
+Computational skills for management, visualization and analysis of large and complex data which are necessary for modern statistics. Includes a wide range of topics necessary for data analytics, including harvesting data from websites and common data structures, setting up and working with databases, and designing interactive data displays.
 
 # Course Objectives
 
-At the end of this course, students should know how to:
-
--   Write a statistical business report and give a presentation on a topic using appropriate information flow, graphics, and provided templates.
--   Write a scientific article, using appropriate structure, graphics, citations.
--   Document a data set and an analysis so that operations performed are reproducible and justified.
--   Explain the consequences of statistical modeling decisions in an understandable and technically correct manner.
--   Counter and preempt common misconceptions and errors in statistical reasoning in practical situations.
--   Write a CV/cover letter.
-
-# Textbook
-
-This course will primarily use an OER (open educational resource) for technical writing, [Open Technical Communication](https://alg.manifoldapp.org/projects/open-technical-communication), by Tijerina, Powell, Arnett, Logan, & Race.
-
-Other useful resources have been added to the course canvas page. All books and resources used in this course are available through the UNL library free of charge.
+- Access and leverage data stored in formats which are commonly used outside of statistics (HTML, JSON, XML, PDF, APIs) and transform these data to formats which are used for statistical analysis. 
+	- Scrape data off of the internet and assemble it into a "tidy" format for visualization and analysis.
+	- Read in structured data from record-based formats (XML, JSON) and transform this data to a table-based format.
+	- Use optical character recognition and other tools to extract data from a PDF file systematically.
+	- Use an API to request data from an online service.
+	- Implement data cleaning and quality control measures to ensure that data is read in correctly.
+	
+- Develop skills for visualization and communication of complex data using interactive graphics. You will be able to 
+	- Determine when an interactive chart is preferable to a static chart.
+	- Create an interactive chart using JavaScript-based tools such as Plotly, Observable.js, or Shiny.
+	- Integrate your interactive chart into a report or web page, along with supportive text describing the chart and important findings.
+	
+- Understand and leverage data management tools for storing and manipulating data, including
+	- Identifying situations where an external database is preferable to working with data in-memory.
+	- Accessing data in an external SQL, Parquet, or Arrow database.
+	- Discussing the tradeoffs between different tools for data management and different approaches to data storage.
+	- Design an analysis strategy for large data which does not fit into computer memory by selecting from strategies such as sampling and split-apply-combine. 
 
 # Class Schedule & Topic Outline
 
-This schedule is **tentative** and **subject to change**. Students are expected to read the corresponding textbook chapter (linked in Canvas) **before coming to class**. For the most part, for each week's topic, there will be one or two corresponding textbook chapters.
+This schedule is **tentative** and **subject to change**. Students are expected to complete assigned reading materials **before coming to class**. 
 
 \FloatBarrier
 
@@ -104,34 +107,40 @@ kableExtra::kable(caption = "Tentative schedule of class topics", format = "simp
 | Assignments                    | Weight |
 |--------------------------------|--------|
 | Reading Quizzes                | 10%    |
-| Participation                  | 10%    |
-| Homework                       | 40%    |
-| User Guide/Documentation       | 20%    |
-| Business Report & Presentation | 20%    |
+| Participation                  |  5%    |
+| Homework                       | 45%    |
+| Project                        | 20%    |
+| Presentation                   | 20%    |
 
-Lower bounds for grade cutoffs are shown in the following table. I will not "round up" grades at the end of the semester.
+Lower bounds for grade cutoffs are shown in the following table. 
 
 | Letter grade | X +    | X    | X -  |
 |--------------|--------|------|------|
-| A            | 97.0   | 94.0 | 90.0 |
-| B            | 87.0   | 84.0 | 80.0 |
-| C            | 77.0   | 74.0 | 70.0 |
-| D            | 67.0   | 64.0 | 61.0 |
-| F            | \<61.0 |      |      |
+| A            | 96.5   | 93.5 | 89.5 |
+| B            | 86.5   | 83.5 | 79.5 |
+| C            | 76.5   | 73.5 | 69.5 |
+| D            | 66.5   | 63.5 | 60.5 |
+| F            | \<60.5 |      |      |
 
-Interpretation of this table: A grade of 84.3 will receive a B. A grade of 77.6 will receive a C+. A grade of 73.9 will receive a C-. Anything below a 61 will receive an F.
+Interpretation: 
+A grade of 84.3 will receive a B. 
+A grade of 79.49 will receive a C+. 
+A grade of 73.49 will receive a C-. 
+Anything below a 60.5 will receive an F.
 
 ## Course Components
 
 ### Reading Quizzes
 
-You will have weekly reading assignments which introduce the weekly focus area and provide different perspectives on the material. Some of these perspectives will be covered in class lectures and activities, but some will not and are provided to expose you to different approaches and opinions.
+You will have weekly reading assignments which introduce the weekly focus area and provide different perspectives on the material. 
+Some of these perspectives will be covered in class lectures and activities, but some will not and are provided to expose you to different approaches and opinions.
 
-In order to motivate the importance of doing the weekly reading before class, you will be given a weekly reading quiz on Canvas which covers the requisite material. These quizzes will be due before the first class of the week (so, at 10am on Mondays).
+In order to motivate the importance of doing the weekly reading before class, you will be given a weekly reading quiz on Canvas which covers the requisite material. 
+These quizzes will be due just before the first class of the week.
 
-### Homework
+### Homework/Lab Assignments
 
-Weekly formative assignments (assignments meant to help you practice skills) will be given throughout the semester. The only way to learn the skills taught in this course is to practice - writing, citing, doing research, summarizing, and so on.
+Weekly formative assignments (assignments meant to help you practice skills) will be given throughout the semester. 
 
 -   You will typically have one week to work on each of the assignments.
 
@@ -139,44 +148,12 @@ Weekly formative assignments (assignments meant to help you practice skills) wil
 
 -   I will attempt to grade formative assignments within a week of the specified due date.
 
--   Formative assessments may be resubmitted for partial credit subject to the terms of the resubmission policy below.
+-   The assignment due date in Canvas will be set to at least 48 hours before the hard deadline for assignment submission. This provides an implicit "grace period" for assignment submission. No additional extensions will be provided. 
 
 #### Late Work Policy
 
-Late assignments will be accepted only under extenuating circumstances, and only if you have contacted me **prior** to the assignment due date and received permission to hand the assignment in late. I reserve the right not to grade (or to assign a 0 to) any assignments received after the assignment due date.
-
-You may submit an assignment that was not submitted in time as a resubmission, assuming it meets the conditions outlined in the next section.
-
-#### Resubmission Policy
-
-Learning how to write is a process that requires an attempt and then subsequent improvement. Do not be afraid to make mistakes! I allow you to re-submit each formative/homework assignment once.
-
-**Note: The resubmission policy does NOT apply to quizzes, projects, or exams.**
-
-This policy is subject to the following constraints:
-
--   You should resubmit assignments as soon as possible.
-
--   You may not resubmit an assignment for which solutions have been posted.
-
--   Each assignment should be resubmitted only once.
-
--   Resubmissions are due no later than 2 weeks after the initial due date. In addition,
-
-    -   Resubmissions from weeks 1-7 must be submitted by Friday at 5pm of week 8 of classes
-    -   Resubmissions from weeks 8-14 must be submitted by Monday at 5pm of week 15 of classes
-
--   Resubmitted assignments will be graded at my convenience.
-
-<!-- - You should resubmit assignments as soon as possible.     -->
-
-<!-- I reserve the right to cut off assignment resubmissions on a rolling basis (e.g. you have 3 weeks after the original due date) or based on the point in the semester (e.g. all homeworks due before Spring Break must be resubmitted by the week after we return from Spring Break). -->
-
-I spend the extra time grading resubmissions because it reinforces your learning; this policy is not designed to improve your grade in this class.\
-I reserve the right to adjust the resubmission policy over the course of the semester to ensure that it is meeting the objective of reinforcing your learning.\
-I reserve the right to limit or penalize resubmissions if it becomes clear that the current policy does not promote learning of the material and/or support the course objectives.
-
-
+Late assignments will be accepted only under extenuating circumstances, and only if you have contacted me **prior** to the assignment due date and received permission to hand the assignment in late. 
+I reserve the right not to grade (or to assign a 0 to) any assignments received after the assignment due date without prior approval.
 
 ### Attendance & Participation
 
@@ -189,10 +166,10 @@ One absence is allowed without any reduction in participation score - no excuse 
 #### Illness
 
 If you are feeling ill, please **do not come to class**. 
-Instead, review the material and work on the homework assignment, and then schedule an appointment with me to meet virtually. 
+Instead, review the material and work on the homework/lab assignment, and then schedule an appointment with me to meet virtually within a week of your absence. 
 In the appointment reason field on Calendly, indicate that this appointment is to substitute for your in-class participation on the date you missed.
 
-If you need to miss more than 1-2 classes for illness, I reserve the right to require documentation from Disability Services or a medical provider in order to continue using this substitute for attendance grades. 
+If you need to miss more than 1-2 classes for illness, I reserve the right to require documentation from Disability Services or a medical provider. 
 
 #### Inclement Weather
 
@@ -203,36 +180,35 @@ You will be held to the same participation standards on Zoom as you are in perso
 
 ### Projects
 
-You will complete two major projects in this course: a business-style report and presentation, and a user guide for a software package or implementation decision relating to a specific topic. 
-The business report will include a presentation and will be compiled over the second half of the semester. The user guide is due just before Spring Break. 
-
 #### Late Projects
 
-Writing is an iterative process that requires time - it's good to write a draft and step away for a day before you revise it. 
-As a result, projects in this course have been designed to encourage this iteration. You have at least 3 weeks to work on both projects outside of class.
 
-With this in mind, late projects will not be accepted without evidence of severe, ongoing (>1 week) extenuating circumstances of a severity that must be documented with your adviser and student services. 
-In addition, to access an accommodation for late project work, you must provide a GitHub commit history that shows ongoing engagement with the project before the circumstance occurred.
-This policy is intended to discourage you from waiting until the last minute to complete your projects, as this does not allow you the time to practice iterative writing and revisions and builds bad writing habits. 
 
 ## Expectations
 
 You can expect me to:
 
--   reply to emails within 48 hours during the week (72 hours on weekends)
--   be available in class to assist with assignments
--   be available by appointment for additional help or discussion
+- reply to emails within 48 hours during the week (72 hours on weekends)
+- be available in class to assist with assignments
+- be available by appointment for additional help or discussion
 
 I expect you to:
 
--   Complete the assigned reading, reading quiz, and any other stated preparations before class
--   Engage with the material and your classmates during class
--   Seek help when you do not understand the material
--   Communicate promptly if you anticipate that you will have trouble meeting deadlines or participating in a portion of the course.
--   Do your own troubleshooting before contacting me for help (and mention things you've already tried when you do ask for help!)
--   Be respectful and considerate of everyone in the class
+- Read the module material and homework assignment before coming to class
+- Engage with the material and your classmates during class
+- Seek help when you do not understand the material
+- Communicate promptly if you anticipate that you will have trouble meeting deadlines or participating in a portion of the course.
+- Do your own troubleshooting before contacting me for help (and mention things you've already tried when you do ask for help!)
+- Be respectful and considerate of everyone in the class
 
-## Evaluation Criteria
+### Make Mistakes!
+
+Programming is the process of making a series of silly or stupid mistakes, and then slowly fixing each mistake (while potentially adding a few more). The only way to know how to fix these mistakes (and avoid them in the future) is to make them. (Sometimes, you have to make the same mistake a few dozen times before you can avoid it in the future). At some point during the class, you will find that you've spent 30 minutes staring at an error caused by a typo, a space, or a parenthesis in the wrong place. You may ask for help debugging this weird error, only to have someone immediately point out the problem... it is always easier to see these things in someone else's code. This is part of programming, it is normal, and you shouldn't feel embarrassed or sorry (unless you put no effort into troubleshooting the problem before you asked for help).
+
+If you manage to produce an error I haven't seen before, then congratulations. You have achieved something special, and that achievement should be celebrated. Each new and bizarre error is an opportunity to learn a bit more about the programming language, the operating system, or the interaction between the two.
+
+
+### Evaluation Criteria
 
 In every assignment, discussion, and written component of this class, you are expected to **demonstrate that you are intellectually engaging with the material**.
 I will evaluate you based on this engagement, which means that technically correct but low effort answers which do not demonstrate engagement or understanding will receive no credit.
@@ -243,7 +219,7 @@ This is not to encourage you to add unnecessary complexity to your answer - simp
 
 Grammar and spelling are important, as is your ability to communicate technical information clearly in a written format; both of these criteria will be used in addition to assignment-specific rubrics to evaluate your work.
 
-## Academic Integrity and Class Conduct
+### Academic Integrity and Class Conduct
 
 You will be engaging with your classmates and me through in-person discussions and collaborative activities. 
 It is expected that everyone will engage in these interactions civilly and in good faith. 
@@ -260,25 +236,21 @@ This is in line with what is generally considered acceptable behavior in program
 You should also provide a link to the source of your code (or even the logic behind your code) - this is useful both for my information and for future you, in addition to being a good way to give attribution to the original author. 
 
 
-### Writing
-
-With the proliferation of AI tools such as Chat-GPT, I reserve the right to replace project and homework grades with grades based on an oral discussion of your submissions. 
-If you cannot explain the logic behind your submission, how you came to the approach you used, and identify the tradeoffs behind decisions you made, then you will not receive credit. 
-Chat GPT can be a useful tool, but this course's objectives are meant to assess your ability to communicate statistical information to a target audience effectively, not your ability to use AI systems. 
-Fundamentally, you need to understand concepts and develop written fluency in technical language and statistical concepts to communicate effectively; generative AI solutions may hamper both of these goals if you rely on them too much.
-
-### Generative AI
-
-Technical writing is more clear and concise than other types of writing, and nuances are extremely important.
-To date, generative AI is not particularly good at these goals - it is wordy and uses nonstandard language, and as a predictive model, it cannot structure its output for human understanding.
-It may be useful to leverage AI tools to ensure that your work conforms to grammar and style guidelines, but I very highly discourage the use of generative AI for content.
+### AI and Explainability Policy
 
 **Any use of generative AI must be disclosed** in an appendix to your submission - this includes brainstorming, editing, using AI as spell-check/grammar-check, and so on. You must document the following:
 
 -   the version of the generative AI used
 -   the full sequence of prompts and responses
 -   any additional inputs you provided to the AI system
--   a "diff" between the AI responses and your submission, showing exactly what was generated by the AI system and what you changed.
+-   a "diff" between the AI responses and your submission, showing exactly what was generated by the AI system and what you changed. 
+
+It may be useful to leverage AI tools to ensure that your work conforms to grammar and style guidelines, but I very highly discourage the use of generative AI for content or code.
+
+- **Oral Exam Policy** - I may replace the grade on any written assignment with a graded oral exam on your submission. This policy is not intended to be punitive -- it may be used to resolve issues where question wording was not clear or was misinterpreted. Rather, it is intended to be used to assess what you actually know when I suspect that the written assignment is not a good measure of your knowledge or skills. 
+
+- You must be able to explain any work you turn in. If you cannot explain the logic behind your approach as well as how it works in practice, then you will not receive credit for your submission. 
+
 
 # Required University Information
 

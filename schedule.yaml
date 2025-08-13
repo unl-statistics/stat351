@@ -1,7 +1,8 @@
 schedule:
+
     - week:
         id: 1
-        name: Web Scraping
+        name: Intro & HTML Primer
         start: 2025-08-24
         end: 2025-08-30
         reading: |
@@ -12,7 +13,24 @@ schedule:
             - Print out and bring cheat sheets for R and python (if you need them)
         class1: |
             - Discussion: Syllabus
+        class2: |
             - Lecture: [HTML/XML primer](slides/01-02-html-xml-primer.qmd)
+        assignments: |
+            - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
+
+
+    - week:
+        id: 2
+        name: Web Scraping
+        start: 2025-08-31
+        end: 2025-09-06
+        reading: |
+            - [Web Scraping](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/03-web-scraping.html)
+        prepare: |
+            - Try out scraping one or more sites that are interesting to you.
+        class1: |
+            - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
+            - [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
         class2: |
             - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
             - [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
@@ -20,11 +38,12 @@ schedule:
             - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
 
     - week:
-        id: 2
-        name:
-        start: 2025-08-31
-        end: 2025-09-06
-        reading: |
+        id: 3
+        name: Record-based Data and List Processing
+        start: 2025-09-07
+        end: 2025-09-13
+        reading:
+          - [Functional Programming](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/08-functional-prog.html)
           - [Record-based Data and List Processing](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/04-xml-json-list-processing.html)
         class1: |
           - Lecture: [Record based Data and List Processing](slides/02-01-lists.qmd)
@@ -32,28 +51,16 @@ schedule:
           - Lab: [Parsing XML Files](assignment-repos/xml-parsing/index.qmd)
         assignments: |
           - Lab: [Parsing XML Files](assignment-repos/xml-parsing/index.qmd)
-    - week:
-        id: 3
-        name: Application Programming Interfaces
-        start: 2025-09-07
-        end: 2025-09-13
-        reading: |
-        prepare: |
-
-        class1: |
-
-        class2: |
-
-        assignments: |
 
     - week:
         id: 4
+        name: Application Programming Interfaces
         start: 2025-09-14
         end: 2025-09-20
         reading: |
-
+          - [Application Programming Interfaces (APIs)](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/05-APIs.html)
         prepare: |
-
+          -
         class1: |
 
         class2: |
@@ -65,7 +72,7 @@ schedule:
         start: 2025-09-21
         end: 2025-09-27
         reading: |
-
+          - [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
         prepare: |
 
         class1: |
@@ -79,7 +86,7 @@ schedule:
         start: 2025-09-28
         end: 2025-10-04
         reading: |
-
+          - Appropriate Graphics
         prepare: |
 
         class1: |
@@ -93,7 +100,7 @@ schedule:
         start: 2025-10-05
         end: 2025-10-11
         reading: |
-
+          - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Plotly and Leaflet)
         prepare: |
 
         class1: |
@@ -107,7 +114,8 @@ schedule:
         start: 2025-10-12
         end: 2025-10-18
         reading: |
-
+          - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
+          - [Shiny documentation](https://shiny.posit.co/) ([R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) or [python](https://shiny.posit.co/py/get-started/))
         prepare: |
 
         class1: |
