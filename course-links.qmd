@@ -1,0 +1,9 @@
+---
+title: "Useful links"
+---
+
+|  |  |
+|------------------------------------|------------------------------------|
+| ![](images/Canvas_logo_single_mark.png){fig-alt="Canvas logo" height="40px"}[Canvas](https://canvas.unl.edu/courses/205466) | Reading Quizzes, Gradebook |
+| [![](images/github-classroom.svg){fig-alt="Github classroom logo" height="30px"}](https://classroom.github.com/classrooms/223349289-stat351-unl-2025c) | Assignment Submissions |
+| [Statistical Computing in R and Python](https://srvanderplas.github.io/stat-computing-r-python/) | Textbook | 
