@@ -1,21 +1,21 @@
 project:
   type: website
   output-dir: docs
-  # pre-render:
-  #   - code/gen-week-files-from-course-schedule.R
+  pre-render:
+    - code/gen-week-files-from-course-schedule.R
   render:
     - index.qmd
     - syllabus.qmd
     - course-links.qmd
     - course-overview.qmd
     - course-support.qmd
-    # - weeks/*.qmd
+    - weeks/*.qmd
     # - activities/*.qmd
-    # - assignment-repos/*/*.qmd
-    # - assignment-repos/*/*/*.qmd
+    - assignment-repos/*/*.qmd
+    - assignment-repos/*/*/*.qmd
     # - instructions/*.qmd
     # - homework/*.qmd
-    # - slides/*.qmd
+    - slides/*.qmd
 
 engine: knitr
 website:
@@ -61,39 +61,39 @@ website:
             text: Schedule
           - href: course-links.qmd
             text: Useful links
-      # - section: "Weekly materials"
-      #   aria-label: "Weekly materials"
-      #   contents:
-      #     - href: weeks/week-01.qmd
-      #       text: "Week 1 - Getting Started"
-      #     - href: weeks/week-02.qmd
-      #       text: "Week 2 - Resumes"
-      #     - href: weeks/week-03.qmd
-      #       text: "Week 3 - References"
-      #     - href: weeks/week-04.qmd
-      #       text: "Week 4 - Organization"
-      #     - href: weeks/week-05.qmd
-      #       text: "Week 5 - Arguments"
-      #     - href: weeks/week-06.qmd
-      #       text: "Week 6 - Problems & Data"
-      #     - href: weeks/week-07.qmd
-      #       text: "Week 7 - Methods"
-      #     - href: weeks/week-08.qmd
-      #       text: "Week 8 - Graphics"
-      #     - href: weeks/week-09.qmd
-      #       text: "Week 9 - Results"
-      #     - href: weeks/week-10.qmd
-      #       text: "Week 10 - Intro & Conclusions"
-      #     - href: weeks/week-11.qmd
-      #       text: "Week 11 - Summaries"
-      #     - href: weeks/week-12.qmd
-      #       text: "Week 12 - Fallacies"
-      #     - href: weeks/week-13.qmd
-      #       text: "Week 13 - Reports"
-      #     - href: weeks/week-14.qmd
-      #       text: "Week 14 - Editing"
-      #     - href: weeks/week-15.qmd
-      #       text: "Week 15 - Presentations"
+      - section: "Weekly materials"
+        aria-label: "Weekly materials"
+        contents:
+          - href: weeks/week-01.qmd
+            text: "Week 1 - Intro & HTML Primer"
+          - href: weeks/week-02.qmd
+            text: "Week 2 - Web Scraping"
+          - href: weeks/week-03.qmd
+            text: "Week 3 - Records & Lists"
+          - href: weeks/week-04.qmd
+            text: "Week 4 - APIs"
+          - href: weeks/week-05.qmd
+            text: "Week 5 - PDF Tools"
+          - href: weeks/week-06.qmd
+            text: "Week 6 - Appropriate Graphics"
+          - href: weeks/week-07.qmd
+            text: "Week 7 - Shiny"
+          - href: weeks/week-08.qmd
+            text: "Week 8 - JavaScript Graphics"
+          - href: weeks/week-09.qmd
+            text: "Week 9 - Linked Graphics"
+          - href: weeks/week-10.qmd
+            text: "Week 10 - Big Data"
+          - href: weeks/week-11.qmd
+            text: "Week 11 - SQL/SQLite"
+          - href: weeks/week-12.qmd
+            text: "Week 12 - Arrow"
+          - href: weeks/week-13.qmd
+            text: "Week 13 - DuckDB"
+          - href: weeks/week-15.qmd
+            text: "Week 15 - Special Topics"
+          - href: weeks/week-16.qmd
+            text: "Week 16 - Special Topics"
 
 format:
   html:
