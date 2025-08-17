@@ -11,16 +11,6 @@ plandf <- plan$schedule |>
   purrr::map_dfr(~ as_tibble(.)) |>
   mutate(start = ymd(start), end = ymd(end))
 
-text_structure <- list(
-  week = "# Week {id}: {name}\n\n",
-  date = ,
-  reading = wrap_headers("## 📖 Reading", reading),
-  prepare = wrap_headers("## 🥣 Prepare for class", prepare),
-  class1 = wrap_headers("## :taco: Tuesday", class1),
-  class2 = wrap_headers("## :hammer::lightning: Thursday", class2),
-  assignments = wrap_headers("##  🏋️ Practice your skill", assignments)
-)
-
 glue_na <- function(data, var, gluestr, .envir = parent.frame()) {
   var <- enquo(var)
   if_else(
@@ -43,7 +33,7 @@ glue_df <- tibble(
 
 md <- glue_df |>
   apply(1, as.list) |>
-  map(~ paste(., collapse = "\n\n"))
+  map_chr(~ paste(., collapse = "\n\n"))
 
 md <- set_names(md, sprintf("weeks/week-%02d.qmd", plandf$week))
 

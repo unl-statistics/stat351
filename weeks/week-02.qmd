@@ -1,6 +1,7 @@
 # Week 2: Web Scraping
 
 
+
 August 31-06, 2025
 
 ## 📖 Reading

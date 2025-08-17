@@ -1,6 +1,7 @@
 # Week 12: Apache Arrow
 
 
+
 November 09-15, 2025
 
 

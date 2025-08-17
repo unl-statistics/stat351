@@ -1,6 +1,7 @@
 # Week 8: Interactive JavaScript Graphics
 
 
+
 October 12-18, 2025
 
 ## 📖 Reading

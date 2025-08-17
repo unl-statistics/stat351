@@ -1,6 +1,7 @@
 # Week 9: Linked Interactive Graphics
 
 
+
 October 19-25, 2025
 
 ## 📖 Reading

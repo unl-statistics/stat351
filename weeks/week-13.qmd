@@ -1,6 +1,7 @@
 # Week 13: DuckDB
 
 
+
 November 16-22, 2025
 
 

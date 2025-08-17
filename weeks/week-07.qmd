@@ -1,6 +1,7 @@
 # Week 7: Dynamic Communication with Shiny
 
 
+
 October 05-11, 2025
 
 ## 📖 Reading

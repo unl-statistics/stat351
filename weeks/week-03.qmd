@@ -1,6 +1,7 @@
 # Week 3: Record-based Data and List Processing
 
 
+
 September 07-13, 2025
 
 ## 📖 Reading
