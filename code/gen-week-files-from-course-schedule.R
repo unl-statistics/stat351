@@ -41,18 +41,9 @@ glue_df <- tibble(
   assignments = glue_na(plandf, assignments, "##  🏋 Practice Your Skills\n\n{assignments}")
 )
 
-glue_df |>
-  t()
-map(t) |>
-  map(as.list) |>
-  paste(collapse = "\n\n")
-
-
-
-md <- map2_chr(
-  split(plandf, 1:nrow(plandf)),
-  templates, glue_data
-)
+md <- glue_df |>
+  apply(1, as.list) |>
+  map(~ paste(., collapse = "\n\n"))
 
 md <- set_names(md, sprintf("weeks/week-%02d.qmd", plandf$week))
 
