@@ -1,0 +1,17 @@
+# Week 10: Approaches to Big Data
+
+
+October 26-01, 2025
+
+
+
+
+
+## :taco: Tuesday
+
+- Lecture: [Computers and Data Storage Trade-Offs](slides/10-01-big-data-tradeoffs.qmd)
+
+
+
+
+

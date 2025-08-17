@@ -1,0 +1,28 @@
+# Week 3: Record-based Data and List Processing
+
+
+September 07-13, 2025
+
+## 📖 Reading
+
+- [Functional Programming](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/08-functional-prog.html)
+- [Record-based Data and List Processing](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/04-xml-json-list-processing.html)
+
+
+
+
+## :taco: Tuesday
+
+- Lecture: [Record based Data and List Processing](slides/03-01-lists.qmd)
+
+
+## :hammer::lightning: Thursday
+
+- Lab: [Parsing XML Files](assignment-repos/02-list-processing/index.qmd)
+
+
+##  🏋 Practice Your Skills
+
+- Lab: [Parsing XML Files](assignment-repos/02-list-processing/index.qmd)
+- [Lab goals](assignment-repos/02-list-processing/tilt.qmd)
+

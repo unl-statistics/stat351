@@ -1,0 +1,31 @@
+# Week 2: Web Scraping
+
+
+August 31-06, 2025
+
+## 📖 Reading
+
+- [Web Scraping](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/03-web-scraping.html)
+
+
+## 🥣 Prepare for class
+
+- Try out scraping one or more sites that are interesting to you.
+
+
+## :taco: Tuesday
+
+- Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
+- [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
+
+
+## :hammer::lightning: Thursday
+
+- Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
+
+
+##  🏋 Practice Your Skills
+
+- Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
+- [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
+

@@ -1,0 +1,30 @@
+# Week 5: PDF Tools
+
+
+September 21-27, 2025
+
+## 📖 Reading
+
+- [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
+
+
+## 🥣 Prepare for class
+
+- Find examples of image-based and text-based PDFs
+
+
+## :taco: Tuesday
+
+- Lecture: [PDF Tools](slides/05-01-pdfs.qmd)
+
+
+## :hammer::lightning: Thursday
+
+- Lab: [PDF/OCR](assignment-repos/05-pdf-parsing/index.qmd)
+
+
+##  🏋 Practice Your Skills
+
+- Lab: [PDF/OCR](assignment-repos/05-pdf-parsing/index.qmd)
+- [Lab goals](assignment-repos/05-pdf-parsing/tilt.qmd)
+

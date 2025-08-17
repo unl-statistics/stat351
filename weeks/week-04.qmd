@@ -1,0 +1,30 @@
+# Week 4: Application Programming Interfaces
+
+
+September 14-20, 2025
+
+## 📖 Reading
+
+- [Application Programming Interfaces (APIs)](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/05-APIs.html)
+
+
+## 🥣 Prepare for class
+
+-
+
+
+## :taco: Tuesday
+
+- Lecture: [API requests](04-01-apis.qmd)
+
+
+## :hammer::lightning: Thursday
+
+- Lab: [APIs](assignment-repos/04-apis/index.qmd)
+
+
+##  🏋 Practice Your Skills
+
+- Lab: [APIs](assignment-repos/04-apis/index.qmd)
+- [Lab goals](assignment-repos/04-apis/tilt.qmd)
+

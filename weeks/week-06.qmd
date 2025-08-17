@@ -1,0 +1,30 @@
+# Week 6: Using Appropriate Graphics
+
+
+September 28-04, 2025
+
+## 📖 Reading
+
+- Appropriate Graphics
+
+
+## 🥣 Prepare for class
+
+- Find the worst data visualization published by a news organization within the last month and bring it with you to class.
+
+
+## :taco: Tuesday
+
+- Lecture: [Appropriate Graphics](slides/06-01-graphics.qmd)
+
+
+## :hammer::lightning: Thursday
+
+- Lab: [Appropriate Graphics](assignment-repos/06-appropriate-graphics/index.qmd)
+
+
+##  🏋 Practice Your Skills
+
+- Lab: [Appropriate Graphics](assignment-repos/06-appropriate-graphics/index.qmd)
+- [Lab goals](assignment-repos/06-appropriate-graphics/tilt.qmd)
+

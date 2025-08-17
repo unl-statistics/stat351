@@ -1,0 +1,30 @@
+# Week 7: Dynamic Communication with Shiny
+
+
+October 05-11, 2025
+
+## 📖 Reading
+
+- [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
+
+
+## 🥣 Prepare for class
+
+- Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
+
+
+## :taco: Tuesday
+
+- Lecture: [Shiny](slides/06-01-shiny.qmd)
+
+
+## :hammer::lightning: Thursday
+
+- Lab: [Shiny Applets](assignment-repos/07-shiny-interactive/index.qmd)
+
+
+##  🏋 Practice Your Skills
+
+- Lab: [Shiny Applets](assignment-repos/07-shiny-interactive/index.qmd)
+- [Lab goals](assignment-repos/07-shiny-interactive/tilt.qmd)
+

@@ -1,0 +1,27 @@
+# Week 9: Linked Interactive Graphics
+
+
+October 19-25, 2025
+
+## 📖 Reading
+
+- [Cubble vignette](https://cran.r-project.org/web/packages/cubble/vignettes/cb6interactive.html)
+- mpld3 in python?
+
+
+
+
+## :taco: Tuesday
+
+- Fall Break!
+
+
+## :hammer::lightning: Thursday
+
+- Lecture: [Interactive Linked Graphics](slides/08-01-linked-graphics.qmd)
+
+
+##  🏋 Practice Your Skills
+
+- Screencast due!
+
