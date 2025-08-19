@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Your Name Here">
+
+<title>Lab: Web Scraping and RSS – STAT 351 - Fall 2025</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-24fedd7fb10dfc7cad4eb8b91752aa78.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-e48c343362a34d6366305ec68d12e303.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<meta property="og:title" content="Lab: Web Scraping and RSS – STAT 351 - Fall 2025">
+<meta property="og:description" content="Homepage for STAT 351 - Advanced Computing II: Data Management and Visualization">
+<meta property="og:site_name" content="STAT 351 - Fall 2025">
+<meta name="twitter:title" content="Lab: Web Scraping and RSS – STAT 351 - Fall 2025">
+<meta name="twitter:description" content="Homepage for STAT 351 - Advanced Computing II: Data Management and Visualization">
+<meta name="twitter:image" content="https://unl-statistics.github.io/stat351/assignment-repos/01-web-scraping/images/twitter-card.png">
+<meta name="twitter:creator" content="@srvanderplas">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lab: Web Scraping and RSS</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      <img src="../../images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-support.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Support</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../course-links.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Useful links</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Weekly materials</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 1 - Intro &amp; HTML Primer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 2 - Web Scraping</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3 - Records &amp; Lists</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4 - APIs</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 5 - PDF Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 6 - Appropriate Graphics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 7 - Shiny</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 8 - JavaScript Graphics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 9 - Linked Graphics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 10 - Big Data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 11 - SQL/SQLite</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 12 - Arrow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 13 - DuckDB</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-15.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 15 - Special Topics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../weeks/week-16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 16 - Special Topics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#warming-up" id="toc-warming-up" class="nav-link active" data-scroll-target="#warming-up"><span class="header-section-number">1</span> Warming Up</a>
+  <ul class="collapse">
+  <li><a href="#parsing-the-file" id="toc-parsing-the-file" class="nav-link" data-scroll-target="#parsing-the-file"><span class="header-section-number">1.1</span> Parsing the File</a></li>
+  <li><a href="#sec-extract-info" id="toc-sec-extract-info" class="nav-link" data-scroll-target="#sec-extract-info"><span class="header-section-number">1.2</span> Extracting Information</a></li>
+  <li><a href="#is-it-xml" id="toc-is-it-xml" class="nav-link" data-scroll-target="#is-it-xml"><span class="header-section-number">1.3</span> Is it XML?</a></li>
+  </ul></li>
+  <li><a href="#cleaning-the-data" id="toc-cleaning-the-data" class="nav-link" data-scroll-target="#cleaning-the-data"><span class="header-section-number">2</span> Cleaning the Data</a>
+  <ul class="collapse">
+  <li><a href="#tidy-data" id="toc-tidy-data" class="nav-link" data-scroll-target="#tidy-data"><span class="header-section-number">2.1</span> Tidy Data</a></li>
+  <li><a href="#tidy-planning" id="toc-tidy-planning" class="nav-link" data-scroll-target="#tidy-planning"><span class="header-section-number">2.2</span> Tidy Planning</a></li>
+  <li><a href="#tidying-for-real" id="toc-tidying-for-real" class="nav-link" data-scroll-target="#tidying-for-real"><span class="header-section-number">2.3</span> Tidying, for real!</a></li>
+  </ul></li>
+  <li><a href="#filing-forms" id="toc-filing-forms" class="nav-link" data-scroll-target="#filing-forms"><span class="header-section-number">3</span> Filing Forms</a>
+  <ul class="collapse">
+  <li><a href="#preparing" id="toc-preparing" class="nav-link" data-scroll-target="#preparing"><span class="header-section-number">3.1</span> Preparing</a></li>
+  <li><a href="#reading-html-tables" id="toc-reading-html-tables" class="nav-link" data-scroll-target="#reading-html-tables"><span class="header-section-number">3.2</span> Reading HTML Tables</a></li>
+  <li><a href="#reading-html-pages" id="toc-reading-html-pages" class="nav-link" data-scroll-target="#reading-html-pages"><span class="header-section-number">3.3</span> Reading HTML Pages</a></li>
+  <li><a href="#assessing-market-value-of-stock-sales" id="toc-assessing-market-value-of-stock-sales" class="nav-link" data-scroll-target="#assessing-market-value-of-stock-sales"><span class="header-section-number">3.4</span> Assessing Market Value of Stock Sales</a></li>
+  <li><a href="#efficiency" id="toc-efficiency" class="nav-link" data-scroll-target="#efficiency"><span class="header-section-number">3.5</span> Efficiency</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/unl-statistics/stat351/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab: Web Scraping and RSS</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-body">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Your Name Here </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The Securities and Exchange Commission (SEC) provides a way to see the most recent filings submitted to the commission at <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent">https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent</a>.</p>
+<p>Form 144 is required to be submitted when an executive officer, director, or affiliate of the company sells more than 5000 shares of stock or the aggregate sales price exceeds $50,000.</p>
+<p>Conveniently, we can access the 100 most recent Form 144 filings by using the <a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&amp;CIK=&amp;type=&amp;company=&amp;dateb=&amp;owner=include&amp;start=0&amp;count=100&amp;output=atom">RSS feed</a>, which provides some basic information about each filing as well as a link to the filing’s database entry. An example of the RSS feed downloaded on July 28, 2025 is provided in the <a href="sample-feed.rss"><code>sample-feed.rss</code></a> file for demonstration purposes.</p>
+<p>RSS feeds are just another XML-like file, as you can see from the <a href="https://www.rssboard.org/rss-specification">RSS2.0 Specification</a>.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>You can see the purpose of this assignment as well as the skills and knowledge you should be using and acquiring, in the <a href="../../assignment-repos/01-web-scraping/tilt.html">Transparency in Learning and Teaching (TILT)</a> document in this repository. The TILT document also contains a checklist for self-reflection that will provide some guidance as to how the assignment will be graded.</p>
+</div>
+</div>
+</div>
+<section id="warming-up" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Warming Up</h1>
+<section id="parsing-the-file" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="parsing-the-file"><span class="header-section-number">1.1</span> Parsing the File</h2>
+<p>Add a code chunk that will read in the RSS feed as an XML file.</p>
+<hr>
+</section>
+<section id="sec-extract-info" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sec-extract-info"><span class="header-section-number">1.2</span> Extracting Information</h2>
+<p>Add a code chunk that will convert each entry into a data frame row with columns <code>title</code>, <code>link</code>, <code>summary</code>, <code>updated</code>, <code>category</code>, and <code>id</code>. Note that you may need to access attributes to get the important data out of some nodes, while for others you may only need to access the content.</p>
+<p>Show the first 5 and last 5 rows of your data, using a function like <code>knitr::kable</code>, <code>DT::DT</code>, or <code>IPython</code>’s <code>display()</code> and <code>Markdown()</code>. See <a href="https://www.datanovia.com/guide/tools/quarto/tables.html#computations">this page</a> for more information about rendering “pretty” tabular data using quarto.</p>
+<hr>
+</section>
+<section id="is-it-xml" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="is-it-xml"><span class="header-section-number">1.3</span> Is it XML?</h2>
+<p>Is an RSS feed actually an XML file? Why or why not? What requirements of an XML file does an RSS feed meet, and what requirements are lacking?</p>
+<hr>
+</section>
+</section>
+<section id="cleaning-the-data" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Cleaning the Data</h1>
+<p>The data frame you created in <a href="#sec-extract-info" class="quarto-xref">Section&nbsp;1.2</a> is not exactly in tidy form. Let’s see if we can fix that!</p>
+<section id="tidy-data" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="tidy-data"><span class="header-section-number">2.1</span> Tidy Data</h2>
+<p>What aspects of the data frame need work in order to meet the criteria for tidy data?</p>
+<hr>
+</section>
+<section id="tidy-planning" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="tidy-planning"><span class="header-section-number">2.2</span> Tidy Planning</h2>
+<p>Write a step-by-step plan to convert your data into tidy form.</p>
+<hr>
+</section>
+<section id="tidying-for-real" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="tidying-for-real"><span class="header-section-number">2.3</span> Tidying, for real!</h2>
+<p>Execute your step-by-step plan. Show a nicely formatted data table with up to 10 entries, and explain why your data is now tidy.</p>
+<hr>
+</section>
+</section>
+<section id="filing-forms" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Filing Forms</h1>
+<p>The RSS feed provides bare-bones data about SEC filings, but also links to the actual forms. The <code>link</code> column of your data should contain a URI for the form which was actually filed. Let’s work on pulling out the form data, with the idea that we might want to analyze SEC filing data.</p>
+<p>For instance, the following entry describes a tractor supply filing.</p>
+<pre><code>&lt;entry&gt;
+&lt;title&gt;144 - TRACTOR SUPPLY CO /DE/ (0000916365) (Subject)&lt;/title&gt;
+&lt;link rel="alternate" type="text/html" href="https://www.sec.gov/Archives/edgar/data/916365/000195917325004774/0001959173-25-004774-index.htm"/&gt;
+&lt;summary type="html"&gt;
+ &amp;lt;b&amp;gt;Filed:&amp;lt;/b&amp;gt; 2025-07-28 &amp;lt;b&amp;gt;AccNo:&amp;lt;/b&amp;gt; 0001959173-25-004774 &amp;lt;b&amp;gt;Size:&amp;lt;/b&amp;gt; 4 KB
+&lt;/summary&gt;
+&lt;updated&gt;2025-07-28T14:07:13-04:00&lt;/updated&gt;
+&lt;category scheme="https://www.sec.gov/" label="form type" term="144"/&gt;
+&lt;id&gt;urn:tag:sec.gov,2008:accession-number=0001959173-25-004774&lt;/id&gt;
+&lt;/entry&gt;</code></pre>
+<p>The link URL is <a href="https://www.sec.gov/Archives/edgar/data/916365/000195917325004774/0001959173-25-004774-index.htm"><code>https://www.sec.gov/Archives/edgar/data/916365/000195917325004774/0001959173-25-004774-index.htm</code></a>. On the linked page, there is a table of document format files which contains the same information in HTM(L), XML, and TXT format.</p>
+<section id="preparing" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="preparing"><span class="header-section-number">3.1</span> Preparing</h2>
+<p>Open one link from your table and examine the HTML page.</p>
+<ol type="1">
+<li>Identify the CSS selector you believe would be most efficient to obtain the <strong>table</strong> of document format files.</li>
+</ol>
+<blockquote class="blockquote">
+<p>Your answer here</p>
+</blockquote>
+<ol start="2" type="1">
+<li>Identify the CSS selector you believe would be most efficient for obtaining the first link in the table of document format files.</li>
+</ol>
+<blockquote class="blockquote">
+<p>Your answer here</p>
+</blockquote>
+</section>
+<section id="reading-html-tables" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="reading-html-tables"><span class="header-section-number">3.2</span> Reading HTML Tables</h2>
+<p>Write a function that takes a URI to the Filing Detail page and extracts the link for the document corresponding to the filing entry (I recommend going for the .htm link). Use your function to obtain the HTML addresses of the filed forms for all of the links in your RSS feed.</p>
+<hr>
+</section>
+<section id="reading-html-pages" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="reading-html-pages"><span class="header-section-number">3.3</span> Reading HTML Pages</h2>
+<p>Use the links to the filed forms and extract the following information from each page, storing the information for each form in a data frame.</p>
+<ul>
+<li>Name, SEC File Number, Address, and Phone Number of Issuer</li>
+<li>Name of person selling the securities, and relationship to the Issuer</li>
+<li>Securities Information: all values in the table</li>
+<li>Securities to be Sold: all values in the table</li>
+<li>Other sales in the last 3 months, if any</li>
+<li>Notice date</li>
+</ul>
+<p>You may want to write one or more functions to extract the necessary data, with error handling in order to ensure that if the data does not exist the function still returns the information that is available.</p>
+<hr>
+</section>
+<section id="assessing-market-value-of-stock-sales" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="assessing-market-value-of-stock-sales"><span class="header-section-number">3.4</span> Assessing Market Value of Stock Sales</h2>
+<p>Make a histogram of the aggregate market value of stock to be sold for the entries in your RSS feed. Make sure your plot has descriptive titles, axis labels, and uses appropriate scales.</p>
+<hr>
+</section>
+<section id="efficiency" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="efficiency"><span class="header-section-number">3.5</span> Efficiency</h2>
+<p>Imagine you’d saved the RSS feed from the SEC for the past 30 days. The SEC may not receive more than 100 form 144 filings each day, and they do not update the feed on federal holidays or weekends.</p>
+<p>Describe how you would approach generating a database of the unique form 144 filings over all 30 days of RSS feed files. Make an ordered list of steps indicating the order in which you would read in the RSS entries, acquire the corresponding data from the SEC filing form, and deduplicating the potentially repeated filings, along with any other intermediate steps you might take.</p>
+<p>Your solution should minimize the amount of load on the SEC’s server both because it minimizes the running time of the code and because it’s more polite.</p>
+<p>Calculate the total number of calls you have to make to the SEC’s server to implement your solution, showing your work.</p>
+<hr>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/unl-statistics\.github\.io\/stat351");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2025, Susan Vanderplas</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/unl-statistics/stat351/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
