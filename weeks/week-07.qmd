@@ -16,16 +16,16 @@ October 05-11, 2025
 
 ## :taco: Tuesday
 
-- Lecture: [Shiny](slides/06-01-shiny.qmd)
+- Lecture: [Shiny](../slides/06-01-shiny.qmd)
 
 
 ## :hammer::lightning: Thursday
 
-- Lab: [Shiny Applets](assignment-repos/07-shiny-interactive/index.qmd)
+- Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Shiny Applets](assignment-repos/07-shiny-interactive/index.qmd)
-- [Lab goals](assignment-repos/07-shiny-interactive/tilt.qmd)
+- Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
+- [Lab goals](../assignment-repos/07-shiny-interactive/tilt.qmd)
 

@@ -16,16 +16,16 @@ September 21-27, 2025
 
 ## :taco: Tuesday
 
-- Lecture: [PDF Tools](slides/05-01-pdfs.qmd)
+- Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
 
 
 ## :hammer::lightning: Thursday
 
-- Lab: [PDF/OCR](assignment-repos/05-pdf-parsing/index.qmd)
+- Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [PDF/OCR](assignment-repos/05-pdf-parsing/index.qmd)
-- [Lab goals](assignment-repos/05-pdf-parsing/tilt.qmd)
+- Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+- [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
 

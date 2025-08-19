@@ -14,16 +14,16 @@ September 07-13, 2025
 
 ## :taco: Tuesday
 
-- Lecture: [Record based Data and List Processing](slides/03-01-lists.qmd)
+- Lecture: [Record based Data and List Processing](../slides/03-01-lists.qmd)
 
 
 ## :hammer::lightning: Thursday
 
-- Lab: [Parsing XML Files](assignment-repos/02-list-processing/index.qmd)
+- Lab: [Parsing XML Files](../assignment-repos/02-list-processing/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Parsing XML Files](assignment-repos/02-list-processing/index.qmd)
-- [Lab goals](assignment-repos/02-list-processing/tilt.qmd)
+- Lab: [Parsing XML Files](../assignment-repos/02-list-processing/index.qmd)
+- [Lab goals](../assignment-repos/02-list-processing/tilt.qmd)
 

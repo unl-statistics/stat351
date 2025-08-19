@@ -214,7 +214,7 @@ I expect you to:
 - Do your own troubleshooting before contacting me for help (and mention things you've already tried when you do ask for help!)
 - Be respectful and considerate of everyone in the class
 
-### Make Mistakes! :car: :explosion:
+### Make Mistakes! :car: :collision:
 
 Programming is the process of making a series of silly or stupid mistakes, and then slowly fixing each mistake (while potentially adding a few more). The only way to know how to fix these mistakes (and avoid them in the future) is to make them. (Sometimes, you have to make the same mistake a few dozen times before you can avoid it in the future). At some point during the class, you will find that you've spent 30 minutes staring at an error caused by a typo, a space, or a parenthesis in the wrong place. You may ask for help debugging this weird error, only to have someone immediately point out the problem... it is always easier to see these things in someone else's code. This is part of programming, it is normal, and you shouldn't feel embarrassed or sorry (unless you put no effort into troubleshooting the problem before you asked for help).
 

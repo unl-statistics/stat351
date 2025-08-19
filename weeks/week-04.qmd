@@ -16,16 +16,16 @@ September 14-20, 2025
 
 ## :taco: Tuesday
 
-- Lecture: [API requests](04-01-apis.qmd)
+- Lecture: [API requests](../slides/04-01-apis.qmd)
 
 
 ## :hammer::lightning: Thursday
 
-- Lab: [APIs](assignment-repos/04-apis/index.qmd)
+- Lab: [APIs](../assignment-repos/04-apis/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [APIs](assignment-repos/04-apis/index.qmd)
-- [Lab goals](assignment-repos/04-apis/tilt.qmd)
+- Lab: [APIs](../assignment-repos/04-apis/index.qmd)
+- [Lab goals](../assignment-repos/04-apis/tilt.qmd)
 

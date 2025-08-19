@@ -6,7 +6,7 @@ August 24-30, 2025
 
 ## 📖 Reading
 
-- [Syllabus](syllabus.qmd)
+- [Syllabus](../syllabus.qmd)
 - [Web Scraping](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/03-web-scraping.html)
 
 
@@ -23,7 +23,7 @@ August 24-30, 2025
 
 ## :hammer::lightning: Thursday
 
-- Lecture: [HTML/XML primer](slides/01-02-html-xml-primer.qmd)
+- Lecture: [HTML/XML primer](../slides/01-02-html-xml-primer.qmd)
 
 
 ##  🏋 Practice Your Skills

@@ -16,17 +16,17 @@ August 31-06, 2025
 
 ## :taco: Tuesday
 
-- Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
-- [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
+- Lab: [Web Scraping](../assignment-repos/01-web-scraping/index.qmd)
+- [Lab goals](../assignment-repos/01-web-scraping/tilt.qmd)
 
 
 ## :hammer::lightning: Thursday
 
-- Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
+- Lab: [Web Scraping](../assignment-repos/01-web-scraping/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
-- [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
+- Lab: [Web Scraping](../assignment-repos/01-web-scraping/index.qmd)
+- [Lab goals](../assignment-repos/01-web-scraping/tilt.qmd)
 

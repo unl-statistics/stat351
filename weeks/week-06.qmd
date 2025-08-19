@@ -16,16 +16,16 @@ September 28-04, 2025
 
 ## :taco: Tuesday
 
-- Lecture: [Appropriate Graphics](slides/06-01-graphics.qmd)
+- Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
 
 
 ## :hammer::lightning: Thursday
 
-- Lab: [Appropriate Graphics](assignment-repos/06-appropriate-graphics/index.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Appropriate Graphics](assignment-repos/06-appropriate-graphics/index.qmd)
-- [Lab goals](assignment-repos/06-appropriate-graphics/tilt.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+- [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
 

@@ -4,3 +4,12 @@
 [submodule "assignment-repos/02-list-processing"]
 	path = assignment-repos/02-list-processing
 	url = git@github.com:unl-stat351/stat351-unl-2025c-list-processing-list-processing-drwho.git
+[submodule "assignment-repos/04-apis"]
+	path = assignment-repos/04-apis
+	url = git@github.com:unl-stat351/stat351-unl-2025c-api-use.git
+[submodule "05-pdf-parsing"]
+	path = 05-pdf-parsing
+	url = git@github.com:unl-stat351/stat351-unl-2025c-pdf-data.git
+[submodule "assignment-repos/05-pdf-parsing"]
+	path = assignment-repos/05-pdf-parsing
+	url = git@github.com:unl-stat351/stat351-unl-2025c-pdf-data.git

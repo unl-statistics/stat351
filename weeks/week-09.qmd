@@ -19,7 +19,7 @@ October 19-25, 2025
 
 ## :hammer::lightning: Thursday
 
-- Lecture: [Interactive Linked Graphics](slides/08-01-linked-graphics.qmd)
+- Lecture: [Interactive Linked Graphics](../slides/08-01-linked-graphics.qmd)
 
 
 ##  🏋 Practice Your Skills

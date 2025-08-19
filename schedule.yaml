@@ -13,7 +13,7 @@ schedule:
     start: 2025-08-24
     end: 2025-08-30
     reading: |
-        - [Syllabus](syllabus.qmd)
+        - [Syllabus](../syllabus.qmd)
         - [Web Scraping](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/03-web-scraping.html)
     prepare: |
         - Ensure R, python, quarto, RStudio are installed on your machine ([Computer setup help](https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html))
@@ -21,7 +21,7 @@ schedule:
     class1: |
         - Discussion: Syllabus
     class2: |
-        - Lecture: [HTML/XML primer](slides/01-02-html-xml-primer.qmd)
+        - Lecture: [HTML/XML primer](../slides/01-02-html-xml-primer.qmd)
     assignments: |
         - Get familiar with HTML and web-based vocabulary:
           - Watch [HTTP and HTML](https://youtu.be/kBXQZMmiA4s) explanation
@@ -36,13 +36,13 @@ schedule:
     prepare: |
         - Try out scraping one or more sites that are interesting to you.
     class1: |
-        - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
-        - [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
+        - Lab: [Web Scraping](../assignment-repos/01-web-scraping/index.qmd)
+        - [Lab goals](../assignment-repos/01-web-scraping/tilt.qmd)
     class2: |
-        - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
+        - Lab: [Web Scraping](../assignment-repos/01-web-scraping/index.qmd)
     assignments: |
-        - Lab: [Web Scraping](assignment-repos/01-web-scraping/index.qmd)
-        - [Lab goals](assignment-repos/01-web-scraping/tilt.qmd)
+        - Lab: [Web Scraping](../assignment-repos/01-web-scraping/index.qmd)
+        - [Lab goals](../assignment-repos/01-web-scraping/tilt.qmd)
 
   - week: 3
     name: Record-based Data and List Processing
@@ -52,12 +52,12 @@ schedule:
       - [Functional Programming](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/08-functional-prog.html)
       - [Record-based Data and List Processing](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/04-xml-json-list-processing.html)
     class1: |
-      - Lecture: [Record based Data and List Processing](slides/03-01-lists.qmd)
+      - Lecture: [Record based Data and List Processing](../slides/03-01-lists.qmd)
     class2: |
-      - Lab: [Parsing XML Files](assignment-repos/02-list-processing/index.qmd)
+      - Lab: [Parsing XML Files](../assignment-repos/02-list-processing/index.qmd)
     assignments: |
-      - Lab: [Parsing XML Files](assignment-repos/02-list-processing/index.qmd)
-      - [Lab goals](assignment-repos/02-list-processing/tilt.qmd)
+      - Lab: [Parsing XML Files](../assignment-repos/02-list-processing/index.qmd)
+      - [Lab goals](../assignment-repos/02-list-processing/tilt.qmd)
 
   - week: 4
     name: Application Programming Interfaces
@@ -68,12 +68,12 @@ schedule:
     prepare: |
       -
     class1: |
-      - Lecture: [API requests](04-01-apis.qmd)
+      - Lecture: [API requests](../slides/04-01-apis.qmd)
     class2: |
-      - Lab: [APIs](assignment-repos/04-apis/index.qmd)
+      - Lab: [APIs](../assignment-repos/04-apis/index.qmd)
     assignments: |
-      - Lab: [APIs](assignment-repos/04-apis/index.qmd)
-      - [Lab goals](assignment-repos/04-apis/tilt.qmd)
+      - Lab: [APIs](../assignment-repos/04-apis/index.qmd)
+      - [Lab goals](../assignment-repos/04-apis/tilt.qmd)
 
   - week: 5
     name: PDF Tools
@@ -84,12 +84,12 @@ schedule:
     prepare: |
       - Find examples of image-based and text-based PDFs
     class1: |
-      - Lecture: [PDF Tools](slides/05-01-pdfs.qmd)
+      - Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
     class2: |
-      - Lab: [PDF/OCR](assignment-repos/05-pdf-parsing/index.qmd)
+      - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
     assignments: |
-      - Lab: [PDF/OCR](assignment-repos/05-pdf-parsing/index.qmd)
-      - [Lab goals](assignment-repos/05-pdf-parsing/tilt.qmd)
+      - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+      - [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
   - week: 6
     name: Using Appropriate Graphics
     start: 2025-09-28
@@ -99,12 +99,12 @@ schedule:
     prepare: |
       - Find the worst data visualization published by a news organization within the last month and bring it with you to class.
     class1: |
-      - Lecture: [Appropriate Graphics](slides/06-01-graphics.qmd)
+      - Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
     class2: |
-      - Lab: [Appropriate Graphics](assignment-repos/06-appropriate-graphics/index.qmd)
+      - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
     assignments: |
-      - Lab: [Appropriate Graphics](assignment-repos/06-appropriate-graphics/index.qmd)
-      - [Lab goals](assignment-repos/06-appropriate-graphics/tilt.qmd)
+      - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+      - [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
   - week: 7
     name: Dynamic Communication with Shiny
     start: 2025-10-05
@@ -114,12 +114,12 @@ schedule:
     prepare: |
       - Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
     class1: |
-      - Lecture: [Shiny](slides/06-01-shiny.qmd)
+      - Lecture: [Shiny](../slides/06-01-shiny.qmd)
     class2: |
-      - Lab: [Shiny Applets](assignment-repos/07-shiny-interactive/index.qmd)
+      - Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
     assignments: |
-      - Lab: [Shiny Applets](assignment-repos/07-shiny-interactive/index.qmd)
-      - [Lab goals](assignment-repos/07-shiny-interactive/tilt.qmd)
+      - Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
+      - [Lab goals](../assignment-repos/07-shiny-interactive/tilt.qmd)
   - week: 8
     name: Interactive JavaScript Graphics
     start: 2025-10-12
@@ -132,12 +132,12 @@ schedule:
       - [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
       - [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
     class1: |
-      - Lecture: [Interactive Graphics using Plotly and Observable](slides/08-01-interactive-graphics.qmd)
+      - Lecture: [Interactive Graphics using Plotly and Observable](../slides/08-01-interactive-graphics.qmd)
     class2: |
-      - Lab: [Interactive Graphics with Plotly and Observable](assignment-repos/08-interactive-graphics-js)
+      - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
     assignments: |
-      - Lab: [Interactive Graphics with Plotly and Observable](assignment-repos/08-interactive-graphics-js)
-      - [Lab goals](assignment-repos/08-interactive-graphics-js/tilt.qmd)
+      - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
+      - [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
   - week: 9
     name: Linked Interactive Graphics
     start: 2025-10-19
@@ -148,7 +148,7 @@ schedule:
     class1: |
       - Fall Break!
     class2: |
-      - Lecture: [Interactive Linked Graphics](slides/08-01-linked-graphics.qmd)
+      - Lecture: [Interactive Linked Graphics](../slides/08-01-linked-graphics.qmd)
     assignments: |
       - Screencast due!
   - week: 10
@@ -158,7 +158,7 @@ schedule:
 
 
     class1: |
-      - Lecture: [Computers and Data Storage Trade-Offs](slides/10-01-big-data-tradeoffs.qmd)
+      - Lecture: [Computers and Data Storage Trade-Offs](../slides/10-01-big-data-tradeoffs.qmd)
 
 
   - week: 11
