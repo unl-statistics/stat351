@@ -26,6 +26,7 @@ officehours: "[Schedule here](https://calendly.com/vanderplas/office-hours)"
 office: Hardin 343D
 classroom: KEIM 214
 classhours: TR 11:00-12:15
+final: "Dec 15, 10am - 12pm"
 ---
 
 ```{r setup, include=FALSE}
@@ -49,7 +50,7 @@ source("schedule.R")
 
 Computational skills for management, visualization and analysis of large and complex data which are necessary for modern statistics. Includes a wide range of topics necessary for data analytics, including harvesting data from websites and common data structures, setting up and working with databases, and designing interactive data displays.
 
-# Course Objectives
+## Objectives
 
 - Access and leverage data stored in formats which are commonly used outside of statistics (HTML, JSON, XML, PDF, APIs) and transform these data to formats which are used for statistical analysis. 
 	- Scrape data off of the internet and assemble it into a "tidy" format for visualization and analysis.
@@ -157,10 +158,11 @@ You will produce a screencast which demonstrates your skills in data acquisition
 
 A final exam (format TBD) will be used to assess your ability to meet the learning objectives for the course. 
 The exam will be due during the scheduled final exam period for the course (`r ymd(semester_info[[5]][[1]]$date) |> format.Date("%A, %B %d")`). 
+It is possible that a take-home portion of the exam may be initially assigned during the last week of classes. 
 
 ## Course Policies
 
-#### Late Work Policy :alarm_clock:
+### Late Work Policy :alarm_clock:
 
 Late assignments will be accepted only under extenuating circumstances, and only if you have contacted me **prior** to the assignment due date and received permission to hand the assignment in late. 
 I reserve the right not to grade (or to assign a 0 to) any assignments received after the assignment due date without prior approval.
@@ -169,13 +171,34 @@ This additional time serves as a general deadline extension to provide an extra 
 
 ### Attendance & Participation :person:
 
-All students are expected to attend and fully participate in class. 
-Participation grades will be determined based on a combination of attendance and participation.
-Consistent, repeated failure to attend class or actively participate in the course will affect the participation portion of your grade.
+You are expected to attend class and participate in online discussions. 
+Consistent, repeated failure to attend class or actively participate in class will affect the participation portion of your grade.
 
-Two absences are allowed without any reduction in participation score - no excuse is necessary. 
-This allows you to participate in a conference, recover from lack of sleep, or have a mental health day. 
-If you miss more than two class days, however, this will start to reduce your participation score.
+#### Excused Absences
+
+The university lists several reasons that a student may miss a class or significant component of the course such as an exam  [Faculty Senate Class Attendance Policy](https://facultysenate.unl.edu/faculty-senate-policies-and-documents/class-attendance-policy/).
+
+- illness of self or dependent,
+- participation in UNL-sponsored activities, 
+- military service or jury duty, 
+- bereavement, or 
+- religious observance
+
+In all cases, students are expected to provide notice to the instructor or the university as soon as possible. 
+
+Religious observance requests must be made by the 2nd week of class.
+
+Conflicts with scheduled UNL-sponsored activities (including participation in conferences) should be communicated to the instructor by the 2nd week of class (if scheduled at the start of the semester) or with at least 2 weeks notice. 
+Emergent conflicts will be handled on a case-by-case basis, but prior notice is expected. 
+
+To initiate bereavement leave, students should contact the Vice Chancellor for Student Affairs, and that office will coordinate with instructors. 
+
+In the case of extended or chronic illness, the student should work with Disability Services to obtain formal accommodations. 
+Disability Services may require medical documentation as part of the accommodations process.
+
+::: {.callout}
+Note that scheduling of vacations or international travel is NOT considered a university approved absence. 
+:::
 
 
 #### Illness :face_with_thermometer: & Excused Absences
@@ -186,15 +209,13 @@ In the appointment reason field on Calendly, indicate that this appointment is t
 
 If you need to miss more than 1-2 classes for illness, I reserve the right to require documentation from Disability Services or a medical provider. 
 
-University 
-
 #### Inclement Weather :cloud_with_snow: :tornado: :cloud_with_lightning_and_rain:
 
 If in-person classes are canceled, you will be notified of the instructional continuity plan for this class by Canvas Announcement. 
 When there is power in the Lincoln area, we may hold class via Zoom; however, I may assign an asynchronous activity instead. 
 You will be held to the same participation and professionalism standards on Zoom as you are in person, and participation and attendance will be graded accordingly.
 That is -- cameras should be on, you should be fully clothed, and you should be an active participant and not an empty black box. 
-If there is a reason you don't want your camera to be on (e.g. if you're in an environment you can't fully control, or you're sick and don't want to be on camera), just let me know. 
+If there is a reason you don't want your camera to be on (e.g. if you're in an environment you can't fully control, or you're sick and don't want to be on camera), let me know. 
 Pets are 100% welcome to join the zoom call :heart: :dog: :cat:. 
 
 ## Expectations
@@ -214,12 +235,16 @@ I expect you to:
 - Do your own troubleshooting before contacting me for help (and mention things you've already tried when you do ask for help!)
 - Be respectful and considerate of everyone in the class
 
+### Communication
+
+If you are lost or confused or have a problem related to the course, make contact early!
+It is much easier to address a small problem early than to fix a cascade of issues later in the semester.
+
 ### Make Mistakes! :car: :collision:
 
 Programming is the process of making a series of silly or stupid mistakes, and then slowly fixing each mistake (while potentially adding a few more). The only way to know how to fix these mistakes (and avoid them in the future) is to make them. (Sometimes, you have to make the same mistake a few dozen times before you can avoid it in the future). At some point during the class, you will find that you've spent 30 minutes staring at an error caused by a typo, a space, or a parenthesis in the wrong place. You may ask for help debugging this weird error, only to have someone immediately point out the problem... it is always easier to see these things in someone else's code. This is part of programming, it is normal, and you shouldn't feel embarrassed or sorry (unless you put no effort into troubleshooting the problem before you asked for help).
 
 If you manage to produce an error I haven't seen before, then congratulations. You have achieved something special, and that achievement should be celebrated. Each new and bizarre error is an opportunity to learn a bit more about the programming language, the operating system, or the interaction between the two.
-
 
 ### Evaluation Criteria
 
@@ -241,15 +266,9 @@ Individuals who detract from an atmosphere of civility and respect will be remov
 
 Students are expected to adhere to guidelines concerning academic dishonesty outlined in [Article III B.1 of the University's Student Code of Conduct](http://stuafs.unl.edu/dos/code). The Statistics Department [academic integrity and grade appeal policy is available here](https://statistics.unl.edu/grade-appeals-and-academic-integrity-policy).
 
-### Code
-
-You must be able to explain how the logic works for any code you turn in. 
-This means that code you obtained from e.g. StackOverflow is fine to use if you can explain it and modify it for the purposes of this class, but if you cannot explain your code you will not get credit for the assignment. 
-This is in line with what is generally considered acceptable behavior in programming - reuse is fine (subject to the code's license) but you must be able to fully explain and modify any code you did not write yourself.
-You should also provide a link to the source of your code (or even the logic behind your code) - this is useful both for my information and for future you, in addition to being a good way to give attribution to the original author. 
 
 
-### AI and Explainability Policy
+#### AI and Explainability Policy
 
 **Any use of generative AI must be disclosed** in an appendix to your submission - this includes brainstorming, editing, using AI as spell-check/grammar-check, and so on. You must document the following:
 
@@ -260,9 +279,24 @@ You should also provide a link to the source of your code (or even the logic beh
 
 It may be useful to leverage AI tools to ensure that your work conforms to grammar and style guidelines, but I very highly discourage the use of generative AI for content or code.
 
-- **Oral Exam Policy** - I may replace the grade on any written assignment with a graded oral exam on your submission. This policy is not intended to be punitive -- it may be used to resolve issues where question wording was not clear or was misinterpreted. Rather, it is intended to be used to assess what you actually know when I suspect that the written assignment is not a good measure of your knowledge or skills. 
+#### Oral Exams
+I reserve the right to replace the grade on any written assignment with a graded oral exam on your submission. 
+This policy is not intended to be punitive -- it may be used to resolve issues where question wording was not clear or was misinterpreted. 
+Rather, it is intended to be used to assess what you actually know when I suspect that the written assignment is not a good measure of your knowledge or skills. 
 
-- You must be able to explain any work you turn in. If you cannot explain the logic behind your approach as well as how it works in practice, then you will not receive credit for your submission. 
+#### Code
+You must be able to explain any work you turn in. 
+  - If you cannot explain the logic behind your approach as well as how it works in practice, then you will not receive credit for your submission. This is in line with what is generally considered acceptable behavior in programming - reuse is fine (subject to the code's license), but you must still be able to **understand** and **modify** any code you did not write yourself. 
+
+  - If you copy and modify code from another source (StackOverflow, Rbloggers, etc.), provide that source in a comment above the code. This provides you with documentation as to how you got to the solution, and also provides credit to the original source. (This practice has been helpful to me on many occasions when I come back to code I wrote long ago)
+
+
+#### Exams
+
+**No external resources** are allowed on exams (including, but not limited to: the internet, AI, StackOverflow, a friend) for assistance unless specifically stated in the problem (and then, only on that specific problem).
+Use of any external resources will be grounds for an academic integrity violation under [Section 2.A.5](https://studentconduct.unl.edu/university-nebraska-student-code-conduct-0/#sectionii), "Failing to follow the rules". 
+
+
 
 
 # Required University Information
