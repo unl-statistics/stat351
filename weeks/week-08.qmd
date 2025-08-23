@@ -17,12 +17,12 @@ October 12-18, 2025
 - [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
 
 
-## :taco: Tuesday
+## 🌮 Tuesday
 
 - Lecture: [Interactive Graphics using Plotly and Observable](../slides/08-01-interactive-graphics.qmd)
 
 
-## :hammer::lightning: Thursday
+## 🌩️ Thursday 🔨 
 
 - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
 

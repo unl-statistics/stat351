@@ -14,13 +14,13 @@ August 31-06, 2025
 - Try scraping one or more sites that are interesting to you.
 
 
-## :taco: Tuesday
+## 🌮 Tuesday
 
 - Lab: [Web Scraping](../assignment-repos/01-web-scraping/index.qmd)
 - [Lab goals](../assignment-repos/01-web-scraping/tilt.qmd)
 
 
-## :hammer::lightning: Thursday
+## 🌩️ Thursday 🔨 
 
 - Lab: [Web Scraping](../assignment-repos/01-web-scraping/index.qmd)
 

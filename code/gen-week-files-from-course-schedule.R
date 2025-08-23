@@ -26,8 +26,8 @@ glue_df <- tibble(
   date = glue_data(plandf, '{format(start, "%B %d")}-{format(end, "%d, %Y")}'),
   reading = glue_na(plandf, reading, "## 📖 Reading\n\n{reading}"),
   prepare = glue_na(plandf, prepare, "## 🥣 Prepare for class\n\n{prepare}"),
-  class1 = glue_na(plandf, class1, "## :taco: Tuesday\n\n{class1}"),
-  class2 = glue_na(plandf, class2, "## :hammer::lightning: Thursday\n\n{class2}"),
+  class1 = glue_na(plandf, class1, "## 🌮 Tuesday\n\n{class1}"),
+  class2 = glue_na(plandf, class2, "## 🌩️ Thursday 🔨 \n\n{class2}"),
   assignments = glue_na(plandf, assignments, "##  🏋 Practice Your Skills\n\n{assignments}")
 )
 

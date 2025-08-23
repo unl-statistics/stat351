@@ -14,12 +14,12 @@ September 28-04, 2025
 - Find the worst data visualization published by a news organization within the last month and bring it with you to class.
 
 
-## :taco: Tuesday
+## 🌮 Tuesday
 
 - Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
 
 
-## :hammer::lightning: Thursday
+## 🌩️ Thursday 🔨 
 
 - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
 

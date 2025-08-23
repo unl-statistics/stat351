@@ -14,12 +14,12 @@ September 21-27, 2025
 - Find examples of image-based and text-based PDFs
 
 
-## :taco: Tuesday
+## 🌮 Tuesday
 
 - Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
 
 
-## :hammer::lightning: Thursday
+## 🌩️ Thursday 🔨 
 
 - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
 

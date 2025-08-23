@@ -230,8 +230,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-09.html#taco-tuesday",
-    "href": "weeks/week-09.html#taco-tuesday",
+    "objectID": "weeks/week-09.html#tuesday",
+    "href": "weeks/week-09.html#tuesday",
     "title": "Week 9: Linked Interactive Graphics",
     "section": "",
     "text": "Fall Break!",
@@ -241,8 +241,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-09.html#hammerlightning-thursday",
-    "href": "weeks/week-09.html#hammerlightning-thursday",
+    "objectID": "weeks/week-09.html#thursday",
+    "href": "weeks/week-09.html#thursday",
     "title": "Week 9: Linked Interactive Graphics",
     "section": "",
     "text": "Lecture: Interactive Linked Graphics",
@@ -296,8 +296,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-07.html#taco-tuesday",
-    "href": "weeks/week-07.html#taco-tuesday",
+    "objectID": "weeks/week-07.html#tuesday",
+    "href": "weeks/week-07.html#tuesday",
     "title": "Week 7: Dynamic Communication with Shiny",
     "section": "",
     "text": "Lecture: Shiny",
@@ -307,8 +307,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-07.html#hammerlightning-thursday",
-    "href": "weeks/week-07.html#hammerlightning-thursday",
+    "objectID": "weeks/week-07.html#thursday",
+    "href": "weeks/week-07.html#thursday",
     "title": "Week 7: Dynamic Communication with Shiny",
     "section": "",
     "text": "Lab: Shiny Applets",
@@ -362,8 +362,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-05.html#taco-tuesday",
-    "href": "weeks/week-05.html#taco-tuesday",
+    "objectID": "weeks/week-05.html#tuesday",
+    "href": "weeks/week-05.html#tuesday",
     "title": "Week 5: PDF Tools",
     "section": "",
     "text": "Lecture: PDF Tools",
@@ -373,8 +373,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-05.html#hammerlightning-thursday",
-    "href": "weeks/week-05.html#hammerlightning-thursday",
+    "objectID": "weeks/week-05.html#thursday",
+    "href": "weeks/week-05.html#thursday",
     "title": "Week 5: PDF Tools",
     "section": "",
     "text": "Lab: PDF/OCR",
@@ -417,8 +417,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-03.html#taco-tuesday",
-    "href": "weeks/week-03.html#taco-tuesday",
+    "objectID": "weeks/week-03.html#tuesday",
+    "href": "weeks/week-03.html#tuesday",
     "title": "Week 3: Record-based Data and List Processing",
     "section": "",
     "text": "Lecture: Record based Data and List Processing",
@@ -428,8 +428,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-03.html#hammerlightning-thursday",
-    "href": "weeks/week-03.html#hammerlightning-thursday",
+    "objectID": "weeks/week-03.html#thursday",
+    "href": "weeks/week-03.html#thursday",
     "title": "Week 3: Record-based Data and List Processing",
     "section": "",
     "text": "Lab: Parsing XML Files",
@@ -483,8 +483,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-01.html#taco-tuesday",
-    "href": "weeks/week-01.html#taco-tuesday",
+    "objectID": "weeks/week-01.html#tuesday",
+    "href": "weeks/week-01.html#tuesday",
     "title": "Week 1: Intro & HTML Primer",
     "section": "",
     "text": "Discussion: Syllabus",
@@ -494,8 +494,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-01.html#hammerlightning-thursday",
-    "href": "weeks/week-01.html#hammerlightning-thursday",
+    "objectID": "weeks/week-01.html#thursday",
+    "href": "weeks/week-01.html#thursday",
     "title": "Week 1: Intro & HTML Primer",
     "section": "",
     "text": "Lecture: HTML/XML primer",
@@ -564,7 +564,7 @@
     "href": "syllabus.html#course-components",
     "title": "Syllabus - Stat 351",
     "section": "3.2 Course Components",
-    "text": "3.2 Course Components\n\n3.2.1 Reading Quizzes 📖\nYou will have weekly reading assignments which introduce the weekly focus area and provide different perspectives on the material. Some of these perspectives will be covered in class lectures and activities, but some will not and are provided to expose you to different approaches and opinions.\nIn order to motivate the importance of doing the weekly reading before class, you will be given a weekly reading quiz on Canvas which covers the requisite material. These quizzes will be due just before the first class of the week.\n\n\n3.2.2 Homework/Lab Assignments 💻\nWeekly formative assignments (assignments meant to help you practice skills) will be given throughout the semester.\n\nYou will typically have one week to work on each of the assignments.\nAssignments must be submitted in the file format specified, and should run or compile as submitted for credit to be given.\nI will attempt to grade formative assignments within a week of the specified due date.\nThe assignment due date in Canvas will be set to at least 48 hours before the hard deadline for assignment submission. This provides an implicit “grace period” for assignment submission. No additional extensions will be provided.\n\n\n\n3.2.3 Screencast\nYou will produce a screencast which demonstrates your skills in data acquisition and data visualization. This project will be submitted around midterms.\n\n\n3.2.4 Final Exam\nA final exam (format TBD) will be used to assess your ability to meet the learning objectives for the course. The exam will be due during the scheduled final exam period for the course (Monday, December 15). It is possible that a take-home portion of the exam may be initially assigned during the last week of classes.",
+    "text": "3.2 Course Components\n\n3.2.1 Reading Quizzes 📖\nYou will have weekly reading assignments which introduce the weekly focus area and provide different perspectives on the material. Some of these perspectives will be covered in class lectures and activities, but some will not and are provided to expose you to different approaches and opinions.\nIn order to motivate the importance of doing the weekly reading before class, you will be given a weekly reading quiz in class which covers the requisite material.\n\n\n3.2.2 Homework/Lab Assignments 💻\nWeekly formative assignments (assignments meant to help you practice skills) will be given throughout the semester.\n\nYou will typically have one week to work on each of the assignments.\nAssignments must be submitted in the file format specified, and should run or compile as submitted for credit to be given.\nI will attempt to grade formative assignments within a week of the specified due date.\nThe assignment due date in Canvas will be set to at least 48 hours before the hard deadline for assignment submission. This provides an implicit “grace period” for assignment submission. No additional extensions will be provided.\n\n\n\n3.2.3 Screencast\nYou will produce a screencast which demonstrates your skills in data acquisition and data visualization. This project will be submitted around midterms.\n\n\n3.2.4 Final Exam\nA final exam (format TBD) will be used to assess your ability to meet the learning objectives for the course. The exam will be due during the scheduled final exam period for the course (Monday, December 15). It is possible that a take-home portion of the exam may be initially assigned during the last week of classes.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -725,8 +725,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-02.html#taco-tuesday",
-    "href": "weeks/week-02.html#taco-tuesday",
+    "objectID": "weeks/week-02.html#tuesday",
+    "href": "weeks/week-02.html#tuesday",
     "title": "Week 2: Web Scraping",
     "section": "",
     "text": "Lab: Web Scraping\nLab goals",
@@ -736,8 +736,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-02.html#hammerlightning-thursday",
-    "href": "weeks/week-02.html#hammerlightning-thursday",
+    "objectID": "weeks/week-02.html#thursday",
+    "href": "weeks/week-02.html#thursday",
     "title": "Week 2: Web Scraping",
     "section": "",
     "text": "Lab: Web Scraping",
@@ -780,8 +780,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-04.html#taco-tuesday",
-    "href": "weeks/week-04.html#taco-tuesday",
+    "objectID": "weeks/week-04.html#tuesday",
+    "href": "weeks/week-04.html#tuesday",
     "title": "Week 4: Application Programming Interfaces",
     "section": "",
     "text": "Lecture: API requests",
@@ -791,8 +791,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-04.html#hammerlightning-thursday",
-    "href": "weeks/week-04.html#hammerlightning-thursday",
+    "objectID": "weeks/week-04.html#thursday",
+    "href": "weeks/week-04.html#thursday",
     "title": "Week 4: Application Programming Interfaces",
     "section": "",
     "text": "Lab: APIs",
@@ -846,8 +846,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-06.html#taco-tuesday",
-    "href": "weeks/week-06.html#taco-tuesday",
+    "objectID": "weeks/week-06.html#tuesday",
+    "href": "weeks/week-06.html#tuesday",
     "title": "Week 6: Using Appropriate Graphics",
     "section": "",
     "text": "Lecture: Appropriate Graphics",
@@ -857,8 +857,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-06.html#hammerlightning-thursday",
-    "href": "weeks/week-06.html#hammerlightning-thursday",
+    "objectID": "weeks/week-06.html#thursday",
+    "href": "weeks/week-06.html#thursday",
     "title": "Week 6: Using Appropriate Graphics",
     "section": "",
     "text": "Lab: Appropriate Graphics",
@@ -912,8 +912,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-08.html#taco-tuesday",
-    "href": "weeks/week-08.html#taco-tuesday",
+    "objectID": "weeks/week-08.html#tuesday",
+    "href": "weeks/week-08.html#tuesday",
     "title": "Week 8: Interactive JavaScript Graphics",
     "section": "",
     "text": "Lecture: Interactive Graphics using Plotly and Observable",
@@ -923,8 +923,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-08.html#hammerlightning-thursday",
-    "href": "weeks/week-08.html#hammerlightning-thursday",
+    "objectID": "weeks/week-08.html#thursday",
+    "href": "weeks/week-08.html#thursday",
     "title": "Week 8: Interactive JavaScript Graphics",
     "section": "",
     "text": "Lab: Interactive Graphics with Plotly and Observable",
@@ -956,8 +956,8 @@
     ]
   },
   {
-    "objectID": "weeks/week-10.html#taco-tuesday",
-    "href": "weeks/week-10.html#taco-tuesday",
+    "objectID": "weeks/week-10.html#tuesday",
+    "href": "weeks/week-10.html#tuesday",
     "title": "Week 10: Approaches to Big Data",
     "section": "",
     "text": "Lecture: Computers and Data Storage Trade-Offs",
@@ -985,15 +985,15 @@
     "text": "November 23-29, 2025\n\n\n\nNo Class! Have a nice break!\n\n\n\n\n\nHappy Turkey Day! :turkey:"
   },
   {
-    "objectID": "weeks/week-14.html#taco-tuesday",
-    "href": "weeks/week-14.html#taco-tuesday",
+    "objectID": "weeks/week-14.html#tuesday",
+    "href": "weeks/week-14.html#tuesday",
     "title": "Week 14: Thanksgiving",
     "section": "",
     "text": "No Class! Have a nice break!"
   },
   {
-    "objectID": "weeks/week-14.html#hammerlightning-thursday",
-    "href": "weeks/week-14.html#hammerlightning-thursday",
+    "objectID": "weeks/week-14.html#thursday",
+    "href": "weeks/week-14.html#thursday",
     "title": "Week 14: Thanksgiving",
     "section": "",
     "text": "Happy Turkey Day! :turkey:"

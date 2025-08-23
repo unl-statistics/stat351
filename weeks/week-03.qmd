@@ -12,12 +12,12 @@ September 07-13, 2025
 
 
 
-## :taco: Tuesday
+## 🌮 Tuesday
 
 - Lecture: [Record based Data and List Processing](../slides/03-01-lists.qmd)
 
 
-## :hammer::lightning: Thursday
+## 🌩️ Thursday 🔨 
 
 - Lab: [Parsing XML Files](../assignment-repos/02-list-processing/index.qmd)
 

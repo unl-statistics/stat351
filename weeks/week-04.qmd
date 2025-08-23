@@ -14,12 +14,12 @@ September 14-20, 2025
 -
 
 
-## :taco: Tuesday
+## 🌮 Tuesday
 
 - Lecture: [API requests](../slides/04-01-apis.qmd)
 
 
-## :hammer::lightning: Thursday
+## 🌩️ Thursday 🔨 
 
 - Lab: [APIs](../assignment-repos/04-apis/index.qmd)
 

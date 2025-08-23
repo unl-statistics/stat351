@@ -16,12 +16,12 @@ August 24-30, 2025
 - Print out and bring cheat sheets for R and python (if you need them)
 
 
-## :taco: Tuesday
+## 🌮 Tuesday
 
 - Discussion: Syllabus
 
 
-## :hammer::lightning: Thursday
+## 🌩️ Thursday 🔨 
 
 - Lecture: [HTML/XML primer](../slides/01-02-html-xml-primer.qmd)
 
