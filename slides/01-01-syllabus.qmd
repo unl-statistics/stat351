@@ -1,4 +1,147 @@
 ---
 title: "Syllabus"
-format: revealjs
+subtitle: "![](deps/rock-cpu-thinking.webp){width='50%' fig-alt='daisyowl, @daisyowl if you ever code something that \"feels like a hack but it works,\" just remember that a CPU is literally a rock that we tricked into thinking. Reply: daisyowl, @daisyowl    not to oversimplify: first you have to flatten the rock and put lightning inside it.'}"
+format: 
+    revealjs:
+        navigation-mode: vertical
+        logo: deps/unl/N.svg
+        theme: deps/unl/inverse.scss
+        css: deps/unl/styles.css
+        includes:
+          in_header: deps/unl/header.html
+        lib_dir: libs
 ---
+
+# Goals for Today
+
+- Syllabus  Q&A
+
+- Make sure computers are set up with R, python, quarto, RStudio, and git
+
+- Check that git works
+
+# Syllabus
+
+## Contact Info
+
+- Email: [susan.vanderplas@unl.edu](mailto:susan.vanderplas@unl.edu?subject=Stat251)
+
+- Office: 343D Hardin Hall North Wing
+
+- Office Hours:     
+[https://calendly.com/drvanderplas/officehours](https://calendly.com/drvanderplas/officehours)    
+[Self-serve, by Zoom unless you specify otherwise.]{.small}
+
+
+## Tentative Schedule
+
+```{r schedule}
+#| echo: false
+#| warning: false
+#| message: false
+#| eval: true
+#| fig-pos: 'h'
+source("../schedule.R", chdir = T)
+schedule |>
+  tidyr::replace_na(list("Important Dates" = "")) |>
+knitr::kable(caption = "Tentative schedule of class topics & project due dates", format = "simple")
+```
+
+## Course Rhythm
+
+| |  S |  S |  M |  T |  W |  R |  F |
+| -- | -- | -- | -- | -- | -- | -- | -- | -- |
+| | Week before | Week Start | | | | | 
+| Textbook | Skim | Read | Work Examples | Reading Quiz | Assignment-focused review | Review difficult concepts | Summarize important concepts | |
+| Homework | | Accept assignment & pull | Read assignment | Work in class | Work at home (if necessary) | Work in class | Submit assignment | 
+
+## Grading
+
+
+| Assignments                     | Weight |
+|---------------------------------|--------|
+| Reading Quizzes & Participation | 10%    |
+| Homework/Labs                   | 50%    |
+| Screencast                      | 20%    |
+| Final Exam                      | 20%    |
+
+## Grading
+
+| Letter grade | X +    | X    | X -  |
+|--------------|--------|------|------|
+| A            | 96.5   | 93.5 | 89.5 |
+| B            | 86.5   | 83.5 | 79.5 |
+| C            | 76.5   | 73.5 | 69.5 |
+| D            | 66.5   | 63.5 | 60.5 |
+| F            | \<60.5 |      |      |
+
+
+## Major Assignments
+
+- Screencast 
+  - guidelines available by Week 4
+
+- Final Exam: 
+  
+  - In class component + take-home component
+  
+  - Take-home will happen during "dead week"
+  
+  - In class portion during final exam period
+
+
+## AI Use Policy
+
+- Using AI to write code (Don't!)
+
+- Using AI to explain an error (Ok)
+
+- Using AI to write explanations (Don't)
+
+- If you use AI
+  - Document the use, version, input, and output
+  - Provide a diff of your submission vs. the AI output
+  
+## Oral Exams
+
+- I reserve the right to replace any grade with an oral exam on your submission
+
+- Allows me to clarify how much you understand when that isn't clear
+
+- Helps when I write an ambiguous question or you miss a key part of a question
+
+- If you can't explain your code/answer you don't get any credit
+
+
+# Some Things About Me
+
+::: columns
+::: {.column width="69%"}
+![2 kids (and a Ryan)](deps/family.jpg)
+:::
+
+::: {.column  width="31%"}
+::: {layout-nrow=2}
+
+![Ivy "Mischief" Q-tip Vanderplas](deps/Ivy.jpg)
+
+![Edison (Eddie) Eduardo Vanderplas](deps/Eddie.jpg)
+
+:::
+:::
+:::
+
+# Class Picture
+
+![[Image Source](http://www.shutterstock.com/pic-283980695/stock-vector-vector-set-of-different-male-and-female-icons-in-trendy-flat-style-flat-people-faces-icon.html)](deps/prosopagnosia.png){width="80%" fig-alt="A cartoon view of 6 heads showing only gross features such as hair, glasses, and facial hair."}
+
+
+# Preview: Thursday
+
+- Basics of the internet
+
+- HTML
+
+- CSS
+
+- why JavaScript broke the (scrape-able) internet

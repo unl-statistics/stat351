@@ -67,14 +67,14 @@
     "href": "slides/01-02-html-xml-primer.html#example-mathematicians-1",
     "title": "HTML, XML, CSS, and XPath",
     "section": "Example: Mathematicians",
-    "text": "Example: Mathematicians\nNot all HTML nodes have the same attributes/children.\nPreemptive error handling can be helpful. ::: panel-tabset ### R {-}\n\ntry_na &lt;- function(i, fn, ...) {\n    res &lt;- try(fn(i, ...))\n    if( \"try-error\" %in% class(res)) {\n        res &lt;- NA\n    }\n    if(length(res) == 0) {\n        res &lt;- NA\n    }\n    res\n}\n\ntry_na() will return\n\nthe value if one exists,\nNA if the command results in an error\nNA if the result has 0 length\n\nPython\n\ndef try_na(x, expression):\n  # If x is NA, then the result must also be NA\n  # for most HTML-parsing expressions... NOT FOOLPROOF\n  if pd.isna(x):\n    return pd.NA\n  else:\n    try:\n      res = eval(expression, {}, {\"x\": x})\n    except:\n      return pd.NA\n    if res is None: # Tests for an empty return value\n      return pd.NA\n    if len(res) == 0:\n      return pd.NA\n  return res\n\n:::"
+    "text": "Example: Mathematicians\nNot all HTML nodes have the same attributes/children.\nPreemptive error handling can be helpful.\n\nRPython\n\n\n\ntry_na &lt;- function(i, fn, ...) {\n    res &lt;- try(fn(i, ...))\n    if( \"try-error\" %in% class(res)) {\n        res &lt;- NA\n    }\n    if(length(res) == 0) {\n        res &lt;- NA\n    }\n    res\n}\n\ntry_na() will return\n\nthe value if one exists,\nNA if the command results in an error\nNA if the result has 0 length\n\n\n\n\ndef try_na(x, expression):\n  # If x is NA, then the result must also be NA\n  # for most HTML-parsing expressions... NOT FOOLPROOF\n  if pd.isna(x):\n    return pd.NA\n  else:\n    try:\n      res = eval(expression, {}, {\"x\": x})\n    except:\n      return pd.NA\n    if res is None: # Tests for an empty return value\n      return pd.NA\n    if len(res) == 0:\n      return pd.NA\n  return res"
   },
   {
     "objectID": "slides/01-02-html-xml-primer.html#example-mathematicians-2",
     "href": "slides/01-02-html-xml-primer.html#example-mathematicians-2",
     "title": "HTML, XML, CSS, and XPath",
     "section": "Example: Mathematicians",
-    "text": "Example: Mathematicians\n\nRPython\n\n\n\nmath_ppl &lt;- tibble(\n    content = html_text(ppl),\n    link_info = map(ppl, ~try_na(., fn = html_children)),\n    name = map_chr(link_info, ~try_na(., fn = html_text)),\n    name2 = map_chr(link_info, ~try_na(., fn = html_attr, \"title\")),\n    link = map_chr(link_info, ~try_na(., fn = html_attr, \"href\"))\n) |&gt;\n    select(-link_info)\n\nError in xml_text(x, trim = trim) : Unexpected node type\nError in xml_text(x, trim = trim) : Unexpected node type\nError in xml_attr(x, name, default = default) : Unexpected node type\nError in xml_attr(x, name, default = default) : Unexpected node type\nError in xml_attr(x, name, default = default) : Unexpected node type\nError in xml_attr(x, name, default = default) : Unexpected node type\n\nhead(math_ppl)\n\n# A tibble: 6 × 4\n  content                                                      name  name2 link \n  &lt;chr&gt;                                                        &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;\n1 Florence Eliza Allen (1876–1960)                             Flor… Flor… /wik…\n2 Emil Artin (1898–1962)                                       Emil… Emil… /wik…\n3 George David Birkhoff (1884–1944)                            Geor… Geor… /wik…\n4 Maxime Bôcher (1867–1918)                                    Maxi… Maxi… /wik…\n5 Leonard Eugene Dickson (1874–1954), algebra and number theo… Leon… Leon… /wik…\n6 Jesse Douglas (1897–1965), Fields Medalist                   Jess… Jess… /wik…\n\n\n\n\n\ncontent = [try_na(i, \"x.text\") for i in ppl]\nlink_info = [try_na(i, \"x.find('a')\") for i in ppl]\nname = [try_na(i, 'x.text') for i in link_info]\nname2 = [try_na(i, 'x.attrs[\"title\"]') for i in link_info]\nlink = [try_na(i, 'x.attrs[\"href\"]') for i in link_info]\nmath_ppl = pd.DataFrame({'content': content, 'name': name, 'name2': name2, 'link': link})"
+    "text": "Example: Mathematicians\n\nRPython\n\n\n\nmath_ppl &lt;- tibble(\n    content = html_text(ppl),\n    link_info = map(ppl, ~try_na(., fn = html_children)),\n    name = map_chr(link_info, ~try_na(., fn = html_text)),\n    name2 = map_chr(link_info, ~try_na(., fn = html_attr, \"title\")),\n    link = map_chr(link_info, ~try_na(., fn = html_attr, \"href\"))\n) |&gt;\n    select(-link_info)\n\nError in xml_text(x, trim = trim) : Unexpected node type\nError in xml_text(x, trim = trim) : Unexpected node type\nError in xml_attr(x, name, default = default) : Unexpected node type\nError in xml_attr(x, name, default = default) : Unexpected node type\nError in xml_attr(x, name, default = default) : Unexpected node type\nError in xml_attr(x, name, default = default) : Unexpected node type\n\nhead(math_ppl)\n\n# A tibble: 6 × 4\n  content                                                      name  name2 link \n  &lt;chr&gt;                                                        &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;\n1 Florence Eliza Allen (1876–1960)                             Flor… Flor… /wik…\n2 Emil Artin (1898–1962)                                       Emil… Emil… /wik…\n3 George David Birkhoff (1884–1944)                            Geor… Geor… /wik…\n4 Maxime Bôcher (1867–1918)                                    Maxi… Maxi… /wik…\n5 Leonard Eugene Dickson (1874–1954), algebra and number theo… Leon… Leon… /wik…\n6 Jesse Douglas (1897–1965), Fields Medalist                   Jess… Jess… /wik…\n\n\n\n\n\ncontent = [try_na(i, \"x.text\") for i in ppl]\nlink_info = [try_na(i, \"x.find('a')\") for i in ppl]\nname = [try_na(i, 'x.text') for i in link_info]\nname2 = [try_na(i, 'x.attrs[\"title\"]') for i in link_info]\nlink = [try_na(i, 'x.attrs[\"href\"]') for i in link_info]\nmath_ppl = pd.DataFrame({'content': content, 'name': name, 'name2': name2, 'link': link})\n\nmath_ppl.head()\n\n                                             content  ...                          link\n0                   Florence Eliza Allen (1876–1960)  ...    /wiki/Florence_Eliza_Allen\n1                             Emil Artin (1898–1962)  ...              /wiki/Emil_Artin\n2                  George David Birkhoff (1884–1944)  ...         /wiki/George_Birkhoff\n3                          Maxime Bôcher (1867–1918)  ...      /wiki/Maxime_B%C3%B4cher\n4  Leonard Eugene Dickson (1874–1954), algebra an...  ...  /wiki/Leonard_Eugene_Dickson\n\n[5 rows x 4 columns]"
   },
   {
     "objectID": "assignment-repos/05-pdf-parsing/tilt.html",
@@ -696,7 +696,7 @@
     "href": "weeks/week-02.html",
     "title": "Week 2: Web Scraping",
     "section": "",
-    "text": "August 31-06, 2025\n\n\n\nWeb Scraping\n\n\n\n\n\nTry out scraping one or more sites that are interesting to you.\n\n\n\n\n\nLab: Web Scraping\nLab goals\n\n\n\n\n\nLab: Web Scraping\n\n\n\n\n\nLab: Web Scraping\nLab goals",
+    "text": "August 31-06, 2025\n\n\n\nWeb Scraping\n\n\n\n\n\nTry scraping one or more sites that are interesting to you.\n\n\n\n\n\nLab: Web Scraping\nLab goals\n\n\n\n\n\nLab: Web Scraping\n\n\n\n\n\nLab: Web Scraping\nLab goals",
     "crumbs": [
       "Weekly materials",
       "Week 2 - Web Scraping"
@@ -718,7 +718,7 @@
     "href": "weeks/week-02.html#prepare-for-class",
     "title": "Week 2: Web Scraping",
     "section": "",
-    "text": "Try out scraping one or more sites that are interesting to you.",
+    "text": "Try scraping one or more sites that are interesting to you.",
     "crumbs": [
       "Weekly materials",
       "Week 2 - Web Scraping"
@@ -1323,5 +1323,61 @@
     "title": "Lab: PDF Data",
     "section": "3.7 Quality Control",
     "text": "3.7 Quality Control\nIf you were to process the full set of faculty salary data across all departments, what quality control measures would you use to ensure your functions functioned as expected? Explain your answer and your reasoning.\n\n\nYour answer and explanation"
+  },
+  {
+    "objectID": "slides/01-01-syllabus.html#contact-info",
+    "href": "slides/01-01-syllabus.html#contact-info",
+    "title": "Syllabus",
+    "section": "Contact Info",
+    "text": "Contact Info\n\nEmail: susan.vanderplas@unl.edu\nOffice: 343D Hardin Hall North Wing\nOffice Hours:\nhttps://calendly.com/drvanderplas/officehours\nSelf-serve, by Zoom unless you specify otherwise."
+  },
+  {
+    "objectID": "slides/01-01-syllabus.html#tentative-schedule",
+    "href": "slides/01-01-syllabus.html#tentative-schedule",
+    "title": "Syllabus",
+    "section": "Tentative Schedule",
+    "text": "Tentative Schedule\n\n\n\nTentative schedule of class topics & project due dates\n\n\nWeek\nTopic\nImportant Dates\n\n\n\n\n1\nIntro & HTML Primer\n\n\n\n2\nWeb Scraping\n\n\n\n3\nRecord-based Data and List Processing\n\n\n\n4\nApplication Programming Interfaces\n\n\n\n5\nPDF Tools\n\n\n\n6\nUsing Appropriate Graphics\n\n\n\n7\nDynamic Communication with Shiny\n\n\n\n8\nInteractive JavaScript Graphics\n\n\n\n9\nLinked Interactive Graphics\nScreencast Due\n\n\n10\nApproaches to Big Data\nScreencast Peer Reviews Due\n\n\n11\nSQL and SQLite\n\n\n\n12\nApache Arrow\n\n\n\n13\nDuckDB\n\n\n\n14\nThanksgiving\n\n\n\n15\nSpecial Topics\n\n\n\n16\nSpecial Topics\n\n\n\n17\nFinals\nFinal Exam"
+  },
+  {
+    "objectID": "slides/01-01-syllabus.html#course-rhythm",
+    "href": "slides/01-01-syllabus.html#course-rhythm",
+    "title": "Syllabus",
+    "section": "Course Rhythm",
+    "text": "Course Rhythm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nS\nS\nM\nT\nW\nR\nF\n\n\n\n\n\n\nWeek before\nWeek Start\n\n\n\n\n\n\n\n\nTextbook\nSkim\nRead\nWork Examples\nReading Quiz\nAssignment-focused review\nReview difficult concepts\nSummarize important concepts\n\n\n\nHomework\n\nAccept assignment & pull\nRead assignment\nWork in class\nWork at home (if necessary)\nWork in class\nSubmit assignment"
+  },
+  {
+    "objectID": "slides/01-01-syllabus.html#grading",
+    "href": "slides/01-01-syllabus.html#grading",
+    "title": "Syllabus",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nAssignments\nWeight\n\n\n\n\nReading Quizzes & Participation\n10%\n\n\nHomework/Labs\n50%\n\n\nScreencast\n20%\n\n\nFinal Exam\n20%"
+  },
+  {
+    "objectID": "slides/01-01-syllabus.html#grading-1",
+    "href": "slides/01-01-syllabus.html#grading-1",
+    "title": "Syllabus",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nLetter grade\nX +\nX\nX -\n\n\n\n\nA\n96.5\n93.5\n89.5\n\n\nB\n86.5\n83.5\n79.5\n\n\nC\n76.5\n73.5\n69.5\n\n\nD\n66.5\n63.5\n60.5\n\n\nF\n&lt;60.5"
+  },
+  {
+    "objectID": "slides/01-01-syllabus.html#major-assignments",
+    "href": "slides/01-01-syllabus.html#major-assignments",
+    "title": "Syllabus",
+    "section": "Major Assignments",
+    "text": "Major Assignments\n\nScreencast\n\nguidelines available by Week 4\n\nFinal Exam:\n\nIn class component + take-home component\nTake-home will happen during “dead week”\nIn class portion during final exam period"
+  },
+  {
+    "objectID": "slides/01-01-syllabus.html#ai-use-policy",
+    "href": "slides/01-01-syllabus.html#ai-use-policy",
+    "title": "Syllabus",
+    "section": "AI Use Policy",
+    "text": "AI Use Policy\n\nUsing AI to write code (Don’t!)\nUsing AI to explain an error (Ok)\nUsing AI to write explanations (Don’t)\nIf you use AI\n\nDocument the use, version, input, and output\nProvide a diff of your submission vs. the AI output"
+  },
+  {
+    "objectID": "slides/01-01-syllabus.html#oral-exams",
+    "href": "slides/01-01-syllabus.html#oral-exams",
+    "title": "Syllabus",
+    "section": "Oral Exams",
+    "text": "Oral Exams\n\nI reserve the right to replace any grade with an oral exam on your submission\nAllows me to clarify how much you understand when that isn’t clear\nHelps when I write an ambiguous question or you miss a key part of a question\nIf you can’t explain your code/answer you don’t get any credit"
   }
 ]

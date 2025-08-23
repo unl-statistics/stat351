@@ -2,10 +2,19 @@
 title: "HTML, XML, CSS, and XPath"
 subtitle: "The Building Blocks of the Internet"
 echo: true
+format: 
+    revealjs:
+        navigation-mode: vertical
+        logo: deps/unl/N.svg
+        theme: deps/unl/inverse.scss
+        css: deps/unl/styles.css
+        includes:
+          in_header: deps/unl/header.html
+        lib_dir: libs
 ---
 
 ## Why?
-
+::: incremental
 - So much data is online!
 - But, ...
     - Manually copying information is error prone
@@ -13,6 +22,7 @@ echo: true
     - I'm lazy
 
 - We can automate gathering data using scripts
+:::
 
 ## Examples {.smaller}
 
@@ -115,6 +125,7 @@ Construct a CSS selector that will get all mathematicians from [this list](https
 ## Example: Mathematicians
 
 ::: panel-tabset
+
 ### R {-}
 
 ```{r}
@@ -155,7 +166,9 @@ ppl[0]
 Not all HTML nodes have the same attributes/children.
 
 Preemptive error handling can be helpful.
+
 ::: panel-tabset
+
 ### R {-}
 
 ```{r}
@@ -227,6 +240,10 @@ name = [try_na(i, 'x.text') for i in link_info]
 name2 = [try_na(i, 'x.attrs["title"]') for i in link_info]
 link = [try_na(i, 'x.attrs["href"]') for i in link_info]
 math_ppl = pd.DataFrame({'content': content, 'name': name, 'name2': name2, 'link': link})
+
+math_ppl.head()
 ```
 
 :::
+
+

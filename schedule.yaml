@@ -34,7 +34,7 @@ schedule:
     reading: |
         - [Web Scraping](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/03-web-scraping.html)
     prepare: |
-        - Try out scraping one or more sites that are interesting to you.
+        - Try scraping one or more sites that are interesting to you.
     class1: |
         - Lab: [Web Scraping](../assignment-repos/01-web-scraping/index.qmd)
         - [Lab goals](../assignment-repos/01-web-scraping/tilt.qmd)

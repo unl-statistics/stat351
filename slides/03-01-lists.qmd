@@ -1,5 +1,14 @@
 ---
-title: "Record-Based Data and List Processing"
-format: revealjs
+title: "Record and Hierarchical Data"
+format: 
+    revealjs:
+        navigation-mode: vertical
+        logo: deps/unl/N.svg
+        theme: deps/unl/inverse.scss
+        css: deps/unl/styles.css
+        includes:
+          in_header: deps/unl/header.html
+        lib_dir: libs
 ---
 
+## 
