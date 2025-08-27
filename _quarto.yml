@@ -18,6 +18,7 @@ project:
     - slides/*.qmd
 
 engine: knitr
+port: 3872
 website:
   page-navigation: true
   title: "STAT 351 - Fall 2025"
