@@ -2,15 +2,7 @@
 title: "HTML, XML, CSS, and XPath"
 subtitle: "The Building Blocks of the Internet"
 echo: true
-format: 
-    revealjs:
-        navigation-mode: vertical
-        logo: deps/unl/N.svg
-        theme: deps/unl/inverse.scss
-        css: deps/unl/styles.css
-        includes:
-          in_header: deps/unl/header.html
-        lib_dir: libs
+format: revealjs
 ---
 
 ## Why?
@@ -73,6 +65,7 @@ format:
 
 ::: columns
 ::: column
+### HTML
 
 - Tags **display** information
 - Tags are pre-defined
@@ -82,6 +75,8 @@ format:
 - Ignores white-space
 :::
 ::: column
+### XML
+
 - Tags **describe** information
 - Data schema defines tags
 - Tags must be closed    
@@ -122,12 +117,39 @@ format:
 Construct a CSS selector that will get all mathematicians from [this list](https://en.wikipedia.org/wiki/List_of_mathematicians_born_in_the_19th_century) without any extra links.
 
 
-## Example: Mathematicians
+# Reading and Working with HTML files in R and Python
+
+## Common Libraries 
+
+::: columns
+::: {.column .r-fit-text}
+### R
+
+- `rvest` - higher-level, process HTML 
+  - Mostly built around `xml2`
+- `xml2` - lower-level, navigate/extract HTML elements
+
+- `httr2` - higher-level, talk to web servers
+- `curl` - lower-level, talk to web servers
+
+- `chromote` - remote control a browser
+
+:::
+
+:::  {.column .r-fit-text}
+### Python
+
+- `bs4` (Beautiful Soup) - processing HTML
+- `urllib` - work with URLs (combining, parsing)
+- `requests` - talk to web servers
+- `selenium` - remote control a browser
+:::
+:::
+
+## Strategy: Set a User Agent
 
 ::: panel-tabset
-
 ### R {-}
-
 ```{r}
 library(xml2)
 library(rvest)
@@ -136,6 +158,36 @@ library(dplyr)
 library(tibble)
 
 url<-"https://en.wikipedia.org/wiki/List_of_mathematicians_born_in_the_19th_century"
+
+read_html(url)
+```
+
+### Python {-}
+
+```{python}
+#| error: true
+from bs4 import BeautifulSoup, SoupStrainer
+import requests
+import pandas as pd
+
+url = "https://en.wikipedia.org/wiki/List_of_mathematicians_born_in_the_19th_century"
+# If at first you don't succeed, 
+# try adding a user-agent
+headers = {'user-agent':'python-data-programming, svanderplas2-at-unl-dot-edu'}
+req = requests.get(url, headers=headers)
+page = req.content
+page
+```
+
+:::
+
+## Accessing Specific Nodes
+
+::: panel-tabset
+
+### R {-}
+
+```{r}
 ppl <- read_html(url) |>
     html_nodes(".mw-body-content ul li")
 ppl[[1]]
@@ -143,17 +195,9 @@ ppl[[1]]
 
 ### Python {-}
 
+First use bs4.BeautifulSoup to make the HTML easy to work with, then find the nodes we care about.
+
 ```{python}
-from bs4 import BeautifulSoup, SoupStrainer
-import urllib.request
-import pandas as pd
-
-url = "https://en.wikipedia.org/wiki/List_of_mathematicians_born_in_the_19th_century"
-req = urllib.request.Request(url)
-page_bytearray = urllib.request.urlopen(req)
-page = page_bytearray.read()
-page_bytearray.close()
-
 soup = BeautifulSoup(page)
 ppl = soup.select(".mw-body-content ul li")
 ppl[0]
@@ -161,12 +205,11 @@ ppl[0]
 
 :::
 
-## Example: Mathematicians
+## Strategy: Error Handling
 
-Not all HTML nodes have the same attributes/children.
 
-Preemptive error handling can be helpful.
-
+:::: columns
+::: column
 ::: panel-tabset
 
 ### R {-}
@@ -183,12 +226,6 @@ try_na <- function(i, fn, ...) {
     res
 }
 ```
-
-`try_na()` will return
-
-- the value if one exists, 
-- NA if the command results in an error
-- NA if the result has 0 length
 
 ### Python {-}
 
@@ -212,9 +249,25 @@ def try_na(x, expression):
 ```
 
 :::
+:::
 
+::: column
 
-## Example: Mathematicians
+Not all HTML nodes have the same attributes/children.
+
+Preemptive error handling can be helpful.
+
+`try_na()` will return
+
+- the value if one exists, 
+- NA if the command results in an error
+- NA if the result has 0 length
+
+:::
+::::
+
+## Strategy: Use Functions {.scrollable}
+[(like, all the time)]{.emph .cerulean}
 
 ::: panel-tabset
 ### R {-}
@@ -245,5 +298,175 @@ math_ppl.head()
 ```
 
 :::
+
+
+## Know your HTTP error codes
+
+<iframe width="850" height="500" src="https://http.cat/" title="HTTP Cats"></iframe>
+
+
+
+# How JavaScript Ruined the Internet
+
+## Once Upon a Time
+
+We wrote webpages the hard way...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3p3Y2R4ZW56cm93N3pieTRydm12dzVxNjZxamUwc3cxb3RwbDM0MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11XcgX9MWV3a8M/giphy.gif){fig-alt="Moses, carrying three stone tablets, says 'The lord Jehovah has given unto you these fifteen...'. He drops one and says 'Oy.'"}
+
+
+## Once Upon a Time
+
+::: columns
+::: column
+```
+<!DOCTYPE html>
+<head></head>
+<body>
+<h1>Susan's webpage</h1>
+<p>My favorite things...</p>
+<ul>
+<li>Rainbows</li>
+<li>Puppies</li>
+<li>Frosting</li>
+</ul>
+</body>
+</html>
+```
+::: 
+::: column
+
+![](images/1999-html.png){fig-alt="A screenshot of the rendered website using the code on the left"}
+
+[Link](images/1999.html)
+:::
+:::
+
+## Ooh, we can style stuff!
+
+::: columns
+::: column
+```
+<!DOCTYPE html>
+<head> <style>
+body{ background-image: url('rainbows.jpg');}
+</style> </head>
+<body>
+<h1 style="color: #ffffff;">Susan's webpage</h1>
+<p style="color: #ffffff;">My favorite things...</p>
+<ul  style="color: #ffffff;">
+<li>Rainbows</li><li>Puppies</li>
+<li>Frosting</li></ul>
+</body>
+</html>
+```
+:::
+::: column
+
+![](images/2000-html.png){fig-alt="A screenshot of the rendered website using the code on the left"}
+
+[Link](images/2000.html)
+:::
+:::
+
+## CSS to simplify styling
+
+::: columns
+::: column
+
+```
+<html>
+<head>
+<link rel="stylesheet" href="mystyles.css"/>
+</head>
+<body>
+<h1>Susan's webpage</h1>
+<p>My favorite things...</p>
+<ul><li>Rainbows</li><li>Puppies</li><li>Frosting</li></ul>
+</body>
+</html>
+```
+[CSS was actually introduced in 1996, but it took a while to catch on.]{.emph .purple}
+:::
+::: column
+
+![](images/2002-html.png){fig-alt="A screenshot of the rendered website using the code on the left"}
+
+[Link](images/2002.html)
+:::
+:::
+
+## Then came JavaScript!
+
+::: columns
+::: column
+```
+<html>
+<head>
+<link rel="stylesheet" href="mystyles.css"/>
+</head>
+<body>
+<script src="test.js"></script>
+<h1>Susan's webpage</h1>
+<p>My favorite things...</p>
+<ul><li>Rainbows</li><li>Puppies</li><li>Frosting</li></ul>
+</body>
+</html>
+```
+
+
+We were really annoying!
+
+:::
+::: column
+![](images/2004-html.gif){fig-alt="A gif stepping through the javascript pop-ups which say 'hello, my name is Susan', 'This is my website', 'What is your name? A: John Doe', 'Hello John Doe!', before proceeding to the main site page."}
+
+:::
+:::
+
+## Fast Forward 15 years
+
+Javascript is used to
+
+- add new elements to HTML
+- provide animations
+- create graphics
+- actually process information and write data to servers
+
+
+It's a full-fledged programming language!
+
+
+## Zeta Tech Jobs - 😈 JS
+
+::: columns
+::: column
+
+[Site](https://www.zeta.tech/in/careers/work-with-us/?department=dataanalytics)
+
+```{r}
+library(httr)
+url <- "https://www.zeta.tech/in/careers/work-with-us/?department=dataanalytics"
+ua <- "Mozilla/5.0 (platform; rv:gecko-version) Gecko/gecko-trail Firefox/firefox-version"
+page <- GET(url, user_agent(ua)) |>
+  read_html()
+
+page |> html_nodes(".link")
+```
+:::
+::: column
+![](images/zeta-jobs-demo.png){fig-alt="A screenshot of the Zeta jobs site with selectorgadget activated, showing that .link selects 118 objects within the page, in contrast to the 0 found with html_nodes."}
+:::
+:::
+
+[[Original Source of this Example](https://www.reddit.com/r/learnpython/comments/16k5itz/scraping_dynamic_site_with_python/)]{.bottom}
+
+## Options for Dynamic Pages
+
+1. Find a different source for the data
+
+2. See if there's an API call under the hood
+
+3. Use browser emulation via selenium/chromote
 
 

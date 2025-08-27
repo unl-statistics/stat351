@@ -105,6 +105,10 @@ $theme-colors: (
   background-color: #001226;
 	color: #d00000;
 }
+.reveal section.inverse code {
+  background-color: #001226;
+	color: #33daff;
+}
 
 /* Other font formatting stuff */
 .reveal section .emph { font-family: 'Handlee', cursive; }
