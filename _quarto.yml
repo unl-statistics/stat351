@@ -35,10 +35,10 @@ website:
 
   page-footer:
     left: "&copy; Copyright 2025, Susan Vanderplas"
-    background: "$secondary"
+    background: "$cyan"
 
   sidebar:
-    background: "$secondary"
+    background: "$cyan"
     aria-label: "Sidebar nagivation"
     logo: "images/logo.png"
     pinned: true
