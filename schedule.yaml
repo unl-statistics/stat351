@@ -58,6 +58,7 @@ schedule:
     assignments: |
       - Lab: [Parsing XML Files](../assignment-repos/02-list-processing/index.qmd)
       - [Lab goals](../assignment-repos/02-list-processing/tilt.qmd)
+      - [Submit a screencast topic proposal](../assignment-repos/screencast/Dataset-Topics.qmd)
 
   - week: 4
     name: Application Programming Interfaces
@@ -120,6 +121,7 @@ schedule:
     assignments: |
       - Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
       - [Lab goals](../assignment-repos/07-shiny-interactive/tilt.qmd)
+      - [Screencast pseudocode due](../assignment-repos/screencast/index.qmd)
   - week: 8
     name: Interactive JavaScript Graphics
     start: 2025-10-12
@@ -150,7 +152,7 @@ schedule:
     class2: |
       - Lecture: [Interactive Linked Graphics](../slides/08-01-linked-graphics.qmd)
     assignments: |
-      - Screencast due!
+      - [Screencast due!](../assignment-repos/screencast/index.qmd)
   - week: 10
     name: Approaches to Big Data
     start: 2025-10-26

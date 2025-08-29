@@ -28,4 +28,5 @@ October 05-11, 2025
 
 - Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
 - [Lab goals](../assignment-repos/07-shiny-interactive/tilt.qmd)
+- [Screencast pseudocode due](../assignment-repos/screencast/index.qmd)
 

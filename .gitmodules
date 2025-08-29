@@ -10,3 +10,6 @@
 [submodule "assignment-repos/05-pdf-parsing"]
 	path = assignment-repos/05-pdf-parsing
 	url = git@github.com:stat-assignments/pdf-data.git
+[submodule "assignment-repos/screencast"]
+	path = assignment-repos/screencast
+	url = git@github.com:stat-assignments/public-data-screencast.git
