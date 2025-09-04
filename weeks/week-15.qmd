@@ -1,4 +1,4 @@
-# Week 15: Special Topics
+# Week 15: DuckDB
 
 
 

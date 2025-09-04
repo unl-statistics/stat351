@@ -1,4 +1,4 @@
-# Week 4: Application Programming Interfaces
+# Week 4: Record-based Data and List Processing
 
 
 
@@ -6,26 +6,25 @@ September 14-20, 2025
 
 ## 📖 Reading
 
-- [Application Programming Interfaces (APIs)](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/05-APIs.html)
+- [Functional Programming](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/08-functional-prog.html)
+- [Record-based Data and List Processing](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/04-xml-json-list-processing.html)
 
 
-## 🥣 Prepare for class
-
--
 
 
 ## 🌮 Tuesday
 
-- Lecture: [API requests](../slides/04-01-apis.qmd)
+- Lecture: [Record based Data and List Processing](../slides/03-01-lists.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [APIs](../assignment-repos/04-apis/index.qmd)
+- Lab: [Parsing XML Files](../assignment-repos/02-list-processing/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [APIs](../assignment-repos/04-apis/index.qmd)
-- [Lab goals](../assignment-repos/04-apis/tilt.qmd)
+- Lab: [Parsing XML Files](../assignment-repos/02-list-processing/index.qmd)
+- [Lab goals](../assignment-repos/02-list-processing/tilt.qmd)
+- [Submit a screencast topic proposal](../assignment-repos/screencast/Dataset-Topics.qmd)
 

@@ -1,4 +1,4 @@
-# Week 7: Dynamic Communication with Shiny
+# Week 7: Using Appropriate Graphics
 
 
 
@@ -6,27 +6,26 @@ October 05-11, 2025
 
 ## 📖 Reading
 
-- [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
+- Appropriate Graphics
 
 
 ## 🥣 Prepare for class
 
-- Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
+- Find the worst data visualization published by a news organization within the last month and bring it with you to class.
 
 
 ## 🌮 Tuesday
 
-- Lecture: [Shiny](../slides/06-01-shiny.qmd)
+- Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
-- [Lab goals](../assignment-repos/07-shiny-interactive/tilt.qmd)
-- [Screencast pseudocode due](../assignment-repos/screencast/index.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+- [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
 

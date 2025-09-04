@@ -1,4 +1,4 @@
-# Week 11: SQL and SQLite
+# Week 11: Approaches to Big Data
 
 
 
@@ -8,6 +8,9 @@ November 02-08, 2025
 
 
 
+## 🌮 Tuesday
+
+- Lecture: [Computers and Data Storage Trade-Offs](../slides/10-01-big-data-tradeoffs.qmd)
 
 
 

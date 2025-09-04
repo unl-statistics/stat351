@@ -1,4 +1,4 @@
-# Week 8: Interactive JavaScript Graphics
+# Week 8: Dynamic Communication with Shiny
 
 
 
@@ -6,29 +6,27 @@ October 12-18, 2025
 
 ## 📖 Reading
 
-- [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Plotly)
-- [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
-- [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
+- [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
 
 
 ## 🥣 Prepare for class
 
-- [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
-- [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
+- Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
 
 
 ## 🌮 Tuesday
 
-- Lecture: [Interactive Graphics using Plotly and Observable](../slides/08-01-interactive-graphics.qmd)
+- Lecture: [Shiny](../slides/06-01-shiny.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
+- Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
-- [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
+- Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
+- [Lab goals](../assignment-repos/07-shiny-interactive/tilt.qmd)
+- [Screencast pseudocode due](../assignment-repos/screencast/index.qmd)
 
