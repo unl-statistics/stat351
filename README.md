@@ -22,10 +22,6 @@ At the end of this course, students should know how to:
 	- Discussing the trade offs between different tools for data management and different approaches to data storage.
 	- Design an analysis strategy for large data which does not fit into computer memory by selecting from strategies such as sampling and split-apply-combine. 
 
-# Timeline
-See [schedule.xlsx](schedule.xlsx)
-
-
 # Course site information
 
 - Configured in _quarto.yml
