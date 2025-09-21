@@ -92,9 +92,24 @@ schedule:
       - [Lab goals](../assignment-repos/04-apis/tilt.qmd)
 
   - week: 6
-    name: PDF Tools
+    name: Application Programming Interfaces
     start: 2025-09-28
     end: 2025-10-04
+    reading: |
+      - [Application Programming Interfaces (APIs)](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/05-APIs.html)
+    prepare: |
+      -
+    class1: |
+      - Lecture: [API requests](../slides/04-01-apis.qmd)
+    class2: |
+      - Lab: [APIs](../assignment-repos/04-apis/index.qmd)
+    assignments: |
+      - Lab: [APIs](../assignment-repos/04-apis/index.qmd)
+      - [Lab goals](../assignment-repos/04-apis/tilt.qmd)
+  - week: 7
+    name: PDF Tools
+    start: 2025-10-05
+    end: 2025-10-11
     reading: |
       - [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
     prepare: |
@@ -106,10 +121,25 @@ schedule:
     assignments: |
       - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
       - [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
-  - week: 7
+  - week: 8
+    name: PDF Tools
+    start: 2025-10-12
+    end: 2025-10-18
+    reading: |
+      - [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
+    prepare: |
+      - Find examples of image-based and text-based PDFs
+    class1: |
+      - Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
+    class2: |
+      - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+    assignments: |
+      - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+      - [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
+  - week: 9
     name: Using Appropriate Graphics
-    start: 2025-10-05
-    end: 2025-10-11
+    start: 2025-10-19
+    end: 2025-10-25
     reading: |
       - Appropriate Graphics
     prepare: |
@@ -121,26 +151,41 @@ schedule:
     assignments: |
       - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
       - [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
-  - week: 8
-    name: Dynamic Communication with Shiny
-    start: 2025-10-12
-    end: 2025-10-18
-    reading: |
-      - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
-    prepare: |
-      - Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
-    class1: |
-      - Lecture: [Shiny](../slides/06-01-shiny.qmd)
-    class2: |
-      - Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
+
+  - week: 10
+    name: Approaches to Big Data
+    start: 2025-10-26
+    end: 2025-11-01
     assignments: |
-      - Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
-      - [Lab goals](../assignment-repos/07-shiny-interactive/tilt.qmd)
-      - [Screencast pseudocode due](../assignment-repos/screencast/index.qmd)
-  - week: 9
+      - [Screencast due!](../assignment-repos/screencast/index.qmd)
+  - week: 11
+    name: SQL and SQLite
+    start: 2025-11-02
+    end: 2025-11-08
+
+  - week: 12
+    name: Apache Arrow
+    start: 2025-11-09
+    end: 2025-11-15
+
+  - week: 13
+    name: DuckDB
+    start: 2025-11-16
+    end: 2025-11-22
+
+  - week: 14
+    name: Thanksgiving
+    start: 2025-11-23
+    end: 2025-11-29
+    class1: |
+      - No Class! Have a nice break!
+    class2: |
+      - Happy Turkey Day! :turkey:
+
+  - week: 15
     name: Interactive JavaScript Graphics
-    start: 2025-10-19
-    end: 2025-10-25
+    start: 2025-11-30
+    end: 2025-12-06
     reading: |
       - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Plotly)
       - [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
@@ -155,10 +200,10 @@ schedule:
     assignments: |
       - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
       - [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
-  - week: 10
+  - week: 16
     name: Linked Interactive Graphics
-    start: 2025-10-26
-    end: 2025-11-01
+    start: 2025-12-07
+    end: 2025-12-13
     reading: |
       - [Cubble vignette](https://cran.r-project.org/web/packages/cubble/vignettes/cb6interactive.html)
       - mpld3 in python?
@@ -166,55 +211,26 @@ schedule:
       - Fall Break!
     class2: |
       - Lecture: [Interactive Linked Graphics](../slides/08-01-linked-graphics.qmd)
-    assignments: |
-      - [Screencast due!](../assignment-repos/screencast/index.qmd)
-  - week: 11
-    name: Approaches to Big Data
-
-    start: 2025-11-02
-    end: 2025-11-08
-
-    class1: |
-      - Lecture: [Computers and Data Storage Trade-Offs](../slides/10-01-big-data-tradeoffs.qmd)
-
-
-  - week: 12
-    name: SQL and SQLite
-
-    start: 2025-11-09
-    end: 2025-11-15
-
-
-
-
-  - week: 13
-    name: Apache Arrow
-    start: 2025-11-16
-    end: 2025-11-22
-
-
-  - week: 14
-    name: Thanksgiving
-    start: 2025-11-23
-    end: 2025-11-29
-    class1: |
-      - No Class! Have a nice break!
-    class2: |
-      - Happy Turkey Day! :turkey:
-  - week: 15
-    name: DuckDB
-    start: 2025-11-30
-    end: 2025-12-06
-  - week: 16
-    name: Special Topics
-    start: 2025-12-07
-    end: 2025-12-13
   - week: 17
     name: Finals
     start: 2025-12-14
     end: 2025-12-20
     assignments: |
       - Final Exam Due
+  # - week: 8
+  #   name: Dynamic Communication with Shiny
+  #   reading: |
+  #     - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
+  #   prepare: |
+  #     - Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
+  #   class1: |
+  #     - Lecture: [Shiny](../slides/06-01-shiny.qmd)
+  #   class2: |
+  #     - Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
+  #   assignments: |
+  #     - Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
+  #     - [Lab goals](../assignment-repos/07-shiny-interactive/tilt.qmd)
+  #     - [Screencast pseudocode due](../assignment-repos/screencast/index.qmd)
 
 important-course-dates:
   - name: Final Exam

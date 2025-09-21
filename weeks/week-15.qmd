@@ -1,15 +1,34 @@
-# Week 15: DuckDB
+# Week 15: Interactive JavaScript Graphics
 
 
 
 November 30-06, 2025
 
+## 📖 Reading
+
+- [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Plotly)
+- [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
+- [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
 
 
+## 🥣 Prepare for class
+
+- [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
+- [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
 
 
+## 🌮 Tuesday
+
+- Lecture: [Interactive Graphics using Plotly and Observable](../slides/08-01-interactive-graphics.qmd)
 
 
+## 🌩️ Thursday 🔨 
+
+- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
 
 
+##  🏋 Practice Your Skills
+
+- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
+- [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
 

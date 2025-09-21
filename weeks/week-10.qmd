@@ -1,25 +1,15 @@
-# Week 10: Linked Interactive Graphics
+# Week 10: Approaches to Big Data
 
 
 
 October 26-01, 2025
 
-## 📖 Reading
-
-- [Cubble vignette](https://cran.r-project.org/web/packages/cubble/vignettes/cb6interactive.html)
-- mpld3 in python?
 
 
 
 
-## 🌮 Tuesday
-
-- Fall Break!
 
 
-## 🌩️ Thursday 🔨 
-
-- Lecture: [Interactive Linked Graphics](../slides/08-01-linked-graphics.qmd)
 
 
 ##  🏋 Practice Your Skills

@@ -1,4 +1,4 @@
-# Week 7: Using Appropriate Graphics
+# Week 7: PDF Tools
 
 
 
@@ -6,26 +6,26 @@ October 05-11, 2025
 
 ## 📖 Reading
 
-- Appropriate Graphics
+- [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
 
 
 ## 🥣 Prepare for class
 
-- Find the worst data visualization published by a news organization within the last month and bring it with you to class.
+- Find examples of image-based and text-based PDFs
 
 
 ## 🌮 Tuesday
 
-- Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
+- Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+- Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
-- [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
+- Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+- [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
 

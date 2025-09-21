@@ -1,4 +1,4 @@
-# Week 8: Dynamic Communication with Shiny
+# Week 8: PDF Tools
 
 
 
@@ -6,27 +6,26 @@ October 12-18, 2025
 
 ## 📖 Reading
 
-- [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
+- [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
 
 
 ## 🥣 Prepare for class
 
-- Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
+- Find examples of image-based and text-based PDFs
 
 
 ## 🌮 Tuesday
 
-- Lecture: [Shiny](../slides/06-01-shiny.qmd)
+- Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
+- Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
-- [Lab goals](../assignment-repos/07-shiny-interactive/tilt.qmd)
-- [Screencast pseudocode due](../assignment-repos/screencast/index.qmd)
+- Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+- [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
 

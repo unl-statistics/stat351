@@ -71,19 +71,19 @@ website:
           - href: weeks/week-02.qmd
             text: "Week 2 - Web Scraping"
           - href: weeks/week-03.qmd
-            text: "Week 3 - Records & Lists"
+            text: "Week 3 - Web Scraping"
           - href: weeks/week-04.qmd
-            text: "Week 4 - APIs"
+            text: "Week 4 - Records & Lists"
           - href: weeks/week-05.qmd
-            text: "Week 5 - PDF Tools"
+            text: "Week 5 - APIs"
           - href: weeks/week-06.qmd
-            text: "Week 6 - Appropriate Graphics"
+            text: "Week 6 - APIs"
           - href: weeks/week-07.qmd
-            text: "Week 7 - Shiny"
+            text: "Week 7 - PDF Tools"
           - href: weeks/week-08.qmd
-            text: "Week 8 - JavaScript Graphics"
+            text: "Week 8 - PDF Tools"
           - href: weeks/week-09.qmd
-            text: "Week 9 - Linked Graphics"
+            text: "Week 9 - Appropriate Graphics"
           - href: weeks/week-10.qmd
             text: "Week 10 - Big Data"
           - href: weeks/week-11.qmd
@@ -93,9 +93,9 @@ website:
           - href: weeks/week-13.qmd
             text: "Week 13 - DuckDB"
           - href: weeks/week-15.qmd
-            text: "Week 15 - Special Topics"
+            text: "Week 15 - JavaScript Graphics"
           - href: weeks/week-16.qmd
-            text: "Week 16 - Special Topics"
+            text: "Week 16 - Linked Graphics"
 
 format:
   html:

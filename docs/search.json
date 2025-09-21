@@ -499,12 +499,45 @@
   {
     "objectID": "weeks/week-16.html",
     "href": "weeks/week-16.html",
-    "title": "Week 16: Special Topics",
+    "title": "Week 16: Linked Interactive Graphics",
     "section": "",
-    "text": "Week 16: Special Topics\nDecember 07-13, 2025",
+    "text": "December 07-13, 2025\n\n\n\nCubble vignette\nmpld3 in python?\n\n\n\n\n\nFall Break!\n\n\n\n\n\nLecture: Interactive Linked Graphics",
     "crumbs": [
       "Weekly materials",
-      "Week 16 - Special Topics"
+      "Week 16 - Linked Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-16.html#reading",
+    "href": "weeks/week-16.html#reading",
+    "title": "Week 16: Linked Interactive Graphics",
+    "section": "",
+    "text": "Cubble vignette\nmpld3 in python?",
+    "crumbs": [
+      "Weekly materials",
+      "Week 16 - Linked Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-16.html#tuesday",
+    "href": "weeks/week-16.html#tuesday",
+    "title": "Week 16: Linked Interactive Graphics",
+    "section": "",
+    "text": "Fall Break!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 16 - Linked Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-16.html#thursday",
+    "href": "weeks/week-16.html#thursday",
+    "title": "Week 16: Linked Interactive Graphics",
+    "section": "",
+    "text": "Lecture: Interactive Linked Graphics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 16 - Linked Graphics"
     ]
   },
   {
@@ -531,9 +564,9 @@
   {
     "objectID": "weeks/week-12.html",
     "href": "weeks/week-12.html",
-    "title": "Week 12: SQL and SQLite",
+    "title": "Week 12: Apache Arrow",
     "section": "",
-    "text": "Week 12: SQL and SQLite\nNovember 09-15, 2025",
+    "text": "Week 12: Apache Arrow\nNovember 09-15, 2025",
     "crumbs": [
       "Weekly materials",
       "Week 12 - Arrow"
@@ -542,42 +575,9 @@
   {
     "objectID": "weeks/week-10.html",
     "href": "weeks/week-10.html",
-    "title": "Week 10: Linked Interactive Graphics",
+    "title": "Week 10: Approaches to Big Data",
     "section": "",
-    "text": "October 26-01, 2025\n\n\n\nCubble vignette\nmpld3 in python?\n\n\n\n\n\nFall Break!\n\n\n\n\n\nLecture: Interactive Linked Graphics\n\n\n\n\n\nScreencast due!",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10 - Big Data"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html#reading",
-    "href": "weeks/week-10.html#reading",
-    "title": "Week 10: Linked Interactive Graphics",
-    "section": "",
-    "text": "Cubble vignette\nmpld3 in python?",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10 - Big Data"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html#tuesday",
-    "href": "weeks/week-10.html#tuesday",
-    "title": "Week 10: Linked Interactive Graphics",
-    "section": "",
-    "text": "Fall Break!",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10 - Big Data"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html#thursday",
-    "href": "weeks/week-10.html#thursday",
-    "title": "Week 10: Linked Interactive Graphics",
-    "section": "",
-    "text": "Lecture: Interactive Linked Graphics",
+    "text": "October 26-01, 2025\n\n\n\nScreencast due!",
     "crumbs": [
       "Weekly materials",
       "Week 10 - Big Data"
@@ -586,7 +586,7 @@
   {
     "objectID": "weeks/week-10.html#practice-your-skills",
     "href": "weeks/week-10.html#practice-your-skills",
-    "title": "Week 10: Linked Interactive Graphics",
+    "title": "Week 10: Approaches to Big Data",
     "section": "",
     "text": "Screencast due!",
     "crumbs": [
@@ -597,133 +597,122 @@
   {
     "objectID": "weeks/week-08.html",
     "href": "weeks/week-08.html",
-    "title": "Week 8: Dynamic Communication with Shiny",
+    "title": "Week 8: PDF Tools",
     "section": "",
-    "text": "October 12-18, 2025\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\n\n\n\n\n\nLecture: Shiny\n\n\n\n\n\nLab: Shiny Applets\n\n\n\n\n\nLab: Shiny Applets\nLab goals\nScreencast pseudocode due",
+    "text": "October 12-18, 2025\n\n\n\nWorking with PDFs\n\n\n\n\n\nFind examples of image-based and text-based PDFs\n\n\n\n\n\nLecture: PDF Tools\n\n\n\n\n\nLab: PDF/OCR\n\n\n\n\n\nLab: PDF/OCR\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - JavaScript Graphics"
+      "Week 8 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-08.html#reading",
     "href": "weeks/week-08.html#reading",
-    "title": "Week 8: Dynamic Communication with Shiny",
+    "title": "Week 8: PDF Tools",
     "section": "",
-    "text": "Interactive Graphics (Shiny)",
+    "text": "Working with PDFs",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - JavaScript Graphics"
+      "Week 8 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-08.html#prepare-for-class",
     "href": "weeks/week-08.html#prepare-for-class",
-    "title": "Week 8: Dynamic Communication with Shiny",
+    "title": "Week 8: PDF Tools",
     "section": "",
-    "text": "Look over Shiny documentation to go through the basic tutorial in R and/or python.",
+    "text": "Find examples of image-based and text-based PDFs",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - JavaScript Graphics"
+      "Week 8 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-08.html#tuesday",
     "href": "weeks/week-08.html#tuesday",
-    "title": "Week 8: Dynamic Communication with Shiny",
+    "title": "Week 8: PDF Tools",
     "section": "",
-    "text": "Lecture: Shiny",
+    "text": "Lecture: PDF Tools",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - JavaScript Graphics"
+      "Week 8 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-08.html#thursday",
     "href": "weeks/week-08.html#thursday",
-    "title": "Week 8: Dynamic Communication with Shiny",
+    "title": "Week 8: PDF Tools",
     "section": "",
-    "text": "Lab: Shiny Applets",
+    "text": "Lab: PDF/OCR",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - JavaScript Graphics"
+      "Week 8 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-08.html#practice-your-skills",
     "href": "weeks/week-08.html#practice-your-skills",
-    "title": "Week 8: Dynamic Communication with Shiny",
+    "title": "Week 8: PDF Tools",
     "section": "",
-    "text": "Lab: Shiny Applets\nLab goals\nScreencast pseudocode due",
+    "text": "Lab: PDF/OCR\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - JavaScript Graphics"
+      "Week 8 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-06.html",
     "href": "weeks/week-06.html",
-    "title": "Week 6: PDF Tools",
+    "title": "Week 6: Application Programming Interfaces",
     "section": "",
-    "text": "September 28-04, 2025\n\n\n\nWorking with PDFs\n\n\n\n\n\nFind examples of image-based and text-based PDFs\n\n\n\n\n\nLecture: PDF Tools\n\n\n\n\n\nLab: PDF/OCR\n\n\n\n\n\nLab: PDF/OCR\nLab goals",
+    "text": "September 28-04, 2025\n\n\n\nApplication Programming Interfaces (APIs)\n\n\n\n\n\n\n\n\n\n\n\nLecture: API requests\n\n\n\n\n\nLab: APIs\n\n\n\n\n\nLab: APIs\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 6 - Appropriate Graphics"
+      "Week 6 - APIs"
     ]
   },
   {
     "objectID": "weeks/week-06.html#reading",
     "href": "weeks/week-06.html#reading",
-    "title": "Week 6: PDF Tools",
+    "title": "Week 6: Application Programming Interfaces",
     "section": "",
-    "text": "Working with PDFs",
+    "text": "Application Programming Interfaces (APIs)",
     "crumbs": [
       "Weekly materials",
-      "Week 6 - Appropriate Graphics"
-    ]
-  },
-  {
-    "objectID": "weeks/week-06.html#prepare-for-class",
-    "href": "weeks/week-06.html#prepare-for-class",
-    "title": "Week 6: PDF Tools",
-    "section": "",
-    "text": "Find examples of image-based and text-based PDFs",
-    "crumbs": [
-      "Weekly materials",
-      "Week 6 - Appropriate Graphics"
+      "Week 6 - APIs"
     ]
   },
   {
     "objectID": "weeks/week-06.html#tuesday",
     "href": "weeks/week-06.html#tuesday",
-    "title": "Week 6: PDF Tools",
+    "title": "Week 6: Application Programming Interfaces",
     "section": "",
-    "text": "Lecture: PDF Tools",
+    "text": "Lecture: API requests",
     "crumbs": [
       "Weekly materials",
-      "Week 6 - Appropriate Graphics"
+      "Week 6 - APIs"
     ]
   },
   {
     "objectID": "weeks/week-06.html#thursday",
     "href": "weeks/week-06.html#thursday",
-    "title": "Week 6: PDF Tools",
+    "title": "Week 6: Application Programming Interfaces",
     "section": "",
-    "text": "Lab: PDF/OCR",
+    "text": "Lab: APIs",
     "crumbs": [
       "Weekly materials",
-      "Week 6 - Appropriate Graphics"
+      "Week 6 - APIs"
     ]
   },
   {
     "objectID": "weeks/week-06.html#practice-your-skills",
     "href": "weeks/week-06.html#practice-your-skills",
-    "title": "Week 6: PDF Tools",
+    "title": "Week 6: Application Programming Interfaces",
     "section": "",
-    "text": "Lab: PDF/OCR\nLab goals",
+    "text": "Lab: APIs\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 6 - Appropriate Graphics"
+      "Week 6 - APIs"
     ]
   },
   {
@@ -734,7 +723,7 @@
     "text": "September 14-20, 2025\n\n\n\nFunctional Programming\nRecord-based Data and List Processing\n\n\n\n\n\nLecture: Record based Data and List Processing\n\n\n\n\n\nLab: Parsing XML Files\n\n\n\n\n\nLab: Parsing XML Files\nLab goals\nSubmit a screencast topic proposal",
     "crumbs": [
       "Weekly materials",
-      "Week 4 - APIs"
+      "Week 4 - Records & Lists"
     ]
   },
   {
@@ -745,7 +734,7 @@
     "text": "Functional Programming\nRecord-based Data and List Processing",
     "crumbs": [
       "Weekly materials",
-      "Week 4 - APIs"
+      "Week 4 - Records & Lists"
     ]
   },
   {
@@ -756,7 +745,7 @@
     "text": "Lecture: Record based Data and List Processing",
     "crumbs": [
       "Weekly materials",
-      "Week 4 - APIs"
+      "Week 4 - Records & Lists"
     ]
   },
   {
@@ -767,7 +756,7 @@
     "text": "Lab: Parsing XML Files",
     "crumbs": [
       "Weekly materials",
-      "Week 4 - APIs"
+      "Week 4 - Records & Lists"
     ]
   },
   {
@@ -778,7 +767,7 @@
     "text": "Lab: Parsing XML Files\nLab goals\nSubmit a screencast topic proposal",
     "crumbs": [
       "Weekly materials",
-      "Week 4 - APIs"
+      "Week 4 - Records & Lists"
     ]
   },
   {
@@ -1097,7 +1086,7 @@
     "text": "September 07-13, 2025\n\n\n\nWeb Scraping\n\n\n\n\n\nTry scraping one or more sites that are interesting to you.\n\n\n\n\n\nLab: Web Scraping\nLab goals\n\n\n\n\n\nLab: Web Scraping\n\n\n\n\n\nLab: Web Scraping\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 3 - Records & Lists"
+      "Week 3 - Web Scraping"
     ]
   },
   {
@@ -1108,7 +1097,7 @@
     "text": "Web Scraping",
     "crumbs": [
       "Weekly materials",
-      "Week 3 - Records & Lists"
+      "Week 3 - Web Scraping"
     ]
   },
   {
@@ -1119,7 +1108,7 @@
     "text": "Try scraping one or more sites that are interesting to you.",
     "crumbs": [
       "Weekly materials",
-      "Week 3 - Records & Lists"
+      "Week 3 - Web Scraping"
     ]
   },
   {
@@ -1130,7 +1119,7 @@
     "text": "Lab: Web Scraping\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 3 - Records & Lists"
+      "Week 3 - Web Scraping"
     ]
   },
   {
@@ -1141,7 +1130,7 @@
     "text": "Lab: Web Scraping",
     "crumbs": [
       "Weekly materials",
-      "Week 3 - Records & Lists"
+      "Week 3 - Web Scraping"
     ]
   },
   {
@@ -1152,7 +1141,7 @@
     "text": "Lab: Web Scraping\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 3 - Records & Lists"
+      "Week 3 - Web Scraping"
     ]
   },
   {
@@ -1163,7 +1152,7 @@
     "text": "September 21-27, 2025\n\n\n\nApplication Programming Interfaces (APIs)\n\n\n\n\n\n\n\n\n\n\n\nLecture: API requests\n\n\n\n\n\nLab: APIs\n\n\n\n\n\nLab: APIs\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 5 - PDF Tools"
+      "Week 5 - APIs"
     ]
   },
   {
@@ -1174,7 +1163,7 @@
     "text": "Application Programming Interfaces (APIs)",
     "crumbs": [
       "Weekly materials",
-      "Week 5 - PDF Tools"
+      "Week 5 - APIs"
     ]
   },
   {
@@ -1185,7 +1174,7 @@
     "text": "Lecture: API requests",
     "crumbs": [
       "Weekly materials",
-      "Week 5 - PDF Tools"
+      "Week 5 - APIs"
     ]
   },
   {
@@ -1196,7 +1185,7 @@
     "text": "Lab: APIs",
     "crumbs": [
       "Weekly materials",
-      "Week 5 - PDF Tools"
+      "Week 5 - APIs"
     ]
   },
   {
@@ -1207,158 +1196,147 @@
     "text": "Lab: APIs\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 5 - PDF Tools"
+      "Week 5 - APIs"
     ]
   },
   {
     "objectID": "weeks/week-07.html",
     "href": "weeks/week-07.html",
-    "title": "Week 7: Using Appropriate Graphics",
+    "title": "Week 7: PDF Tools",
     "section": "",
-    "text": "October 05-11, 2025\n\n\n\nAppropriate Graphics\n\n\n\n\n\nFind the worst data visualization published by a news organization within the last month and bring it with you to class.\n\n\n\n\n\nLecture: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\nLab goals",
+    "text": "October 05-11, 2025\n\n\n\nWorking with PDFs\n\n\n\n\n\nFind examples of image-based and text-based PDFs\n\n\n\n\n\nLecture: PDF Tools\n\n\n\n\n\nLab: PDF/OCR\n\n\n\n\n\nLab: PDF/OCR\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 7 - Shiny"
+      "Week 7 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-07.html#reading",
     "href": "weeks/week-07.html#reading",
-    "title": "Week 7: Using Appropriate Graphics",
+    "title": "Week 7: PDF Tools",
     "section": "",
-    "text": "Appropriate Graphics",
+    "text": "Working with PDFs",
     "crumbs": [
       "Weekly materials",
-      "Week 7 - Shiny"
+      "Week 7 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-07.html#prepare-for-class",
     "href": "weeks/week-07.html#prepare-for-class",
-    "title": "Week 7: Using Appropriate Graphics",
+    "title": "Week 7: PDF Tools",
     "section": "",
-    "text": "Find the worst data visualization published by a news organization within the last month and bring it with you to class.",
+    "text": "Find examples of image-based and text-based PDFs",
     "crumbs": [
       "Weekly materials",
-      "Week 7 - Shiny"
+      "Week 7 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-07.html#tuesday",
     "href": "weeks/week-07.html#tuesday",
-    "title": "Week 7: Using Appropriate Graphics",
+    "title": "Week 7: PDF Tools",
     "section": "",
-    "text": "Lecture: Appropriate Graphics",
+    "text": "Lecture: PDF Tools",
     "crumbs": [
       "Weekly materials",
-      "Week 7 - Shiny"
+      "Week 7 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-07.html#thursday",
     "href": "weeks/week-07.html#thursday",
-    "title": "Week 7: Using Appropriate Graphics",
+    "title": "Week 7: PDF Tools",
     "section": "",
-    "text": "Lab: Appropriate Graphics",
+    "text": "Lab: PDF/OCR",
     "crumbs": [
       "Weekly materials",
-      "Week 7 - Shiny"
+      "Week 7 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-07.html#practice-your-skills",
     "href": "weeks/week-07.html#practice-your-skills",
-    "title": "Week 7: Using Appropriate Graphics",
+    "title": "Week 7: PDF Tools",
     "section": "",
-    "text": "Lab: Appropriate Graphics\nLab goals",
+    "text": "Lab: PDF/OCR\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 7 - Shiny"
+      "Week 7 - PDF Tools"
     ]
   },
   {
     "objectID": "weeks/week-09.html",
     "href": "weeks/week-09.html",
-    "title": "Week 9: Interactive JavaScript Graphics",
+    "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "October 19-25, 2025\n\n\n\nInteractive Graphics (Plotly)\nObservable JavaScript primer\nObservable from ggplot2\n\n\n\n\n\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics using Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\nLab goals",
+    "text": "October 19-25, 2025\n\n\n\nAppropriate Graphics\n\n\n\n\n\nFind the worst data visualization published by a news organization within the last month and bring it with you to class.\n\n\n\n\n\nLecture: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 9 - Linked Graphics"
+      "Week 9 - Appropriate Graphics"
     ]
   },
   {
     "objectID": "weeks/week-09.html#reading",
     "href": "weeks/week-09.html#reading",
-    "title": "Week 9: Interactive JavaScript Graphics",
+    "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "Interactive Graphics (Plotly)\nObservable JavaScript primer\nObservable from ggplot2",
+    "text": "Appropriate Graphics",
     "crumbs": [
       "Weekly materials",
-      "Week 9 - Linked Graphics"
+      "Week 9 - Appropriate Graphics"
     ]
   },
   {
     "objectID": "weeks/week-09.html#prepare-for-class",
     "href": "weeks/week-09.html#prepare-for-class",
-    "title": "Week 9: Interactive JavaScript Graphics",
+    "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics",
+    "text": "Find the worst data visualization published by a news organization within the last month and bring it with you to class.",
     "crumbs": [
       "Weekly materials",
-      "Week 9 - Linked Graphics"
+      "Week 9 - Appropriate Graphics"
     ]
   },
   {
     "objectID": "weeks/week-09.html#tuesday",
     "href": "weeks/week-09.html#tuesday",
-    "title": "Week 9: Interactive JavaScript Graphics",
+    "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "Lecture: Interactive Graphics using Plotly and Observable",
+    "text": "Lecture: Appropriate Graphics",
     "crumbs": [
       "Weekly materials",
-      "Week 9 - Linked Graphics"
+      "Week 9 - Appropriate Graphics"
     ]
   },
   {
     "objectID": "weeks/week-09.html#thursday",
     "href": "weeks/week-09.html#thursday",
-    "title": "Week 9: Interactive JavaScript Graphics",
+    "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "Lab: Interactive Graphics with Plotly and Observable",
+    "text": "Lab: Appropriate Graphics",
     "crumbs": [
       "Weekly materials",
-      "Week 9 - Linked Graphics"
+      "Week 9 - Appropriate Graphics"
     ]
   },
   {
     "objectID": "weeks/week-09.html#practice-your-skills",
     "href": "weeks/week-09.html#practice-your-skills",
-    "title": "Week 9: Interactive JavaScript Graphics",
+    "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "Lab: Interactive Graphics with Plotly and Observable\nLab goals",
+    "text": "Lab: Appropriate Graphics\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 9 - Linked Graphics"
+      "Week 9 - Appropriate Graphics"
     ]
   },
   {
     "objectID": "weeks/week-11.html",
     "href": "weeks/week-11.html",
-    "title": "Week 11: Approaches to Big Data",
+    "title": "Week 11: SQL and SQLite",
     "section": "",
-    "text": "November 02-08, 2025\n\n\n\nLecture: Computers and Data Storage Trade-Offs",
-    "crumbs": [
-      "Weekly materials",
-      "Week 11 - SQL/SQLite"
-    ]
-  },
-  {
-    "objectID": "weeks/week-11.html#tuesday",
-    "href": "weeks/week-11.html#tuesday",
-    "title": "Week 11: Approaches to Big Data",
-    "section": "",
-    "text": "Lecture: Computers and Data Storage Trade-Offs",
+    "text": "Week 11: SQL and SQLite\nNovember 02-08, 2025",
     "crumbs": [
       "Weekly materials",
       "Week 11 - SQL/SQLite"
@@ -1367,9 +1345,9 @@
   {
     "objectID": "weeks/week-13.html",
     "href": "weeks/week-13.html",
-    "title": "Week 13: Apache Arrow",
+    "title": "Week 13: DuckDB",
     "section": "",
-    "text": "Week 13: Apache Arrow\nNovember 16-22, 2025",
+    "text": "Week 13: DuckDB\nNovember 16-22, 2025",
     "crumbs": [
       "Weekly materials",
       "Week 13 - DuckDB"
@@ -1378,12 +1356,67 @@
   {
     "objectID": "weeks/week-15.html",
     "href": "weeks/week-15.html",
-    "title": "Week 15: DuckDB",
+    "title": "Week 15: Interactive JavaScript Graphics",
     "section": "",
-    "text": "Week 15: DuckDB\nNovember 30-06, 2025",
+    "text": "November 30-06, 2025\n\n\n\nInteractive Graphics (Plotly)\nObservable JavaScript primer\nObservable from ggplot2\n\n\n\n\n\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics using Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 15 - Special Topics"
+      "Week 15 - JavaScript Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html#reading",
+    "href": "weeks/week-15.html#reading",
+    "title": "Week 15: Interactive JavaScript Graphics",
+    "section": "",
+    "text": "Interactive Graphics (Plotly)\nObservable JavaScript primer\nObservable from ggplot2",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15 - JavaScript Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html#prepare-for-class",
+    "href": "weeks/week-15.html#prepare-for-class",
+    "title": "Week 15: Interactive JavaScript Graphics",
+    "section": "",
+    "text": "Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15 - JavaScript Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html#tuesday",
+    "href": "weeks/week-15.html#tuesday",
+    "title": "Week 15: Interactive JavaScript Graphics",
+    "section": "",
+    "text": "Lecture: Interactive Graphics using Plotly and Observable",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15 - JavaScript Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html#thursday",
+    "href": "weeks/week-15.html#thursday",
+    "title": "Week 15: Interactive JavaScript Graphics",
+    "section": "",
+    "text": "Lab: Interactive Graphics with Plotly and Observable",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15 - JavaScript Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-15.html#practice-your-skills",
+    "href": "weeks/week-15.html#practice-your-skills",
+    "title": "Week 15: Interactive JavaScript Graphics",
+    "section": "",
+    "text": "Lab: Interactive Graphics with Plotly and Observable\nLab goals",
+    "crumbs": [
+      "Weekly materials",
+      "Week 15 - JavaScript Graphics"
     ]
   },
   {

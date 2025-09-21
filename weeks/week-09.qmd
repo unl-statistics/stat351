@@ -1,4 +1,4 @@
-# Week 9: Interactive JavaScript Graphics
+# Week 9: Using Appropriate Graphics
 
 
 
@@ -6,29 +6,26 @@ October 19-25, 2025
 
 ## 📖 Reading
 
-- [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Plotly)
-- [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
-- [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
+- Appropriate Graphics
 
 
 ## 🥣 Prepare for class
 
-- [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
-- [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
+- Find the worst data visualization published by a news organization within the last month and bring it with you to class.
 
 
 ## 🌮 Tuesday
 
-- Lecture: [Interactive Graphics using Plotly and Observable](../slides/08-01-interactive-graphics.qmd)
+- Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
+- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
-- [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+- [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
 
