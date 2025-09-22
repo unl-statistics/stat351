@@ -128,3 +128,10 @@ res
     - in an HTTP header value such as `apiKey`
     - as part of the path (prev example)
 
+## Your Turn {.inverse}
+
+- Pick one of the APIs at the end of the chapter in the textbook
+
+- Read the documentation
+
+- See what data you can pull out of it
