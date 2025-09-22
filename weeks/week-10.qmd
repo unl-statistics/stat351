@@ -1,18 +1,28 @@
-# Week 10: Approaches to Big Data
+# Week 10: Using Appropriate Graphics
 
 
 
 October 26-01, 2025
 
+## 📖 Reading
+
+- Appropriate Graphics
 
 
 
 
+## 🌮 Tuesday
+
+- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
 
 
+## 🌩️ Thursday 🔨 
+
+- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- [Screencast due!](../assignment-repos/screencast/index.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+- [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
 

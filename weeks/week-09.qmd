@@ -16,16 +16,17 @@ October 19-25, 2025
 
 ## 🌮 Tuesday
 
-- Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
+- Fall Break!
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+- Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
 
 
 ##  🏋 Practice Your Skills
 
 - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
 - [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
+- [Screencast due!](../assignment-repos/screencast/index.qmd)
 

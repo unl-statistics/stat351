@@ -1,4 +1,4 @@
-# Week 16: Linked Interactive Graphics
+# Week 16: Interactive JavaScript Graphics
 
 
 
@@ -6,20 +6,29 @@ December 07-13, 2025
 
 ## 📖 Reading
 
-- [Cubble vignette](https://cran.r-project.org/web/packages/cubble/vignettes/cb6interactive.html)
-- mpld3 in python?
+- [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Plotly)
+- [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
+- [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
 
 
+## 🥣 Prepare for class
+
+- [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
+- [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
 
 
 ## 🌮 Tuesday
 
-- Fall Break!
+- Lecture: [Interactive Graphics using Plotly and Observable](../slides/08-01-interactive-graphics.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lecture: [Interactive Linked Graphics](../slides/08-01-linked-graphics.qmd)
+- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
 
 
+##  🏋 Practice Your Skills
+
+- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
+- [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
 

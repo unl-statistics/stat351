@@ -85,17 +85,17 @@ website:
           - href: weeks/week-09.qmd
             text: "Week 9 - Appropriate Graphics"
           - href: weeks/week-10.qmd
-            text: "Week 10 - Big Data"
+            text: "Week 10 - Appropriate Graphics"
           - href: weeks/week-11.qmd
-            text: "Week 11 - SQL/SQLite"
+            text: "Week 11 - Big Data"
           - href: weeks/week-12.qmd
-            text: "Week 12 - Arrow"
+            text: "Week 12 - SQL/SQLite"
           - href: weeks/week-13.qmd
-            text: "Week 13 - DuckDB"
+            text: "Week 13 - Arrow"
           - href: weeks/week-15.qmd
-            text: "Week 15 - JavaScript Graphics"
+            text: "Week 15 - DuckDB"
           - href: weeks/week-16.qmd
-            text: "Week 16 - Linked Graphics"
+            text: "Week 16 - JavaScript Graphics"
 
 format:
   html:

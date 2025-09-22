@@ -94,12 +94,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a>
   <ul class="collapse">
   <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills">Skills</a></li>
-  <li><a href="#knowledge" id="toc-knowledge" class="nav-link" data-scroll-target="#knowledge">Knowledge</a></li>
   </ul></li>
   <li><a href="#success-criteria" id="toc-success-criteria" class="nav-link" data-scroll-target="#success-criteria">Success Criteria</a>
   <ul class="collapse">
   <li><a href="#general-criteria" id="toc-general-criteria" class="nav-link" data-scroll-target="#general-criteria">General Criteria</a></li>
-  <li><a href="#task-specific-criteria" id="toc-task-specific-criteria" class="nav-link" data-scroll-target="#task-specific-criteria">Task-specific criteria</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/unl-statistics/stat351/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -134,22 +132,11 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="skills">Skills</h3>
 <p>This assignment will help you practice the following skills which are important for being able to access and work with data:</p>
 <ul>
-<li>Reading and using XML data schemas</li>
-<li>Developing strategies to extract data from an XML document using XPATH and CSS selectors</li>
-<li>Extracting data from XML-coded documents</li>
-<li>Reformatting and tidying extracted data into a form that is workable for statistical analysis</li>
-<li>Implementing quality control measures for data assembled from sources which are not always completely consistent</li>
-</ul>
-</section>
-<section id="knowledge" class="level3">
-<h3 class="anchored" data-anchor-id="knowledge">Knowledge</h3>
-<p>This assignment will help you to become familiar with important knowledge in this discipline:</p>
-<ul>
-<li>XML data formats</li>
-<li>Tidy data formats</li>
-<li>Functional programming techniques</li>
-<li>Computational time considerations for different strategies for data extraction</li>
-<li>File access time considerations for different data extraction strategies</li>
+<li>Acquiring data from the internet using scripts for reproducibility</li>
+<li>Cleaning and formatting web-based data for analysis</li>
+<li>Leveraging web-based data for statistical investigation</li>
+<li>Communicating statistical techniques and information appropriately for a general audience</li>
+<li>Presenting appropriate conclusions from a statistical analysis</li>
 </ul>
 </section>
 </section>
@@ -159,94 +146,16 @@ ul.task-list li input[type="checkbox"] {
 <section id="general-criteria" class="level3">
 <h3 class="anchored" data-anchor-id="general-criteria">General Criteria</h3>
 <ul class="task-list">
-<li><label><input type="checkbox">Student’s name is included at top of assignment</label></li>
-<li><label><input type="checkbox">Document compiles on a different machine</label></li>
-<li><label><input type="checkbox">Compiled document is formatted well</label></li>
-<li><label><input type="checkbox">All code in the document is contained in appropriately formatted code chunks</label></li>
-<li><label><input type="checkbox">Compiled document does not include long sections of printed data, making use of <code>head</code> and <code>tail</code> commands to show only a few rows of data during data cleaning.</label></li>
-<li><label><input type="checkbox">Student answers are below the <code>---</code> separator and above the next prompt, or in cases where questions are enumerated, student answers are indicated using the quote indicator, <code>&gt;</code> and the placeholder text <code>Your answer here</code> has been removed and replaced with the answer.</label></li>
+<li><label><input type="checkbox">Screencast is recorded appropriately (audible sound, good video quality)</label></li>
+<li><label><input type="checkbox">Commented and reproducible code is provided for the screencast and linked in the video description</label></li>
+<li><label><input type="checkbox">Screencast demonstrates at least 4 techniques learned during Stat 351</label>
+<ul class="task-list">
+<li><label><input type="checkbox">An approximate time index is provided for each technique in the video description</label></li>
+<li><label><input type="checkbox">An approximate time index is provided for each technique in the GitHub README</label></li>
+</ul></li>
+<li><label><input type="checkbox">Web scraping is conducted politely and in accordance with the terms of the data service provider</label></li>
+<li><label><input type="checkbox">Screencast captions are accurate</label></li>
 </ul>
-</section>
-<section id="task-specific-criteria" class="level3">
-<h3 class="anchored" data-anchor-id="task-specific-criteria">Task-specific criteria</h3>
-<ol type="1">
-<li>Warming Up
-<ol type="1">
-<li>Parsing
-<ul class="task-list">
-<li><label><input type="checkbox">Code chunk reads in the RSS feed from the web address</label></li>
-<li><label><input type="checkbox">RSS feed is saved as an xml-parseable object</label></li>
-</ul></li>
-<li>Extracting Information
-<ul class="task-list">
-<li><label><input type="checkbox">Resulting data frame has columns <code>title</code>, <code>link</code>, <code>summary</code>, <code>updated</code>, <code>category</code>, and <code>id</code></label></li>
-<li><label><input type="checkbox">Code demonstrates accessing node attribute(s)</label></li>
-<li><label><input type="checkbox">Code demonstrates accessing node content</label></li>
-</ul></li>
-<li>Is it XML?
-<ul class="task-list">
-<li><label><input type="checkbox">Response lists requirements for valid XML files</label></li>
-<li><label><input type="checkbox">Response evaluates each listed requirement of an XML file accurately</label></li>
-</ul></li>
-</ol></li>
-<li>Cleaning the Data
-<ol type="1">
-<li>Tidy Data
-<ul class="task-list">
-<li><label><input type="checkbox">Response identifies aspects of the data which are not tidy</label></li>
-<li><label><input type="checkbox">Each aspect of the data which is identified as messy is related back to a violation of tidy criteria (one value in a cell, one variable in each column, one observation in each row).</label></li>
-</ul></li>
-<li>Tidy Planning
-<ul class="task-list">
-<li><label><input type="checkbox">Steps to transition from current form to tidy form are listed in order</label></li>
-<li><label><input type="checkbox">Listed steps are adequate to complete the transition</label></li>
-<li><label><input type="checkbox">Each step contains the necessary information to identify a function and provide the required parameters for that function. For instance, if the step is “Separate values in column 3 into two separate columns”, the description should also include the delimiter or regular expression used to separate the values, and the names of the columns the data will be extracted into.</label></li>
-</ul></li>
-<li>Tidying, for real!
-<ul class="task-list">
-<li><label><input type="checkbox">Code included in this step matches the planning in step 2</label></li>
-<li><label><input type="checkbox">Code works correctly</label></li>
-<li><label><input type="checkbox">Resulting data shown contains less than 10 entries</label></li>
-<li><label><input type="checkbox">Data shown is formatted using a</label></li>
-</ul></li>
-</ol></li>
-<li>Filing Forms
-<ol type="1">
-<li>Preparing
-<ul class="task-list">
-<li><label><input type="checkbox">CSS selector for the table is correctly identified</label></li>
-<li><label><input type="checkbox">CSS selector for the first link in the table is correctly identified</label></li>
-</ul></li>
-<li>Reading HTML Tables
-<ul class="task-list">
-<li><label><input type="checkbox">Function extracts the <code>.htm</code> link from the table when provided with the filing detail URL</label></li>
-<li><label><input type="checkbox">HTML addresses for all filed forms are obtained successfully</label></li>
-</ul></li>
-<li>Reading HTML Pages
-<ul class="task-list">
-<li><label><input type="checkbox">Requisite data is extracted and stored in a data frame</label></li>
-<li><label><input type="checkbox">(Suggested) Functions are used to modularize data extraction</label></li>
-<li><label><input type="checkbox">Data extraction code effectively handles missing data without erroring out</label></li>
-</ul></li>
-<li>Assessing Market Value of Stock Sales
-<ul class="task-list">
-<li><label><input type="checkbox">Aggregate market value of stock is converted to a numerical variable</label></li>
-<li><label><input type="checkbox">Agg. market value of stock is used to make a histogram</label></li>
-<li><label><input type="checkbox">Histogram y-axis indicates that values are counts</label></li>
-<li><label><input type="checkbox">Histogram x-axis indicates that the plotted value is the aggregate market value of the stock</label></li>
-<li><label><input type="checkbox">Histogram has an accurate title</label></li>
-<li><label><input type="checkbox">If histogram values cover several orders of magnitude, an appropriate scale transformation is used</label></li>
-</ul></li>
-<li>Efficiency
-<ul class="task-list">
-<li><label><input type="checkbox">Ordered list of steps is complete</label></li>
-<li><label><input type="checkbox">Steps minimize the number of calls to the SEC server</label></li>
-<li><label><input type="checkbox">Steps de-duplicate any repeated entries</label></li>
-<li><label><input type="checkbox">Total number of calls to the SEC server is calculated correctly</label></li>
-<li><label><input type="checkbox">Calculation of total number of calls is explained</label></li>
-</ul></li>
-</ol></li>
-</ol>
 
 
 </section>

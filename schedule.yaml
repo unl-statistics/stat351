@@ -145,31 +145,42 @@ schedule:
     prepare: |
       - Find the worst data visualization published by a news organization within the last month and bring it with you to class.
     class1: |
+      - Fall Break!
+    class2: |
       - Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
+    assignments: |
+      - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+      - [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
+      - [Screencast due!](../assignment-repos/screencast/index.qmd)
+
+  - week: 10
+    name: Using Appropriate Graphics
+    start: 2025-10-26
+    end: 2025-11-01
+    reading: |
+      - Appropriate Graphics
+    class1: |
+      - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
     class2: |
       - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
     assignments: |
       - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
       - [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
 
-  - week: 10
-    name: Approaches to Big Data
-    start: 2025-10-26
-    end: 2025-11-01
-    assignments: |
-      - [Screencast due!](../assignment-repos/screencast/index.qmd)
+
   - week: 11
-    name: SQL and SQLite
+    name: Approaches to Big Data
     start: 2025-11-02
     end: 2025-11-08
 
+
   - week: 12
-    name: Apache Arrow
+    name: SQL and SQLite
     start: 2025-11-09
     end: 2025-11-15
 
   - week: 13
-    name: DuckDB
+    name: Apache Arrow
     start: 2025-11-16
     end: 2025-11-22
 
@@ -183,9 +194,14 @@ schedule:
       - Happy Turkey Day! :turkey:
 
   - week: 15
-    name: Interactive JavaScript Graphics
+    name: DuckDB
     start: 2025-11-30
     end: 2025-12-06
+
+  - week: 16
+    name: Interactive JavaScript Graphics
+    start: 2025-12-07
+    end: 2025-12-13
     reading: |
       - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Plotly)
       - [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
@@ -200,23 +216,25 @@ schedule:
     assignments: |
       - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
       - [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
-  - week: 16
-    name: Linked Interactive Graphics
-    start: 2025-12-07
-    end: 2025-12-13
-    reading: |
-      - [Cubble vignette](https://cran.r-project.org/web/packages/cubble/vignettes/cb6interactive.html)
-      - mpld3 in python?
-    class1: |
-      - Fall Break!
-    class2: |
-      - Lecture: [Interactive Linked Graphics](../slides/08-01-linked-graphics.qmd)
   - week: 17
     name: Finals
     start: 2025-12-14
     end: 2025-12-20
     assignments: |
       - Final Exam Due
+
+important-course-dates:
+  - name: Final Exam
+    id: final
+    date: "2025-12-15"
+  - name: Screencast Due
+    id: screencast
+    date: "2025-10-24"
+  - name: Screencast Peer Reviews Due
+    id: screencast-peer
+    date: "2025-10-29"
+
+
   # - week: 8
   #   name: Dynamic Communication with Shiny
   #   reading: |
@@ -231,14 +249,3 @@ schedule:
   #     - Lab: [Shiny Applets](../assignment-repos/07-shiny-interactive/index.qmd)
   #     - [Lab goals](../assignment-repos/07-shiny-interactive/tilt.qmd)
   #     - [Screencast pseudocode due](../assignment-repos/screencast/index.qmd)
-
-important-course-dates:
-  - name: Final Exam
-    id: final
-    date: "2025-12-15"
-  - name: Screencast Due
-    id: screencast
-    date: "2025-10-24"
-  - name: Screencast Peer Reviews Due
-    id: screencast-peer
-    date: "2025-10-29"

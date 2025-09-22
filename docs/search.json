@@ -158,21 +158,21 @@
     "href": "assignment-repos/screencast/tilt.html",
     "title": "Screencast TILT Information",
     "section": "",
-    "text": "This assignment serves multiple purposes. It is intended to showcase your skills at web-scraping, assembling, and cleaning data, with the goal that you will add this project to your portfolio to provide evidence of your abilities.\nIn addition, this assessment will serve as a demonstration of the utility and availability of public data, and the work that is required to get that data into a useful form for analysis. Finally, this\n\n\nThis assignment will help you practice the following skills which are important for being able to access and work with data:\n\nReading and using XML data schemas\nDeveloping strategies to extract data from an XML document using XPATH and CSS selectors\nExtracting data from XML-coded documents\nReformatting and tidying extracted data into a form that is workable for statistical analysis\nImplementing quality control measures for data assembled from sources which are not always completely consistent\n\n\n\n\nThis assignment will help you to become familiar with important knowledge in this discipline:\n\nXML data formats\nTidy data formats\nFunctional programming techniques\nComputational time considerations for different strategies for data extraction\nFile access time considerations for different data extraction strategies"
+    "text": "This assignment serves multiple purposes. It is intended to showcase your skills at web-scraping, assembling, and cleaning data, with the goal that you will add this project to your portfolio to provide evidence of your abilities.\nIn addition, this assessment will serve as a demonstration of the utility and availability of public data, and the work that is required to get that data into a useful form for analysis. Finally, this\n\n\nThis assignment will help you practice the following skills which are important for being able to access and work with data:\n\nAcquiring data from the internet using scripts for reproducibility\nCleaning and formatting web-based data for analysis\nLeveraging web-based data for statistical investigation\nCommunicating statistical techniques and information appropriately for a general audience\nPresenting appropriate conclusions from a statistical analysis"
   },
   {
     "objectID": "assignment-repos/screencast/tilt.html#purpose",
     "href": "assignment-repos/screencast/tilt.html#purpose",
     "title": "Screencast TILT Information",
     "section": "",
-    "text": "This assignment serves multiple purposes. It is intended to showcase your skills at web-scraping, assembling, and cleaning data, with the goal that you will add this project to your portfolio to provide evidence of your abilities.\nIn addition, this assessment will serve as a demonstration of the utility and availability of public data, and the work that is required to get that data into a useful form for analysis. Finally, this\n\n\nThis assignment will help you practice the following skills which are important for being able to access and work with data:\n\nReading and using XML data schemas\nDeveloping strategies to extract data from an XML document using XPATH and CSS selectors\nExtracting data from XML-coded documents\nReformatting and tidying extracted data into a form that is workable for statistical analysis\nImplementing quality control measures for data assembled from sources which are not always completely consistent\n\n\n\n\nThis assignment will help you to become familiar with important knowledge in this discipline:\n\nXML data formats\nTidy data formats\nFunctional programming techniques\nComputational time considerations for different strategies for data extraction\nFile access time considerations for different data extraction strategies"
+    "text": "This assignment serves multiple purposes. It is intended to showcase your skills at web-scraping, assembling, and cleaning data, with the goal that you will add this project to your portfolio to provide evidence of your abilities.\nIn addition, this assessment will serve as a demonstration of the utility and availability of public data, and the work that is required to get that data into a useful form for analysis. Finally, this\n\n\nThis assignment will help you practice the following skills which are important for being able to access and work with data:\n\nAcquiring data from the internet using scripts for reproducibility\nCleaning and formatting web-based data for analysis\nLeveraging web-based data for statistical investigation\nCommunicating statistical techniques and information appropriately for a general audience\nPresenting appropriate conclusions from a statistical analysis"
   },
   {
     "objectID": "assignment-repos/screencast/tilt.html#success-criteria",
     "href": "assignment-repos/screencast/tilt.html#success-criteria",
     "title": "Screencast TILT Information",
     "section": "Success Criteria",
-    "text": "Success Criteria\nNote: These criteria are provided to facilitate self reflection and evaluation. Assignment grades may be decided based on an instructor-selected subset of these criteria.\n\nGeneral Criteria\n\nStudent’s name is included at top of assignment\nDocument compiles on a different machine\nCompiled document is formatted well\nAll code in the document is contained in appropriately formatted code chunks\nCompiled document does not include long sections of printed data, making use of head and tail commands to show only a few rows of data during data cleaning.\nStudent answers are below the --- separator and above the next prompt, or in cases where questions are enumerated, student answers are indicated using the quote indicator, &gt; and the placeholder text Your answer here has been removed and replaced with the answer.\n\n\n\nTask-specific criteria\n\nWarming Up\n\nParsing\n\nCode chunk reads in the RSS feed from the web address\nRSS feed is saved as an xml-parseable object\n\nExtracting Information\n\nResulting data frame has columns title, link, summary, updated, category, and id\nCode demonstrates accessing node attribute(s)\nCode demonstrates accessing node content\n\nIs it XML?\n\nResponse lists requirements for valid XML files\nResponse evaluates each listed requirement of an XML file accurately\n\n\nCleaning the Data\n\nTidy Data\n\nResponse identifies aspects of the data which are not tidy\nEach aspect of the data which is identified as messy is related back to a violation of tidy criteria (one value in a cell, one variable in each column, one observation in each row).\n\nTidy Planning\n\nSteps to transition from current form to tidy form are listed in order\nListed steps are adequate to complete the transition\nEach step contains the necessary information to identify a function and provide the required parameters for that function. For instance, if the step is “Separate values in column 3 into two separate columns”, the description should also include the delimiter or regular expression used to separate the values, and the names of the columns the data will be extracted into.\n\nTidying, for real!\n\nCode included in this step matches the planning in step 2\nCode works correctly\nResulting data shown contains less than 10 entries\nData shown is formatted using a\n\n\nFiling Forms\n\nPreparing\n\nCSS selector for the table is correctly identified\nCSS selector for the first link in the table is correctly identified\n\nReading HTML Tables\n\nFunction extracts the .htm link from the table when provided with the filing detail URL\nHTML addresses for all filed forms are obtained successfully\n\nReading HTML Pages\n\nRequisite data is extracted and stored in a data frame\n(Suggested) Functions are used to modularize data extraction\nData extraction code effectively handles missing data without erroring out\n\nAssessing Market Value of Stock Sales\n\nAggregate market value of stock is converted to a numerical variable\nAgg. market value of stock is used to make a histogram\nHistogram y-axis indicates that values are counts\nHistogram x-axis indicates that the plotted value is the aggregate market value of the stock\nHistogram has an accurate title\nIf histogram values cover several orders of magnitude, an appropriate scale transformation is used\n\nEfficiency\n\nOrdered list of steps is complete\nSteps minimize the number of calls to the SEC server\nSteps de-duplicate any repeated entries\nTotal number of calls to the SEC server is calculated correctly\nCalculation of total number of calls is explained"
+    "text": "Success Criteria\nNote: These criteria are provided to facilitate self reflection and evaluation. Assignment grades may be decided based on an instructor-selected subset of these criteria.\n\nGeneral Criteria\n\nScreencast is recorded appropriately (audible sound, good video quality)\nCommented and reproducible code is provided for the screencast and linked in the video description\nScreencast demonstrates at least 4 techniques learned during Stat 351\n\nAn approximate time index is provided for each technique in the video description\nAn approximate time index is provided for each technique in the GitHub README\n\nWeb scraping is conducted politely and in accordance with the terms of the data service provider\nScreencast captions are accurate"
   },
   {
     "objectID": "assignment-repos/screencast/Dataset-Topics.html",
@@ -499,45 +499,67 @@
   {
     "objectID": "weeks/week-16.html",
     "href": "weeks/week-16.html",
-    "title": "Week 16: Linked Interactive Graphics",
+    "title": "Week 16: Interactive JavaScript Graphics",
     "section": "",
-    "text": "December 07-13, 2025\n\n\n\nCubble vignette\nmpld3 in python?\n\n\n\n\n\nFall Break!\n\n\n\n\n\nLecture: Interactive Linked Graphics",
+    "text": "December 07-13, 2025\n\n\n\nInteractive Graphics (Plotly)\nObservable JavaScript primer\nObservable from ggplot2\n\n\n\n\n\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics using Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 16 - Linked Graphics"
+      "Week 16 - JavaScript Graphics"
     ]
   },
   {
     "objectID": "weeks/week-16.html#reading",
     "href": "weeks/week-16.html#reading",
-    "title": "Week 16: Linked Interactive Graphics",
+    "title": "Week 16: Interactive JavaScript Graphics",
     "section": "",
-    "text": "Cubble vignette\nmpld3 in python?",
+    "text": "Interactive Graphics (Plotly)\nObservable JavaScript primer\nObservable from ggplot2",
     "crumbs": [
       "Weekly materials",
-      "Week 16 - Linked Graphics"
+      "Week 16 - JavaScript Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-16.html#prepare-for-class",
+    "href": "weeks/week-16.html#prepare-for-class",
+    "title": "Week 16: Interactive JavaScript Graphics",
+    "section": "",
+    "text": "Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 16 - JavaScript Graphics"
     ]
   },
   {
     "objectID": "weeks/week-16.html#tuesday",
     "href": "weeks/week-16.html#tuesday",
-    "title": "Week 16: Linked Interactive Graphics",
+    "title": "Week 16: Interactive JavaScript Graphics",
     "section": "",
-    "text": "Fall Break!",
+    "text": "Lecture: Interactive Graphics using Plotly and Observable",
     "crumbs": [
       "Weekly materials",
-      "Week 16 - Linked Graphics"
+      "Week 16 - JavaScript Graphics"
     ]
   },
   {
     "objectID": "weeks/week-16.html#thursday",
     "href": "weeks/week-16.html#thursday",
-    "title": "Week 16: Linked Interactive Graphics",
+    "title": "Week 16: Interactive JavaScript Graphics",
     "section": "",
-    "text": "Lecture: Interactive Linked Graphics",
+    "text": "Lab: Interactive Graphics with Plotly and Observable",
     "crumbs": [
       "Weekly materials",
-      "Week 16 - Linked Graphics"
+      "Week 16 - JavaScript Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-16.html#practice-your-skills",
+    "href": "weeks/week-16.html#practice-your-skills",
+    "title": "Week 16: Interactive JavaScript Graphics",
+    "section": "",
+    "text": "Lab: Interactive Graphics with Plotly and Observable\nLab goals",
+    "crumbs": [
+      "Weekly materials",
+      "Week 16 - JavaScript Graphics"
     ]
   },
   {
@@ -564,34 +586,67 @@
   {
     "objectID": "weeks/week-12.html",
     "href": "weeks/week-12.html",
-    "title": "Week 12: Apache Arrow",
+    "title": "Week 12: SQL and SQLite",
     "section": "",
-    "text": "Week 12: Apache Arrow\nNovember 09-15, 2025",
+    "text": "Week 12: SQL and SQLite\nNovember 09-15, 2025",
     "crumbs": [
       "Weekly materials",
-      "Week 12 - Arrow"
+      "Week 12 - SQL/SQLite"
     ]
   },
   {
     "objectID": "weeks/week-10.html",
     "href": "weeks/week-10.html",
-    "title": "Week 10: Approaches to Big Data",
+    "title": "Week 10: Using Appropriate Graphics",
     "section": "",
-    "text": "October 26-01, 2025\n\n\n\nScreencast due!",
+    "text": "October 26-01, 2025\n\n\n\nAppropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 10 - Big Data"
+      "Week 10 - Appropriate Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#reading",
+    "href": "weeks/week-10.html#reading",
+    "title": "Week 10: Using Appropriate Graphics",
+    "section": "",
+    "text": "Appropriate Graphics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Appropriate Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#tuesday",
+    "href": "weeks/week-10.html#tuesday",
+    "title": "Week 10: Using Appropriate Graphics",
+    "section": "",
+    "text": "Lab: Appropriate Graphics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Appropriate Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#thursday",
+    "href": "weeks/week-10.html#thursday",
+    "title": "Week 10: Using Appropriate Graphics",
+    "section": "",
+    "text": "Lab: Appropriate Graphics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Appropriate Graphics"
     ]
   },
   {
     "objectID": "weeks/week-10.html#practice-your-skills",
     "href": "weeks/week-10.html#practice-your-skills",
-    "title": "Week 10: Approaches to Big Data",
+    "title": "Week 10: Using Appropriate Graphics",
     "section": "",
-    "text": "Screencast due!",
+    "text": "Lab: Appropriate Graphics\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 10 - Big Data"
+      "Week 10 - Appropriate Graphics"
     ]
   },
   {
@@ -1270,7 +1325,7 @@
     "href": "weeks/week-09.html",
     "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "October 19-25, 2025\n\n\n\nAppropriate Graphics\n\n\n\n\n\nFind the worst data visualization published by a news organization within the last month and bring it with you to class.\n\n\n\n\n\nLecture: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\nLab goals",
+    "text": "October 19-25, 2025\n\n\n\nAppropriate Graphics\n\n\n\n\n\nFind the worst data visualization published by a news organization within the last month and bring it with you to class.\n\n\n\n\n\nFall Break!\n\n\n\n\n\nLecture: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\nLab goals\nScreencast due!",
     "crumbs": [
       "Weekly materials",
       "Week 9 - Appropriate Graphics"
@@ -1303,7 +1358,7 @@
     "href": "weeks/week-09.html#tuesday",
     "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "Lecture: Appropriate Graphics",
+    "text": "Fall Break!",
     "crumbs": [
       "Weekly materials",
       "Week 9 - Appropriate Graphics"
@@ -1314,7 +1369,7 @@
     "href": "weeks/week-09.html#thursday",
     "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "Lab: Appropriate Graphics",
+    "text": "Lecture: Appropriate Graphics",
     "crumbs": [
       "Weekly materials",
       "Week 9 - Appropriate Graphics"
@@ -1325,7 +1380,7 @@
     "href": "weeks/week-09.html#practice-your-skills",
     "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "Lab: Appropriate Graphics\nLab goals",
+    "text": "Lab: Appropriate Graphics\nLab goals\nScreencast due!",
     "crumbs": [
       "Weekly materials",
       "Week 9 - Appropriate Graphics"
@@ -1334,89 +1389,34 @@
   {
     "objectID": "weeks/week-11.html",
     "href": "weeks/week-11.html",
-    "title": "Week 11: SQL and SQLite",
+    "title": "Week 11: Approaches to Big Data",
     "section": "",
-    "text": "Week 11: SQL and SQLite\nNovember 02-08, 2025",
+    "text": "Week 11: Approaches to Big Data\nNovember 02-08, 2025",
     "crumbs": [
       "Weekly materials",
-      "Week 11 - SQL/SQLite"
+      "Week 11 - Big Data"
     ]
   },
   {
     "objectID": "weeks/week-13.html",
     "href": "weeks/week-13.html",
-    "title": "Week 13: DuckDB",
+    "title": "Week 13: Apache Arrow",
     "section": "",
-    "text": "Week 13: DuckDB\nNovember 16-22, 2025",
+    "text": "Week 13: Apache Arrow\nNovember 16-22, 2025",
     "crumbs": [
       "Weekly materials",
-      "Week 13 - DuckDB"
+      "Week 13 - Arrow"
     ]
   },
   {
     "objectID": "weeks/week-15.html",
     "href": "weeks/week-15.html",
-    "title": "Week 15: Interactive JavaScript Graphics",
+    "title": "Week 15: DuckDB",
     "section": "",
-    "text": "November 30-06, 2025\n\n\n\nInteractive Graphics (Plotly)\nObservable JavaScript primer\nObservable from ggplot2\n\n\n\n\n\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics using Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\nLab goals",
+    "text": "Week 15: DuckDB\nNovember 30-06, 2025",
     "crumbs": [
       "Weekly materials",
-      "Week 15 - JavaScript Graphics"
-    ]
-  },
-  {
-    "objectID": "weeks/week-15.html#reading",
-    "href": "weeks/week-15.html#reading",
-    "title": "Week 15: Interactive JavaScript Graphics",
-    "section": "",
-    "text": "Interactive Graphics (Plotly)\nObservable JavaScript primer\nObservable from ggplot2",
-    "crumbs": [
-      "Weekly materials",
-      "Week 15 - JavaScript Graphics"
-    ]
-  },
-  {
-    "objectID": "weeks/week-15.html#prepare-for-class",
-    "href": "weeks/week-15.html#prepare-for-class",
-    "title": "Week 15: Interactive JavaScript Graphics",
-    "section": "",
-    "text": "Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics",
-    "crumbs": [
-      "Weekly materials",
-      "Week 15 - JavaScript Graphics"
-    ]
-  },
-  {
-    "objectID": "weeks/week-15.html#tuesday",
-    "href": "weeks/week-15.html#tuesday",
-    "title": "Week 15: Interactive JavaScript Graphics",
-    "section": "",
-    "text": "Lecture: Interactive Graphics using Plotly and Observable",
-    "crumbs": [
-      "Weekly materials",
-      "Week 15 - JavaScript Graphics"
-    ]
-  },
-  {
-    "objectID": "weeks/week-15.html#thursday",
-    "href": "weeks/week-15.html#thursday",
-    "title": "Week 15: Interactive JavaScript Graphics",
-    "section": "",
-    "text": "Lab: Interactive Graphics with Plotly and Observable",
-    "crumbs": [
-      "Weekly materials",
-      "Week 15 - JavaScript Graphics"
-    ]
-  },
-  {
-    "objectID": "weeks/week-15.html#practice-your-skills",
-    "href": "weeks/week-15.html#practice-your-skills",
-    "title": "Week 15: Interactive JavaScript Graphics",
-    "section": "",
-    "text": "Lab: Interactive Graphics with Plotly and Observable\nLab goals",
-    "crumbs": [
-      "Weekly materials",
-      "Week 15 - JavaScript Graphics"
+      "Week 15 - DuckDB"
     ]
   },
   {
