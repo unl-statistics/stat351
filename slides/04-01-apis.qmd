@@ -1,0 +1,130 @@
+---
+title: "APIs"
+format: 
+    revealjs:
+        navigation-mode: vertical
+        logo: deps/unl/N.svg
+        theme: deps/unl/inverse.scss
+        css: deps/unl/styles.css
+        includes:
+          in_header: deps/unl/header.html
+        lib_dir: libs
+---
+
+
+## URL Anatomy {.scrollable .smaller}
+
+$$\underbrace{\text{https}}_{scheme}\text{://}\underbrace{\text{archive.org}}_{endpoint}/\underbrace{\text{wayback/available}}_{path}?\underbrace{\text{url=nyt.com}}_{query}$$
+
+$$\underbrace{\text{https}}_{scheme}\text{://}\underbrace{\text{srvanderplas.github.io}}_{endpoint}\text{/}\underbrace{\text{stat-computing-r-python/part-advanced-topics/05-APIs.html}}_{path}\underbrace{\text{#http-response-codes}}_{fragment}$$
+
+
+## URL Anatomy {.scrollable .smaller}
+
+$$\begin{align}
+scheme                                  &\ \ \   \text{https}\text{://}\\
+endpoint                                &\ \ \ \text{www.google.com}\\
+path                                    &\ \ \  \text{/search} \\
+my\ actual\ query                       &\ \ \  \text{?q=parts+of+a+url} \\
+possibly\ experiment\ version\ info??   &\ \ \  \text{&sca_esv=d64738122a810e98} \\
+initiated\ via\ homepage                &\ \ \  \text{&source=hp}\\
+engine\ identifier\ (meaning\ unknown)  &\ \ \  \text{&ei=aKPQaLvEMrmw0...}\\
+internal\ link\ tracking\ info          &\ \ \  \text{&ved=0ahUKEwi7mLm...}\\
+my\ query\ again?                       &\ \ \  \text{&oq=parts+of+a+url}\\
+Google\ Web\ Search\ Wizard             &\ \ \  \text{&sclient=gws-wiz} \end{align}$$
+<!-- \text{&gs_lp=Egdnd3Mtd2l6Ig5wYXJ0cyBvZiBhIHVybDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDILEAAYgAQYhgMYigVIqxZQAFi-C3AAeACQAQCYAW-gAfcJqgEEMTEuM7gBA8gBAPgBAZgCDqACogrCAg4QLhiABBixAxjRAxjHAcICDhAuGIAEGLEDGIMBGIoFwgILEAAYgAQYsQMYgwHCAgsQLhiABBjRAxjHAcICERAuGIAEGLEDGNEDGIMBGMcBwgIOEAAYgAQYsQMYgwEYigXCAgsQLhiABBixAxiDAcICDhAuGIAEGMcBGI4FGK8BwgILEAAYgAQYsQMYyQPCAgsQABiABBiSAxiKBcICCxAuGIAEGMcBGK8BwgIOEC4YgAQYsQMYxwEYrwHCAhEQLhiABBixAxjRAxjHARiKBcICCBAAGIAEGJIDwgIIEAAYgAQYsQOYAwCSBwQxMS4zoAfzhQGyBwQxMS4zuAeiCsIHBTAuOC42yAcm} & base64\ encoded\ search\ query\ and\ client\ info??\\ -->
+
+[Guide to Google search parameters](https://serpapi.com/blog/google-search-parameters/#the-q-parameter)
+
+## APIs without Authentication {.scrollable .smaller}
+
+::: panel-tabset
+### R
+
+```{r}
+#| echo: true
+#| results: hold
+library(httr2)
+library(dplyr)
+library(jsonlite)
+url <- "https://openlibrary.org/search.json?q=the+lord+of+the+rings"
+
+res <- request(url) |>
+  req_perform()
+res
+
+tmp <- res |> resp_body_string() |> fromJSON()
+# tmp[1:7]
+tmp$docs |> select(author_key, author_name, title) |> head()
+```
+
+### Python
+
+```{python}
+#| echo: true
+import requests
+import pandas as pd
+
+url = "https://openlibrary.org/search.json?q=the+lord+of+the+rings"
+req = requests.get(url)
+res = req.json()
+pd.DataFrame.from_dict(res['docs']).head()
+```
+
+:::
+
+
+
+## API key authentication
+
+
+::: panel-tabset
+### R
+
+```{r}
+#| echo: true
+#| results: hold
+library(httr2)
+library(dplyr)
+library(jsonlite)
+api_key <- 1 # Test key for educational purposes
+base <- "http://www.themealdb.com/api/json/v1/"
+query <- "/search.php?s=Pizza"
+
+url <- paste0(base, api_key, query)
+
+
+res <- request(url) |>
+  req_perform()
+res
+
+tmp <- res |> resp_body_string() |> parse_json()
+```
+
+### Python
+
+```{python}
+#| echo: true
+import requests
+import pandas as pd
+api_key = 1 # Test key for educational purposes
+base = "http://www.themealdb.com/api/json/v1/"
+query = "/search.php?s=Pizza"
+url = base + str(api_key) + query
+req = requests.get(url)
+res = req.json()
+res
+```
+
+:::
+
+
+
+## API key authentication
+
+- Generally, you'll need to sign up to obtain an API key
+- Read the documentation to figure out how to pass in the key
+    - as part of the query string
+    - in an HTTP header value such as `apiKey`
+    - as part of the path (prev example)
+

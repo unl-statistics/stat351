@@ -1586,5 +1586,26 @@
     "title": "Syllabus",
     "section": "Oral Exams",
     "text": "Oral Exams\n\nI reserve the right to replace any grade with an oral exam on your submission\nAllows me to clarify how much you understand when that isn’t clear\nHelps when I write an ambiguous question or you miss a key part of a question\nIf you can’t explain your code/answer you don’t get any credit"
+  },
+  {
+    "objectID": "slides/04-01-apis.html#url-anatomy",
+    "href": "slides/04-01-apis.html#url-anatomy",
+    "title": "APIs",
+    "section": "URL Anatomy",
+    "text": "URL Anatomy\n\\[\\underbrace{\\text{https}}_{scheme}\\text{://}\\underbrace{\\text{archive.org}}_{endpoint}/\\underbrace{\\text{wayback/available}}_{path}?\\underbrace{\\text{url=nyt.com}}_{query}\\]\n\\[\\underbrace{\\text{https}}_{scheme}\\text{://}\\underbrace{\\text{srvanderplas.github.io}}_{endpoint}\\text{/}\\underbrace{\\text{stat-computing-r-python/part-advanced-topics/05-APIs.html}}_{path}\\underbrace{\\text{#http-response-codes}}_{fragment}\\]"
+  },
+  {
+    "objectID": "slides/04-01-apis.html#apis-without-authentication",
+    "href": "slides/04-01-apis.html#apis-without-authentication",
+    "title": "APIs",
+    "section": "APIs without Authentication",
+    "text": "APIs without Authentication\n\nRPython\n\n\n\nlibrary(httr2)\nlibrary(dplyr)\nlibrary(jsonlite)\nurl &lt;- \"https://openlibrary.org/search.json?q=the+lord+of+the+rings\"\n\nres &lt;- request(url) |&gt;\n  req_perform()\nres\n\ntmp &lt;- res |&gt; resp_body_string() |&gt; fromJSON()\n# tmp[1:7]\ntmp$docs |&gt; select(author_key, author_name, title) |&gt; head()\n\n   author_key                      author_name\n1    OL26320A                   J.R.R. Tolkien\n2    OL26320A                   J.R.R. Tolkien\n3    OL26320A                   J.R.R. Tolkien\n4    OL26320A                   J.R.R. Tolkien\n5    OL26320A                   J.R.R. Tolkien\n6 OL10330532A The Lord Of The Rings Publishing\n                                         title\n1                        The Lord of the Rings\n2                   The Fellowship of the Ring\n3                               The Two Towers\n4                       The Return of the King\n5          Novels (Hobbit / Lord of the Rings)\n6 Official the lôrd of the Rîngs 2022 Calendar\n\n\n\n\n\nimport requests\nimport pandas as pd\n\nurl = \"https://openlibrary.org/search.json?q=the+lord+of+the+rings\"\nreq = requests.get(url)\nres = req.json()\npd.DataFrame.from_dict(res['docs']).head()\n\n   author_key       author_name  ...                                title  subtitle\n0  [OL26320A]  [J.R.R. Tolkien]  ...                The Lord of the Rings       NaN\n1  [OL26320A]  [J.R.R. Tolkien]  ...           The Fellowship of the Ring       NaN\n2  [OL26320A]  [J.R.R. Tolkien]  ...                       The Two Towers       NaN\n3  [OL26320A]  [J.R.R. Tolkien]  ...               The Return of the King       NaN\n4  [OL26320A]  [J.R.R. Tolkien]  ...  Novels (Hobbit / Lord of the Rings)       NaN\n\n[5 rows x 17 columns]"
+  },
+  {
+    "objectID": "slides/04-01-apis.html#url-anatomy-1",
+    "href": "slides/04-01-apis.html#url-anatomy-1",
+    "title": "APIs",
+    "section": "URL Anatomy",
+    "text": "URL Anatomy\n\\[\\begin{align}\nscheme                                  &\\ \\ \\   \\text{https}\\text{://}\\\\\nendpoint                                &\\ \\ \\ \\text{www.google.com}\\\\\npath                                    &\\ \\ \\  \\text{/search} \\\\\nmy\\ actual\\ query                       &\\ \\ \\  \\text{?q=parts+of+a+url} \\\\\npossibly\\ experiment\\ version\\ info??   &\\ \\ \\  \\text{&sca_esv=d64738122a810e98} \\\\\ninitiated\\ via\\ homepage                &\\ \\ \\  \\text{&source=hp}\\\\\nengine\\ identifier\\ (meaning\\ unknown)  &\\ \\ \\  \\text{&ei=aKPQaLvEMrmw0...}\\\\\ninternal\\ link\\ tracking\\ info          &\\ \\ \\  \\text{&ved=0ahUKEwi7mLm...}\\\\\nmy\\ query\\ again?                       &\\ \\ \\  \\text{&oq=parts+of+a+url}\\\\\nGoogle\\ Web\\ Search\\ Wizard             &\\ \\ \\  \\text{&sclient=gws-wiz} \\end{align}\\] \nGuide to Google search parameters"
   }
 ]
