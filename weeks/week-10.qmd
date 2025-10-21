@@ -13,16 +13,17 @@ October 26-01, 2025
 
 ## 🌮 Tuesday
 
-- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
-- [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
+- [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
+- [Screencast pseudocode script due!](../assignment-repos/screencast/index.qmd)
 

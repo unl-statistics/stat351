@@ -1,4 +1,4 @@
-# Week 13: Apache Arrow
+# Week 13: SQL and SQLite
 
 
 
@@ -12,4 +12,7 @@ November 16-22, 2025
 
 
 
+##  🏋 Practice Your Skills
+
+- [Screencast peer reviews due Nov 21](../assignment-repos/screencast/index.qmd)
 

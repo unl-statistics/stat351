@@ -106,6 +106,7 @@ schedule:
     assignments: |
       - Lab: [APIs](../assignment-repos/04-apis/index.qmd)
       - [Lab goals](../assignment-repos/04-apis/tilt.qmd)
+
   - week: 7
     name: PDF Tools
     start: 2025-10-05
@@ -136,6 +137,7 @@ schedule:
     assignments: |
       - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
       - [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
+
   - week: 9
     name: Using Appropriate Graphics
     start: 2025-10-19
@@ -149,9 +151,8 @@ schedule:
     class2: |
       - Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
     assignments: |
-      - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
-      - [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
-      - [Screencast due!](../assignment-repos/screencast/index.qmd)
+      - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
+      - [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
 
   - week: 10
     name: Using Appropriate Graphics
@@ -160,29 +161,48 @@ schedule:
     reading: |
       - Appropriate Graphics
     class1: |
-      - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+      - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
     class2: |
-      - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
+      - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
     assignments: |
-      - Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
-      - [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
-
+      - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
+      - [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
+      - [Screencast pseudocode script due!](../assignment-repos/screencast/index.qmd)
 
   - week: 11
-    name: Approaches to Big Data
+    name: Shiny and JavaScript Graphics
     start: 2025-11-02
     end: 2025-11-08
+    prepare: |
+      - Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
+      - [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
+      - [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
+    reading: |
+      - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
+    # - [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
+    # - [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
+    class1: |
+      - Lecture: [Interactive Graphics: Shiny and Plotly](../slides/06-01-shiny.qmd)
+    class2: |
+      - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
+    assignments: |
+      - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
+      - [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
 
 
   - week: 12
-    name: SQL and SQLite
+    name: Approaches to Big Data
     start: 2025-11-09
     end: 2025-11-15
+    assignments: |
+      - [Screencast due Nov 14](../assignment-repos/screencast/index.qmd)
 
   - week: 13
-    name: Apache Arrow
+    name: SQL and SQLite
     start: 2025-11-16
     end: 2025-11-22
+    assignments: |
+      - [Screencast peer reviews due Nov 21](../assignment-repos/screencast/index.qmd)
 
   - week: 14
     name: Thanksgiving
@@ -194,28 +214,15 @@ schedule:
       - Happy Turkey Day! :turkey:
 
   - week: 15
-    name: DuckDB
+    name: Apache Arrow
     start: 2025-11-30
     end: 2025-12-06
 
   - week: 16
-    name: Interactive JavaScript Graphics
+    name: DuckDB
     start: 2025-12-07
     end: 2025-12-13
-    reading: |
-      - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Plotly)
-      - [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
-      - [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
-    prepare: |
-      - [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
-      - [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
-    class1: |
-      - Lecture: [Interactive Graphics using Plotly and Observable](../slides/08-01-interactive-graphics.qmd)
-    class2: |
-      - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
-    assignments: |
-      - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
-      - [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
+
   - week: 17
     name: Finals
     start: 2025-12-14
@@ -229,10 +236,10 @@ important-course-dates:
     date: "2025-12-15"
   - name: Screencast Due
     id: screencast
-    date: "2025-10-24"
+    date: "2025-11-14"
   - name: Screencast Peer Reviews Due
     id: screencast-peer
-    date: "2025-10-29"
+    date: "2025-11-21"
 
 
   # - week: 8

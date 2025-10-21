@@ -1,4 +1,4 @@
-# Week 12: SQL and SQLite
+# Week 12: Approaches to Big Data
 
 
 
@@ -12,4 +12,7 @@ November 09-15, 2025
 
 
 
+##  🏋 Practice Your Skills
+
+- [Screencast due Nov 14](../assignment-repos/screencast/index.qmd)
 

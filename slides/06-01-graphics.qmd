@@ -1,0 +1,237 @@
+---
+title: "Creating Good Graphics"
+format: 
+    revealjs:
+        navigation-mode: vertical
+        logo: deps/unl/N.svg
+        theme: deps/unl/inverse.scss
+        css: deps/unl/styles.css
+        includes:
+          in_header: deps/unl/header.html
+        lib_dir: libs
+lightbox: true
+---
+
+## Grammar of Graphics Review
+
+::: columns
+::: column
+
+![[Plot source](https://web.archive.org/web/2/https://stats.stackexchange.com/questions/463463/how-could-we-improve-the-rainbow-tornado-graph-of-coronavirus-deaths)](images/covid-tornado-plot.jpg){fig-alt='The image is a multicolored line graph illustrating changes in the average number of COVID-19 deaths per day over time in various countries. The x-axis represents the increase or decrease in deaths per day, while the y-axis shows the average number of deaths per day. Curving lines in different colors represent the death trends from eight countries: USA (dark blue), France (light blue), Spain (yellow), Italy (red), UK (green), England and Wales (orange), China (purple), and Germany (light red). Notable dates and events such as lockdowns and other measures are marked along these lines, indicating changes in trends from March to April 2020. Annotations with specific dates are provided, such as "3-Apr", indicating notable shifts or inflection points in the trend lines.'}
+
+:::
+::: column
+
+How do we describe this plot using the grammar?
+
+- X mapping: 
+- Y mapping: 
+- color mapping: 
+- geoms: 
+- stats:
+- position:
+- coordinate system:
+- transformations:
+
+:::
+::::
+
+## Alt Text and Accessibility
+
+The original alt text for the plot on StackOverflow was "The Rainbow Tornado".
+
+- Does this help visually impaired users?
+
+- What would be a better description?
+
+- If you were visually impaired or hearing someone describe this chart, what would you want as a description?
+
+
+## Alt Text and Accessibility
+
+Best Practice:
+
+- Provide a 1-2 sentence alt-text AND a link to a longer description
+- Longer description should contain:
+  - the data source, 
+  - a tabular representation of the data, and 
+  - 1-2 paragraphs of description for the chart
+  
+This is hard to do well (or integrate into the page).
+
+
+## Alt Text and Accessibility
+
+Good (but not best) Practice:
+
+- Provide a caption 
+  - with the data source and 
+  - link to a data table if it's easily available
+- Provide several sentences of alt text
+
+[Image Accessibility Checker](https://asuo-ai-labs.streamlit.app/Image_Accessibility) - AI image captions
+
+- Not perfect but decent
+- Manually check before using
+
+
+## Gestalt Principles of Grouping
+
+![](images/gestalt.jpg){fig-alt='The image illustrates the word "GESTALT" using various visual design concepts. Each letter is creatively manipulated to demonstrate principles of Gestalt psychology. The "G" uses partial shapes to suggest closure. The "E" consists of small squares to depict proximity. The "S" shows continuation with lines extending from its curves. The "T" and "A" demonstrate similarity with vertical stripes, while the "A" also features a tree-like shape within its form to illustrate figure and ground. The "L" and final "T" continue the use of vertical lines consistent with similarity.'}
+
+```{r}
+
+library(ggplot2)
+library(tibble)
+library(tidyr)
+library(dplyr)
+library(ggforce)
+set_theme(theme_bw())
+
+```
+
+## Gestalt: Closure
+
+```{r}
+#| echo: false
+#| fig-width: 6
+#| fig-height: 6
+#| fig-alt: "Kanizsa Triangle Illusion. Most people see an upright white triangle occluding three black circles at the vertices and a second inverted triangle with a black outline."
+
+tdown <- tibble(x = c(0, 2/sqrt(3), -2/sqrt(3)), 
+                y = c(-1/3-8/(3*sqrt(3)), 2/3-2/(3*sqrt(3)), 2/3-2/(3*sqrt(3))))
+tup <- tibble(x = c(0, 2/sqrt(3), -2/sqrt(3)), y = c(1, -2/sqrt(3), -2/sqrt(3)))
+
+ggplot() + 
+  theme_void() + 
+  coord_fixed() + 
+  # geom_circle(aes(x0 = 0, y0=1, r = .5), fill = "black", color = "black") + 
+  # geom_circle(aes(x0 = 2/sqrt(3), y0=-2/sqrt(3), r = .5), fill = "black", color = "black") + 
+  # geom_circle(aes(x0 = -2/sqrt(3), y0=-2/sqrt(3), r = .5), fill = "black", color = "black") + 
+  # geom_shape(data = tdown, aes(x = x, y = y), fill = "white", color = "black") + 
+  geom_shape(data = tup, aes(x = x, y = y), fill = "white", color = "grey")
+```
+
+## Don't trust Alt Text generators all the time!
+
+> The image features a simplistic black silhouette of a five-pointed star. The star is symmetrical, with each point extending outward evenly from a central focal point. Its sharp angles and straight lines create a clean and balanced geometric design. The background is entirely white, providing a stark contrast that highlights the star's dark outline.
+
+Umm...
+
+## Gestalt: Closure
+
+::: {layout-ncol: 2}
+
+![](images/k-triangle-colored.png){fig-alt="Three circles at the vertices of an upright equilateral triangle, with an upside down orange equilateral triangle and then a blue upright equilateral triangle."}
+
+![](images/k-triangle-pieces.png){fig-alt="Three pac-man shapes (circles with a 60 degree section missing) with three 60 degree acute angles interspersed."}
+
+:::
+
+## Gestalt: Good Continuation
+
+```{r}
+#| echo: false
+#| fig-width: 4
+#| fig-height: 3
+#| out-width: "100%"
+#| fig-alt: "A sin curve from 0 to 4*pi, with a corresponding line at y=0 over the same domain."
+
+ggplot(tibble(x = seq(0, 4*pi, pi/100)), aes(x = x)) + 
+  geom_function(fun = sin) +
+  geom_function(fun = function(x) 0*x)
+```
+
+## Gestalt: Good Continuation
+
+
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+#| fig-width: 4
+#| fig-height: 3
+#| out-width: "100%"
+#| fig-alt: ["A sin curve from 0 to 4*pi, with a corresponding line at y=0 over the same domain. From 0 to pi, both lines are colored red and are solid, from pi to 2*pi, the lines are dashed and yellow, from 2*pi to 3*pi, the lines are green with longer dashes, and from 3*pi to 4*pi, the lines are blue with even longer dashes. The addition of color and linetype combine to make the plot seem to be composed of four half-ellipsoid shapes, rather than two continuous lines.", "A sine curve from 0 to 4*pi, with a corresponding line at y=0 over the same domain. The sinusoidal line is colored red and solid, while the line at y=0 is dashed and blue. The addition of color and linetype combine to make it clear that the plot is composed of two continuous lines that happen to intersect, illustrating the Gestalt principle of closure."]
+
+tmp <- tibble(x = seq(0, 4*pi, pi/100), y1 = sin(x), y2 = 0, group = floor(x/pi), size = (group %% 2)*.5 + 1) |>
+  bind_rows(tibble(group = 0:3, x = (group+1)*pi, y1 = sin(x), y2 = 0)) |>
+  pivot_longer(matches("y"), names_to = "y", values_to="value")
+
+ggplot(tmp, aes(x = x, y = value, color = factor(group), group = interaction(y, group))) + 
+  geom_line(aes(linetype = factor(group), linewidth = size)) + 
+  scale_linewidth_identity() + 
+  theme(legend.position = "none")
+
+
+ggplot(tmp, aes(x = x, y = value, color = factor(y), group = interaction(y, group))) + 
+  geom_line(aes(linetype = factor(y)), linewidth = 1) + 
+  scale_linewidth_identity() + 
+  theme(legend.position = "none")
+
+```
+
+
+## Gestalt: Proximity
+
+```{r}
+#| echo: false
+#| fig-width: 3
+#| fig-height: 3
+#| out-width: "100%"
+
+library(ggplot2)
+library(tibble)
+library(tidyr)
+library(dplyr)
+library(purrr)
+set_theme(theme_bw())
+
+sample_points <- function(df, n = 80) {
+  tibble(x = rnorm(n, df$xc, df$var),
+         y = rnorm(n, df$yc, df$var))
+}
+
+centers <- expand_grid(xc = c(-1, 1), yc = c(-1, 1)) |>
+  mutate(var = .4, 
+         cluster = 1:n()) 
+data <- centers |>
+  nest(center = -cluster) |>
+  mutate(data = map(center, sample_points)) |>
+  unnest(data) |>
+  unnest(center)
+
+ggplot(data, aes(x = x, y = y)) + geom_point() + coord_fixed() + theme(title = element_blank())
+```
+
+## Gestalt: Proximity
+
+```{r}
+#| echo: false
+#| fig-width: 3
+#| fig-height: 3
+#| out-width: "100%"
+
+
+
+ggplot() + geom_point(data = data, aes(x = x, y = y)) + 
+  geom_circle(data = centers, aes(x0=xc, y0=yc, r = 2.5*var)) + 
+  coord_fixed() + theme(title = element_blank())
+```
+
+
+## Gestalt: Similarity
+
+```{r}
+#| echo: false
+#| fig-width: 3
+#| fig-height: 3
+#| out-width: "100%"
+
+
+ggplot(data, aes(x = x, y = y, color = factor(cluster))) + geom_point() + theme(title = element_blank(), legend.position = "none") + coord_fixed()
+```
+
+## Applying Gestalt
+
+![[Source](https://flowingdata.com/2025/10/21/historical-lack-of-change-in-home-prices-in-major-cities/)](images/flowingdata-20251021.png){fig-alt="A set of 12 small multiple charts showing changes in house proices between 1890 and 2020 in cities. All cities have price increases but increases in Philadelphia, Baltimoore, Charleston, and Washington DC are much larger than cities in the south or midwest."}

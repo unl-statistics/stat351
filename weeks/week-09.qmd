@@ -26,7 +26,6 @@ October 19-25, 2025
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Appropriate Graphics](../assignment-repos/06-appropriate-graphics/index.qmd)
-- [Lab goals](../assignment-repos/06-appropriate-graphics/tilt.qmd)
-- [Screencast due!](../assignment-repos/screencast/index.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
+- [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
 
