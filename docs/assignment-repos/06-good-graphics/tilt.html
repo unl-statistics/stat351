@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Stat 351. Statistical Computing II - Data Management and Visualization – STAT 351 - Fall 2025</title>
+<title>Creating Good Graphics TILT Information – STAT 351 - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./course-links.html" rel="next">
-<link href="./course-support.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-75b1baf1bbf7ea741bf9ae632d6e7754.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e79f662b91e9a6bf4d6c5c8faf89cea7.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-75b1baf1bbf7ea741bf9ae632d6e7754.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-e79f662b91e9a6bf4d6c5c8faf89cea7.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,220 +67,54 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-<script src="site_libs/datatables-binding-0.33/datatables.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="site_libs/dt-core-bootstrap-1.13.6/css/dataTables.bootstrap.min.css" rel="stylesheet">
-<link href="site_libs/dt-core-bootstrap-1.13.6/css/dataTables.bootstrap.extra.css" rel="stylesheet">
-<script src="site_libs/dt-core-bootstrap-1.13.6/js/jquery.dataTables.min.js"></script>
-<script src="site_libs/dt-core-bootstrap-1.13.6/js/dataTables.bootstrap.min.js"></script>
-<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 
 
-<meta property="og:title" content="Stat 351. Statistical Computing II - Data Management and Visualization – STAT 351 - Fall 2025">
+<meta property="og:title" content="Creating Good Graphics TILT Information – STAT 351 - Fall 2025">
+<meta property="og:description" content="Homepage for STAT 351 - Advanced Computing II: Data Management and Visualization">
 <meta property="og:site_name" content="STAT 351 - Fall 2025">
-<meta name="twitter:title" content="Stat 351. Statistical Computing II - Data Management and Visualization – STAT 351 - Fall 2025">
-<meta name="twitter:image" content="https://unl-statistics.github.io/stat351/images/twitter-card.png">
+<meta name="twitter:title" content="Creating Good Graphics TILT Information – STAT 351 - Fall 2025">
+<meta name="twitter:description" content="Homepage for STAT 351 - Advanced Computing II: Data Management and Visualization">
+<meta name="twitter:image" content="https://unl-statistics.github.io/stat351/assignment-repos/06-good-graphics/images/twitter-card.png">
 <meta name="twitter:creator" content="@srvanderplas">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
-<body class="nav-sidebar docked">
+<body>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-overview.html">Course information</a></li><li class="breadcrumb-item"><a href="./index.html">Schedule</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
-</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Stat 351</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-    </div>
-      </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Course information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./course-overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./syllabus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Syllabus</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./course-support.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Support</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Schedule</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./course-links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Useful links</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Weekly materials</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 1 - Intro &amp; HTML Primer</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 2 - Web Scraping</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 3 - Web Scraping</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-04.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 4 - Records &amp; Lists</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-05.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 5 - APIs</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-06.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 6 - APIs</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-07.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 7 - PDF Tools</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-08.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 8 - PDF Tools</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-09.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 9 - Appropriate Graphics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 10 - Appropriate Graphics</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 11 - Big Data</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 12 - SQL/SQLite</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-13.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 13 - Arrow</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-15.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 15 - DuckDB</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./weeks/week-16.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 16 - JavaScript Graphics</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#purpose" id="toc-purpose" class="nav-link active" data-scroll-target="#purpose">Purpose</a>
+  <ul class="collapse">
+  <li><a href="#skills" id="toc-skills" class="nav-link" data-scroll-target="#skills">Skills</a></li>
+  <li><a href="#knowledge" id="toc-knowledge" class="nav-link" data-scroll-target="#knowledge">Knowledge</a></li>
+  </ul></li>
+  <li><a href="#success-criteria" id="toc-success-criteria" class="nav-link" data-scroll-target="#success-criteria">Success Criteria</a>
+  <ul class="collapse">
+  <li><a href="#general-criteria" id="toc-general-criteria" class="nav-link" data-scroll-target="#general-criteria">General Criteria</a></li>
+  <li><a href="#task-specific-criteria" id="toc-task-specific-criteria" class="nav-link" data-scroll-target="#task-specific-criteria">Task specific Criteria</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/unl-statistics/stat351/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./course-overview.html">Course information</a></li><li class="breadcrumb-item"><a href="./index.html">Schedule</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Stat 351. Statistical Computing II - Data Management and Visualization</h1>
+<h1 class="title">Creating Good Graphics TILT Information</h1>
 </div>
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -294,14 +126,113 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="cell">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-a2017d9ff49216cb1e1b" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-a2017d9ff49216cb1e1b">{"x":{"style":"bootstrap","filter":"none","vertical":false,"data":[[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],["<a href='weeks/week-01.html'> Intro & HTML Primer <\/a>","<a href='weeks/week-02.html'> Web Scraping <\/a>","<a href='weeks/week-03.html'> Web Scraping <\/a>","<a href='weeks/week-04.html'> Record-based Data and List Processing <\/a>","<a href='weeks/week-05.html'> Application Programming Interfaces <\/a>","<a href='weeks/week-06.html'> Application Programming Interfaces <\/a>","<a href='weeks/week-07.html'> PDF Tools <\/a>","<a href='weeks/week-08.html'> PDF Tools <\/a>","<a href='weeks/week-09.html'> Using Appropriate Graphics <\/a>","<a href='weeks/week-10.html'> Using Appropriate Graphics <\/a>","<a href='weeks/week-11.html'> Shiny and JavaScript Graphics <\/a>","<a href='weeks/week-12.html'> Approaches to Big Data <\/a>","<a href='weeks/week-13.html'> SQL and SQLite <\/a>","<a href='weeks/week-14.html'> Thanksgiving <\/a>","<a href='weeks/week-15.html'> Apache Arrow <\/a>","<a href='weeks/week-16.html'> DuckDB <\/a>","Finals"],[null,null,null,null,null,null,null,null,null,null,null,"Screencast Due","Screencast Peer Reviews Due",null,null,null,"Final Exam"]],"container":"<table class=\"table table-striped table-hover row-border order-column display\">\n  <thead>\n    <tr>\n      <th>Week<\/th>\n      <th>Topic<\/th>\n      <th>Important Dates<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"info":false,"searching":false,"ordering":false,"columnDefs":[{"className":"dt-right","targets":0},{"name":"Week","targets":0},{"name":"Topic","targets":1},{"name":"Important Dates","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
+<p>One of the most critical skills for statisticians and data scientists is to be able to <strong>communicate</strong> results effectively. Data visualization is a critical tool for communication - it leverages visual channels (higher bandwidth) and relays data based on the internal relationships that are displayed and highlighted graphically. This comes at a cost – we have to understand the human visual system in order to develop graphics that are effective.</p>
+<section id="skills" class="level3">
+<h3 class="anchored" data-anchor-id="skills">Skills</h3>
+<p>This assignment will help you practice the following skills which are important for creating good data visualizations:</p>
+<ul>
+<li><p>Analyze graphics to determine effectiveness based on:</p>
+<ul>
+<li>Use of Gestalt principles</li>
+<li>Hierarchies of accurate estimation (geoms)</li>
+<li>Appropriate geometric object representation</li>
+</ul></li>
+<li><p>Create graphics which are intended to communicate a specific message</p></li>
+<li><p>Carefully select annotations to assist users with appropriate interpretation of visualizations</p></li>
+<li><p>Consider accessibility when creating graphics and write appropriate alt-text for screen reader users</p></li>
+</ul>
+</section>
+<section id="knowledge" class="level3">
+<h3 class="anchored" data-anchor-id="knowledge">Knowledge</h3>
+<ul>
+<li><p>Basic understanding of short term memory, color vision, Gestalt heuristics, and other concepts in cognitive psychology important for constructing data visualizations.</p></li>
+<li><p>Grammar of graphics syntax and layering mechanisms</p></li>
+</ul>
+</section>
+</section>
+<section id="success-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="success-criteria">Success Criteria</h2>
+<section id="general-criteria" class="level3">
+<h3 class="anchored" data-anchor-id="general-criteria">General Criteria</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Student’s name is included at top of assignment</label></li>
+<li><label><input type="checkbox">Document compiles on a different machine</label></li>
+<li><label><input type="checkbox">Compiled document is formatted well</label></li>
+<li><label><input type="checkbox">All code in the document is contained in appropriately formatted code chunks</label></li>
+<li><label><input type="checkbox">Compiled document does not include long sections of printed data, making use of <code>head</code> and <code>tail</code> commands to show only a few rows of data during data cleaning.</label></li>
+<li><label><input type="checkbox">Student answers are below the <code>---</code> separator and above the next prompt, or in cases where questions are enumerated, student answers are indicated using the quote indicator, <code>&gt;</code> and the placeholder text <code>Your answer here</code> has been removed and replaced with the answer.</label></li>
+</ul>
+</section>
+<section id="task-specific-criteria" class="level3">
+<h3 class="anchored" data-anchor-id="task-specific-criteria">Task specific Criteria</h3>
+<ol type="1">
+<li>Graphical Critiques</li>
+</ol>
+<ul class="task-list">
+<li><p><label><input type="checkbox">Each chart has an appropriate caption</label></p></li>
+<li><p><label><input type="checkbox">Each chart has appropriate alt-text that provides essential information to a visually impaired individual or screen-reader user.</label></p></li>
+<li><p><label><input type="checkbox">YAML chunk options are formatted correctly and compile.</label></p></li>
+<li><p><label><input type="checkbox">Grammar of graphics table is filled out correctly.</label></p></li>
+<li><p><label><input type="checkbox">Analysis of effective communication in each chart is reasonable.</label></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Charts that ineffectively show changes in vaccine rates over time across different age groups</label>
+<ul class="task-list">
+<li><label><input type="checkbox">are identified and</label></li>
+<li><label><input type="checkbox">an explanation of <em>why</em> they are ineffective is provided.</label></li>
+</ul></li>
+<li><label><input type="checkbox">Charts that are appropriate but perhaps suboptimal</label>
+<ul class="task-list">
+<li><label><input type="checkbox">have issues identified and</label></li>
+<li><label><input type="checkbox">what would be changed to address the issue is provided and appropriate.</label></li>
+</ul></li>
+</ul></li>
+<li><p><label><input type="checkbox">Gestalt principles of grouping</label></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Principles that apply are ID’d for each chart</label></li>
+<li><label><input type="checkbox">Principle effectiveness is evaluated</label></li>
+</ul></li>
+<li><p><label><input type="checkbox">Message Evaluation</label></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Important messages from the data set are identified</label></li>
+<li><label><input type="checkbox">Comparisons that should be easy to perform are identified</label></li>
+<li><label><input type="checkbox">Obstacles are provided (if there are any, if not, “no obstacles” is an ok answer… but be careful with its use.)</label></li>
+</ul></li>
+<li><p><label><input type="checkbox">Improved chart is created, and changes relative to initial charts are explained.</label></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Explanation focuses on each change and how it improves the chart/makes it easier to read.</label></li>
+</ul></li>
+</ul>
+<ol start="2" type="1">
+<li>Choose Your Own Adventure</li>
+</ol>
+<ul>
+<li><label><input type="checkbox">Population size estimates are calculated correctly for each year of data.</label>
+<ul class="task-list">
+<li><label><input type="checkbox">Population size is merged into the dataset appropriately</label></li>
+</ul></li>
+<li><label><input type="checkbox">Plot from 1.6 is generated using the real data.</label>
+<ul class="task-list">
+<li><label><input type="checkbox">Change to the message when using real data is examined</label></li>
+<li><label><input type="checkbox">Analysis of change in difficulty when using real data is included</label></li>
+</ul></li>
+<li>Annotations
+<ul class="task-list">
+<li><label><input type="checkbox">Suggested annotations are reasonable</label></li>
+<li><label><input type="checkbox">Annotations do not over-clutter the chart</label></li>
+</ul></li>
+<li><label><input type="checkbox">Modifications to compare 2023 to 2024 vaccination rates are reasonable</label>
+<ul class="task-list">
+<li><label><input type="checkbox">Cognitive load considerations are included</label></li>
+<li><label><input type="checkbox">Modifications actually make the comparisons easier for the reader</label></li>
+</ul></li>
+<li><label><input type="checkbox">Suggestions for statistical significance are reasonable and explanation is thorough.</label></li>
+</ul>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -865,18 +796,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation column-page-right">
-  <div class="nav-page nav-page-previous">
-      <a href="./course-support.html" class="pagination-link" aria-label="Support">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Support</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./course-links.html" class="pagination-link" aria-label="Useful links">
-        <span class="nav-page-text">Useful links</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -885,7 +804,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/unl-statistics/stat351/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/unl-statistics/stat351/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

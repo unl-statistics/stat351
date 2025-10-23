@@ -105,11 +105,11 @@ tup <- tibble(x = c(0, 2/sqrt(3), -2/sqrt(3)), y = c(1, -2/sqrt(3), -2/sqrt(3)))
 ggplot() + 
   theme_void() + 
   coord_fixed() + 
-  # geom_circle(aes(x0 = 0, y0=1, r = .5), fill = "black", color = "black") + 
-  # geom_circle(aes(x0 = 2/sqrt(3), y0=-2/sqrt(3), r = .5), fill = "black", color = "black") + 
-  # geom_circle(aes(x0 = -2/sqrt(3), y0=-2/sqrt(3), r = .5), fill = "black", color = "black") + 
-  # geom_shape(data = tdown, aes(x = x, y = y), fill = "white", color = "black") + 
-  geom_shape(data = tup, aes(x = x, y = y), fill = "white", color = "grey")
+  geom_circle(aes(x0 = 0, y0=1, r = .5), fill = "black", color = "black") +
+  geom_circle(aes(x0 = 2/sqrt(3), y0=-2/sqrt(3), r = .5), fill = "black", color = "black") +
+  geom_circle(aes(x0 = -2/sqrt(3), y0=-2/sqrt(3), r = .5), fill = "black", color = "black") +
+  geom_shape(data = tdown, aes(x = x, y = y), fill = "white", color = "black") +
+  geom_shape(data = tup, aes(x = x, y = y), fill = "white", color = "white")
 ```
 
 ## Don't trust Alt Text generators all the time!

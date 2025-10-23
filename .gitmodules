@@ -13,3 +13,6 @@
 [submodule "assignment-repos/screencast"]
 	path = assignment-repos/screencast
 	url = git@github.com:stat-assignments/public-data-screencast.git
+[submodule "assignment-repos/06-good-graphics"]
+	path = assignment-repos/06-good-graphics
+	url = git@github.com:stat-assignments/creating-good-graphics.git
