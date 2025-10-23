@@ -2,50 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://unl-statistics.github.io/stat351/slides/06-01-graphics.html</loc>
-    <lastmod>2025-10-21T18:11:35.364Z</lastmod>
+    <lastmod>2025-10-23T16:04:44.948Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/slides/04-01-apis.html</loc>
-    <lastmod>2025-10-21T18:11:27.604Z</lastmod>
+    <lastmod>2025-09-22T02:45:22.439Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/slides/01-02-html-xml-primer.html</loc>
-    <lastmod>2025-10-21T18:11:27.604Z</lastmod>
+    <lastmod>2025-08-28T16:00:15.758Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/screencast/tilt.html</loc>
-    <lastmod>2025-10-21T18:12:32.031Z</lastmod>
+    <lastmod>2025-09-21T14:19:11.762Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/screencast/pseudocode.html</loc>
-    <lastmod>2025-10-21T18:12:32.031Z</lastmod>
+    <lastmod>2025-08-29T20:42:03.794Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/screencast/Dataset-Topics.html</loc>
-    <lastmod>2025-10-21T18:12:32.031Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat351/assignment-repos/06-good-graphics/index.html</loc>
-    <lastmod>2025-10-21T15:54:07.913Z</lastmod>
+    <lastmod>2025-08-29T20:42:03.794Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/05-pdf-parsing/index.html</loc>
-    <lastmod>2025-10-21T18:12:31.927Z</lastmod>
+    <lastmod>2025-08-23T20:25:38.264Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/04-apis/index.html</loc>
-    <lastmod>2025-10-21T18:12:31.923Z</lastmod>
+    <lastmod>2025-08-23T20:25:37.540Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/02-list-processing/index.html</loc>
-    <lastmod>2025-10-21T18:12:31.915Z</lastmod>
+    <lastmod>2025-08-01T21:15:06.571Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/01-web-scraping/index.html</loc>
-    <lastmod>2025-10-21T18:12:31.903Z</lastmod>
+    <lastmod>2025-10-19T17:56:14.260Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/weeks/week-16.html</loc>
+<<<<<<< HEAD
     <lastmod>2025-10-23T16:09:15.569Z</lastmod>
   </url>
   <url>
@@ -75,29 +72,61 @@
   <url>
     <loc>https://unl-statistics.github.io/stat351/weeks/week-02.html</loc>
     <lastmod>2025-10-23T16:09:15.569Z</lastmod>
+=======
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-14.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-12.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-10.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-08.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-06.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-04.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-02.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+>>>>>>> 0879a5e97b0469c813cbca58e6d6e7cd5f98820e
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/course-support.html</loc>
-    <lastmod>2025-10-21T18:11:27.532Z</lastmod>
+    <lastmod>2025-08-15T15:57:56.107Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/course-links.html</loc>
-    <lastmod>2025-10-21T18:11:27.532Z</lastmod>
+    <lastmod>2025-08-15T15:57:56.107Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/index.html</loc>
-    <lastmod>2025-10-21T18:11:27.840Z</lastmod>
+    <lastmod>2025-10-23T15:58:16.847Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/syllabus.html</loc>
-    <lastmod>2025-10-21T18:11:27.640Z</lastmod>
+    <lastmod>2025-08-24T17:04:22.226Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/course-overview.html</loc>
-    <lastmod>2025-10-21T18:11:27.532Z</lastmod>
+    <lastmod>2025-08-15T15:57:56.107Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/weeks/week-01.html</loc>
+<<<<<<< HEAD
     <lastmod>2025-10-23T16:09:15.569Z</lastmod>
   </url>
   <url>
@@ -131,45 +160,76 @@
   <url>
     <loc>https://unl-statistics.github.io/stat351/weeks/week-17.html</loc>
     <lastmod>2025-10-23T16:09:15.569Z</lastmod>
+=======
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-03.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-05.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-07.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-09.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-11.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-13.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-15.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+  </url>
+  <url>
+    <loc>https://unl-statistics.github.io/stat351/weeks/week-17.html</loc>
+    <lastmod>2025-10-23T15:58:27.715Z</lastmod>
+>>>>>>> 0879a5e97b0469c813cbca58e6d6e7cd5f98820e
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/01-web-scraping/tilt.html</loc>
-    <lastmod>2025-10-21T18:12:31.903Z</lastmod>
+    <lastmod>2025-08-01T16:29:39.685Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/02-list-processing/tilt.html</loc>
-    <lastmod>2025-10-21T18:12:31.915Z</lastmod>
+    <lastmod>2025-08-01T21:15:06.571Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/04-apis/tilt.html</loc>
-    <lastmod>2025-10-21T18:12:31.923Z</lastmod>
+    <lastmod>2025-08-23T20:25:37.540Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/05-pdf-parsing/tilt.html</loc>
-    <lastmod>2025-10-21T18:12:31.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://unl-statistics.github.io/stat351/assignment-repos/06-good-graphics/tilt.html</loc>
-    <lastmod>2025-10-21T15:57:17.691Z</lastmod>
+    <lastmod>2025-08-23T20:25:38.264Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/screencast/index.html</loc>
-    <lastmod>2025-10-21T18:12:32.031Z</lastmod>
+    <lastmod>2025-08-29T20:42:03.794Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/assignment-repos/screencast/screencast-checklist.html</loc>
-    <lastmod>2025-10-21T18:12:32.031Z</lastmod>
+    <lastmod>2025-08-29T20:42:03.794Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/slides/01-01-syllabus.html</loc>
-    <lastmod>2025-10-21T18:11:27.604Z</lastmod>
+    <lastmod>2025-08-24T17:04:22.194Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/slides/03-01-lists.html</loc>
-    <lastmod>2025-10-21T18:11:27.604Z</lastmod>
+    <lastmod>2025-08-24T17:04:22.194Z</lastmod>
   </url>
   <url>
     <loc>https://unl-statistics.github.io/stat351/slides/05-01-pdfs.html</loc>
-    <lastmod>2025-10-21T18:11:27.604Z</lastmod>
+    <lastmod>2025-08-15T15:57:56.107Z</lastmod>
   </url>
 </urlset>

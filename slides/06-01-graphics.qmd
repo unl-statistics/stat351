@@ -86,7 +86,7 @@ library(tibble)
 library(tidyr)
 library(dplyr)
 library(ggforce)
-set_theme(theme_bw())
+theme_set(theme_bw())
 
 ```
 
@@ -185,7 +185,7 @@ library(tibble)
 library(tidyr)
 library(dplyr)
 library(purrr)
-set_theme(theme_bw())
+theme_set(theme_bw())
 
 sample_points <- function(df, n = 80) {
   tibble(x = rnorm(n, df$xc, df$var),
