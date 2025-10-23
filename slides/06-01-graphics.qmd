@@ -86,7 +86,7 @@ library(tibble)
 library(tidyr)
 library(dplyr)
 library(ggforce)
-set_theme(theme_bw())
+theme_set(theme_bw())
 
 ```
 
