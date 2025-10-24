@@ -12,29 +12,59 @@ format:
 lightbox: true
 ---
 
-## Grammar of Graphics Review
+## Grammar of Graphics Review {.smaller}
 
 ::: columns
+
+::: column
+
+![[Plot source](https://data.europa.eu/apps/data-visualisation-guide/foundation-of-the-grammar-of-graphics)](images/penguin-rainclouds.png){fig-alt='Three raincloud plots show the distribution of bill lengths of 3 species of penguins.'}
+
+:::
+
+::: column
+
+How do we describe this plot using the grammar?
+
+- X mapping: [bill length]{.fragment}
+- Y mapping: [species]{.fragment}
+- color mapping: [species]{.fragment}
+- geoms: [Density, Dotplot]{.fragment}
+- stats: [Density, Dotplot]{.fragment}
+- position: [dodge?]{.fragment}
+- coordinate system: [Cartesian]{.fragment}
+
+:::
+
+::::
+
+
+## Grammar of Graphics Review {.smaller}
+
+::: columns
+
 ::: column
 
 ![[Plot source](https://web.archive.org/web/2/https://stats.stackexchange.com/questions/463463/how-could-we-improve-the-rainbow-tornado-graph-of-coronavirus-deaths)](images/covid-tornado-plot.jpg){fig-alt='The image is a multicolored line graph illustrating changes in the average number of COVID-19 deaths per day over time in various countries. The x-axis represents the increase or decrease in deaths per day, while the y-axis shows the average number of deaths per day. Curving lines in different colors represent the death trends from eight countries: USA (dark blue), France (light blue), Spain (yellow), Italy (red), UK (green), England and Wales (orange), China (purple), and Germany (light red). Notable dates and events such as lockdowns and other measures are marked along these lines, indicating changes in trends from March to April 2020. Annotations with specific dates are provided, such as "3-Apr", indicating notable shifts or inflection points in the trend lines.'}
 
 :::
+
 ::: column
 
 How do we describe this plot using the grammar?
 
-- X mapping: 
-- Y mapping: 
-- color mapping: 
-- geoms: 
-- stats:
-- position:
-- coordinate system:
-- transformations:
+- X mapping: [$\Delta$ Deaths/day]{.fragment}
+- Y mapping: [Avg Deaths/day]{.fragment}
+- color mapping: [Country]{.fragment}
+- label mapping: [Date]{.fragment}
+- geoms: [Path, Text]{.fragment}
+- coordinate system: [Cartesian]{.fragment}
+
 
 :::
+
 ::::
+
 
 ## Alt Text and Accessibility
 
@@ -120,7 +150,7 @@ Umm...
 
 ## Gestalt: Closure
 
-::: {layout-ncol: 2}
+::: {layout-ncol=2}
 
 ![](images/k-triangle-colored.png){fig-alt="Three circles at the vertices of an upright equilateral triangle, with an upside down orange equilateral triangle and then a blue upright equilateral triangle."}
 
@@ -178,7 +208,7 @@ ggplot(tmp, aes(x = x, y = value, color = factor(y), group = interaction(y, grou
 #| echo: false
 #| fig-width: 3
 #| fig-height: 3
-#| out-width: "100%"
+#| out-width: "70%"
 
 library(ggplot2)
 library(tibble)
@@ -210,7 +240,7 @@ ggplot(data, aes(x = x, y = y)) + geom_point() + coord_fixed() + theme(title = e
 #| echo: false
 #| fig-width: 3
 #| fig-height: 3
-#| out-width: "100%"
+#| out-width: "70%"
 
 
 
@@ -226,7 +256,7 @@ ggplot() + geom_point(data = data, aes(x = x, y = y)) +
 #| echo: false
 #| fig-width: 3
 #| fig-height: 3
-#| out-width: "100%"
+#| out-width: "70%"
 
 
 ggplot(data, aes(x = x, y = y, color = factor(cluster))) + geom_point() + theme(title = element_blank(), legend.position = "none") + coord_fixed()
@@ -234,4 +264,4 @@ ggplot(data, aes(x = x, y = y, color = factor(cluster))) + geom_point() + theme(
 
 ## Applying Gestalt
 
-![[Source](https://flowingdata.com/2025/10/21/historical-lack-of-change-in-home-prices-in-major-cities/)](images/flowingdata-20251021.png){fig-alt="A set of 12 small multiple charts showing changes in house proices between 1890 and 2020 in cities. All cities have price increases but increases in Philadelphia, Baltimoore, Charleston, and Washington DC are much larger than cities in the south or midwest."}
+![[Source](https://flowingdata.com/2025/10/21/historical-lack-of-change-in-home-prices-in-major-cities/)](images/flowingdata-20251021.png){fig-alt="A set of 12 small multiple charts showing changes in house proices between 1890 and 2020 in cities. All cities have price increases but increases in Philadelphia, Baltimore, Charleston, and Washington DC are much larger than cities in the south or midwest."}

@@ -9,6 +9,9 @@ format: html
 #| message: false
 #| warning: false
 #| cache: false
+#| include: true
+
+
 source("schedule.R") 
 library(DT)
   schedule |>
