@@ -1783,5 +1783,47 @@
     "title": "Syllabus",
     "section": "Oral Exams",
     "text": "Oral Exams\n\nI reserve the right to replace any grade with an oral exam on your submission\nAllows me to clarify how much you understand when that isn’t clear\nHelps when I write an ambiguous question or you miss a key part of a question\nIf you can’t explain your code/answer you don’t get any credit"
+  },
+  {
+    "objectID": "slides/06-02-graphics.html#grammar-of-graphics-review",
+    "href": "slides/06-02-graphics.html#grammar-of-graphics-review",
+    "title": "Creating Good Graphics",
+    "section": "Grammar of Graphics Review",
+    "text": "Grammar of Graphics Review\n\n\n\n\n\nPlot source\n\n\n\nHow do we describe this plot using the grammar?\n\nX mapping: time\nY mapping: utilities cost\ncolor mapping: continent\nfill mapping: flag\ngeoms: line, point\ncoordinate system: Cartesian"
+  },
+  {
+    "objectID": "slides/06-02-graphics.html#grammar-of-graphics-review-1",
+    "href": "slides/06-02-graphics.html#grammar-of-graphics-review-1",
+    "title": "Creating Good Graphics",
+    "section": "Grammar of Graphics Review",
+    "text": "Grammar of Graphics Review\n\n\n\n\n\nPlot source\n\n\n\nHow do we describe this plot using the grammar?\n\nX mapping: Political spectrum\nY mapping: Average number of children\ncolor mapping: Timespan\nlabel mapping: Timespan\ngeoms: Line\ncoordinate system: Cartesian\nfacet: Location"
+  },
+  {
+    "objectID": "slides/06-02-graphics.html#grammar-of-graphics-review-2",
+    "href": "slides/06-02-graphics.html#grammar-of-graphics-review-2",
+    "title": "Creating Good Graphics",
+    "section": "Grammar of Graphics Review",
+    "text": "Grammar of Graphics Review\n\n\n\n\n\nPlot source (screenshots from the video)\n\n\n\nHow do we describe this plot using the grammar?\n\nX mapping: time\nY mapping: GDP growth\nfill mapping: Economic sector\ngeoms: Bar, Line\nposition: Stacked, Identity\ncoordinate system: Cartesian"
+  },
+  {
+    "objectID": "slides/06-02-graphics.html#grammar-of-graphics-review-3",
+    "href": "slides/06-02-graphics.html#grammar-of-graphics-review-3",
+    "title": "Creating Good Graphics",
+    "section": "Grammar of Graphics Review",
+    "text": "Grammar of Graphics Review\n\n\n\n\n\nPlot source (screenshots from the video)\n\n\n\nHow do we describe this plot using the grammar?\n\nX mapping: time\nY mapping: Payroll growth\nfill mapping: Firm size (ADP payroll), Economic sector (Nonfarm payroll)\ngeoms: Bar, Line\nposition: Stacked, Identity\ncoordinate system: Cartesian"
+  },
+  {
+    "objectID": "slides/06-02-graphics.html#good-graphics-review",
+    "href": "slides/06-02-graphics.html#good-graphics-review",
+    "title": "Creating Good Graphics",
+    "section": "Good Graphics Review",
+    "text": "Good Graphics Review\n\n\n\n\n\nPlot source\n\n\n\nWhat problems do you notice in this chart?\nWhat would you fix?"
+  },
+  {
+    "objectID": "slides/06-02-graphics.html#good-graphics-review-1",
+    "href": "slides/06-02-graphics.html#good-graphics-review-1",
+    "title": "Creating Good Graphics",
+    "section": "Good Graphics Review",
+    "text": "Good Graphics Review\n\n\n\n\n\nPlot source (screenshots from the video)\n\n\n\nWhat problems do you notice in this chart?\nWhat would you fix?"
   }
 ]

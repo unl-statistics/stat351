@@ -1,0 +1,160 @@
+---
+title: "Creating Good Graphics"
+format: 
+    revealjs:
+        navigation-mode: vertical
+        logo: deps/unl/N.svg
+        theme: deps/unl/inverse.scss
+        css: deps/unl/styles.css
+        includes:
+          in_header: deps/unl/header.html
+        lib_dir: libs
+lightbox: true
+---
+
+## Grammar of Graphics Review {.smaller}
+
+:::: columns
+
+::: column
+
+![[Plot source](https://www.visualcapitalist.com/cost-of-utilities-around-the-world/)](images/graphics-visual-capitalist-cost-of-utilities.png){fig-alt='The cost of Utilities. Monthly cost (USD) of utilities (electricity, heating, cooling, water, garbage) in countries around the world. Lines are colored by continent, and show the change from 2020 to 2025. The point in 2025 shows the country\'s flag within the circle. For most countries, the cost has gone up, but this is particularly notable for european countries, who have seen the highest increase by far. A table of the original data is available at https://www.visualcapitalist.com/cost-of-utilities-around-the-world/#tablepress-6368_wrapper'}
+
+:::
+
+::: column
+
+How do we describe this plot using the grammar?
+
+- X mapping: [time]{.fragment .purple .emph}
+- Y mapping: [utilities cost]{.fragment .purple .emph}
+- color mapping: [continent]{.fragment .purple .emph}
+- fill mapping: [flag]{.fragment .purple .emph}
+- geoms: [line, point]{.fragment .purple .emph}
+- coordinate system: [Cartesian]{.fragment .purple .emph}
+
+:::
+
+::::
+
+
+## Grammar of Graphics Review {.smaller}
+
+:::: columns
+
+::: column
+
+![[Plot source](https://archive.ph/NRdq0)](images/graphics-financial-times-birth-rates.png){fig-alt='Line chart titled "Birth rates are falling more steeply among progressives than conservatives" with subtitle "Average number of children born to people at different points along the political spectrum, by era". Two subplots are shown: the US, and the developed world average. The US y axis has values between 2.8 and 1.8, while the developed world y axis has values between 2.2 and 1.6. In the US, the highest line corresponds to the 1970s and oscillates between 2.8 and just below 2.6, with little change across the political spectrum from left to right. In the 1990s, the average had dropped on the left to approximately 2.2, and goes up to 2.4 in the center and 2.7 on the right. In the 2010-2024 period, the average is 1.8 on the left and increases at every point along the spectrum to just over 2.6 on the right. Moving to the developed world, however, the 1990s line is at 2.1 on the left, dips down to just under 2 moving towards center-left, and then increases to just under 2.2 at the center, where it is relatively flat until the final point on the right side of the plot, where it is just above 2.2. In the 2010-2022 period, the line moves from 1.6 on the left to 1.8 at center-left, and increases steadily to 2.1 on the far right. Vertical arrows are shown on both plots to emphasize the change between the early data and the more recent data on the left side of the plot. The information is taken from the US General Social Survey and teh World Values Survey.'}
+
+:::
+
+::: column
+
+How do we describe this plot using the grammar?
+
+- X mapping: [Political spectrum]{.fragment .green .emph}
+- Y mapping: [Average number of children]{.fragment .green .emph}
+- color mapping: [Timespan]{.fragment .green .emph}
+- label mapping: [Timespan]{.fragment .green .emph}
+- geoms: [Line]{.fragment .green .emph}
+- coordinate system: [Cartesian]{.fragment .green .emph}
+- facet: [Location]{.fragment .green .emph}
+
+
+:::
+
+::::
+
+
+## Good Graphics Review {.smaller}
+
+:::: columns
+
+::: column
+
+![[Plot source](https://archive.ph/NRdq0)](images/graphics-financial-times-birth-rates.png){fig-alt='Line chart titled "Birth rates are falling more steeply among progressives than conservatives" with subtitle "Average number of children born to people at different points along the political spectrum, by era". Two subplots are shown: the US, and the developed world average. The US y axis has values between 2.8 and 1.8, while the developed world y axis has values between 2.2 and 1.6. In the US, the highest line corresponds to the 1970s and oscillates between 2.8 and just below 2.6, with little change across the political spectrum from left to right. In the 1990s, the average had dropped on the left to approximately 2.2, and goes up to 2.4 in the center and 2.7 on the right. In the 2010-2024 period, the average is 1.8 on the left and increases at every point along the spectrum to just over 2.6 on the right. Moving to the developed world, however, the 1990s line is at 2.1 on the left, dips down to just under 2 moving towards center-left, and then increases to just under 2.2 at the center, where it is relatively flat until the final point on the right side of the plot, where it is just above 2.2. In the 2010-2022 period, the line moves from 1.6 on the left to 1.8 at center-left, and increases steadily to 2.1 on the far right. Vertical arrows are shown on both plots to emphasize the change between the early data and the more recent data on the left side of the plot. The information is taken from the US General Social Survey and teh World Values Survey.'}
+
+:::
+
+::: column
+
+What problems do you notice in this chart?
+
+What would you fix?
+:::
+
+::::
+
+
+## Grammar of Graphics Review {.smaller}
+
+:::: columns
+
+::: column
+
+![[Plot source](https://www.msnbc.com/morning-joe/watch/steve-rattner-the-job-market-is-clearly-getting-rough-right-now-250005573912) (screenshots from the video)](images/graphics-msnbc-gdp-growth-ai.png){fig-alt='A stacked bar chart titled GDP Growth (HoH Annualized) showing AI investment (striped) and all other investment (solid), with a line showing total gdp growth. The y-axis goes from -1% to 7%, and the x-axis shows 2021H1, 2022 H1, 2023H1, ..., 2025H1 (presumably first and second halves of the year, with the first half labeled). In 2021, AI investment is highest, and in 2022, the total GDP growth was slightly negative, with AI investment nearly balancing out the rest of the economy. AI investment has been relatively small (.33%ish) through the other halves until 2025, when it registered as maybe .5%.'}
+
+:::
+
+::: column
+
+How do we describe this plot using the grammar?
+
+- X mapping: [time]{.fragment .red .emph}
+- Y mapping: [GDP growth]{.fragment .red .emph}
+- fill mapping: [Economic sector]{.fragment .red .emph}
+- geoms: [Bar, Line]{.fragment .red .emph}
+- position: [Stacked, Identity]{.fragment .red .emph}
+- coordinate system: [Cartesian]{.fragment .red .emph}
+
+
+:::
+
+::::
+
+
+## Grammar of Graphics Review {.smaller}
+
+:::: columns
+
+::: column
+
+![[Plot source](https://www.msnbc.com/morning-joe/watch/steve-rattner-the-job-market-is-clearly-getting-rough-right-now-250005573912) (screenshots from the video)](images/graphics-msnbc-payroll-growth.png){fig-alt='Two stacked bar charts showing ADP and nonfarm payroll growth, with the x-axis showing time (monthly) and the y-axis showing growth in thousands. ADP payroll growth is shown for June, July, August, Sept, while nonfarm payroll growth is shown for May, June, July, August. ADP payroll growth is shown by firm size, with an increase in July. The overall trend is shown with a black line, and the average is slightly negative in June (-25k) and Sept (-25k), but positive in July (~100k) and at 0 in August. The Nonfarm payrolls growth is shown by sector, with government, education and helath, leisure and hospitality, and other categories. A black line shows overall growth, and is slightly positive in May, slightly negative in June, very positive (about 75k) in July, and slightly positive (20k) in August.'}
+
+:::
+
+::: column
+
+How do we describe this plot using the grammar?
+
+- X mapping: [time]{.fragment .blue .emph}
+- Y mapping: [Payroll growth]{.fragment .blue .emph}
+- fill mapping: [Firm size (ADP payroll), Economic sector (Nonfarm payroll)]{.fragment .blue .emph}
+- geoms: [Bar, Line]{.fragment .blue .emph}
+- position: [Stacked, Identity]{.fragment .blue .emph}
+- coordinate system: [Cartesian]{.fragment .blue .emph}
+
+
+:::
+
+::::
+
+## Good Graphics Review {.smaller}
+
+:::: columns
+
+::: column
+
+![[Plot source](https://www.msnbc.com/morning-joe/watch/steve-rattner-the-job-market-is-clearly-getting-rough-right-now-250005573912) (screenshots from the video)](images/graphics-msnbc-payroll-growth.png){fig-alt='Two stacked bar charts showing ADP and nonfarm payroll growth, with the x-axis showing time (monthly) and the y-axis showing growth in thousands. ADP payroll growth is shown for June, July, August, Sept, while nonfarm payroll growth is shown for May, June, July, August. ADP payroll growth is shown by firm size, with an increase in July. The overall trend is shown with a black line, and the average is slightly negative in June (-25k) and Sept (-25k), but positive in July (~100k) and at 0 in August. The Nonfarm payrolls growth is shown by sector, with government, education and helath, leisure and hospitality, and other categories. A black line shows overall growth, and is slightly positive in May, slightly negative in June, very positive (about 75k) in July, and slightly positive (20k) in August.'}
+
+:::
+
+::: column
+
+What problems do you notice in this chart?
+
+What would you fix?
+
+:::
+
+::::
