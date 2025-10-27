@@ -13,6 +13,7 @@ October 26-01, 2025
 
 ## 🌮 Tuesday
 
+- Intro: [Appropriate Graphics](../slides/06-02-graphics.qmd)
 - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
 
 
