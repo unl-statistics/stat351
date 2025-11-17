@@ -1,4 +1,4 @@
-# Week 13: SQL and SQLite
+# Week 13: Approaches to Big Data, SQL and SQLite
 
 
 
@@ -6,10 +6,23 @@ November 16-22, 2025
 
 
 
+## 🥣 Prepare for class
+
+Don't worry, the chapters from [Big Data Analytics](https://umatter.github.io/BigData/) by Ulrich Matter are much shorter than chapters I tend to write. I could probably learn something...
+- [Approaches to Analyzing Big Data](https://umatter.github.io/BigData/approaches-to-analyzing-big-data.html)
+- [Two Domains of Big Data Analytics](https://umatter.github.io/BigData/the-two-domains-of-big-data-analytics.html)
+- [Data Collection and Data Storage](https://umatter.github.io/BigData/data-collection-and-data-storage.html) -- how to create and connect to databases in R.
+- Practice Material -- [SQL Zoo](https://sqlzoo.net/wiki/SQL_Tutorial) - a guided tutorial through the basics of SQL Queries
 
 
+## 🌮 Tuesday
+
+- We'll work through the Berkeley Statistics [Databases/SQL](https://computing.stat.berkeley.edu/tutorial-databases/) tutorial together in class.
 
 
+## 🌩️ Thursday 🔨 
+
+- Lab: [SQL Squid Game](https://datalemur.com/sql-game) -- participation grade. You must be in class to get credit.
 
 
 ##  🏋 Practice Your Skills

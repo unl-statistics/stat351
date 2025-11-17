@@ -244,9 +244,42 @@
   {
     "objectID": "weeks/week-13.html",
     "href": "weeks/week-13.html",
-    "title": "Week 13: SQL and SQLite",
+    "title": "Week 13: Approaches to Big Data, SQL and SQLite",
     "section": "",
-    "text": "November 16-22, 2025\n\n\n\nScreencast peer reviews due Nov 21",
+    "text": "November 16-22, 2025\n\n\nDon’t worry, the chapters from Big Data Analytics by Ulrich Matter are much shorter than chapters I tend to write. I could probably learn something… - Approaches to Analyzing Big Data - Two Domains of Big Data Analytics - Data Collection and Data Storage – how to create and connect to databases in R. - Practice Material – SQL Zoo - a guided tutorial through the basics of SQL Queries\n\n\n\n\nWe’ll work through the Berkeley Statistics Databases/SQL tutorial together in class.\n\n\n\n\n\nLab: SQL Squid Game – participation grade. You must be in class to get credit.\n\n\n\n\n\nScreencast peer reviews due Nov 21",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13 - Arrow"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html#prepare-for-class",
+    "href": "weeks/week-13.html#prepare-for-class",
+    "title": "Week 13: Approaches to Big Data, SQL and SQLite",
+    "section": "",
+    "text": "Don’t worry, the chapters from Big Data Analytics by Ulrich Matter are much shorter than chapters I tend to write. I could probably learn something… - Approaches to Analyzing Big Data - Two Domains of Big Data Analytics - Data Collection and Data Storage – how to create and connect to databases in R. - Practice Material – SQL Zoo - a guided tutorial through the basics of SQL Queries",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13 - Arrow"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html#tuesday",
+    "href": "weeks/week-13.html#tuesday",
+    "title": "Week 13: Approaches to Big Data, SQL and SQLite",
+    "section": "",
+    "text": "We’ll work through the Berkeley Statistics Databases/SQL tutorial together in class.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 13 - Arrow"
+    ]
+  },
+  {
+    "objectID": "weeks/week-13.html#thursday",
+    "href": "weeks/week-13.html#thursday",
+    "title": "Week 13: Approaches to Big Data, SQL and SQLite",
+    "section": "",
+    "text": "Lab: SQL Squid Game – participation grade. You must be in class to get credit.",
     "crumbs": [
       "Weekly materials",
       "Week 13 - Arrow"
@@ -255,7 +288,7 @@
   {
     "objectID": "weeks/week-13.html#practice-your-skills",
     "href": "weeks/week-13.html#practice-your-skills",
-    "title": "Week 13: SQL and SQLite",
+    "title": "Week 13: Approaches to Big Data, SQL and SQLite",
     "section": "",
     "text": "Screencast peer reviews due Nov 21",
     "crumbs": [
@@ -268,7 +301,7 @@
     "href": "weeks/week-11.html",
     "title": "Week 11: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "November 02-08, 2025\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\nLab goals",
+    "text": "November 02-08, 2025\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: Play with Shiny, work on Screencast.\n\n\n\n\nNone - Play with Shiny!",
     "crumbs": [
       "Weekly materials",
       "Week 11 - Big Data"
@@ -312,7 +345,7 @@
     "href": "weeks/week-11.html#thursday",
     "title": "Week 11: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "Lab: Interactive Graphics with Plotly and Observable",
+    "text": "Lab: Play with Shiny, work on Screencast.",
     "crumbs": [
       "Weekly materials",
       "Week 11 - Big Data"
@@ -323,7 +356,7 @@
     "href": "weeks/week-11.html#practice-your-skills",
     "title": "Week 11: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "Lab: Interactive Graphics with Plotly and Observable\nLab goals",
+    "text": "None - Play with Shiny!",
     "crumbs": [
       "Weekly materials",
       "Week 11 - Big Data"
@@ -1124,9 +1157,53 @@
   {
     "objectID": "weeks/week-12.html",
     "href": "weeks/week-12.html",
-    "title": "Week 12: Approaches to Big Data",
+    "title": "Week 12: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "November 09-15, 2025\n\n\n\nScreencast due Nov 14",
+    "text": "November 09-NA\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\nLab goals\nScreencast due Nov 14",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12 - SQL/SQLite"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#reading",
+    "href": "weeks/week-12.html#reading",
+    "title": "Week 12: Shiny and JavaScript Graphics",
+    "section": "",
+    "text": "Interactive Graphics (Shiny)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12 - SQL/SQLite"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#prepare-for-class",
+    "href": "weeks/week-12.html#prepare-for-class",
+    "title": "Week 12: Shiny and JavaScript Graphics",
+    "section": "",
+    "text": "Look over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12 - SQL/SQLite"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#tuesday",
+    "href": "weeks/week-12.html#tuesday",
+    "title": "Week 12: Shiny and JavaScript Graphics",
+    "section": "",
+    "text": "Lecture: Interactive Graphics: Shiny and Plotly",
+    "crumbs": [
+      "Weekly materials",
+      "Week 12 - SQL/SQLite"
+    ]
+  },
+  {
+    "objectID": "weeks/week-12.html#thursday",
+    "href": "weeks/week-12.html#thursday",
+    "title": "Week 12: Shiny and JavaScript Graphics",
+    "section": "",
+    "text": "Lab: Interactive Graphics with Plotly and Observable",
     "crumbs": [
       "Weekly materials",
       "Week 12 - SQL/SQLite"
@@ -1135,9 +1212,9 @@
   {
     "objectID": "weeks/week-12.html#practice-your-skills",
     "href": "weeks/week-12.html#practice-your-skills",
-    "title": "Week 12: Approaches to Big Data",
+    "title": "Week 12: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "Screencast due Nov 14",
+    "text": "Lab: Interactive Graphics with Plotly and Observable\nLab goals\nScreencast due Nov 14",
     "crumbs": [
       "Weekly materials",
       "Week 12 - SQL/SQLite"

@@ -1,18 +1,34 @@
-# Week 12: Approaches to Big Data
+# Week 12: Shiny and JavaScript Graphics
 
 
 
-November 09-15, 2025
+November 09-NA
+
+## 📖 Reading
+
+- [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
 
 
+## 🥣 Prepare for class
+
+- Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
+- [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
+- [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
 
 
+## 🌮 Tuesday
+
+- Lecture: [Interactive Graphics: Shiny and Plotly](../slides/06-01-shiny.qmd)
 
 
+## 🌩️ Thursday 🔨 
 
+- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
 
 
 ##  🏋 Practice Your Skills
 
+- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
+- [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
 - [Screencast due Nov 14](../assignment-repos/screencast/index.qmd)
 

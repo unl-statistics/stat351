@@ -183,25 +183,48 @@ schedule:
     # - [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
     # - [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
     class1: |
-      - Lecture: [Interactive Graphics: Shiny and Plotly](../slides/06-01-shiny.qmd)
+      - Lecture: Interactive Graphics: Shiny and Plotly
+    class2: |
+      - Lab: Play with Shiny, work on Screencast.
+    assignments: |
+      None - Play with Shiny!
+
+
+  - week: 12
+    name: Shiny and JavaScript Graphics
+    start: 2025-11-09
+    end: 2025-11-015
+    prepare: |
+      - Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
+      - [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
+      - [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
+    reading: |
+      - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
+    # - [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
+    # - [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
+    class1: |
+      - Lecture: Interactive Graphics: Observable
     class2: |
       - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
     assignments: |
       - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
       - [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
-
-
-  - week: 12
-    name: Approaches to Big Data
-    start: 2025-11-09
-    end: 2025-11-15
-    assignments: |
       - [Screencast due Nov 14](../assignment-repos/screencast/index.qmd)
 
   - week: 13
-    name: SQL and SQLite
+    name: Approaches to Big Data, SQL and SQLite
     start: 2025-11-16
     end: 2025-11-22
+    prepare: |
+      Don't worry, the chapters from [Big Data Analytics](https://umatter.github.io/BigData/) by Ulrich Matter are much shorter than chapters I tend to write. I could probably learn something...
+      - [Approaches to Analyzing Big Data](https://umatter.github.io/BigData/approaches-to-analyzing-big-data.html)
+      - [Two Domains of Big Data Analytics](https://umatter.github.io/BigData/the-two-domains-of-big-data-analytics.html)
+      - [Data Collection and Data Storage](https://umatter.github.io/BigData/data-collection-and-data-storage.html) -- how to create and connect to databases in R.
+      - Practice Material -- [SQL Zoo](https://sqlzoo.net/wiki/SQL_Tutorial) - a guided tutorial through the basics of SQL Queries
+    class1: |
+      - We'll work through the Berkeley Statistics [Databases/SQL](https://computing.stat.berkeley.edu/tutorial-databases/) tutorial together in class.
+    class2: |
+      - Lab: [SQL Squid Game](https://datalemur.com/sql-game) -- participation grade. You must be in class to get credit.
     assignments: |
       - [Screencast peer reviews due Nov 21](../assignment-repos/screencast/index.qmd)
 

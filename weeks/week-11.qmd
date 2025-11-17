@@ -18,16 +18,15 @@ November 02-08, 2025
 
 ## 🌮 Tuesday
 
-- Lecture: [Interactive Graphics: Shiny and Plotly](../slides/06-01-shiny.qmd)
+- Lecture: Interactive Graphics: Shiny and Plotly
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
+- Lab: Play with Shiny, work on Screencast.
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
-- [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
+None - Play with Shiny!
 
