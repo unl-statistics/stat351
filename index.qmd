@@ -3,7 +3,7 @@ title: Stat 351. Statistical Computing II -  Data Management and Visualization
 format: html
 ---
 
-
+ 
 ```{r}
 #| echo: false
 #| message: false

@@ -1159,7 +1159,7 @@
     "href": "weeks/week-12.html",
     "title": "Week 12: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "November 09-NA\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\nLab goals\nScreencast due Nov 14",
+    "text": "November 09-NA\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\nLab goals\nScreencast due Nov 14",
     "crumbs": [
       "Weekly materials",
       "Week 12 - SQL/SQLite"
@@ -1192,7 +1192,7 @@
     "href": "weeks/week-12.html#tuesday",
     "title": "Week 12: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "Lecture: Interactive Graphics: Shiny and Plotly",
+    "text": "Lecture: Interactive Graphics: Observable",
     "crumbs": [
       "Weekly materials",
       "Week 12 - SQL/SQLite"
