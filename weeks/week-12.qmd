@@ -29,6 +29,5 @@ November 09-NA
 ##  🏋 Practice Your Skills
 
 - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
-- [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
 - [Screencast due Nov 14](../assignment-repos/screencast/index.qmd)
 

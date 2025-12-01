@@ -1,0 +1,17 @@
+{
+  "hash": "f129a0d77889f775d061cee336942967",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Arrow and Parquet\"\nformat: html\n---\n\nIf you choose not to attend the rally (or you are otherwise unable to attend class), please submit the completed qmd file by email. \n\n# Introduction\n\nMake sure to install the `arrow` package in R before you proceed with this assignment.\n\n## Make your own big data\n\nCreate a data frame, `df`, with 10,000,000 rows and two columns. \n\n- The first column, `x`, should be a randomly sampled number from a `N(0, 5)` distribution. \n- The second column, `y`, should be a randomly sampled letter from the `letters` vector (sampling with replacement, uniform probability). \n\nSave your data as an `arrow` `Table` using `Table$create(df)`.\nYou can find out more about the `Table` class by running `?Table` after loading the arrow package. \n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(arrow)\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\n\nAttaching package: 'arrow'\n```\n\n\n:::\n\n::: {.cell-output .cell-output-stderr}\n\n```\nThe following object is masked from 'package:utils':\n\n    timestamp\n```\n\n\n:::\n\n```{.r .cell-code}\n?Table # Learn more about the table class\nTable$public_methods |> names() # These methods (functions attached to the Table object) will override columns with the same names\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n [1] \"column\"                \"ColumnNames\"           \"nbytes\"               \n [4] \"RenameColumns\"         \"GetColumnByName\"       \"RemoveColumn\"         \n [7] \"AddColumn\"             \"SetColumn\"             \"ReplaceSchemaMetadata\"\n[10] \"field\"                 \"serialize\"             \"to_data_frame\"        \n[13] \"cast\"                  \"SelectColumns\"         \"Slice\"                \n[16] \"Equals\"                \"Validate\"              \"ValidateFull\"         \n[19] \"clone\"                \n```\n\n\n:::\n:::\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# Your data frame code goes here\n```\n:::\n\n\n\n## Save, Read, and Compare\n\nSave your data to disk as a parquet file named `mydata.parquet`.\nRead the data back in from the parquet format as `pardf`. \nWhat has changed?\n\n# `dplyr` and Arrow\n\n## Filtering Rows\n\nUse arrow's `dplyr` interface to filter and keep only the rows where $x>0$ and $y\\in\\{a, e, i, o, u\\}$. \n\nWhat function is necessary to convert the results back into a data frame at the end of the statement?\n\n\n::: {.cell}\n\n:::\n\n\n\n## Summary Statistics\n\nGroup by the letter and compute the number of rows, the mean of $x$ values, and the standard deviation of $x$ values. \n\n\n::: {.cell}\n\n:::\n\n\n# Reflection\n\nIn 3-4 sentences, explain where you see yourself using Arrow in the future, and when it would make sense to use Arrow rather than e.g. a base R `data.frame` or a `tibble`. \n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,132 @@
+---
+title: "DuckDB"
+---
+
+
+# Querying Parquet with Different Engines
+
+## Introduction to DuckDB
+
+![](https://duckdb.org/images/duckdb-circle.svg){width=25%}
+
+::: {.incremental}
+- **Analytical SQL database system**
+  - Embedded database (like SQLite)
+  - Column oriented
+  - In-process query execution
+
+- **Key features:**
+  - Direct Parquet querying
+  - Vectorized query execution
+  - Parallel processing
+  - Zero-copy integration with arrow
+:::
+
+:::{.notes}
+The zero-copy integration with arrow is because DuckDB uses basically the same format for it's own internal representation.
+:::
+
+## DuckDB
+
+```{r}
+#| eval: false
+library(duckdb)
+
+con <- dbConnect(duckdb())
+
+# Register a Parquet file as a virtual table
+dbExecute(con, "CREATE VIEW pums AS SELECT * 
+                FROM read_parquet('CA_person_2021.parquet')")
+
+# Run our query
+dbGetQuery(con, "
+  SELECT SUM(JWMNP * PWGTP)/SUM(PWGTP) as avg_commute_time,
+         COUNT(*) as count
+  FROM pums
+  WHERE AGEP >= 16
+")
+
+dbDisconnect(con, shutdown = TRUE)
+```
+
+## duckplyr
+
+```{r}
+#| eval: false
+library(duckplyr)
+
+# Read data with Arrow
+pums_data <- read_file_duckdb(
+  "CA_person_2021.parquet", 
+  "read_parquet"
+)
+
+# Use duckplyr to optimize dplyr operations
+pums_data |>
+  filter(AGEP >= 16) |>
+  summarize(
+    mean_commute_time = sum(JWMNP * PWGTP, na.rm = TRUE) /
+      sum(PWGTP),
+    count = n()
+  ) |>
+  collect()
+```
+
+:::{.notes}
+duckplyr is a drop-in replacement for dplyr, using duckdb as a backend
+:::
+
+## data.table
+
+```{r}
+#| eval: false
+library(arrow)
+library(data.table)
+
+# Read Parquet file with Arrow
+pums_data <- read_parquet("CA_person_2021.parquet")
+
+# Convert to data.table
+pums_dt <- as.data.table(pums_data)
+
+# data.table query
+pums_dt[AGEP >= 16,
+  .(avg_commute_time = sum(JWMNP * PWGTP, na.rm = TRUE) / sum(PWGTP), 
+    count = .N)]
+```
+
+## Arrow Query Execution
+
+```{r}
+#| eval: false
+# Create an Arrow Dataset
+pums_ds <- open_dataset("pums_dataset_dir/")
+
+# Execute query with Arrow
+result <- pums_ds |>
+  filter(AGEP >= 16) |>
+  group_by(ST) |>
+  summarize(
+    avg_commute_time = mean(JWMNP, na.rm = TRUE),
+    count = n()
+  ) |>
+  arrange(desc(avg_commute_time)) |>
+  collect()
+```
+
+## Demo: Seamless Integration Arrow ↔ DuckDB
+
+```{r}
+#| eval: false
+df <- read_parquet("CA_person_2021.parquet")
+
+# Use dplyr verbs with arrow tables
+df |>
+  filter(AGEP >= 16) |>
+  to_duckdb() |>
+  summarize(
+    mean_commute_time = sum(JWMNP * PWGTP, na.rm = TRUE) /
+      sum(PWGTP),
+    count = n()
+  ) 
+```

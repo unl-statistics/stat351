@@ -33,3 +33,5 @@ po/*~
 rsconnect/
 /.quarto/
 student-assignments
+
+**/*.quarto_ipynb

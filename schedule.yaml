@@ -208,7 +208,6 @@ schedule:
       - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
     assignments: |
       - Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
-      - [Lab goals](../assignment-repos/08-interactive-graphics-js/tilt.qmd)
       - [Screencast due Nov 14](../assignment-repos/screencast/index.qmd)
 
   - week: 13
@@ -241,6 +240,17 @@ schedule:
     name: Apache Arrow
     start: 2025-11-30
     end: 2025-12-06
+    reading: |
+      - [Getting Started with Apache Arrow](https://blog.djnavarro.net/posts/2021-11-19_starting-apache-arrow-in-r/) - Danielle Navarro
+      - [Arrow project overview](https://arrow.apache.org/overview/)
+      - [Arrow](https://r4ds.hadley.nz/arrow.html) - R for Data Science
+      - [Arrow: Reading and Writing Data](https://arrow.apache.org/cookbook/r/reading-and-writing-data---single-files.html) - Apache Arrow R Cookbook (Optional additional resource)
+      - [PyArrow](https://arrow.apache.org/docs/python/index.html) (Optional, for reference -- we'll primarily work in R for this week)
+    class1: |
+      - [Why Arrow?](../slides/15-why-arrow.qmd)
+    class2: |
+      - East Campus "Pack the Boardroom" Rally 11 am - 1 pm. We will meet for 10 minutes (attendance check) and then walk to the rally.
+      - An [optional Apache Arrow assignment](../assignment-repos/09-arrow/index.qmd) is available for students who do not wish to attend the rally. Submit the index.qmd file (completed) by email.
 
   - week: 16
     name: DuckDB

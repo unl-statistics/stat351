@@ -16,3 +16,6 @@
 [submodule "assignment-repos/06-good-graphics"]
 	path = assignment-repos/06-good-graphics
 	url = git@github.com:stat-assignments/creating-good-graphics.git
+[submodule "assignment-repos/08-interactive-graphics"]
+	path = assignment-repos/08-interactive-graphics
+	url = git@github.com:stat-assignments/interactive-graphics-ojs.git
