@@ -11,35 +11,35 @@
     "href": "slides/16-duckdb.html#duckdb",
     "title": "DuckDB",
     "section": "DuckDB",
-    "text": "DuckDB\n\nlibrary(duckdb)\n\ncon &lt;- dbConnect(duckdb())\n\n# Register a Parquet file as a virtual table\ndbExecute(con, \"CREATE VIEW pums AS SELECT * \n                FROM read_parquet('CA_person_2021.parquet')\")\n\n# Run our query\ndbGetQuery(con, \"\n  SELECT SUM(JWMNP * PWGTP)/SUM(PWGTP) as avg_commute_time,\n         COUNT(*) as count\n  FROM pums\n  WHERE AGEP &gt;= 16\n\")\n\ndbDisconnect(con, shutdown = TRUE)"
+    "text": "DuckDB"
   },
   {
     "objectID": "slides/16-duckdb.html#duckplyr",
     "href": "slides/16-duckdb.html#duckplyr",
     "title": "DuckDB",
     "section": "duckplyr",
-    "text": "duckplyr\n\nlibrary(duckplyr)\n\n# Read data with Arrow\npums_data &lt;- read_file_duckdb(\n  \"CA_person_2021.parquet\", \n  \"read_parquet\"\n)\n\n# Use duckplyr to optimize dplyr operations\npums_data |&gt;\n  filter(AGEP &gt;= 16) |&gt;\n  summarize(\n    mean_commute_time = sum(JWMNP * PWGTP, na.rm = TRUE) /\n      sum(PWGTP),\n    count = n()\n  ) |&gt;\n  collect()\n\n\nduckplyr is a drop-in replacement for dplyr, using duckdb as a backend"
+    "text": "duckplyr\n\nduckplyr is a drop-in replacement for dplyr, using duckdb as a backend"
   },
   {
     "objectID": "slides/16-duckdb.html#data.table",
     "href": "slides/16-duckdb.html#data.table",
     "title": "DuckDB",
     "section": "data.table",
-    "text": "data.table\n\nlibrary(arrow)\nlibrary(data.table)\n\n# Read Parquet file with Arrow\npums_data &lt;- read_parquet(\"CA_person_2021.parquet\")\n\n# Convert to data.table\npums_dt &lt;- as.data.table(pums_data)\n\n# data.table query\npums_dt[AGEP &gt;= 16,\n  .(avg_commute_time = sum(JWMNP * PWGTP, na.rm = TRUE) / sum(PWGTP), \n    count = .N)]"
+    "text": "data.table"
   },
   {
     "objectID": "slides/16-duckdb.html#arrow-query-execution",
     "href": "slides/16-duckdb.html#arrow-query-execution",
     "title": "DuckDB",
     "section": "Arrow Query Execution",
-    "text": "Arrow Query Execution\n\n# Create an Arrow Dataset\npums_ds &lt;- open_dataset(\"pums_dataset_dir/\")\n\n# Execute query with Arrow\nresult &lt;- pums_ds |&gt;\n  filter(AGEP &gt;= 16) |&gt;\n  group_by(ST) |&gt;\n  summarize(\n    avg_commute_time = mean(JWMNP, na.rm = TRUE),\n    count = n()\n  ) |&gt;\n  arrange(desc(avg_commute_time)) |&gt;\n  collect()"
+    "text": "Arrow Query Execution"
   },
   {
     "objectID": "slides/16-duckdb.html#demo-seamless-integration-arrow-duckdb",
     "href": "slides/16-duckdb.html#demo-seamless-integration-arrow-duckdb",
     "title": "DuckDB",
     "section": "Demo: Seamless Integration Arrow ↔︎ DuckDB",
-    "text": "Demo: Seamless Integration Arrow ↔︎ DuckDB\n\ndf &lt;- read_parquet(\"CA_person_2021.parquet\")\n\n# Use dplyr verbs with arrow tables\ndf |&gt;\n  filter(AGEP &gt;= 16) |&gt;\n  to_duckdb() |&gt;\n  summarize(\n    mean_commute_time = sum(JWMNP * PWGTP, na.rm = TRUE) /\n      sum(PWGTP),\n    count = n()\n  )"
+    "text": "Demo: Seamless Integration Arrow ↔︎ DuckDB"
   },
   {
     "objectID": "slides/06-02-graphics.html#grammar-of-graphics-review",
@@ -298,7 +298,7 @@
     "href": "weeks/week-17.html",
     "title": "Week 17: Finals",
     "section": "",
-    "text": "December 14-20, 2025\n\n\n\nFinal Exam Due"
+    "text": "December 14-20, 2026\n\n\n\nFinal Exam Due"
   },
   {
     "objectID": "weeks/week-17.html#practice-your-skills",
@@ -312,7 +312,7 @@
     "href": "weeks/week-15.html",
     "title": "Week 15: Apache Arrow",
     "section": "",
-    "text": "November 30-06, 2025\n\n\n\nGetting Started with Apache Arrow - Danielle Navarro\nArrow project overview\nArrow - R for Data Science\nArrow: Reading and Writing Data - Apache Arrow R Cookbook (Optional additional resource)\nPyArrow (Optional, for reference – we’ll primarily work in R for this week)\n\n\n\n\n\nWhy Arrow?\n\n\n\n\n\nEast Campus “Pack the Boardroom” Rally 11 am - 1 pm. We will meet for 10 minutes (attendance check) and then walk to the rally.\nAn optional Apache Arrow assignment is available for students who do not wish to attend the rally. Submit the index.qmd file (completed) by email.",
+    "text": "November 30-06, 2026\n\n\n\nGetting Started with Apache Arrow - Danielle Navarro\nArrow project overview\nArrow - R for Data Science\nArrow: Reading and Writing Data - Apache Arrow R Cookbook (Optional additional resource)\nPyArrow (Optional, for reference – we’ll primarily work in R for this week)\n\n\n\n\n\nWhy Arrow?\n\n\n\n\n\nEast Campus “Pack the Boardroom” Rally 11 am - 1 pm. We will meet for 10 minutes (attendance check) and then walk to the rally.\nAn optional Apache Arrow assignment is available for students who do not wish to attend the rally. Submit the index.qmd file (completed) on Canvas. If you attended class, you do not need to submit anything, but it would be beneficial to work through the questions to see how Arrow works.",
     "crumbs": [
       "Weekly materials",
       "Week 15 - DuckDB"
@@ -345,7 +345,7 @@
     "href": "weeks/week-15.html#thursday",
     "title": "Week 15: Apache Arrow",
     "section": "",
-    "text": "East Campus “Pack the Boardroom” Rally 11 am - 1 pm. We will meet for 10 minutes (attendance check) and then walk to the rally.\nAn optional Apache Arrow assignment is available for students who do not wish to attend the rally. Submit the index.qmd file (completed) by email.",
+    "text": "East Campus “Pack the Boardroom” Rally 11 am - 1 pm. We will meet for 10 minutes (attendance check) and then walk to the rally.\nAn optional Apache Arrow assignment is available for students who do not wish to attend the rally. Submit the index.qmd file (completed) on Canvas. If you attended class, you do not need to submit anything, but it would be beneficial to work through the questions to see how Arrow works.",
     "crumbs": [
       "Weekly materials",
       "Week 15 - DuckDB"
@@ -356,7 +356,7 @@
     "href": "weeks/week-13.html",
     "title": "Week 13: Approaches to Big Data, SQL and SQLite",
     "section": "",
-    "text": "November 16-22, 2025\n\n\nDon’t worry, the chapters from Big Data Analytics by Ulrich Matter are much shorter than chapters I tend to write. I could probably learn something… - Approaches to Analyzing Big Data - Two Domains of Big Data Analytics - Data Collection and Data Storage – how to create and connect to databases in R. - Practice Material – SQL Zoo - a guided tutorial through the basics of SQL Queries\n\n\n\n\nWe’ll work through the Berkeley Statistics Databases/SQL tutorial together in class.\n\n\n\n\n\nLab: SQL Squid Game – participation grade. You must be in class to get credit.\n\n\n\n\n\nScreencast peer reviews due Nov 21",
+    "text": "November 16-22, 2026\n\n\nDon’t worry, the chapters from Big Data Analytics by Ulrich Matter are much shorter than chapters I tend to write. I could probably learn something… - Approaches to Analyzing Big Data - Two Domains of Big Data Analytics - Data Collection and Data Storage – how to create and connect to databases in R. - Practice Material – SQL Zoo - a guided tutorial through the basics of SQL Queries\n\n\n\n\nWe’ll work through the Berkeley Statistics Databases/SQL tutorial together in class.\n\n\n\n\n\nLab: SQL Squid Game – participation grade. You must be in class to get credit.\n\n\n\n\n\nScreencast peer reviews due Nov 21",
     "crumbs": [
       "Weekly materials",
       "Week 13 - Arrow"
@@ -411,7 +411,7 @@
     "href": "weeks/week-11.html",
     "title": "Week 11: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "November 02-08, 2025\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: Play with Shiny, work on Screencast.\n\n\n\n\nNone - Play with Shiny!",
+    "text": "November 02-08, 2026\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: Play with Shiny, work on Screencast.\n\n\n\n\nNone - Play with Shiny!",
     "crumbs": [
       "Weekly materials",
       "Week 11 - Big Data"
@@ -477,7 +477,7 @@
     "href": "weeks/week-09.html",
     "title": "Week 9: Using Appropriate Graphics",
     "section": "",
-    "text": "October 19-25, 2025\n\n\n\nAppropriate Graphics\n\n\n\n\n\nFind the worst data visualization published by a news organization within the last month and bring it with you to class.\n\n\n\n\n\nFall Break!\n\n\n\n\n\nLecture: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\nLab goals",
+    "text": "October 19-25, 2026\n\n\n\nAppropriate Graphics\n\n\n\n\n\nFind the worst data visualization published by a news organization within the last month and bring it with you to class.\n\n\n\n\n\nFall Break!\n\n\n\n\n\nLecture: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\nLab goals",
     "crumbs": [
       "Weekly materials",
       "Week 9 - Appropriate Graphics"
@@ -543,7 +543,7 @@
     "href": "weeks/week-07.html",
     "title": "Week 7: PDF Tools",
     "section": "",
-    "text": "October 05-11, 2025\n\n\n\nWorking with PDFs\n\n\n\n\n\nFind examples of image-based and text-based PDFs\n\n\n\n\n\nLecture: PDF Tools\n\n\n\n\n\nLab: PDF/OCR\n\n\n\n\n\nLab: PDF/OCR\nLab goals",
+    "text": "October 05-11, 2026\n\n\n\nWorking with PDFs\n\n\n\n\n\nFind examples of image-based and text-based PDFs\n\n\n\n\n\nLecture: PDF Tools\n\n\n\n\n\nLab: PDF/OCR\n\n\n\n\n\nLab: PDF/OCR\nLab goals",
     "crumbs": [
       "Weekly materials",
       "Week 7 - PDF Tools"
@@ -609,7 +609,7 @@
     "href": "weeks/week-05.html",
     "title": "Week 5: Application Programming Interfaces",
     "section": "",
-    "text": "September 21-27, 2025\n\n\n\nApplication Programming Interfaces (APIs)\n\n\n\n\n\n\n\n\n\n\n\nLecture: API requests\n\n\n\n\n\nLab: APIs\n\n\n\n\n\nLab: APIs\nLab goals",
+    "text": "September 21-27, 2026\n\n\n\nApplication Programming Interfaces (APIs)\n\n\n\n\n\n\n\n\n\n\n\nLecture: API requests\n\n\n\n\n\nLab: APIs\n\n\n\n\n\nLab: APIs\nLab goals",
     "crumbs": [
       "Weekly materials",
       "Week 5 - APIs"
@@ -664,7 +664,7 @@
     "href": "weeks/week-03.html",
     "title": "Week 3: Web Scraping",
     "section": "",
-    "text": "September 07-13, 2025\n\n\n\nWeb Scraping\n\n\n\n\n\nTry scraping one or more sites that are interesting to you.\n\n\n\n\n\nLab: Web Scraping\nLab goals\n\n\n\n\n\nLab: Web Scraping\n\n\n\n\n\nLab: Web Scraping\nLab goals",
+    "text": "September 07-13, 2026\n\n\n\nWeb Scraping\n\n\n\n\n\nTry scraping one or more sites that are interesting to you.\n\n\n\n\n\nLab: Web Scraping\nLab goals\n\n\n\n\n\nLab: Web Scraping\n\n\n\n\n\nLab: Web Scraping\nLab goals",
     "crumbs": [
       "Weekly materials",
       "Week 3 - Web Scraping"
@@ -730,7 +730,7 @@
     "href": "weeks/week-01.html",
     "title": "Week 1: Intro & HTML Primer",
     "section": "",
-    "text": "August 24-30, 2025\n\n\n\nSyllabus\nWeb Scraping\n\n\n\n\n\nEnsure R, python, quarto, RStudio are installed on your machine (Computer setup help)\nPrint out and bring cheat sheets for R and python (if you need them)\n\n\n\n\n\nDiscussion: Syllabus\n\n\n\n\n\nLecture: HTML/XML primer\n\n\n\n\n\nGet familiar with HTML and web-based vocabulary:\n\nWatch HTTP and HTML explanation\nWatch Web Scraping with BeautifulSoup and Requests\nWatch Control a web browser from R to web scrape static and dynamic websites using {chromote}",
+    "text": "August 24-30, 2026\n\n\n\nSyllabus\nWeb Scraping\n\n\n\n\n\nEnsure R, python, quarto, RStudio are installed on your machine (Computer setup help)\nPrint out and bring cheat sheets for R and python (if you need them)\n\n\n\n\n\nDiscussion: Syllabus\n\n\n\n\n\nLecture: HTML/XML primer\n\n\n\n\n\nGet familiar with HTML and web-based vocabulary:\n\nWatch HTTP and HTML explanation\nWatch Web Scraping with BeautifulSoup and Requests\nWatch Control a web browser from R to web scrape static and dynamic websites using {chromote}",
     "crumbs": [
       "Weekly materials",
       "Week 1 - Intro & HTML Primer"
@@ -807,7 +807,7 @@
     "href": "syllabus.html",
     "title": "Syllabus - Stat 351",
     "section": "",
-    "text": "InstructorSusan Vanderplas\n\nE-mailsusan.vanderplas@unl.edu \nOfficeHardin 343D\n\n \nTimeTR 11:00-12:15\nLocationKEIM 214\nStudent HoursSchedule here",
+    "text": "InstructorHeike Hofmann\n\nE-mailhhofmann4@unl.edu \nOfficeHardin 346D\n\n \nTimeTR 11:00-12:15\nLocationKEIM 214\nStudent Hoursby arrangement",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -840,7 +840,7 @@
     "href": "syllabus.html#course-components",
     "title": "Syllabus - Stat 351",
     "section": "3.2 Course Components",
-    "text": "3.2 Course Components\n\n3.2.1 Reading Quizzes 📖\nYou will have weekly reading assignments which introduce the weekly focus area and provide different perspectives on the material. Some of these perspectives will be covered in class lectures and activities, but some will not and are provided to expose you to different approaches and opinions.\nIn order to motivate the importance of doing the weekly reading before class, you will be given a weekly reading quiz in class which covers the requisite material.\n\n\n3.2.2 Homework/Lab Assignments 💻\nWeekly formative assignments (assignments meant to help you practice skills) will be given throughout the semester.\n\nYou will typically have one week to work on each of the assignments.\nAssignments must be submitted in the file format specified, and should run or compile as submitted for credit to be given.\nI will attempt to grade formative assignments within a week of the specified due date.\nThe assignment due date in Canvas will be set to at least 48 hours before the hard deadline for assignment submission. This provides an implicit “grace period” for assignment submission. No additional extensions will be provided.\n\n\n\n3.2.3 Screencast\nYou will produce a screencast which demonstrates your skills in data acquisition and data visualization. This project will be submitted around midterms.\n\n\n3.2.4 Final Exam\nA final exam (format TBD) will be used to assess your ability to meet the learning objectives for the course. The exam will be due during the scheduled final exam period for the course (Monday, December 15). It is possible that a take-home portion of the exam may be initially assigned during the last week of classes.",
+    "text": "3.2 Course Components\n\n3.2.1 Reading Quizzes 📖\nYou will have weekly reading assignments which introduce the weekly focus area and provide different perspectives on the material. Some of these perspectives will be covered in class lectures and activities, but some will not and are provided to expose you to different approaches and opinions.\nIn order to motivate the importance of doing the weekly reading before class, you will be given a weekly reading quiz in class which covers the requisite material.\n\n\n3.2.2 Homework/Lab Assignments 💻\nWeekly formative assignments (assignments meant to help you practice skills) will be given throughout the semester.\n\nYou will typically have one week to work on each of the assignments.\nAssignments must be submitted in the file format specified, and should run or compile as submitted for credit to be given.\nI will attempt to grade formative assignments within a week of the specified due date.\nThe assignment due date in Canvas will be set to at least 48 hours before the hard deadline for assignment submission. This provides an implicit “grace period” for assignment submission. No additional extensions will be provided.\n\n\n\n3.2.3 Screencast\nYou will produce a screencast which demonstrates your skills in data acquisition and data visualization. This project will be submitted around midterms.\n\n\n3.2.4 Final Exam\nA final exam (format TBD) will be used to assess your ability to meet the learning objectives for the course. The exam will be due during the scheduled final exam period for the course (Tuesday, December 15). It is possible that a take-home portion of the exam may be initially assigned during the last week of classes.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -972,7 +972,7 @@
     "href": "weeks/week-02.html",
     "title": "Week 2: Web Scraping",
     "section": "",
-    "text": "August 31-06, 2025\n\n\n\nWeb Scraping\n\n\n\n\n\nTry scraping one or more sites that are interesting to you.\n\n\n\n\n\nLab: Web Scraping\nLab goals\n\n\n\n\n\nLab: Web Scraping\n\n\n\n\n\nLab: Web Scraping\nLab goals",
+    "text": "August 31-06, 2026\n\n\n\nWeb Scraping\n\n\n\n\n\nTry scraping one or more sites that are interesting to you.\n\n\n\n\n\nLab: Web Scraping\nLab goals\n\n\n\n\n\nLab: Web Scraping\n\n\n\n\n\nLab: Web Scraping\nLab goals",
     "crumbs": [
       "Weekly materials",
       "Week 2 - Web Scraping"
@@ -1038,7 +1038,7 @@
     "href": "weeks/week-04.html",
     "title": "Week 4: Record-based Data and List Processing",
     "section": "",
-    "text": "September 14-20, 2025\n\n\n\nFunctional Programming\nRecord-based Data and List Processing\n\n\n\n\n\nLecture: Record based Data and List Processing\n\n\n\n\n\nLab: Parsing XML Files\n\n\n\n\n\nLab: Parsing XML Files\nLab goals\nSubmit a screencast topic proposal",
+    "text": "September 14-20, 2026\n\n\n\nFunctional Programming\nRecord-based Data and List Processing\n\n\n\n\n\nLecture: Record based Data and List Processing\n\n\n\n\n\nLab: Parsing XML Files\n\n\n\n\n\nLab: Parsing XML Files\nLab goals\nSubmit a screencast topic proposal",
     "crumbs": [
       "Weekly materials",
       "Week 4 - Records & Lists"
@@ -1093,7 +1093,7 @@
     "href": "weeks/week-06.html",
     "title": "Week 6: Application Programming Interfaces",
     "section": "",
-    "text": "September 28-04, 2025\n\n\n\nApplication Programming Interfaces (APIs)\n\n\n\n\n\n\n\n\n\n\n\nLecture: API requests\n\n\n\n\n\nLab: APIs\n\n\n\n\n\nLab: APIs\nLab goals",
+    "text": "September 28-04, 2026\n\n\n\nApplication Programming Interfaces (APIs)\n\n\n\n\n\n\n\n\n\n\n\nLecture: API requests\n\n\n\n\n\nLab: APIs\n\n\n\n\n\nLab: APIs\nLab goals",
     "crumbs": [
       "Weekly materials",
       "Week 6 - APIs"
@@ -1148,7 +1148,7 @@
     "href": "weeks/week-08.html",
     "title": "Week 8: PDF Tools",
     "section": "",
-    "text": "October 12-18, 2025\n\n\n\nWorking with PDFs\n\n\n\n\n\nFind examples of image-based and text-based PDFs\n\n\n\n\n\nLecture: PDF Tools\n\n\n\n\n\nLab: PDF/OCR\n\n\n\n\n\nLab: PDF/OCR\nLab goals",
+    "text": "October 12-18, 2026\n\n\n\nWorking with PDFs\n\n\n\n\n\nFind examples of image-based and text-based PDFs\n\n\n\n\n\nLecture: PDF Tools\n\n\n\n\n\nLab: PDF/OCR\n\n\n\n\n\nLab: PDF/OCR\nLab goals",
     "crumbs": [
       "Weekly materials",
       "Week 8 - PDF Tools"
@@ -1214,7 +1214,7 @@
     "href": "weeks/week-10.html",
     "title": "Week 10: Using Appropriate Graphics",
     "section": "",
-    "text": "October 26-01, 2025\n\n\n\nAppropriate Graphics\n\n\n\n\n\nIntro: Appropriate Graphics\nLab: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\nLab goals\nScreencast pseudocode script due!",
+    "text": "October 26-01, 2026\n\n\n\nAppropriate Graphics\n\n\n\n\n\nIntro: Appropriate Graphics\nLab: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\nLab goals\nScreencast pseudocode script due!",
     "crumbs": [
       "Weekly materials",
       "Week 10 - Appropriate Graphics"
@@ -1335,7 +1335,7 @@
     "href": "weeks/week-14.html",
     "title": "Week 14: Thanksgiving",
     "section": "",
-    "text": "November 23-29, 2025\n\n\n\nNo Class! Have a nice break!\n\n\n\n\n\nHappy Turkey Day! :turkey:"
+    "text": "November 23-29, 2026\n\n\n\nNo Class! Have a nice break!\n\n\n\n\n\nHappy Turkey Day! :turkey:"
   },
   {
     "objectID": "weeks/week-14.html#tuesday",
@@ -1356,7 +1356,7 @@
     "href": "weeks/week-16.html",
     "title": "Week 16: DuckDB",
     "section": "",
-    "text": "Week 16: DuckDB\nDecember 07-13, 2025",
+    "text": "Week 16: DuckDB\nDecember 07-13, 2026",
     "crumbs": [
       "Weekly materials",
       "Week 16 - JavaScript Graphics"
@@ -1367,14 +1367,14 @@
     "href": "assignment-repos/01-web-scraping/index.html",
     "title": "Lab: Web Scraping and RSS",
     "section": "",
-    "text": "The Securities and Exchange Commission (SEC) provides a way to see the most recent filings submitted to the commission at https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent.\nForm 144 is required to be submitted when an executive officer, director, or affiliate of the company sells more than 5000 shares of stock or the aggregate sales price exceeds $50,000.\nConveniently, we can access the 100 most recent Form 144 filings by using the RSS feed, which provides some basic information about each filing as well as a link to the filing’s database entry. An example of the RSS feed downloaded on July 28, 2025 is provided in the sample-feed.rss file for demonstration purposes.\nRSS feeds are just another XML-like file, as you can see from the RSS2.0 Specification."
+    "text": "The Securities and Exchange Commission (SEC) provides a way to see the most recent filings submitted to the commission at https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent.\nForm 144 is required to be submitted when an executive officer, director, or affiliate of the company sells more than 5000 shares of stock or the aggregate sales price exceeds $50,000.\nConveniently, we can access the 100 most recent Form 144 filings by using the RSS feed, which provides some basic information about each filing as well as a link to the filing’s database entry. An example of the RSS feed downloaded on Aug 24, 2026 is provided in the sample-feed.rss file for demonstration purposes.\nRSS feeds are just another XML-like file, as you can see from the RSS2.0 Specification."
   },
   {
     "objectID": "assignment-repos/01-web-scraping/index.html#parsing-the-file",
     "href": "assignment-repos/01-web-scraping/index.html#parsing-the-file",
     "title": "Lab: Web Scraping and RSS",
     "section": "1.1 Parsing the File",
-    "text": "1.1 Parsing the File\nAdd a code chunk that will read in the RSS feed as an XML file.\n\n\nlibrary(xml2)\nlibrary(rvest)\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.2\n✔ ggplot2   4.0.0     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter()         masks stats::filter()\n✖ readr::guess_encoding() masks rvest::guess_encoding()\n✖ dplyr::lag()            masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ndoc &lt;- read_xml(\"sample-feed.rss\")\nxml_find_first(doc, \"//d1:entry\")\n\n{xml_node}\n&lt;entry&gt;\n[1] &lt;title&gt;424B2 - BANK OF NOVA SCOTIA (0000009631) (Filer)&lt;/title&gt;\n[2] &lt;link rel=\"alternate\" type=\"text/html\" href=\"https://www.sec.gov/Archives ...\n[3] &lt;summary type=\"html\"&gt;\\n &lt;b&gt;Filed:&lt;/b&gt; 2025-07-28 &lt;b&gt;Acc ...\n[4] &lt;updated&gt;2025-07-28T14:47:24-04:00&lt;/updated&gt;\n[5] &lt;category scheme=\"https://www.sec.gov/\" label=\"form type\" term=\"424B2\"/&gt;\n[6] &lt;id&gt;urn:tag:sec.gov,2008:accession-number=0001839882-25-040744&lt;/id&gt;\n\ntmp &lt;- xml_children(doc) |&gt; map(xml_contents)\n\ntmpindex &lt;- map_int(tmp,length)\n\ntmp &lt;- tmp[tmpindex==6]\n\nparse_entries &lt;- function(node) {\n  var_names &lt;- map_chr(node, xml_name)\n  var_values &lt;- map_chr(node, xml_text)\n  \n  res &lt;- as_tibble(t(var_values)) |&gt;\n    set_names(var_names) |&gt;\n    mutate(link = xml_attr(node[[2]], \"href\"),\n           category = xml_attrs(node[[5]]) |&gt; t() |&gt; as_tibble()) |&gt;\n    unnest_wider(category)\n}\n\ntmpdf &lt;- map_dfr(tmp, parse_entries)\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`."
+    "text": "1.1 Parsing the File\nAdd a code chunk that will read in the RSS feed as an XML file.\n\n\nlibrary(xml2)\nlibrary(rvest)\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.1     ✔ readr     2.2.0\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.3     ✔ tibble    3.3.1\n✔ lubridate 1.9.5     ✔ tidyr     1.3.2\n✔ purrr     1.2.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter()         masks stats::filter()\n✖ readr::guess_encoding() masks rvest::guess_encoding()\n✖ dplyr::lag()            masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\ndoc &lt;- read_xml(\"sample-feed.rss\")\nxml_find_first(doc, \"//d1:entry\")\n\n{xml_node}\n&lt;entry&gt;\n[1] &lt;title&gt;144 - Cyr William B. (0001680803) (Reporting)&lt;/title&gt;\n[2] &lt;link rel=\"alternate\" type=\"text/html\" href=\"https://www.sec.gov/Archives ...\n[3] &lt;summary type=\"html\"&gt;\\n &lt;b&gt;Filed:&lt;/b&gt; 2026-08-24 &lt;b&gt;Acc ...\n[4] &lt;updated&gt;2026-08-24T11:52:33-04:00&lt;/updated&gt;\n[5] &lt;category scheme=\"https://www.sec.gov/\" label=\"form type\" term=\"144\"/&gt;\n[6] &lt;id&gt;urn:tag:sec.gov,2008:accession-number=0001959173-26-006368&lt;/id&gt;\n\ntmp &lt;- xml_children(doc) |&gt; map(xml_contents)\n\ntmpindex &lt;- map_int(tmp,length)\n\ntmp &lt;- tmp[tmpindex==6]\n\nparse_entries &lt;- function(node) {\n  var_names &lt;- map_chr(node, xml_name)\n  var_values &lt;- map_chr(node, xml_text)\n  \n  res &lt;- as_tibble(t(var_values)) |&gt;\n    set_names(var_names) |&gt;\n    mutate(link = xml_attr(node[[2]], \"href\"),\n           category = xml_attrs(node[[5]]) |&gt; t() |&gt; as_tibble()) |&gt;\n    unnest_wider(category)\n}\n\ntmpdf &lt;- map(tmp, parse_entries) |&gt; list_rbind()\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`."
   },
   {
     "objectID": "assignment-repos/01-web-scraping/index.html#sec-extract-info",

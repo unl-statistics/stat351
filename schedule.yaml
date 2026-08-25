@@ -1,8 +1,8 @@
 semester:
-  - start: 2025-08-24
-  - end: 2025-12-20
-  - holiday: ["2025-09-01", "2025-10-20", "2025-10-21", "2025-11-26", "2025-11-27", "2025-11-28"]
-  - exams: ["2025-12-15", "2025-12-16", "2025-12-17", "2025-12-18", "2025-12-19"]
+  - start: 2026-08-24
+  - end: 2026-12-20
+  - holiday: ["2026-09-07", "2026-10-19", "2026-10-20", "2026-11-25", "2026-11-26", "2026-11-27"]
+  - exams: ["2026-12-15", "2026-12-16", "2026-12-17", "2026-12-18", "2026-12-19"]
 class: stat-351
 class-days:
   - Tue
@@ -10,8 +10,8 @@ class-days:
 schedule:
   - week: 1
     name: Intro & HTML Primer
-    start: 2025-08-24
-    end: 2025-08-30
+    start: 2026-08-24
+    end: 2026-08-30
     reading: |
         - [Syllabus](../syllabus.qmd)
         - [Web Scraping](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/03-web-scraping.html)
@@ -29,8 +29,8 @@ schedule:
           - Watch [Control a web browser from R to web scrape static and dynamic websites using {chromote}](https://www.youtube.com/watch?v=30AOpjLeOyI)
   - week: 2
     name: Web Scraping
-    start: 2025-08-31
-    end: 2025-09-06
+    start: 2026-08-31
+    end: 2026-09-06
     reading: |
         - [Web Scraping](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/03-web-scraping.html)
     prepare: |
@@ -45,8 +45,8 @@ schedule:
         - [Lab goals](../assignment-repos/01-web-scraping/tilt.qmd)
   - week: 3
     name: Web Scraping
-    start: 2025-09-07
-    end: 2025-09-13
+    start: 2026-09-07
+    end: 2026-09-13
     reading: |
         - [Web Scraping](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/03-web-scraping.html)
     prepare: |
@@ -61,8 +61,8 @@ schedule:
         - [Lab goals](../assignment-repos/01-web-scraping/tilt.qmd)
   - week: 4
     name: Record-based Data and List Processing
-    start: 2025-09-14
-    end: 2025-09-20
+    start: 2026-09-14
+    end: 2026-09-20
     reading: |
       - [Functional Programming](https://srvanderplas.github.io/stat-computing-r-python/part-wrangling/08-functional-prog.html)
       - [Record-based Data and List Processing](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/04-xml-json-list-processing.html)
@@ -77,8 +77,8 @@ schedule:
 
   - week: 5
     name: Application Programming Interfaces
-    start: 2025-09-21
-    end: 2025-09-27
+    start: 2026-09-21
+    end: 2026-09-27
     reading: |
       - [Application Programming Interfaces (APIs)](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/05-APIs.html)
     prepare: |
@@ -93,8 +93,8 @@ schedule:
 
   - week: 6
     name: Application Programming Interfaces
-    start: 2025-09-28
-    end: 2025-10-04
+    start: 2026-09-28
+    end: 2026-10-04
     reading: |
       - [Application Programming Interfaces (APIs)](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/05-APIs.html)
     prepare: |
@@ -109,8 +109,8 @@ schedule:
 
   - week: 7
     name: PDF Tools
-    start: 2025-10-05
-    end: 2025-10-11
+    start: 2026-10-05
+    end: 2026-10-11
     reading: |
       - [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
     prepare: |
@@ -124,8 +124,8 @@ schedule:
       - [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
   - week: 8
     name: PDF Tools
-    start: 2025-10-12
-    end: 2025-10-18
+    start: 2026-10-12
+    end: 2026-10-18
     reading: |
       - [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
     prepare: |
@@ -140,8 +140,8 @@ schedule:
 
   - week: 9
     name: Using Appropriate Graphics
-    start: 2025-10-19
-    end: 2025-10-25
+    start: 2026-10-19
+    end: 2026-10-25
     reading: |
       - Appropriate Graphics
     prepare: |
@@ -156,8 +156,8 @@ schedule:
 
   - week: 10
     name: Using Appropriate Graphics
-    start: 2025-10-26
-    end: 2025-11-01
+    start: 2026-10-26
+    end: 2026-11-01
     reading: |
       - Appropriate Graphics
     class1: |
@@ -172,8 +172,8 @@ schedule:
 
   - week: 11
     name: Shiny and JavaScript Graphics
-    start: 2025-11-02
-    end: 2025-11-08
+    start: 2026-11-02
+    end: 2026-11-08
     prepare: |
       - Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
       - [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
@@ -192,8 +192,8 @@ schedule:
 
   - week: 12
     name: Shiny and JavaScript Graphics
-    start: 2025-11-09
-    end: 2025-11-015
+    start: 2026-11-09
+    end: 2026-11-015
     prepare: |
       - Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
       - [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
@@ -212,8 +212,8 @@ schedule:
 
   - week: 13
     name: Approaches to Big Data, SQL and SQLite
-    start: 2025-11-16
-    end: 2025-11-22
+    start: 2026-11-16
+    end: 2026-11-22
     prepare: |
       Don't worry, the chapters from [Big Data Analytics](https://umatter.github.io/BigData/) by Ulrich Matter are much shorter than chapters I tend to write. I could probably learn something...
       - [Approaches to Analyzing Big Data](https://umatter.github.io/BigData/approaches-to-analyzing-big-data.html)
@@ -229,8 +229,8 @@ schedule:
 
   - week: 14
     name: Thanksgiving
-    start: 2025-11-23
-    end: 2025-11-29
+    start: 2026-11-23
+    end: 2026-11-29
     class1: |
       - No Class! Have a nice break!
     class2: |
@@ -238,8 +238,8 @@ schedule:
 
   - week: 15
     name: Apache Arrow
-    start: 2025-11-30
-    end: 2025-12-06
+    start: 2026-11-30
+    end: 2026-12-06
     reading: |
       - [Getting Started with Apache Arrow](https://blog.djnavarro.net/posts/2021-11-19_starting-apache-arrow-in-r/) - Danielle Navarro
       - [Arrow project overview](https://arrow.apache.org/overview/)
@@ -254,26 +254,26 @@ schedule:
 
   - week: 16
     name: DuckDB
-    start: 2025-12-07
-    end: 2025-12-13
+    start: 2026-12-07
+    end: 2026-12-13
 
   - week: 17
     name: Finals
-    start: 2025-12-14
-    end: 2025-12-20
+    start: 2026-12-14
+    end: 2026-12-20
     assignments: |
       - Final Exam Due
 
 important-course-dates:
   - name: Final Exam
     id: final
-    date: "2025-12-15"
+    date: "2026-12-15"
   - name: Screencast Due
     id: screencast
-    date: "2025-11-14"
+    date: "2026-11-14"
   - name: Screencast Peer Reviews Due
     id: screencast-peer
-    date: "2025-11-21"
+    date: "2026-11-21"
 
 
   # - week: 8

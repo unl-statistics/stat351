@@ -6,8 +6,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.25">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
 
   <title>STAT 351 - Fall 2025 – DuckDB</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -16,6 +16,9 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -27,74 +30,8 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d878a951bf411864e4812399b6de45a0.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-9bbf30c60fa9ba91d25805c506ab75b0.css">
   <link rel="stylesheet" href="deps/unl/styles.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -244,47 +181,9 @@
 </section>
 <section id="duckdb" class="slide level2">
 <h2>DuckDB</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(duckdb)</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(<span class="fu">duckdb</span>())</span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a><span class="co"># Register a Parquet file as a virtual table</span></span>
-<span id="cb1-6"><a></a><span class="fu">dbExecute</span>(con, <span class="st">"CREATE VIEW pums AS SELECT * </span></span>
-<span id="cb1-7"><a></a><span class="st">                FROM read_parquet('CA_person_2021.parquet')"</span>)</span>
-<span id="cb1-8"><a></a></span>
-<span id="cb1-9"><a></a><span class="co"># Run our query</span></span>
-<span id="cb1-10"><a></a><span class="fu">dbGetQuery</span>(con, <span class="st">"</span></span>
-<span id="cb1-11"><a></a><span class="st">  SELECT SUM(JWMNP * PWGTP)/SUM(PWGTP) as avg_commute_time,</span></span>
-<span id="cb1-12"><a></a><span class="st">         COUNT(*) as count</span></span>
-<span id="cb1-13"><a></a><span class="st">  FROM pums</span></span>
-<span id="cb1-14"><a></a><span class="st">  WHERE AGEP &gt;= 16</span></span>
-<span id="cb1-15"><a></a><span class="st">"</span>)</span>
-<span id="cb1-16"><a></a></span>
-<span id="cb1-17"><a></a><span class="fu">dbDisconnect</span>(con, <span class="at">shutdown =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 </section>
 <section id="duckplyr" class="slide level2">
 <h2>duckplyr</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(duckplyr)</span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a><span class="co"># Read data with Arrow</span></span>
-<span id="cb2-4"><a></a>pums_data <span class="ot">&lt;-</span> <span class="fu">read_file_duckdb</span>(</span>
-<span id="cb2-5"><a></a>  <span class="st">"CA_person_2021.parquet"</span>, </span>
-<span id="cb2-6"><a></a>  <span class="st">"read_parquet"</span></span>
-<span id="cb2-7"><a></a>)</span>
-<span id="cb2-8"><a></a></span>
-<span id="cb2-9"><a></a><span class="co"># Use duckplyr to optimize dplyr operations</span></span>
-<span id="cb2-10"><a></a>pums_data <span class="sc">|&gt;</span></span>
-<span id="cb2-11"><a></a>  <span class="fu">filter</span>(AGEP <span class="sc">&gt;=</span> <span class="dv">16</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-12"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb2-13"><a></a>    <span class="at">mean_commute_time =</span> <span class="fu">sum</span>(JWMNP <span class="sc">*</span> PWGTP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span></span>
-<span id="cb2-14"><a></a>      <span class="fu">sum</span>(PWGTP),</span>
-<span id="cb2-15"><a></a>    <span class="at">count =</span> <span class="fu">n</span>()</span>
-<span id="cb2-16"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb2-17"><a></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <aside class="notes">
 <p>duckplyr is a drop-in replacement for dplyr, using duckdb as a backend</p>
 <style type="text/css">
@@ -301,55 +200,12 @@
 </section>
 <section id="data.table" class="slide level2">
 <h2>data.table</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(arrow)</span>
-<span id="cb3-2"><a></a><span class="fu">library</span>(data.table)</span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a><span class="co"># Read Parquet file with Arrow</span></span>
-<span id="cb3-5"><a></a>pums_data <span class="ot">&lt;-</span> <span class="fu">read_parquet</span>(<span class="st">"CA_person_2021.parquet"</span>)</span>
-<span id="cb3-6"><a></a></span>
-<span id="cb3-7"><a></a><span class="co"># Convert to data.table</span></span>
-<span id="cb3-8"><a></a>pums_dt <span class="ot">&lt;-</span> <span class="fu">as.data.table</span>(pums_data)</span>
-<span id="cb3-9"><a></a></span>
-<span id="cb3-10"><a></a><span class="co"># data.table query</span></span>
-<span id="cb3-11"><a></a>pums_dt[AGEP <span class="sc">&gt;=</span> <span class="dv">16</span>,</span>
-<span id="cb3-12"><a></a>  .(<span class="at">avg_commute_time =</span> <span class="fu">sum</span>(JWMNP <span class="sc">*</span> PWGTP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span> <span class="fu">sum</span>(PWGTP), </span>
-<span id="cb3-13"><a></a>    <span class="at">count =</span> .N)]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 </section>
 <section id="arrow-query-execution" class="slide level2">
 <h2>Arrow Query Execution</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># Create an Arrow Dataset</span></span>
-<span id="cb4-2"><a></a>pums_ds <span class="ot">&lt;-</span> <span class="fu">open_dataset</span>(<span class="st">"pums_dataset_dir/"</span>)</span>
-<span id="cb4-3"><a></a></span>
-<span id="cb4-4"><a></a><span class="co"># Execute query with Arrow</span></span>
-<span id="cb4-5"><a></a>result <span class="ot">&lt;-</span> pums_ds <span class="sc">|&gt;</span></span>
-<span id="cb4-6"><a></a>  <span class="fu">filter</span>(AGEP <span class="sc">&gt;=</span> <span class="dv">16</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-7"><a></a>  <span class="fu">group_by</span>(ST) <span class="sc">|&gt;</span></span>
-<span id="cb4-8"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb4-9"><a></a>    <span class="at">avg_commute_time =</span> <span class="fu">mean</span>(JWMNP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb4-10"><a></a>    <span class="at">count =</span> <span class="fu">n</span>()</span>
-<span id="cb4-11"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb4-12"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_commute_time)) <span class="sc">|&gt;</span></span>
-<span id="cb4-13"><a></a>  <span class="fu">collect</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 </section>
 <section id="demo-seamless-integration-arrow-duckdb" class="slide level2">
 <h2>Demo: Seamless Integration Arrow ↔︎ DuckDB</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">read_parquet</span>(<span class="st">"CA_person_2021.parquet"</span>)</span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a><span class="co"># Use dplyr verbs with arrow tables</span></span>
-<span id="cb5-4"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb5-5"><a></a>  <span class="fu">filter</span>(AGEP <span class="sc">&gt;=</span> <span class="dv">16</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-6"><a></a>  <span class="fu">to_duckdb</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-7"><a></a>  <span class="fu">summarize</span>(</span>
-<span id="cb5-8"><a></a>    <span class="at">mean_commute_time =</span> <span class="fu">sum</span>(JWMNP <span class="sc">*</span> PWGTP, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="sc">/</span></span>
-<span id="cb5-9"><a></a>      <span class="fu">sum</span>(PWGTP),</span>
-<span id="cb5-10"><a></a>    <span class="at">count =</span> <span class="fu">n</span>()</span>
-<span id="cb5-11"><a></a>  ) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 
 
 </section></section>
@@ -569,6 +425,44 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

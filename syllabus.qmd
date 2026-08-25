@@ -18,15 +18,15 @@ format:
     - partials/graphics.tex
     dev: cairo_pdf
 title: Syllabus - Stat 351 
-instructor: Susan Vanderplas
-semester: Fall 2025
-email: susan.vanderplas@unl.edu
-web: srvanderplas.github.io
-officehours: "[Schedule here](https://calendly.com/vanderplas/office-hours)"
-office: Hardin 343D
+instructor: Heike Hofmann
+semester: Fall 2026
+email: hhofmann4@unl.edu
+web: heike.github.io
+officehours: by arrangement
+office: Hardin 346D
 classroom: KEIM 214
 classhours: TR 11:00-12:15
-final: "Dec 15, 10am - 12pm"
+final: "Dec 16, 10am - 12pm"
 ---
 
 ```{r setup, include=FALSE}
