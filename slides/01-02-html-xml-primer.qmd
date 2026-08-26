@@ -159,7 +159,8 @@ library(tibble)
 
 url<-"https://en.wikipedia.org/wiki/List_of_mathematicians_born_in_the_19th_century"
 
-read_html(url)
+doc <- read_html(url)
+doc
 ```
 
 ### Python {-}
@@ -188,7 +189,7 @@ page
 ### R {-}
 
 ```{r}
-ppl <- read_html(url) |>
+ppl <- doc |>
     html_nodes(".mw-body-content ul li")
 ppl[[1]]
 ```
@@ -216,14 +217,15 @@ ppl[0]
 
 ```{r}
 try_na <- function(i, fn, ...) {
+    if (is.na(i)) return(NA)
     res <- try(fn(i, ...))
     if( "try-error" %in% class(res)) {
-        res <- NA
+        res <- attr(res, "condition")
     }
     if(length(res) == 0) {
         res <- NA
     }
-    res
+    res[1]
 }
 ```
 
@@ -279,7 +281,7 @@ math_ppl <- tibble(
     name = map_chr(link_info, ~try_na(., fn = html_text)),
     name2 = map_chr(link_info, ~try_na(., fn = html_attr, "title")),
     link = map_chr(link_info, ~try_na(., fn = html_attr, "href"))
-) |>
+) |> 
     select(-link_info)
 head(math_ppl)
 ```
