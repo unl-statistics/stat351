@@ -18,6 +18,7 @@ schedule:
     prepare: |
         - Ensure R, python, quarto, RStudio are installed on your machine ([Computer setup help](https://srvanderplas.github.io/stat-computing-r-python/part-tools/02-setting-up-computer.html))
         - Print out and bring cheat sheets for R and python (if you need them)
+        - [Code from class](../slides/code/code-2026-08-27.R)
     class1: |
         - Discussion: Syllabus
     class2: |

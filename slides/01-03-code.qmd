@@ -1,0 +1,13 @@
+---
+title: "Code for Some of the Your Turns"
+echo: true
+format: revealjs
+---
+
+Code we were working on in class on Aug 27
+
+```{r}
+#| echo: true
+#| eval: true 
+#| file: code/code-2026-08-27.R
+```

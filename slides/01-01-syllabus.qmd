@@ -24,13 +24,12 @@ format:
 
 ## Contact Info
 
-- Email: [susan.vanderplas@unl.edu](mailto:susan.vanderplas@unl.edu?subject=Stat251)
+- Email: [hhofmann4@unl.edu](mailto:hhofmann4@unl.edu?subject=Stat351)
 
 - Office: 343D Hardin Hall North Wing
 
-- Office Hours:     
-[https://calendly.com/drvanderplas/officehours](https://calendly.com/drvanderplas/officehours)    
-[Self-serve, by Zoom unless you specify otherwise.]{.small}
+- Office Hours: by arrangement
+
 
 
 ## Tentative Schedule
@@ -112,28 +111,6 @@ knitr::kable(caption = "Tentative schedule of class topics & project due dates",
 
 - If you can't explain your code/answer you don't get any credit
 
-
-# Some Things About Me
-
-::: columns
-::: {.column width="69%"}
-![2 kids (and a Ryan)](deps/family.jpg)
-:::
-
-::: {.column  width="31%"}
-::: {layout-nrow=2}
-
-![Ivy "Mischief" Q-tip Vanderplas](deps/Ivy.jpg)
-
-![Edison (Eddie) Eduardo Vanderplas](deps/Eddie.jpg)
-
-:::
-:::
-:::
-
-# Class Picture
-
-![[Image Source](http://www.shutterstock.com/pic-283980695/stock-vector-vector-set-of-different-male-and-female-icons-in-trendy-flat-style-flat-people-faces-icon.html)](deps/prosopagnosia.png){width="80%" fig-alt="A cartoon view of 6 heads showing only gross features such as hair, glasses, and facial hair."}
 
 
 # Preview: Thursday
