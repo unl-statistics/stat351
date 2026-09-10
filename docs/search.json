@@ -84,6 +84,90 @@
     "text": "Good Graphics Review\n\n\n\n\n\nPlot source (screenshots from the video)\n\n\n\nWhat problems do you notice in this chart?\nWhat would you fix?"
   },
   {
+    "objectID": "slides/03-01-lists.html#complex-data-structures",
+    "href": "slides/03-01-lists.html#complex-data-structures",
+    "title": "Record-based data and List Processing",
+    "section": "Complex Data structures",
+    "text": "Complex Data structures\n\n\n\n\n\n\nHow would you encode this structure in python? how in R?"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#lists",
+    "href": "slides/03-01-lists.html#lists",
+    "title": "Record-based data and List Processing",
+    "section": "Lists",
+    "text": "Lists\nLists are a superset of all data structures\n\nallow multiple data formats\nallow items that are lists\n\nLists are python’s basic data form:\n[4, [2, [10, 13, [5, 6]], 7]]\n(needs convention of [ starts children nodes and ] finishes list of children)\nIn R there are list objects list()"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#tree-in-r",
+    "href": "slides/03-01-lists.html#tree-in-r",
+    "title": "Record-based data and List Processing",
+    "section": "Tree in R",
+    "text": "Tree in R\n\ntree &lt;- list(value = 4, children = \n               c(list(value = 2, children = \n                        c(list(value = 10, children = NULL), \n                          list(value = 13, children = \n                                 c(list(value = 5, children = NULL),\n                                   list(value = 6, children = NULL))))), \n                 list(value = 7, children = NULL)))\n\nstr(tree)\n\nList of 2\n $ value   : num 4\n $ children:List of 4\n  ..$ value   : num 2\n  ..$ children:List of 4\n  .. ..$ value   : num 10\n  .. ..$ children: NULL\n  .. ..$ value   : num 13\n  .. ..$ children:List of 4\n  .. .. ..$ value   : num 5\n  .. .. ..$ children: NULL\n  .. .. ..$ value   : num 6\n  .. .. ..$ children: NULL\n  ..$ value   : num 7\n  ..$ children: NULL"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#trees",
+    "href": "slides/03-01-lists.html#trees",
+    "title": "Record-based data and List Processing",
+    "section": "Trees",
+    "text": "Trees\nthere are no native ‘tree’ objects in R or python (there are packages for sure), i.e. no standard implementation for trees\nimplementation as data frame:\n\n\n# A tibble: 7 × 3\n  node_id value children \n    &lt;int&gt; &lt;dbl&gt; &lt;list&gt;   \n1       1     4 &lt;dbl [2]&gt;\n2       2     2 &lt;dbl [2]&gt;\n3       3     7 &lt;NULL&gt;   \n4       4    10 &lt;NULL&gt;   \n5       5    13 &lt;dbl [2]&gt;\n6       6     5 &lt;NULL&gt;   \n7       7     6 &lt;NULL&gt;"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#xml-can-be-expressed-as-list",
+    "href": "slides/03-01-lists.html#xml-can-be-expressed-as-list",
+    "title": "Record-based data and List Processing",
+    "section": "XML can be expressed as list",
+    "text": "XML can be expressed as list\nCoerce list to xml: as_xml_document\nxml to list: xml2::as_list\nWe need to be able to navigate along lists"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#working-with-lists",
+    "href": "slides/03-01-lists.html#working-with-lists",
+    "title": "Record-based data and List Processing",
+    "section": "Working with lists",
+    "text": "Working with lists\n\n[ accesses sub lists\n[[ accesses elements\nfor well-structured lists more powerful tools: map (purrr)\n\nPackage purrr: https://purrr.tidyverse.org/reference/index.html"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#example-employee-data",
+    "href": "slides/03-01-lists.html#example-employee-data",
+    "title": "Record-based data and List Processing",
+    "section": "Example: Employee Data",
+    "text": "Example: Employee Data\nRelational Overview"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#identify-the-structures---follow-the-hierarchy",
+    "href": "slides/03-01-lists.html#identify-the-structures---follow-the-hierarchy",
+    "title": "Record-based data and List Processing",
+    "section": "Identify the Structures - follow the hierarchy",
+    "text": "Identify the Structures - follow the hierarchy\nxml_children recovers the children of an XML node\n\n\n{xml_nodeset (6)}\n[1] &lt;EMPLOYEE_INFO&gt;\\n  &lt;EMPLOYEE&gt;\\n    &lt;ID&gt;2824&lt;/ID&gt;\\n    &lt;first&gt;Michael&lt;/fir ...\n[2] &lt;BACKGROUND_CHECK&gt;\\n  &lt;BACKGROUND_CHEC&gt;\\n    &lt;ID&gt;39089&lt;/ID&gt;\\n    &lt;EMPLOYE ...\n[3] &lt;TAX_INFO&gt;\\n  &lt;TAX_INF&gt;\\n    &lt;ID&gt;93941&lt;/ID&gt;\\n    &lt;EMPLOYEE_ID&gt;2824&lt;/EMPLO ...\n[4] &lt;TRAINING&gt;\\n  &lt;TRAININ&gt;\\n    &lt;ID&gt;67510&lt;/ID&gt;\\n    &lt;TRAINING_TYPE&gt;3&lt;/TRAINI ...\n[5] &lt;EMP_AGREE&gt;\\n  &lt;EMP_AGRE&gt;\\n    &lt;ID&gt;14107&lt;/ID&gt;\\n    &lt;EMPLOYEE_ID&gt;2824&lt;/EMP ...\n[6] &lt;ORG_REL&gt;\\n  &lt;ORG_RE&gt;\\n    &lt;ID&gt;80344&lt;/ID&gt;\\n    &lt;EMPLOYEE_ID&gt;2824&lt;/EMPLOYE ..."
+  },
+  {
+    "objectID": "slides/03-01-lists.html#employee-data",
+    "href": "slides/03-01-lists.html#employee-data",
+    "title": "Record-based data and List Processing",
+    "section": "Employee Data",
+    "text": "Employee Data\n\n\n{xml_node}\n&lt;EMPLOYEE&gt;\n[1] &lt;ID&gt;2824&lt;/ID&gt;\n[2] &lt;first&gt;Michael&lt;/first&gt;\n[3] &lt;last&gt;Phillips&lt;/last&gt;\n[4] &lt;middle&gt;E&lt;/middle&gt;\n[5] &lt;address&gt;341 Bonilla Extensions\\nLake Jacktown, VA 72058&lt;/address&gt;\n[6] &lt;phone&gt;+1-701-028-0259x700&lt;/phone&gt;\n[7] &lt;ssn&gt;821097324&lt;/ssn&gt;"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#get-all-elements-of-one-record",
+    "href": "slides/03-01-lists.html#get-all-elements-of-one-record",
+    "title": "Record-based data and List Processing",
+    "section": "Get all elements of one record",
+    "text": "Get all elements of one record"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#your-turn",
+    "href": "slides/03-01-lists.html#your-turn",
+    "title": "Record-based data and List Processing",
+    "section": "Your Turn",
+    "text": "Your Turn\nHow do we need to modify the function make_row so that we can extract data for the background check?\nIs your solution applicable to all the tables of the Employee database?"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#solution",
+    "href": "slides/03-01-lists.html#solution",
+    "title": "Record-based data and List Processing",
+    "section": "Solution",
+    "text": "Solution\nIn practice we need to use some error handling"
+  },
+  {
     "objectID": "slides/01-02-html-xml-primer.html#why",
     "href": "slides/01-02-html-xml-primer.html#why",
     "title": "HTML, XML, CSS, and XPath",
