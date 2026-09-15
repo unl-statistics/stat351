@@ -2397,5 +2397,12 @@
     "title": "Why Arrow?",
     "section": "Conclusion",
     "text": "Conclusion\nResources:\n\nArrow documentation: arrow.apache.org/docs/r\nParquet: parquet.apache.org\nDuckDB: duckdb.org\nBook: Scaling up with Arrow and R"
+  },
+  {
+    "objectID": "slides/03-01-lists.html#your-turn-web-page-anatomy",
+    "href": "slides/03-01-lists.html#your-turn-web-page-anatomy",
+    "title": "Record-based data and List Processing",
+    "section": "Your Turn: Web Page Anatomy",
+    "text": "Your Turn: Web Page Anatomy\nUse the JSON specification at https://www.json.org/json-en.html to write out the tree"
   }
 ]

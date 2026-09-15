@@ -79,6 +79,13 @@ tree_df <- tibble::tibble(
 tree_df
 ```
 
+## Your Turn: Web Page Anatomy {.smaller .inverse}
+
+Use the JSON specification at https://www.json.org/json-en.html to write out the tree
+
+![](../images/tree.png)
+
+
 ## XML can be expressed as list
 
 Coerce list to xml: `as_xml_document`
