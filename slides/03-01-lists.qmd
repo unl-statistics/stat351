@@ -116,7 +116,7 @@ Relational Overview
 
 `xml_children` recovers the children of an XML node
 
-```{r}
+```{r echo=TRUE}
 library(xml2)
 xml_data <- read_xml("https://srvanderplas.github.io/stat-computing-r-python/data/sample_employee_data.xml")
 
@@ -124,7 +124,7 @@ xml_children(xml_data) # children's names look like the table names in the relat
 ```
 ## Employee Data
 
-```{r}
+```{r echo=TRUE}
 library(tibble)
 library(rlang)
 employees <- xml_children(xml_data)[1] |> xml_children()
@@ -135,7 +135,7 @@ employees[[1]]
 
 ## Get all elements of one record
 
-```{r}
+```{r echo=TRUE}
 make_row <- function(node) {
   if (xml_name(node) == "EMPLOYEE") {
     values <- xml_text(xml_children(node))
@@ -157,7 +157,7 @@ Is your solution applicable to all the tables of the Employee database?
 ## Solution
 
 
-```{r}
+```{r echo=TRUE}
 make_row <- function(node) {
   
   values <- xml_text(xml_children(node))

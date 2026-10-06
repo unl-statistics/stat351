@@ -85,8 +85,9 @@ schedule:
     prepare: |
       -
     class1: |
-      - Lecture: [API requests](../slides/04-01-apis.qmd)
+      - Lab: [Parsing XML Files](../assignment-repos/02-list-processing/index.qmd)
     class2: |
+      - Lecture: [API requests](../slides/04-01-apis.qmd)
       - Lab: [APIs](../assignment-repos/04-apis/index.qmd)
     assignments: |
       - Lab: [APIs](../assignment-repos/04-apis/index.qmd)
@@ -109,20 +110,20 @@ schedule:
       - [Lab goals](../assignment-repos/04-apis/tilt.qmd)
 
   - week: 7
-    name: PDF Tools
+    name: Scraping a Public Data set
     start: 2026-10-05
     end: 2026-10-11
     reading: |
       - [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
+      - Watch [Control a web browser from R to web scrape static and dynamic websites using {chromote}](https://www.youtube.com/watch?v=30AOpjLeOyI)
     prepare: |
-      - Find examples of image-based and text-based PDFs
+      - Identify a dataset to scrape and explore
     class1: |
-      - Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
+      - Lab: [Describe the scrape](../assignment-repos/screencast/Dataset-Topics.qmd)
     class2: |
-      - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+      - Lab:
     assignments: |
-      - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
-      - [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
+      - [Lab goals](../assignment-repos/screencast/tilt.qmd)
   - week: 8
     name: PDF Tools
     start: 2026-10-12

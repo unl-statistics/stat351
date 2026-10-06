@@ -310,6 +310,10 @@
 <h2>Identify the Structures - follow the hierarchy</h2>
 <p><code>xml_children</code> recovers the children of an XML node</p>
 <div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(xml2)</span>
+<span id="cb4-2"><a></a>xml_data <span class="ot">&lt;-</span> <span class="fu">read_xml</span>(<span class="st">"https://srvanderplas.github.io/stat-computing-r-python/data/sample_employee_data.xml"</span>)</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="fu">xml_children</span>(xml_data) <span class="co"># children's names look like the table names in the relational overview</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{xml_nodeset (6)}
 [1] &lt;EMPLOYEE_INFO&gt;\n  &lt;EMPLOYEE&gt;\n    &lt;ID&gt;2824&lt;/ID&gt;\n    &lt;first&gt;Michael&lt;/fir ...
@@ -324,6 +328,12 @@
 <section id="employee-data" class="slide level2">
 <h2>Employee Data</h2>
 <div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(tibble)</span>
+<span id="cb6-2"><a></a><span class="fu">library</span>(rlang)</span>
+<span id="cb6-3"><a></a>employees <span class="ot">&lt;-</span> <span class="fu">xml_children</span>(xml_data)[<span class="dv">1</span>] <span class="sc">|&gt;</span> <span class="fu">xml_children</span>()</span>
+<span id="cb6-4"><a></a><span class="co"># list of employees</span></span>
+<span id="cb6-5"><a></a></span>
+<span id="cb6-6"><a></a>employees[[<span class="dv">1</span>]]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{xml_node}
 &lt;EMPLOYEE&gt;
@@ -339,6 +349,18 @@
 </section>
 <section id="get-all-elements-of-one-record" class="slide level2">
 <h2>Get all elements of one record</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>make_row <span class="ot">&lt;-</span> <span class="cf">function</span>(node) {</span>
+<span id="cb8-2"><a></a>  <span class="cf">if</span> (<span class="fu">xml_name</span>(node) <span class="sc">==</span> <span class="st">"EMPLOYEE"</span>) {</span>
+<span id="cb8-3"><a></a>    values <span class="ot">&lt;-</span> <span class="fu">xml_text</span>(<span class="fu">xml_children</span>(node))</span>
+<span id="cb8-4"><a></a>    <span class="fu">names</span>(values) <span class="ot">&lt;-</span> <span class="fu">xml_name</span>(<span class="fu">xml_children</span>(node))</span>
+<span id="cb8-5"><a></a>    </span>
+<span id="cb8-6"><a></a>    <span class="fu">as_tibble</span>(<span class="fu">t</span>(values)) </span>
+<span id="cb8-7"><a></a>  }</span>
+<span id="cb8-8"><a></a>}</span>
+<span id="cb8-9"><a></a></span>
+<span id="cb8-10"><a></a>employee_data <span class="ot">&lt;-</span> employees <span class="sc">|&gt;</span> purrr<span class="sc">::</span><span class="fu">map</span>(<span class="at">.f =</span> make_row) <span class="sc">|&gt;</span> purrr<span class="sc">::</span><span class="fu">list_rbind</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </section>
 <section id="your-turn" class="slide level2">
 <h2>Your Turn</h2>
@@ -347,6 +369,15 @@
 </section>
 <section id="solution" class="slide level2">
 <h2>Solution</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>make_row <span class="ot">&lt;-</span> <span class="cf">function</span>(node) {</span>
+<span id="cb9-2"><a></a>  </span>
+<span id="cb9-3"><a></a>  values <span class="ot">&lt;-</span> <span class="fu">xml_text</span>(<span class="fu">xml_children</span>(node))</span>
+<span id="cb9-4"><a></a>  <span class="fu">names</span>(values) <span class="ot">&lt;-</span> <span class="fu">xml_name</span>(<span class="fu">xml_children</span>(node))</span>
+<span id="cb9-5"><a></a>    </span>
+<span id="cb9-6"><a></a>  <span class="fu">as_tibble</span>(<span class="fu">t</span>(values)) </span>
+<span id="cb9-7"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 <p>In practice we need to use some error handling</p>
 
 

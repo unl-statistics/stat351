@@ -112,6 +112,13 @@
     "text": "Trees\nthere are no native ‘tree’ objects in R or python (there are packages for sure), i.e. no standard implementation for trees\nimplementation as data frame:\n\n\n# A tibble: 7 × 3\n  node_id value children \n    &lt;int&gt; &lt;dbl&gt; &lt;list&gt;   \n1       1     4 &lt;dbl [2]&gt;\n2       2     2 &lt;dbl [2]&gt;\n3       3     7 &lt;NULL&gt;   \n4       4    10 &lt;NULL&gt;   \n5       5    13 &lt;dbl [2]&gt;\n6       6     5 &lt;NULL&gt;   \n7       7     6 &lt;NULL&gt;"
   },
   {
+    "objectID": "slides/03-01-lists.html#your-turn-web-page-anatomy",
+    "href": "slides/03-01-lists.html#your-turn-web-page-anatomy",
+    "title": "Record-based data and List Processing",
+    "section": "Your Turn: Web Page Anatomy",
+    "text": "Your Turn: Web Page Anatomy\nUse the JSON specification at https://www.json.org/json-en.html to write out the tree"
+  },
+  {
     "objectID": "slides/03-01-lists.html#xml-can-be-expressed-as-list",
     "href": "slides/03-01-lists.html#xml-can-be-expressed-as-list",
     "title": "Record-based data and List Processing",
@@ -137,21 +144,21 @@
     "href": "slides/03-01-lists.html#identify-the-structures---follow-the-hierarchy",
     "title": "Record-based data and List Processing",
     "section": "Identify the Structures - follow the hierarchy",
-    "text": "Identify the Structures - follow the hierarchy\nxml_children recovers the children of an XML node\n\n\n{xml_nodeset (6)}\n[1] &lt;EMPLOYEE_INFO&gt;\\n  &lt;EMPLOYEE&gt;\\n    &lt;ID&gt;2824&lt;/ID&gt;\\n    &lt;first&gt;Michael&lt;/fir ...\n[2] &lt;BACKGROUND_CHECK&gt;\\n  &lt;BACKGROUND_CHEC&gt;\\n    &lt;ID&gt;39089&lt;/ID&gt;\\n    &lt;EMPLOYE ...\n[3] &lt;TAX_INFO&gt;\\n  &lt;TAX_INF&gt;\\n    &lt;ID&gt;93941&lt;/ID&gt;\\n    &lt;EMPLOYEE_ID&gt;2824&lt;/EMPLO ...\n[4] &lt;TRAINING&gt;\\n  &lt;TRAININ&gt;\\n    &lt;ID&gt;67510&lt;/ID&gt;\\n    &lt;TRAINING_TYPE&gt;3&lt;/TRAINI ...\n[5] &lt;EMP_AGREE&gt;\\n  &lt;EMP_AGRE&gt;\\n    &lt;ID&gt;14107&lt;/ID&gt;\\n    &lt;EMPLOYEE_ID&gt;2824&lt;/EMP ...\n[6] &lt;ORG_REL&gt;\\n  &lt;ORG_RE&gt;\\n    &lt;ID&gt;80344&lt;/ID&gt;\\n    &lt;EMPLOYEE_ID&gt;2824&lt;/EMPLOYE ..."
+    "text": "Identify the Structures - follow the hierarchy\nxml_children recovers the children of an XML node\n\nlibrary(xml2)\nxml_data &lt;- read_xml(\"https://srvanderplas.github.io/stat-computing-r-python/data/sample_employee_data.xml\")\n\nxml_children(xml_data) # children's names look like the table names in the relational overview\n\n{xml_nodeset (6)}\n[1] &lt;EMPLOYEE_INFO&gt;\\n  &lt;EMPLOYEE&gt;\\n    &lt;ID&gt;2824&lt;/ID&gt;\\n    &lt;first&gt;Michael&lt;/fir ...\n[2] &lt;BACKGROUND_CHECK&gt;\\n  &lt;BACKGROUND_CHEC&gt;\\n    &lt;ID&gt;39089&lt;/ID&gt;\\n    &lt;EMPLOYE ...\n[3] &lt;TAX_INFO&gt;\\n  &lt;TAX_INF&gt;\\n    &lt;ID&gt;93941&lt;/ID&gt;\\n    &lt;EMPLOYEE_ID&gt;2824&lt;/EMPLO ...\n[4] &lt;TRAINING&gt;\\n  &lt;TRAININ&gt;\\n    &lt;ID&gt;67510&lt;/ID&gt;\\n    &lt;TRAINING_TYPE&gt;3&lt;/TRAINI ...\n[5] &lt;EMP_AGREE&gt;\\n  &lt;EMP_AGRE&gt;\\n    &lt;ID&gt;14107&lt;/ID&gt;\\n    &lt;EMPLOYEE_ID&gt;2824&lt;/EMP ...\n[6] &lt;ORG_REL&gt;\\n  &lt;ORG_RE&gt;\\n    &lt;ID&gt;80344&lt;/ID&gt;\\n    &lt;EMPLOYEE_ID&gt;2824&lt;/EMPLOYE ..."
   },
   {
     "objectID": "slides/03-01-lists.html#employee-data",
     "href": "slides/03-01-lists.html#employee-data",
     "title": "Record-based data and List Processing",
     "section": "Employee Data",
-    "text": "Employee Data\n\n\n{xml_node}\n&lt;EMPLOYEE&gt;\n[1] &lt;ID&gt;2824&lt;/ID&gt;\n[2] &lt;first&gt;Michael&lt;/first&gt;\n[3] &lt;last&gt;Phillips&lt;/last&gt;\n[4] &lt;middle&gt;E&lt;/middle&gt;\n[5] &lt;address&gt;341 Bonilla Extensions\\nLake Jacktown, VA 72058&lt;/address&gt;\n[6] &lt;phone&gt;+1-701-028-0259x700&lt;/phone&gt;\n[7] &lt;ssn&gt;821097324&lt;/ssn&gt;"
+    "text": "Employee Data\n\nlibrary(tibble)\nlibrary(rlang)\nemployees &lt;- xml_children(xml_data)[1] |&gt; xml_children()\n# list of employees\n\nemployees[[1]]\n\n{xml_node}\n&lt;EMPLOYEE&gt;\n[1] &lt;ID&gt;2824&lt;/ID&gt;\n[2] &lt;first&gt;Michael&lt;/first&gt;\n[3] &lt;last&gt;Phillips&lt;/last&gt;\n[4] &lt;middle&gt;E&lt;/middle&gt;\n[5] &lt;address&gt;341 Bonilla Extensions\\nLake Jacktown, VA 72058&lt;/address&gt;\n[6] &lt;phone&gt;+1-701-028-0259x700&lt;/phone&gt;\n[7] &lt;ssn&gt;821097324&lt;/ssn&gt;"
   },
   {
     "objectID": "slides/03-01-lists.html#get-all-elements-of-one-record",
     "href": "slides/03-01-lists.html#get-all-elements-of-one-record",
     "title": "Record-based data and List Processing",
     "section": "Get all elements of one record",
-    "text": "Get all elements of one record"
+    "text": "Get all elements of one record\n\nmake_row &lt;- function(node) {\n  if (xml_name(node) == \"EMPLOYEE\") {\n    values &lt;- xml_text(xml_children(node))\n    names(values) &lt;- xml_name(xml_children(node))\n    \n    as_tibble(t(values)) \n  }\n}\n\nemployee_data &lt;- employees |&gt; purrr::map(.f = make_row) |&gt; purrr::list_rbind()"
   },
   {
     "objectID": "slides/03-01-lists.html#your-turn",
@@ -165,7 +172,7 @@
     "href": "slides/03-01-lists.html#solution",
     "title": "Record-based data and List Processing",
     "section": "Solution",
-    "text": "Solution\nIn practice we need to use some error handling"
+    "text": "Solution\n\nmake_row &lt;- function(node) {\n  \n  values &lt;- xml_text(xml_children(node))\n  names(values) &lt;- xml_name(xml_children(node))\n    \n  as_tibble(t(values)) \n}\n\nIn practice we need to use some error handling"
   },
   {
     "objectID": "slides/01-02-html-xml-primer.html#why",
@@ -350,6 +357,97 @@
     "text": "Link to dataset\nThings you plan to investigate using this dataset:\n\nThing 1\nThing 2\nThing 3\n\nStat 351 topics you plan to cover during the analysis:\n\nTopic 1\nTopic 2\nTopic 3\nTopic 4"
   },
   {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html",
+    "title": "Lab: PDF Data",
+    "section": "",
+    "text": "You can see the purpose of this assignment as well as the skills and knowledge you should be using and acquiring, in the Transparency in Learning and Teaching (TILT) document in this repository. The TILT document also contains a checklist for self-reflection that will provide some guidance on how the assignment will be graded."
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#pdf-format",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#pdf-format",
+    "title": "Lab: PDF Data",
+    "section": "2.1 PDF Format",
+    "text": "2.1 PDF Format\nWhat type of PDF files are these? Based on the format, what would you have to do to process the PDFs and extract text and/or tabular information (in broad terms)?\n\nyour answer here"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#pdf-structure",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#pdf-structure",
+    "title": "Lab: PDF Data",
+    "section": "2.2 PDF Structure",
+    "text": "2.2 PDF Structure\nTake a look at the provided PDFs in your default PDF viewer (acrobat, reader, chrome, xPDF, etc). Do they have a consistent structure across years? Across departments? Make a list of at least 3-5 problems you expect to have to overcome if you scrape data from the PDFs. Include screenshots where it is relevant to do so (similar to Fig 34.4 in the textbook), and make sure your images are included using appropriate markdown syntax, captions, and hyperlinks. Discuss how you might overcome these problems and why the PDF format leads to processing challenges.\n\nList here\n\n\nSupporting screenshots/discussion here"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#plan-of-attack",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#plan-of-attack",
+    "title": "Lab: PDF Data",
+    "section": "2.3 Plan of Attack",
+    "text": "2.3 Plan of Attack\nWhat strategy would you use to read in the budget data to minimize the amount of post-processing you need to do? Explain your reasoning.\n\n\nStrategy here\n\n\nExplanation"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#acquiring-metadata",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#acquiring-metadata",
+    "title": "Lab: PDF Data",
+    "section": "2.4 Acquiring Metadata",
+    "text": "2.4 Acquiring Metadata\nUse a PDF library to programmatically examine each PDF. Use a functional approach, and organize the metadata in a table, with one row per file. Do you notice any anomalies or unfamiliar metadata components which might be important? Propose a possible hypothesis for any anomalies you discover, and research/explain any unfamiliar terms in the metadata that you identified.\n\n\nCode chunk should replace this line\n\n\n\nYour response to open-ended questions goes here"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#anomalies-and-strategy-adjustments",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#anomalies-and-strategy-adjustments",
+    "title": "Lab: PDF Data",
+    "section": "2.5 Anomalies and Strategy Adjustments",
+    "text": "2.5 Anomalies and Strategy Adjustments\nConsidering what you discovered in the previous step, do you need to adjust your strategy for reading in the data? Why or why not? Investigate any differences in metadata values across files, and determine whether or not the variation(s) may pose problems for your analysis.\n\n\nCode chunk should replace this line (delete line and break if not needed)\n\n\n\nYour response to open-ended questions goes here"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#identify-relevant-pages",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#identify-relevant-pages",
+    "title": "Lab: PDF Data",
+    "section": "3.1 Identify Relevant Pages",
+    "text": "3.1 Identify Relevant Pages\nDevelop a function that takes the path to a PDF file and identifies which pages have tabular salary data on them (e.g. get a range of pages with the salary information). Use your function to create a table with columns file_name, page_start, and page_end.\n\n\nCode Chunk"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#read-in-relevant-text",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#read-in-relevant-text",
+    "title": "Lab: PDF Data",
+    "section": "3.2 Read in Relevant Text",
+    "text": "3.2 Read in Relevant Text\nDevelop a function read_salary_data(file, start, end) which will read in all of the salary data from the pages with tables, using the 2025-2026 salary report as a guide. You should not generalize to other years yet. Use the pdf_text function in tabulapdf (R) or the read_pdf function in the tabula-py package (python).\n\n\nCode Chunk"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#plan-your-approach",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#plan-your-approach",
+    "title": "Lab: PDF Data",
+    "section": "3.3 Plan your Approach",
+    "text": "3.3 Plan your Approach\nWhat processing steps would you use to get the text vectors from this function into a table? Make a detailed list of the necessary steps. Are there any steps you do not think will be consistently successful or generalizable? Is there information your steps sacrifice to read things in cleanly?\n\n\nYour answer should include an ordered list of steps (indent with at least 2 spaces to form a nested list, if necessary), as well as a response to the open-ended questions at the end."
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#would-coordinates-help",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#would-coordinates-help",
+    "title": "Lab: PDF Data",
+    "section": "3.4 Would Coordinates Help?",
+    "text": "3.4 Would Coordinates Help?\nThere are other functions in the tabula software which provide the coordinates of each piece of text. How might this make it easier to ensure tables are read in correctly?\n\n\nYour answer"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#explore-package-documentation",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#explore-package-documentation",
+    "title": "Lab: PDF Data",
+    "section": "3.5 Explore Package Documentation",
+    "text": "3.5 Explore Package Documentation\nFind a function that will provide coordinates for each text component, and write out the steps you might use to convert this data into a clean tabular format. What challenges will you face?\n\n\nYour answer should include an ordered list of steps (indent with at least 2 spaces to form a nested list, if necessary), as well as a response to the open-ended question at the end."
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#a-classical-problem",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#a-classical-problem",
+    "title": "Lab: PDF Data",
+    "section": "3.6 A Classical Problem",
+    "text": "3.6 A Classical Problem\nUsing either approach, get the salary data for all individuals in the Classics department, across all 4 reports (this should require reading in about 2 pages from each report). Plot the salaries of each individual. Generate a second plot of the total budget for the classics department, split by faculty, administration (the chair), and staff (including student workers. What do you notice?\nYour answer should address some of the following questions:\n\nHow has the budget for Classics changed over the last 15 years?\nHow has the proportional allocation of salaries to faculty, staff, and administration changed?\nWhat do you think is driving that change?\n\nYour plots must include appropriate titles and legends, and be well constructed using an appropriate mapping. Each plot should be accompanied by a 2-4 sentence description.\n\n\nCode chunk(s)\n\n\n\nOverall observations"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/index.html#quality-control",
+    "href": "assignment-repos/out 05-pdf-parsing/index.html#quality-control",
+    "title": "Lab: PDF Data",
+    "section": "3.7 Quality Control",
+    "text": "3.7 Quality Control\nIf you were to process the full set of faculty salary data across all departments, what quality control measures would you use to ensure your functions functioned as expected? Explain your answer and your reasoning.\n\n\nYour answer and explanation"
+  },
+  {
     "objectID": "assignment-repos/08-interactive-graphics/index.html",
     "href": "assignment-repos/08-interactive-graphics/index.html",
     "title": "Homework: Interactive Visualization with Vega-Lite",
@@ -378,102 +476,11 @@
     "text": "Adding selectors\nAdd a maxSat2 selector that puts an upper bound on the saturation. To ensure mathematical viability, your maxSat2 selector should have a lower bound of minSat2. Wire your maxSat2 selector to the plot, using the chunk below, which I’ve edited to use variables with 2 at the end to not conflict with the original chart.\n\nviewof space2 = Inputs.select([\"HSL\", \"RGB\"], {label: \"Color space (axes)\", value: \"HSL\"})\n// selector for color saturation/intensity\nviewof minSat2 = Inputs.range([0, 100], {label: \"Min saturation (%)\", value: 0, step: 1})\n\n\n// filter out points based on saturation\nfiltered2 = colors.filter(d =&gt; d.s &gt;= minSat2)\n\n// Create an x variable that's conditional on what is selected,\n// changing both the values and the label accordingly\nxAccessor2 = space === \"HSL\" ? (d) =&gt; d.h : (d) =&gt; d.r\nxLabel2 = space === \"HSL\" ? \"Hue (°)\" : \"Red (0–255)\"\n\n// Create a y variable that's conditional on what is selected,\n// changing both the values and the label accordingly\nyAccessor2 = space === \"HSL\" ? (d) =&gt; d.l : (d) =&gt; d.g\nyLabel2 = space === \"HSL\" ? \"Lightness (%)\" : \"Green (0–255)\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  grid: true, // show coordinate grid\n  color: {legend: false}, // no need for legends when the data is colors\n  marks: [\n    Plot.dot(\n      filtered2, // use filtered data\n      {\n        x: xAccessor2, y: yAccessor2, // specify mappings\n        fill: (d) =&gt; d.hex,\n        stroke: \"#333\", strokeWidth: 0.5, r: 5, // and defaults\n        tip: true,\n        // title = tooltip text. use both color name and hex value\n        title: d =&gt; `${d.color} (${d.hex})\n  HSL: ${d.h.toFixed(0)}, ${d.s.toFixed(0)}%, ${d.l.toFixed(0)}%\n  RGB: ${d.r}, ${d.g}, ${d.b}`\n      }\n    )],\n  x: {label: xLabel2, domain: space === \"HSL\" ? [0, 360] : [0, 255]},\n  y: {label: yLabel2, domain: space === \"HSL\" ? [0, 100] : [0, 255]},\n  caption: space === \"HSL\" ? \"Hue vs. Lightness (filtered by min saturation).\" : \"Red vs. Green (still filtered by HSL saturation).\"\n})"
   },
   {
-    "objectID": "assignment-repos/06-good-graphics/index.html",
-    "href": "assignment-repos/06-good-graphics/index.html",
+    "objectID": "assignment-repos/05-good-graphics/index.html",
+    "href": "assignment-repos/05-good-graphics/index.html",
     "title": "Lab: Creating Good Graphics",
     "section": "",
     "text": "You can see the purpose of this assignment as well as the skills and knowledge you should be using and acquiring, in the Transparency in Learning and Teaching (TILT) document in this repository. The TILT document also contains a checklist for self-reflection that will provide some guidance on how the assignment will be graded.\n\n\n\n\n1 Graphical Critiques\nThe following code was generated by Claude AI vers. Sonnet 4.5 (with some modifications).\n\nCode\n# Load required libraries\nsuppressPackageStartupMessages({\n  library(ggplot2)\n  theme_set(theme_bw())\n  library(dplyr)\n  library(tidyr)\n})\n\n# Create sample dataset\nset.seed(123)\nweeks &lt;- 1:12\nage_groups &lt;- c(\"18-29\", \"30-49\", \"50-64\", \"65+\")\n\n# Generate vaccination rate data with realistic patterns\nvaccination_data &lt;- data.frame(\n  week = rep(weeks, each = 4),\n  age_group = rep(age_groups, times = 12),\n  vaccination_rate = c(\n    # Week-by-week data for each age group\n    12, 18, 25, 35,  # Week 1\n    15, 22, 30, 41,  # Week 2\n    18, 26, 35, 47,  # Week 3\n    22, 31, 41, 54,  # Week 4\n    26, 36, 47, 60,  # Week 5\n    30, 41, 53, 66,  # Week 6\n    34, 46, 58, 71,  # Week 7\n    38, 50, 63, 75,  # Week 8\n    42, 54, 67, 79,  # Week 9\n    45, 58, 71, 82,  # Week 10\n    48, 61, 74, 85,  # Week 11\n    51, 64, 77, 87   # Week 12\n  )\n)\n\n# Set factor levels for consistent ordering\nvaccination_data$age_group &lt;- factor(vaccination_data$age_group, \n                                     levels = c(\"18-29\", \"30-49\", \"50-64\", \"65+\"))\n\n# Define color palette\nage_colors &lt;- c(\"18-29\" = \"#FF6B6B\", \n                \"30-49\" = \"#4ECDC4\", \n                \"50-64\" = \"#FFD93D\", \n                \"65+\" = \"#95E1D3\")\n\n# CHART A: 3D Pie Chart (showing total vaccinations by age group)\n\n# Calculate total vaccinations per age group (sum across weeks)\ntotal_by_age &lt;- vaccination_data %&gt;%\n  group_by(age_group) %&gt;%\n  summarise(total = sum(vaccination_rate))\n\n# Create pie chart with 3D-like appearance using custom positioning\nchart_a &lt;- ggplot(total_by_age, aes(x = \"\", y = total, fill = age_group)) +\n  geom_bar(stat = \"identity\", width = 1, color = \"white\") +\n  coord_polar(\"y\", start = 0) +\n  scale_fill_manual(values = age_colors) +\n  labs(title = \"Chart A: 3D Pie Chart - Total Vaccinations by Age Group\",\n       subtitle = \"(Summed across all 12 weeks)\",\n       fill = \"Age Group\") +\n  theme_void() +\n  theme(\n    plot.title = element_text(hjust = 0.5, size = 14, face = \"bold\"),\n    plot.subtitle = element_text(hjust = 0.5, size = 10, face = \"italic\"),\n    legend.position = \"right\",\n    legend.title = element_text(size = 11, face = \"bold\"),\n    legend.text = element_text(size = 10)\n  ) +\n  # Add percentage labels\n  geom_text(aes(label = paste0(round(total/sum(total)*100, 1), \"%\")),\n            position = position_stack(vjust = 0.5),\n            size = 4, fontface = \"bold\")\n\n# CHART B: Line Graph - Vaccination Rates Over Time\n\nchart_b &lt;- ggplot(vaccination_data, aes(x = week, y = vaccination_rate, \n                                        color = age_group, group = age_group)) +\n  geom_line(linewidth = 1.2) +\n  geom_point(size = 2.5) +\n  scale_color_manual(values = age_colors) +\n  scale_x_continuous(breaks = 1:12) +\n  labs(title = \"Chart B: Line Graph - Vaccination Rates Over Time\",\n       x = \"Week\",\n       y = \"Vaccination Rate (%)\",\n       color = \"Age Group\")\n\n# CHART C: Stacked Area Chart - Vaccination Rates Over Time\n\nchart_c &lt;- ggplot(vaccination_data, aes(x = week, y = vaccination_rate, \n                                        fill = age_group)) +\n  geom_area(alpha = 0.8, position = \"stack\") +\n  scale_fill_manual(values = age_colors) +\n  scale_x_continuous(breaks = 1:12) +\n  labs(title = \"Chart C: Stacked Area Chart - Vaccination Rates Over Time\",\n       x = \"Week\",\n       y = \"Cumulative Vaccination Rate (%)\",\n       fill = \"Age Group\")\n\n\n# CHART D: Grouped Bar Chart - Vaccination Rates by Week and Age Group\n\nchart_d &lt;- ggplot(vaccination_data, aes(x = factor(week), y = vaccination_rate, \n                                        fill = age_group)) +\n  geom_bar(stat = \"identity\", position = \"dodge\", width = 0.8) +\n  scale_fill_manual(values = age_colors) +\n  labs(title = \"Chart D: Grouped Bar Chart - Vaccination Rates by Week and Age Group\",\n       x = \"Week\",\n       y = \"Vaccination Rate (%)\",\n       fill = \"Age Group\")\n\nchart_a\nchart_b\nchart_c\nchart_d\n\n\n\n\n\n\n\n\n\n\n\n\n(a) Caption 1\n\n\n\n\n\n\n\n\n\n\n\n(b) Caption 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Caption 3\n\n\n\n\n\n\n\n\n\n\n\n(d) Caption 4\n\n\n\n\n\n\n\nFigure 1: Four different representations of COVID vaccination rates.\n\n\n\n\nEdit the chunk options above to produce helpful and descriptive captions and alt-text for each chart. Every chart you include in a document should be referenced in the text (preferably using a cross-reference) and should have a helpful caption and include at least short alt-text descriptions using the fig-alt quarto option.\nResources:\n\n\nMastering Alt Text for Images and Charts\nImage Accessibility Generator - This is a great tool but I often have to customize the output. I usually use the long text for image descriptions, which is not best practice but tends to work better than many of the other options available within the quarto ecosystem.\n\n\nUsing the grammar of graphics, identify the geom, mappings, stat, positions, coordinate systems, and transformations for each graphic. Fill in the table below accordingly, leaving any cells which do not apply to the chart blank. If a mapping is a function of a statistic, fill in the statistic function from ggplot2 and indicate the mapping using the appropriate after_stat variable.\n\n\nGrammar of graphics mappings for the four charts\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChart\nGeom\nX mapping\nY mapping\nColor mapping\nFill mapping\nStat\nPosition\nCoord System\nTransform\n\n\n\n\nA\n\n\n\n\n\n\n\n\n\n\n\nB\n\n\n\n\n\n\n\n\n\n\n\nC\n\n\n\n\n\n\n\n\n\n\n\nD\n\n\n\n\n\n\n\n\n\n\n\n\n\nExamine each chart and determine whether it effectively communicates changes in vaccine rates over time across different age groups. If the chart is inappropriate for that comparison, explain why; if it is appropriate but not optimal, explain what you would change.\n\n\n\n\n\n\nExamine each chart and critique the use of Gestalt principles of grouping. What principles apply? Are they used effectively?\n\n\n\n\n\n\nConsider the “messages” you might want viewers to take away from this data and the visuals you generate.\n\nBrainstorm 2-3 reasonable messages\n\n\n\n\n\nWhat do you think the most important message is from this data set?\n\n\n\n\n\nWhich comparisons do you want to make easier for participants to perform?\n\n\n\n\n\nWhat obstacles do you expect to encounter designing a chart to facilitate these comparisons?\n\n\n\n\nConsidering your answers to the questions above, create your own version of the chart that minimizes cognitive load and maximizes interpretability. Explain the changes that you made and why they improve the chart compared to the ones generated by Claude.\n\n\n\n2 Choose Your Own Adventure\nClaude used fake data, but we have access to the real deal, and I’ve downloaded a csv to simplify the process.\nOf course, the CDC only tracks number of vaccines, not the overall vaccination rate.\n\nAugment this data with census estimates of the population size for each age group. In either case, you may need to do a bit of inference/subtraction to get the counts for the age brackets used by the CDC. Provide reproducible code that generates a population table for 2023 and 2024 with the appropriate counts for each age bracket provided by the CDC.\nOptions:\n\nUse the Census QuickFacts page https://www.census.gov/quickfacts/\nUse the nc-est2024-agesex.xlsx population by age and sex file I downloaded from the US Census.\n\nUse the real data to generate the plot you created in 6. How does the real data change the appearance/message of the plot? Does anything get easier or more difficult?\nWhat annotations would you want to add to your chart? You may be able to find relevant information about e.g. approval dates of vaccines at immunize.org’s Vaccine Timeline. Add at least one annotation to your chart, but balance utility with clutter.\nHow would you modify this chart if your goal was to compare vaccination rates for each age group in 2023 and 2024? Explain your answer, highlighting how your modifications would reduce the cognitive load of making the comparison of interest.\nHow would you use your statistical training to test and visually highlight any statistically significant differences? Explain. You do not have to actually implement any statistical testing to answer this question."
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html",
-    "href": "assignment-repos/05-pdf-parsing/index.html",
-    "title": "Lab: PDF Data",
-    "section": "",
-    "text": "You can see the purpose of this assignment as well as the skills and knowledge you should be using and acquiring, in the Transparency in Learning and Teaching (TILT) document in this repository. The TILT document also contains a checklist for self-reflection that will provide some guidance on how the assignment will be graded."
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#pdf-format",
-    "href": "assignment-repos/05-pdf-parsing/index.html#pdf-format",
-    "title": "Lab: PDF Data",
-    "section": "2.1 PDF Format",
-    "text": "2.1 PDF Format\nWhat type of PDF files are these? Based on the format, what would you have to do to process the PDFs and extract text and/or tabular information (in broad terms)?\n\nyour answer here"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#pdf-structure",
-    "href": "assignment-repos/05-pdf-parsing/index.html#pdf-structure",
-    "title": "Lab: PDF Data",
-    "section": "2.2 PDF Structure",
-    "text": "2.2 PDF Structure\nTake a look at the provided PDFs in your default PDF viewer (acrobat, reader, chrome, xPDF, etc). Do they have a consistent structure across years? Across departments? Make a list of at least 3-5 problems you expect to have to overcome if you scrape data from the PDFs. Include screenshots where it is relevant to do so (similar to Fig 34.4 in the textbook), and make sure your images are included using appropriate markdown syntax, captions, and hyperlinks. Discuss how you might overcome these problems and why the PDF format leads to processing challenges.\n\nList here\n\n\nSupporting screenshots/discussion here"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#plan-of-attack",
-    "href": "assignment-repos/05-pdf-parsing/index.html#plan-of-attack",
-    "title": "Lab: PDF Data",
-    "section": "2.3 Plan of Attack",
-    "text": "2.3 Plan of Attack\nWhat strategy would you use to read in the budget data to minimize the amount of post-processing you need to do? Explain your reasoning.\n\n\nStrategy here\n\n\nExplanation"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#acquiring-metadata",
-    "href": "assignment-repos/05-pdf-parsing/index.html#acquiring-metadata",
-    "title": "Lab: PDF Data",
-    "section": "2.4 Acquiring Metadata",
-    "text": "2.4 Acquiring Metadata\nUse a PDF library to programmatically examine each PDF. Use a functional approach, and organize the metadata in a table, with one row per file. Do you notice any anomalies or unfamiliar metadata components which might be important? Propose a possible hypothesis for any anomalies you discover, and research/explain any unfamiliar terms in the metadata that you identified.\n\n\nCode chunk should replace this line\n\n\n\nYour response to open-ended questions goes here"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#anomalies-and-strategy-adjustments",
-    "href": "assignment-repos/05-pdf-parsing/index.html#anomalies-and-strategy-adjustments",
-    "title": "Lab: PDF Data",
-    "section": "2.5 Anomalies and Strategy Adjustments",
-    "text": "2.5 Anomalies and Strategy Adjustments\nConsidering what you discovered in the previous step, do you need to adjust your strategy for reading in the data? Why or why not? Investigate any differences in metadata values across files, and determine whether or not the variation(s) may pose problems for your analysis.\n\n\nCode chunk should replace this line (delete line and break if not needed)\n\n\n\nYour response to open-ended questions goes here"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#identify-relevant-pages",
-    "href": "assignment-repos/05-pdf-parsing/index.html#identify-relevant-pages",
-    "title": "Lab: PDF Data",
-    "section": "3.1 Identify Relevant Pages",
-    "text": "3.1 Identify Relevant Pages\nDevelop a function that takes the path to a PDF file and identifies which pages have tabular salary data on them (e.g. get a range of pages with the salary information). Use your function to create a table with columns file_name, page_start, and page_end.\n\n\nCode Chunk"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#read-in-relevant-text",
-    "href": "assignment-repos/05-pdf-parsing/index.html#read-in-relevant-text",
-    "title": "Lab: PDF Data",
-    "section": "3.2 Read in Relevant Text",
-    "text": "3.2 Read in Relevant Text\nDevelop a function read_salary_data(file, start, end) which will read in all of the salary data from the pages with tables, using the 2025-2026 salary report as a guide. You should not generalize to other years yet. Use the pdf_text function in tabulapdf (R) or the read_pdf function in the tabula-py package (python).\n\n\nCode Chunk"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#plan-your-approach",
-    "href": "assignment-repos/05-pdf-parsing/index.html#plan-your-approach",
-    "title": "Lab: PDF Data",
-    "section": "3.3 Plan your Approach",
-    "text": "3.3 Plan your Approach\nWhat processing steps would you use to get the text vectors from this function into a table? Make a detailed list of the necessary steps. Are there any steps you do not think will be consistently successful or generalizable? Is there information your steps sacrifice to read things in cleanly?\n\n\nYour answer should include an ordered list of steps (indent with at least 2 spaces to form a nested list, if necessary), as well as a response to the open-ended questions at the end."
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#would-coordinates-help",
-    "href": "assignment-repos/05-pdf-parsing/index.html#would-coordinates-help",
-    "title": "Lab: PDF Data",
-    "section": "3.4 Would Coordinates Help?",
-    "text": "3.4 Would Coordinates Help?\nThere are other functions in the tabula software which provide the coordinates of each piece of text. How might this make it easier to ensure tables are read in correctly?\n\n\nYour answer"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#explore-package-documentation",
-    "href": "assignment-repos/05-pdf-parsing/index.html#explore-package-documentation",
-    "title": "Lab: PDF Data",
-    "section": "3.5 Explore Package Documentation",
-    "text": "3.5 Explore Package Documentation\nFind a function that will provide coordinates for each text component, and write out the steps you might use to convert this data into a clean tabular format. What challenges will you face?\n\n\nYour answer should include an ordered list of steps (indent with at least 2 spaces to form a nested list, if necessary), as well as a response to the open-ended question at the end."
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#a-classical-problem",
-    "href": "assignment-repos/05-pdf-parsing/index.html#a-classical-problem",
-    "title": "Lab: PDF Data",
-    "section": "3.6 A Classical Problem",
-    "text": "3.6 A Classical Problem\nUsing either approach, get the salary data for all individuals in the Classics department, across all 4 reports (this should require reading in about 2 pages from each report). Plot the salaries of each individual. Generate a second plot of the total budget for the classics department, split by faculty, administration (the chair), and staff (including student workers. What do you notice?\nYour answer should address some of the following questions:\n\nHow has the budget for Classics changed over the last 15 years?\nHow has the proportional allocation of salaries to faculty, staff, and administration changed?\nWhat do you think is driving that change?\n\nYour plots must include appropriate titles and legends, and be well constructed using an appropriate mapping. Each plot should be accompanied by a 2-4 sentence description.\n\n\nCode chunk(s)\n\n\n\nOverall observations"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/index.html#quality-control",
-    "href": "assignment-repos/05-pdf-parsing/index.html#quality-control",
-    "title": "Lab: PDF Data",
-    "section": "3.7 Quality Control",
-    "text": "3.7 Quality Control\nIf you were to process the full set of faculty salary data across all departments, what quality control measures would you use to ensure your functions functioned as expected? Explain your answer and your reasoning.\n\n\nYour answer and explanation"
   },
   {
     "objectID": "assignment-repos/04-apis/index.html",
@@ -1407,7 +1414,7 @@
     "href": "weeks/week-05.html",
     "title": "Week 5: Application Programming Interfaces",
     "section": "",
-    "text": "September 21-27, 2026\n\n\n\nApplication Programming Interfaces (APIs)\n\n\n\n\n\n\n\n\n\n\n\nLecture: API requests\n\n\n\n\n\nLab: APIs\n\n\n\n\n\nLab: APIs\nLab goals",
+    "text": "September 21-27, 2026\n\n\n\nApplication Programming Interfaces (APIs)\n\n\n\n\n\n\n\n\n\n\n\nLab: Parsing XML Files\n\n\n\n\n\nLecture: API requests\nLab: APIs\n\n\n\n\n\nLab: APIs\nLab goals",
     "crumbs": [
       "Weekly materials",
       "Week 5 - APIs"
@@ -1429,7 +1436,7 @@
     "href": "weeks/week-05.html#tuesday",
     "title": "Week 5: Application Programming Interfaces",
     "section": "",
-    "text": "Lecture: API requests",
+    "text": "Lab: Parsing XML Files",
     "crumbs": [
       "Weekly materials",
       "Week 5 - APIs"
@@ -1440,7 +1447,7 @@
     "href": "weeks/week-05.html#thursday",
     "title": "Week 5: Application Programming Interfaces",
     "section": "",
-    "text": "Lab: APIs",
+    "text": "Lecture: API requests\nLab: APIs",
     "crumbs": [
       "Weekly materials",
       "Week 5 - APIs"
@@ -1460,9 +1467,9 @@
   {
     "objectID": "weeks/week-07.html",
     "href": "weeks/week-07.html",
-    "title": "Week 7: PDF Tools",
+    "title": "Week 7: Scraping a Public Data set",
     "section": "",
-    "text": "October 05-11, 2026\n\n\n\nWorking with PDFs\n\n\n\n\n\nFind examples of image-based and text-based PDFs\n\n\n\n\n\nLecture: PDF Tools\n\n\n\n\n\nLab: PDF/OCR\n\n\n\n\n\nLab: PDF/OCR\nLab goals",
+    "text": "October 05-11, 2026\n\n\n\nWorking with PDFs\nWatch Control a web browser from R to web scrape static and dynamic websites using {chromote}\n\n\n\n\n\nIdentify a dataset to scrape and explore\n\n\n\n\n\nLab: Describe the scrape\n\n\n\n\n\nLab:\n\n\n\n\n\nLab goals",
     "crumbs": [
       "Weekly materials",
       "Week 7 - PDF Tools"
@@ -1471,9 +1478,9 @@
   {
     "objectID": "weeks/week-07.html#reading",
     "href": "weeks/week-07.html#reading",
-    "title": "Week 7: PDF Tools",
+    "title": "Week 7: Scraping a Public Data set",
     "section": "",
-    "text": "Working with PDFs",
+    "text": "Working with PDFs\nWatch Control a web browser from R to web scrape static and dynamic websites using {chromote}",
     "crumbs": [
       "Weekly materials",
       "Week 7 - PDF Tools"
@@ -1482,9 +1489,9 @@
   {
     "objectID": "weeks/week-07.html#prepare-for-class",
     "href": "weeks/week-07.html#prepare-for-class",
-    "title": "Week 7: PDF Tools",
+    "title": "Week 7: Scraping a Public Data set",
     "section": "",
-    "text": "Find examples of image-based and text-based PDFs",
+    "text": "Identify a dataset to scrape and explore",
     "crumbs": [
       "Weekly materials",
       "Week 7 - PDF Tools"
@@ -1493,9 +1500,9 @@
   {
     "objectID": "weeks/week-07.html#tuesday",
     "href": "weeks/week-07.html#tuesday",
-    "title": "Week 7: PDF Tools",
+    "title": "Week 7: Scraping a Public Data set",
     "section": "",
-    "text": "Lecture: PDF Tools",
+    "text": "Lab: Describe the scrape",
     "crumbs": [
       "Weekly materials",
       "Week 7 - PDF Tools"
@@ -1504,9 +1511,9 @@
   {
     "objectID": "weeks/week-07.html#thursday",
     "href": "weeks/week-07.html#thursday",
-    "title": "Week 7: PDF Tools",
+    "title": "Week 7: Scraping a Public Data set",
     "section": "",
-    "text": "Lab: PDF/OCR",
+    "text": "Lab:",
     "crumbs": [
       "Weekly materials",
       "Week 7 - PDF Tools"
@@ -1515,9 +1522,9 @@
   {
     "objectID": "weeks/week-07.html#practice-your-skills",
     "href": "weeks/week-07.html#practice-your-skills",
-    "title": "Week 7: PDF Tools",
+    "title": "Week 7: Scraping a Public Data set",
     "section": "",
-    "text": "Lab: PDF/OCR\nLab goals",
+    "text": "Lab goals",
     "crumbs": [
       "Weekly materials",
       "Week 7 - PDF Tools"
@@ -1832,43 +1839,22 @@
     "text": "Success Criteria\n\nGeneral Criteria\n\nStudent’s name is included at top of assignment\nDocument compiles on a different machine\nCompiled document is formatted well\nAll code in the document is contained in appropriately formatted code chunks\nCompiled document does not include long sections of printed data, making use of head and tail commands to show only a few rows of data during data cleaning.\nStudent answers are below the --- separator and above the next prompt, or in cases where questions are enumerated, student answers are indicated using the quote indicator, &gt; and the placeholder text Your answer here has been removed and replaced with the answer.\n\n\n\nTask specific Criteria\n\nOverall criteria\n\nAPI key is protected and not pushed to GitHub or otherwise exposed.\n\n\n\nPublic API, No Authentication\nHTTP Response Codes - [ ] Table of HTTP response codes scraped - [ ] Table is named correctly - [ ] Table has columns that are named as specified\nFighting Like Cats and Dogs with APIs 1. Saving the response images\n\nURLs for images created correctly and saved in url column\nFolder to save images into created as directed\nFunctional programming used to save images to folder\n\nIntroducing glue and f-strings\n\nFormatted string created using glue (R) or f-strings (python) to generate a complete image reference string\nColumns which will be used to fill in the string are indicated\n\nCreating An Image Wall\n\nMarkdown code for all images created successfully\nYAML header created successfully\nStart string for figure panel created\nEnd string for figure panel created\nLines assembled in the correct order with appropriate blank lines\nmarkdown file written to http-codes.qmd\nmarkdown file compiles\nfigure panel works as specified\n\nAPIs with Authentication\nRegister for Calendarific - [ ] API key stored in .Renviron or .env (but not pushed to the repository) - [ ] .gitignore file contains appropriate exclusion - [ ] Code to load the key into the environment is provided (python – R will load it automatically) - [ ] Screenshot of working directory provided in markdown document (and image added to repo and linked correctly) - [ ] Code included to determine how many characters are present in API key - [ ] Code chunk is set to not evaluate - [ ] Number of characters in key is correct and included statically\nOctober Holidays - [ ] Query constructed to get all US holidays in October - [ ] Code to run query is correct and works with an API key set up as directed - [ ] Query response saved to oct_holidays and written out to a (binary) file (so as not to expose the API key) - [ ] Thoughtful and correct answer to minimize redundant API calls question\nFormatting JSON data - [ ] Response body saved as oct-holidays.json - [ ] Holidays formatted in a rectangular table with only states as a nested column; columns are otherwise as described. - [ ] Dates are stored as dates, not characters\nState Holidays - [ ] State specific holidays separated from national holidays - [ ] State specific holidays unnested successfully - [ ] Unnested data are combined back together appropriately to get a dataset which has one row for each entity celebrating the holiday\nHoliday List - [ ] Holidays are appropriately merged, keeping only the national holiday in cases where there are the same national and state holiday on the same date. - [ ] Table is sorted by date - [ ] Table includes only holidays that are US federal holidays, Nebraska holidays, religious observances, or world statistics day. - [ ] Code is used to present the results as a markdown formatted table integrated into the document.\nDate Sequences - [ ] long_holiday(data, \"name\") function created as specified to expand holidays that have First Day of X, Last Day of X labels. - [ ] Function is tested and works correctly\nScheduling an Event - [ ] Date range only includes August - December - [ ] Saturdays and Sundays are excluded - [ ] holidays are excluded - [ ] Plot shows a reasonable representation of a calendar"
   },
   {
-    "objectID": "assignment-repos/05-pdf-parsing/tilt.html",
-    "href": "assignment-repos/05-pdf-parsing/tilt.html",
-    "title": "PDF Data TILT Information",
-    "section": "",
-    "text": "Data scientists and statisticians must be able to take data that is in its natural, messy form and transform it into tidy data, making and documenting the transformations and considering their impact on inference and interpretation of the data. Many organizations release data in PDF format that they do not release in a more standard text-based format (CSV, XLSX, XML, etc.), and sometimes, it is necessary to extract information from these PDF files. This lab is designed to help you practice the skills necessary to extract data from PDFs, so that if you are ever in an unfortunate situation where you need to extract data from a PDF file, you have some familiarity with the tools and the process.\n\n\nThis assignment will help you practice the following skills which are important for being able to access and work with PDF files:\n\nIdentify the type of PDF file\nDevelop a strategy for accessing the data, determining whether it is necessary to use OCR, text-processing, or other tools to get the data out of the PDF file.\nExtract the text data from the PDF file\nClean and format the extracted text to produce tabular data for analysis\n\nData cleaning and wrangling skills\nText processing and regular expression skills\n\nImplement quality control checks to correct common errors which occur during the extraction process\n\n\n\n\nThis assignment will help you to become familiar with important knowledge in this discipline:\n\nPDF file structure (which is important for making accessible documents in addition to OCR and data extraction) and formats\nUse of new libraries to accomplish a task (tesseract, tabulapdf, camelot, etc.)"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/tilt.html#purpose",
-    "href": "assignment-repos/05-pdf-parsing/tilt.html#purpose",
-    "title": "PDF Data TILT Information",
-    "section": "",
-    "text": "Data scientists and statisticians must be able to take data that is in its natural, messy form and transform it into tidy data, making and documenting the transformations and considering their impact on inference and interpretation of the data. Many organizations release data in PDF format that they do not release in a more standard text-based format (CSV, XLSX, XML, etc.), and sometimes, it is necessary to extract information from these PDF files. This lab is designed to help you practice the skills necessary to extract data from PDFs, so that if you are ever in an unfortunate situation where you need to extract data from a PDF file, you have some familiarity with the tools and the process.\n\n\nThis assignment will help you practice the following skills which are important for being able to access and work with PDF files:\n\nIdentify the type of PDF file\nDevelop a strategy for accessing the data, determining whether it is necessary to use OCR, text-processing, or other tools to get the data out of the PDF file.\nExtract the text data from the PDF file\nClean and format the extracted text to produce tabular data for analysis\n\nData cleaning and wrangling skills\nText processing and regular expression skills\n\nImplement quality control checks to correct common errors which occur during the extraction process\n\n\n\n\nThis assignment will help you to become familiar with important knowledge in this discipline:\n\nPDF file structure (which is important for making accessible documents in addition to OCR and data extraction) and formats\nUse of new libraries to accomplish a task (tesseract, tabulapdf, camelot, etc.)"
-  },
-  {
-    "objectID": "assignment-repos/05-pdf-parsing/tilt.html#success-criteria",
-    "href": "assignment-repos/05-pdf-parsing/tilt.html#success-criteria",
-    "title": "PDF Data TILT Information",
-    "section": "Success Criteria",
-    "text": "Success Criteria\n\nGeneral Criteria\n\nStudent’s name is included at top of assignment\nDocument compiles on a different machine\nCompiled document is formatted well\nAll code in the document is contained in appropriately formatted code chunks\nCompiled document does not include long sections of printed data, making use of head and tail commands to show only a few rows of data during data cleaning.\nStudent answers are below the --- separator and above the next prompt, or in cases where questions are enumerated, student answers are indicated using the quote indicator, &gt; and the placeholder text Your answer here has been removed and replaced with the answer.\n\n\n\nTask specific Criteria\n\nWarming Up\n\nPDF Format\n\nPDF file type is identified correctly\nProcessing approach is described correctly and justified based on the PDF format type\n\nPDF Structure\n\nAnswer addresses consistency of data structure in the PDF across years and departments\nlist includes 3-5 reasonable problems which must be overcome to get well-formatted data from the pdf tables\nScreenshots (if included) use appropriate markdown syntax, captions, and hyperlinks\nDiscussion of problems includes a targeted explanation of why PDF data extraction is challenging due to the data format\n\nPlan of Attack\n\nStrategy addresses the problems identified in the previous step and is realistic.\nRelevant tools and functions are included in the plan of attack.\nExplanation of why the strategy minimizes the amount of post-processing (error correction) is reasonable.\n\nAcquiring Metadata\n\nPDF library is used to get metadata information from each PDF\nFunctional approach is used to construct the metadata table\nAt least two anomalies are identified in the metadata\nReasonable explanations for the anomalies are proposed.\nExplanations for unfamiliar components of the metadata are provided.\n\nAnomalies and Strategy Adjustments\n\nRelevant differences in metadata across files are identified and evaluated\nExplanation of evaluation of whether differences are problematic is reasonable\nCode chunk (if provided) explores the anomalies in a sensible way\n\n\nExtracting the Text\n\nIdentify Relevant Pages\n\nFunction is written according to specifications – argument is path, returns pages (either start and end or page range) that have tables\nTable is created with columns as specified\n\nRead in Relevant Text\n\nread_salary_data function created with arguments file, start, end\nWithin the function, only pages between start and end are returned\nProcess is reasonable for 2025-26 feport\nfunction calls pdf_text or read_pdf\n\nPlan Your Approach\n\nList of processing steps is sufficiently detailed to transform text vector into a table with the appropriate columns.\nSteps which are not generalizable are indicated\nInformation which is sacrificed is identified clearly\nAnswer is properly formatted\n\nWould Coordinates Help?\n\nAbstract idea of coordinates for each piece of text is explored\nReasonable compare/contrast to text vector method is provided\n\nExplore Package Documentation\n\nFunction to provide coordinates for each text component is identified in either R or Python\nSteps are clearly identified to make use of coordinate information for table processing\nChallenges for working with coordinate data identified\n\nA Classical Problem\n\nSalary data obtained for all Classics department employees over 4 reports\nSalary data is formatted for analysis\nPlot comparing salaries over years for each individual is present and contains labels and a title\nIndividual salary plot is described with 2-4 sentences\nPlot containing total budget broken out by faculty, administration, and staff is present and contains labels and a title\nOverall budget plot is described with 2-4 sentences\nQuestions provided are addressed in long-form responses with references to the plot. Answers are within the context of the data and the environment in which the data was collected.\n\nQuality Control\n\nAnswer accounts for other facets of the data not present within a single department\nAnswer and reasoning are explained within the context of the problem\nQC measures proposed are reasonable and address problems identified."
-  },
-  {
-    "objectID": "assignment-repos/06-good-graphics/tilt.html",
-    "href": "assignment-repos/06-good-graphics/tilt.html",
+    "objectID": "assignment-repos/05-good-graphics/tilt.html",
+    "href": "assignment-repos/05-good-graphics/tilt.html",
     "title": "Creating Good Graphics TILT Information",
     "section": "",
     "text": "One of the most critical skills for statisticians and data scientists is to be able to communicate results effectively. Data visualization is a critical tool for communication - it leverages visual channels (higher bandwidth) and relays data based on the internal relationships that are displayed and highlighted graphically. This comes at a cost – we have to understand the human visual system in order to develop graphics that are effective.\n\n\nThis assignment will help you practice the following skills which are important for creating good data visualizations:\n\nAnalyze graphics to determine effectiveness based on:\n\nUse of Gestalt principles\nHierarchies of accurate estimation (geoms)\nAppropriate geometric object representation\n\nCreate graphics which are intended to communicate a specific message\nCarefully select annotations to assist users with appropriate interpretation of visualizations\nConsider accessibility when creating graphics and write appropriate alt-text for screen reader users\n\n\n\n\n\nBasic understanding of short term memory, color vision, Gestalt heuristics, and other concepts in cognitive psychology important for constructing data visualizations.\nGrammar of graphics syntax and layering mechanisms"
   },
   {
-    "objectID": "assignment-repos/06-good-graphics/tilt.html#purpose",
-    "href": "assignment-repos/06-good-graphics/tilt.html#purpose",
+    "objectID": "assignment-repos/05-good-graphics/tilt.html#purpose",
+    "href": "assignment-repos/05-good-graphics/tilt.html#purpose",
     "title": "Creating Good Graphics TILT Information",
     "section": "",
     "text": "One of the most critical skills for statisticians and data scientists is to be able to communicate results effectively. Data visualization is a critical tool for communication - it leverages visual channels (higher bandwidth) and relays data based on the internal relationships that are displayed and highlighted graphically. This comes at a cost – we have to understand the human visual system in order to develop graphics that are effective.\n\n\nThis assignment will help you practice the following skills which are important for creating good data visualizations:\n\nAnalyze graphics to determine effectiveness based on:\n\nUse of Gestalt principles\nHierarchies of accurate estimation (geoms)\nAppropriate geometric object representation\n\nCreate graphics which are intended to communicate a specific message\nCarefully select annotations to assist users with appropriate interpretation of visualizations\nConsider accessibility when creating graphics and write appropriate alt-text for screen reader users\n\n\n\n\n\nBasic understanding of short term memory, color vision, Gestalt heuristics, and other concepts in cognitive psychology important for constructing data visualizations.\nGrammar of graphics syntax and layering mechanisms"
   },
   {
-    "objectID": "assignment-repos/06-good-graphics/tilt.html#success-criteria",
-    "href": "assignment-repos/06-good-graphics/tilt.html#success-criteria",
+    "objectID": "assignment-repos/05-good-graphics/tilt.html#success-criteria",
+    "href": "assignment-repos/05-good-graphics/tilt.html#success-criteria",
     "title": "Creating Good Graphics TILT Information",
     "section": "Success Criteria",
     "text": "Success Criteria\n\nGeneral Criteria\n\nStudent’s name is included at top of assignment\nDocument compiles on a different machine\nCompiled document is formatted well\nAll code in the document is contained in appropriately formatted code chunks\nCompiled document does not include long sections of printed data, making use of head and tail commands to show only a few rows of data during data cleaning.\nStudent answers are below the --- separator and above the next prompt, or in cases where questions are enumerated, student answers are indicated using the quote indicator, &gt; and the placeholder text Your answer here has been removed and replaced with the answer.\n\n\n\nTask specific Criteria\n\nGraphical Critiques\n\n\nEach chart has an appropriate caption\nEach chart has appropriate alt-text that provides essential information to a visually impaired individual or screen-reader user.\nYAML chunk options are formatted correctly and compile.\nGrammar of graphics table is filled out correctly.\nAnalysis of effective communication in each chart is reasonable.\n\nCharts that ineffectively show changes in vaccine rates over time across different age groups\n\nare identified and\nan explanation of why they are ineffective is provided.\n\nCharts that are appropriate but perhaps suboptimal\n\nhave issues identified and\nwhat would be changed to address the issue is provided and appropriate.\n\n\nGestalt principles of grouping\n\nPrinciples that apply are ID’d for each chart\nPrinciple effectiveness is evaluated\n\nMessage Evaluation\n\nImportant messages from the data set are identified\nComparisons that should be easy to perform are identified\nObstacles are provided (if there are any, if not, “no obstacles” is an ok answer… but be careful with its use.)\n\nImproved chart is created, and changes relative to initial charts are explained.\n\nExplanation focuses on each change and how it improves the chart/makes it easier to read.\n\n\n\nChoose Your Own Adventure\n\n\nPopulation size estimates are calculated correctly for each year of data.\n\nPopulation size is merged into the dataset appropriately\n\nPlot from 1.6 is generated using the real data.\n\nChange to the message when using real data is examined\nAnalysis of change in difficulty when using real data is included\n\nAnnotations\n\nSuggested annotations are reasonable\nAnnotations do not over-clutter the chart\n\nModifications to compare 2023 to 2024 vaccination rates are reasonable\n\nCognitive load considerations are included\nModifications actually make the comparisons easier for the reader\n\nSuggestions for statistical significance are reasonable and explanation is thorough."
@@ -1907,6 +1893,27 @@
     "title": "Arrow and Parquet",
     "section": "Summary Statistics",
     "text": "Summary Statistics\nGroup by the letter and compute the number of rows, the mean of \\(x\\) values, and the standard deviation of \\(x\\) values."
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/tilt.html",
+    "href": "assignment-repos/out 05-pdf-parsing/tilt.html",
+    "title": "PDF Data TILT Information",
+    "section": "",
+    "text": "Data scientists and statisticians must be able to take data that is in its natural, messy form and transform it into tidy data, making and documenting the transformations and considering their impact on inference and interpretation of the data. Many organizations release data in PDF format that they do not release in a more standard text-based format (CSV, XLSX, XML, etc.), and sometimes, it is necessary to extract information from these PDF files. This lab is designed to help you practice the skills necessary to extract data from PDFs, so that if you are ever in an unfortunate situation where you need to extract data from a PDF file, you have some familiarity with the tools and the process.\n\n\nThis assignment will help you practice the following skills which are important for being able to access and work with PDF files:\n\nIdentify the type of PDF file\nDevelop a strategy for accessing the data, determining whether it is necessary to use OCR, text-processing, or other tools to get the data out of the PDF file.\nExtract the text data from the PDF file\nClean and format the extracted text to produce tabular data for analysis\n\nData cleaning and wrangling skills\nText processing and regular expression skills\n\nImplement quality control checks to correct common errors which occur during the extraction process\n\n\n\n\nThis assignment will help you to become familiar with important knowledge in this discipline:\n\nPDF file structure (which is important for making accessible documents in addition to OCR and data extraction) and formats\nUse of new libraries to accomplish a task (tesseract, tabulapdf, camelot, etc.)"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/tilt.html#purpose",
+    "href": "assignment-repos/out 05-pdf-parsing/tilt.html#purpose",
+    "title": "PDF Data TILT Information",
+    "section": "",
+    "text": "Data scientists and statisticians must be able to take data that is in its natural, messy form and transform it into tidy data, making and documenting the transformations and considering their impact on inference and interpretation of the data. Many organizations release data in PDF format that they do not release in a more standard text-based format (CSV, XLSX, XML, etc.), and sometimes, it is necessary to extract information from these PDF files. This lab is designed to help you practice the skills necessary to extract data from PDFs, so that if you are ever in an unfortunate situation where you need to extract data from a PDF file, you have some familiarity with the tools and the process.\n\n\nThis assignment will help you practice the following skills which are important for being able to access and work with PDF files:\n\nIdentify the type of PDF file\nDevelop a strategy for accessing the data, determining whether it is necessary to use OCR, text-processing, or other tools to get the data out of the PDF file.\nExtract the text data from the PDF file\nClean and format the extracted text to produce tabular data for analysis\n\nData cleaning and wrangling skills\nText processing and regular expression skills\n\nImplement quality control checks to correct common errors which occur during the extraction process\n\n\n\n\nThis assignment will help you to become familiar with important knowledge in this discipline:\n\nPDF file structure (which is important for making accessible documents in addition to OCR and data extraction) and formats\nUse of new libraries to accomplish a task (tesseract, tabulapdf, camelot, etc.)"
+  },
+  {
+    "objectID": "assignment-repos/out 05-pdf-parsing/tilt.html#success-criteria",
+    "href": "assignment-repos/out 05-pdf-parsing/tilt.html#success-criteria",
+    "title": "PDF Data TILT Information",
+    "section": "Success Criteria",
+    "text": "Success Criteria\n\nGeneral Criteria\n\nStudent’s name is included at top of assignment\nDocument compiles on a different machine\nCompiled document is formatted well\nAll code in the document is contained in appropriately formatted code chunks\nCompiled document does not include long sections of printed data, making use of head and tail commands to show only a few rows of data during data cleaning.\nStudent answers are below the --- separator and above the next prompt, or in cases where questions are enumerated, student answers are indicated using the quote indicator, &gt; and the placeholder text Your answer here has been removed and replaced with the answer.\n\n\n\nTask specific Criteria\n\nWarming Up\n\nPDF Format\n\nPDF file type is identified correctly\nProcessing approach is described correctly and justified based on the PDF format type\n\nPDF Structure\n\nAnswer addresses consistency of data structure in the PDF across years and departments\nlist includes 3-5 reasonable problems which must be overcome to get well-formatted data from the pdf tables\nScreenshots (if included) use appropriate markdown syntax, captions, and hyperlinks\nDiscussion of problems includes a targeted explanation of why PDF data extraction is challenging due to the data format\n\nPlan of Attack\n\nStrategy addresses the problems identified in the previous step and is realistic.\nRelevant tools and functions are included in the plan of attack.\nExplanation of why the strategy minimizes the amount of post-processing (error correction) is reasonable.\n\nAcquiring Metadata\n\nPDF library is used to get metadata information from each PDF\nFunctional approach is used to construct the metadata table\nAt least two anomalies are identified in the metadata\nReasonable explanations for the anomalies are proposed.\nExplanations for unfamiliar components of the metadata are provided.\n\nAnomalies and Strategy Adjustments\n\nRelevant differences in metadata across files are identified and evaluated\nExplanation of evaluation of whether differences are problematic is reasonable\nCode chunk (if provided) explores the anomalies in a sensible way\n\n\nExtracting the Text\n\nIdentify Relevant Pages\n\nFunction is written according to specifications – argument is path, returns pages (either start and end or page range) that have tables\nTable is created with columns as specified\n\nRead in Relevant Text\n\nread_salary_data function created with arguments file, start, end\nWithin the function, only pages between start and end are returned\nProcess is reasonable for 2025-26 feport\nfunction calls pdf_text or read_pdf\n\nPlan Your Approach\n\nList of processing steps is sufficiently detailed to transform text vector into a table with the appropriate columns.\nSteps which are not generalizable are indicated\nInformation which is sacrificed is identified clearly\nAnswer is properly formatted\n\nWould Coordinates Help?\n\nAbstract idea of coordinates for each piece of text is explored\nReasonable compare/contrast to text vector method is provided\n\nExplore Package Documentation\n\nFunction to provide coordinates for each text component is identified in either R or Python\nSteps are clearly identified to make use of coordinate information for table processing\nChallenges for working with coordinate data identified\n\nA Classical Problem\n\nSalary data obtained for all Classics department employees over 4 reports\nSalary data is formatted for analysis\nPlot comparing salaries over years for each individual is present and contains labels and a title\nIndividual salary plot is described with 2-4 sentences\nPlot containing total budget broken out by faculty, administration, and staff is present and contains labels and a title\nOverall budget plot is described with 2-4 sentences\nQuestions provided are addressed in long-form responses with references to the plot. Answers are within the context of the data and the environment in which the data was collected.\n\nQuality Control\n\nAnswer accounts for other facets of the data not present within a single department\nAnswer and reasoning are explained within the context of the problem\nQC measures proposed are reasonable and address problems identified."
   },
   {
     "objectID": "assignment-repos/screencast/index.html",
@@ -2397,12 +2404,5 @@
     "title": "Why Arrow?",
     "section": "Conclusion",
     "text": "Conclusion\nResources:\n\nArrow documentation: arrow.apache.org/docs/r\nParquet: parquet.apache.org\nDuckDB: duckdb.org\nBook: Scaling up with Arrow and R"
-  },
-  {
-    "objectID": "slides/03-01-lists.html#your-turn-web-page-anatomy",
-    "href": "slides/03-01-lists.html#your-turn-web-page-anatomy",
-    "title": "Record-based data and List Processing",
-    "section": "Your Turn: Web Page Anatomy",
-    "text": "Your Turn: Web Page Anatomy\nUse the JSON specification at https://www.json.org/json-en.html to write out the tree"
   }
 ]

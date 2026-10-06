@@ -1,4 +1,4 @@
-# Week 7: PDF Tools
+# Week 7: Scraping a Public Data set
 
 
 
@@ -7,25 +7,25 @@ October 05-11, 2026
 ## 📖 Reading
 
 - [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
+- Watch [Control a web browser from R to web scrape static and dynamic websites using {chromote}](https://www.youtube.com/watch?v=30AOpjLeOyI)
 
 
 ## 🥣 Prepare for class
 
-- Find examples of image-based and text-based PDFs
+- Identify a dataset to scrape and explore
 
 
 ## 🌮 Tuesday
 
-- Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
+- Lab: [Describe the scrape](../assignment-repos/screencast/Dataset-Topics.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+- Lab:
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
-- [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
+- [Lab goals](../assignment-repos/screencast/tilt.qmd)
 

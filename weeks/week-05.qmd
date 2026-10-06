@@ -16,11 +16,12 @@ September 21-27, 2026
 
 ## 🌮 Tuesday
 
-- Lecture: [API requests](../slides/04-01-apis.qmd)
+- Lab: [Parsing XML Files](../assignment-repos/02-list-processing/index.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
+- Lecture: [API requests](../slides/04-01-apis.qmd)
 - Lab: [APIs](../assignment-repos/04-apis/index.qmd)
 
 
