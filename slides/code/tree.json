@@ -1,0 +1,2 @@
+{ "tree" : { "node" : 4, "child" : { "node" : 2, "child" : 10,
+"child" : { "node" : 13, "child" : 5, "child" : 6 }, "child" : 7 } } }

@@ -1,30 +1,15 @@
-# Week 10: Using Appropriate Graphics
+# Week 10: Shiny and JavaScript Graphics
 
 
 
 October 26-01, 2026
 
-## 📖 Reading
-
-- Appropriate Graphics
 
 
 
 
-## 🌮 Tuesday
-
-- Intro: [Appropriate Graphics](../slides/06-02-graphics.qmd)
-- Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
 
 
-## 🌩️ Thursday 🔨 
-
-- Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
 
 
-##  🏋 Practice Your Skills
-
-- Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
-- [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
-- [Screencast pseudocode script due!](../assignment-repos/screencast/index.qmd)
 

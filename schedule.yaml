@@ -125,20 +125,34 @@ schedule:
     assignments: |
       - [Lab goals](../assignment-repos/screencast/tilt.qmd)
   - week: 8
-    name: PDF Tools
+    # name: Scraping Public Data
+    name: Using Appropriate Graphics
     start: 2026-10-12
     end: 2026-10-18
+    # reading: |
+    #   - [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
+    # prepare: |
+    #   - Find examples of image-based and text-based PDFs
+    # class1: |
+    #   - Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
+    # class2: |
+    #   - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+    # assignments: |
+    #   - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+    #   - [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
+
     reading: |
-      - [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
+      - Appropriate Graphics
     prepare: |
-      - Find examples of image-based and text-based PDFs
+      - Find the worst data visualization published by a news organization within the last month and bring it with you to class.
     class1: |
-      - Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
+      - Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
+      - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
     class2: |
-      - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+      - Intro: [Appropriate Graphics](../slides/06-02-graphics.qmd)
     assignments: |
-      - Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
-      - [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
+      - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
+      - [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
 
   - week: 9
     name: Using Appropriate Graphics
@@ -146,31 +160,19 @@ schedule:
     end: 2026-10-25
     reading: |
       - Appropriate Graphics
-    prepare: |
-      - Find the worst data visualization published by a news organization within the last month and bring it with you to class.
     class1: |
       - Fall Break!
-    class2: |
-      - Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
-    assignments: |
-      - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
-      - [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
-
-  - week: 10
-    name: Using Appropriate Graphics
-    start: 2026-10-26
-    end: 2026-11-01
-    reading: |
-      - Appropriate Graphics
-    class1: |
-      - Intro: [Appropriate Graphics](../slides/06-02-graphics.qmd)
-      - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
     class2: |
       - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
     assignments: |
       - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
       - [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
       - [Screencast pseudocode script due!](../assignment-repos/screencast/index.qmd)
+
+  - week: 10
+    name:  Shiny and JavaScript Graphics
+    start: 2026-10-26
+    end: 2026-11-01
 
   - week: 11
     name: Shiny and JavaScript Graphics

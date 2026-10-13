@@ -9,9 +9,6 @@ October 19-25, 2026
 - Appropriate Graphics
 
 
-## 🥣 Prepare for class
-
-- Find the worst data visualization published by a news organization within the last month and bring it with you to class.
 
 
 ## 🌮 Tuesday
@@ -21,11 +18,12 @@ October 19-25, 2026
 
 ## 🌩️ Thursday 🔨 
 
-- Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
 
 
 ##  🏋 Practice Your Skills
 
 - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
 - [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
+- [Screencast pseudocode script due!](../assignment-repos/screencast/index.qmd)
 

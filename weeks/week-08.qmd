@@ -1,4 +1,4 @@
-# Week 8: PDF Tools
+# Week 8: Using Appropriate Graphics
 
 
 
@@ -6,26 +6,27 @@ October 12-18, 2026
 
 ## 📖 Reading
 
-- [Working with PDFs](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/06-pdf-tools.html)
+- Appropriate Graphics
 
 
 ## 🥣 Prepare for class
 
-- Find examples of image-based and text-based PDFs
+- Find the worst data visualization published by a news organization within the last month and bring it with you to class.
 
 
 ## 🌮 Tuesday
 
-- Lecture: [PDF Tools](../slides/05-01-pdfs.qmd)
+- Lecture: [Appropriate Graphics](../slides/06-01-graphics.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
+- Intro: [Appropriate Graphics](../slides/06-02-graphics.qmd)
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [PDF/OCR](../assignment-repos/05-pdf-parsing/index.qmd)
-- [Lab goals](../assignment-repos/05-pdf-parsing/tilt.qmd)
+- Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
+- [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
 
