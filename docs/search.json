@@ -812,7 +812,62 @@
     "text": "October 26-01, 2026\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: Play with Shiny, work on Screencast.\n\n\n\n\n\nScreencast pseudocode script due!",
     "crumbs": [
       "Weekly materials",
-      "Week 10 - Appropriate Graphics"
+      "Week 10 - Interactive Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#reading",
+    "href": "weeks/week-10.html#reading",
+    "title": "Week 10: Shiny and JavaScript Graphics",
+    "section": "",
+    "text": "Interactive Graphics (Shiny)",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Interactive Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#prepare-for-class",
+    "href": "weeks/week-10.html#prepare-for-class",
+    "title": "Week 10: Shiny and JavaScript Graphics",
+    "section": "",
+    "text": "Look over Shiny documentation to go through the basic tutorial in R and/or python.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Interactive Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#tuesday",
+    "href": "weeks/week-10.html#tuesday",
+    "title": "Week 10: Shiny and JavaScript Graphics",
+    "section": "",
+    "text": "Lecture: Interactive Graphics: Shiny and Plotly",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Interactive Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#thursday",
+    "href": "weeks/week-10.html#thursday",
+    "title": "Week 10: Shiny and JavaScript Graphics",
+    "section": "",
+    "text": "Lab: Play with Shiny, work on Screencast.",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Interactive Graphics"
+    ]
+  },
+  {
+    "objectID": "weeks/week-10.html#practice-your-skills",
+    "href": "weeks/week-10.html#practice-your-skills",
+    "title": "Week 10: Shiny and JavaScript Graphics",
+    "section": "",
+    "text": "Screencast pseudocode script due!",
+    "crumbs": [
+      "Weekly materials",
+      "Week 10 - Interactive Graphics"
     ]
   },
   {
@@ -823,7 +878,7 @@
     "text": "October 12-18, 2026\n\n\n\nAppropriate Graphics\n\n\n\n\n\nFind the worst data visualization published by a news organization within the last month and bring it with you to class.\n\n\n\n\n\nLecture: Appropriate Graphics\nLab: Appropriate Graphics\n\n\n\n\n\nIntro: Appropriate Graphics\n\n\n\n\n\nLab: Appropriate Graphics\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - PDF Tools"
+      "Week 8 - Appropriate Graphics"
     ]
   },
   {
@@ -834,7 +889,7 @@
     "text": "Appropriate Graphics",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - PDF Tools"
+      "Week 8 - Appropriate Graphics"
     ]
   },
   {
@@ -845,7 +900,7 @@
     "text": "Find the worst data visualization published by a news organization within the last month and bring it with you to class.",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - PDF Tools"
+      "Week 8 - Appropriate Graphics"
     ]
   },
   {
@@ -856,7 +911,7 @@
     "text": "Lecture: Appropriate Graphics\nLab: Appropriate Graphics",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - PDF Tools"
+      "Week 8 - Appropriate Graphics"
     ]
   },
   {
@@ -867,7 +922,7 @@
     "text": "Intro: Appropriate Graphics",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - PDF Tools"
+      "Week 8 - Appropriate Graphics"
     ]
   },
   {
@@ -878,7 +933,7 @@
     "text": "Lab: Appropriate Graphics\nLab goals",
     "crumbs": [
       "Weekly materials",
-      "Week 8 - PDF Tools"
+      "Week 8 - Appropriate Graphics"
     ]
   },
   {
@@ -2349,60 +2404,5 @@
     "title": "Why Arrow?",
     "section": "Conclusion",
     "text": "Conclusion\nResources:\n\nArrow documentation: arrow.apache.org/docs/r\nParquet: parquet.apache.org\nDuckDB: duckdb.org\nBook: Scaling up with Arrow and R"
-  },
-  {
-    "objectID": "weeks/week-10.html#reading",
-    "href": "weeks/week-10.html#reading",
-    "title": "Week 10: Shiny and JavaScript Graphics",
-    "section": "",
-    "text": "Interactive Graphics (Shiny)",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10 - Appropriate Graphics"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html#prepare-for-class",
-    "href": "weeks/week-10.html#prepare-for-class",
-    "title": "Week 10: Shiny and JavaScript Graphics",
-    "section": "",
-    "text": "Look over Shiny documentation to go through the basic tutorial in R and/or python.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10 - Appropriate Graphics"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html#tuesday",
-    "href": "weeks/week-10.html#tuesday",
-    "title": "Week 10: Shiny and JavaScript Graphics",
-    "section": "",
-    "text": "Lecture: Interactive Graphics: Shiny and Plotly",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10 - Appropriate Graphics"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html#thursday",
-    "href": "weeks/week-10.html#thursday",
-    "title": "Week 10: Shiny and JavaScript Graphics",
-    "section": "",
-    "text": "Lab: Play with Shiny, work on Screencast.",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10 - Appropriate Graphics"
-    ]
-  },
-  {
-    "objectID": "weeks/week-10.html#practice-your-skills",
-    "href": "weeks/week-10.html#practice-your-skills",
-    "title": "Week 10: Shiny and JavaScript Graphics",
-    "section": "",
-    "text": "Screencast pseudocode script due!",
-    "crumbs": [
-      "Weekly materials",
-      "Week 10 - Appropriate Graphics"
-    ]
   }
 ]
