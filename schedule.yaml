@@ -167,12 +167,21 @@ schedule:
     assignments: |
       - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
       - [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
-      - [Screencast pseudocode script due!](../assignment-repos/screencast/index.qmd)
 
   - week: 10
     name:  Shiny and JavaScript Graphics
     start: 2026-10-26
     end: 2026-11-01
+    prepare: |
+      - Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
+    reading: |
+      - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
+    class1: |
+      - Lecture: Interactive Graphics: Shiny and Plotly
+    class2: |
+      - Lab: Play with Shiny, work on Screencast.
+    assignments: |
+      - [Screencast pseudocode script due!](../assignment-repos/screencast/index.qmd)
 
   - week: 11
     name: Shiny and JavaScript Graphics

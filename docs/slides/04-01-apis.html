@@ -252,14 +252,28 @@ Google\ Web\ Search\ Wizard             &amp;\ \ \  \text{&amp;sclient=gws-wiz} 
 GET https://openlibrary.org/search.json?q=the+lord+of+the+rings
 Status: 200 OK
 Content-Type: application/json
-Body: In memory (50738 bytes)
-  author_key    author_name                               title
-1   OL26320A J.R.R. Tolkien               The Lord of the Rings
-2   OL26320A J.R.R. Tolkien                      The Two Towers
-3   OL26320A J.R.R. Tolkien          The Fellowship of the Ring
-4   OL26320A J.R.R. Tolkien              The Return of the King
-5   OL26320A J.R.R. Tolkien Novels (Hobbit / Lord of the Rings)
-6   OL26320A J.R.R. Tolkien                          The Hobbit</code></pre>
+Body: In memory (60844 bytes)
+                                               author_key
+1                                                OL26320A
+2                                                OL26320A
+3                                                OL26320A
+4                                                OL26320A
+5                                                OL26320A
+6 OL232748A, OL2689079A, OL2725410A, OL27452A, OL9100884A
+                                                                 author_name
+1                                                             J.R.R. Tolkien
+2                                                             J.R.R. Tolkien
+3                                                             J.R.R. Tolkien
+4                                                             J.R.R. Tolkien
+5                                                             J.R.R. Tolkien
+6 Henry Beard, Harvard Lampoon, Douglas C. Kenney, Jean Little, Jim Meskimen
+                                                title
+1                               The Lord of the Rings
+2                          The Fellowship of the Ring
+3                                      The Two Towers
+4                              The Return of the King
+5 The Hobbit &amp; The Lord of the Rings [collection/set]
+6                                  Bored of the Rings</code></pre>
 </div>
 </div>
 </div>
@@ -273,14 +287,14 @@ Body: In memory (50738 bytes)
 <span id="cb3-6"><a></a>res <span class="op">=</span> req.json()</span>
 <span id="cb3-7"><a></a>pd.DataFrame.from_dict(res[<span class="st">'docs'</span>]).head()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   author_key       author_name  ...                                title  subtitle
-0  [OL26320A]  [J.R.R. Tolkien]  ...                The Lord of the Rings       NaN
-1  [OL26320A]  [J.R.R. Tolkien]  ...                       The Two Towers       NaN
-2  [OL26320A]  [J.R.R. Tolkien]  ...           The Fellowship of the Ring       NaN
-3  [OL26320A]  [J.R.R. Tolkien]  ...               The Return of the King       NaN
-4  [OL26320A]  [J.R.R. Tolkien]  ...  Novels (Hobbit / Lord of the Rings)       NaN
+<pre><code>   author_key  ... subtitle
+0  [OL26320A]  ...      NaN
+1  [OL26320A]  ...      NaN
+2  [OL26320A]  ...      NaN
+3  [OL26320A]  ...      NaN
+4  [OL26320A]  ...      NaN
 
-[5 rows x 17 columns]</code></pre>
+[5 rows x 22 columns]</code></pre>
 </div>
 </div>
 </div>
@@ -314,7 +328,7 @@ Body: In memory (50738 bytes)
 GET https://www.themealdb.com/api/json/v1/1/search.php?s=Pizza
 Status: 200 OK
 Content-Type: application/json
-Body: In memory (2563 bytes)</code></pre>
+Body: In memory (6234 bytes)</code></pre>
 </div>
 </div>
 </div>
@@ -330,7 +344,7 @@ Body: In memory (2563 bytes)</code></pre>
 <span id="cb7-8"><a></a>res <span class="op">=</span> req.json()</span>
 <span id="cb7-9"><a></a>res</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>{'meals': [{'idMeal': '53014', 'strMeal': 'Pizza Express Margherita', 'strMealAlternate': None, 'strCategory': 'Miscellaneous', 'strArea': 'Italian', 'strInstructions': '1 Preheat the oven to 230°C.\r\n\r\n2 Add the sugar and crumble the fresh yeast into warm water.\r\n\r\n3 Allow the mixture to stand for 10 – 15 minutes in a warm place (we find a windowsill on a sunny day works best) until froth develops on the surface.\r\n\r\n4 Sift the flour and salt into a large mixing bowl, make a well in the middle and pour in the yeast mixture and olive oil.\r\n\r\n5 Lightly flour your hands, and slowly mix the ingredients together until they bind.\r\n\r\n6 Generously dust your surface with flour.\r\n\r\n7 Throw down the dough and begin kneading for 10 minutes until smooth, silky and soft.\r\n\r\n8 Place in a lightly oiled, non-stick baking tray (we use a round one, but any shape will do!)\r\n\r\n9 Spread the passata on top making sure you go to the edge.\r\n\r\n10 Evenly place the mozzarella (or other cheese) on top, season with the oregano and black pepper, then drizzle with a little olive oil.\r\n\r\n11 Cook in the oven for 10 – 12 minutes until the cheese slightly colours.\r\n\r\n12 When ready, place the basil leaf on top and tuck in!', 'strMealThumb': 'https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg', 'strTags': None, 'strYoutube': 'https://www.youtube.com/watch?v=Mt5lgUZRoUg', 'strIngredient1': 'Water', 'strIngredient2': 'Sugar', 'strIngredient3': 'Yeast', 'strIngredient4': 'Plain Flour', 'strIngredient5': 'Salt', 'strIngredient6': 'Olive Oil', 'strIngredient7': 'Passata', 'strIngredient8': 'Mozzarella', 'strIngredient9': 'Oregano', 'strIngredient10': 'Basil', 'strIngredient11': 'Black Pepper', 'strIngredient12': '', 'strIngredient13': '', 'strIngredient14': '', 'strIngredient15': '', 'strIngredient16': '', 'strIngredient17': '', 'strIngredient18': '', 'strIngredient19': '', 'strIngredient20': '', 'strMeasure1': '150ml', 'strMeasure2': '1 tsp ', 'strMeasure3': '15g', 'strMeasure4': '225g', 'strMeasure5': '1 1/2 tsp ', 'strMeasure6': 'Drizzle', 'strMeasure7': '80g', 'strMeasure8': '70g', 'strMeasure9': 'Peeled and Sliced', 'strMeasure10': 'Leaves', 'strMeasure11': 'Pinch', 'strMeasure12': ' ', 'strMeasure13': ' ', 'strMeasure14': ' ', 'strMeasure15': ' ', 'strMeasure16': ' ', 'strMeasure17': ' ', 'strMeasure18': ' ', 'strMeasure19': ' ', 'strMeasure20': ' ', 'strSource': 'https://www.dailymail.co.uk/femail/food/article-8240361/Pizza-Express-release-secret-recipe-Margherita-Pizza-make-home.html', 'strImageSource': None, 'strCreativeCommonsConfirmed': None, 'dateModified': None}]}</code></pre>
+<pre><code>{'meals': [{'idMeal': '53330', 'strMeal': 'Cassava pizza', 'strMealAlternate': None, 'strCategory': 'Pork', 'strArea': 'Venezuela', 'strCountry': 'Venezuela', 'strInstructions': 'Preheat the oven to 200ºC.\r\nCut the bacon or chorizo into medium pieces and the paprika into strips.\r\nSpread a little tomato sauce and mozzarella cheese on each portion of cassava.\r\nAdd the bacon or chorizo, corn, turkey ham, some olives and paprika.\r\nBake for 7 to 10 minutes.\r\nRemove from the oven and enjoy.', 'strMealThumb': 'https://www.themealdb.com/images/media/meals/lrfdwz1764438393.jpg', 'strTags': None, 'strYoutube': 'https://www.youtube.com/watch?v=3fK4zsa2AYM', 'strIngredient1': 'Casabe', 'strIngredient2': 'Tomato Sauce', 'strIngredient3': 'Chorizo', 'strIngredient4': 'Turkey Ham', 'strIngredient5': 'Sweetcorn', 'strIngredient6': 'Green Olives', 'strIngredient7': 'Paprika', 'strIngredient8': 'Mozzarella', 'strIngredient9': '', 'strIngredient10': '', 'strIngredient11': '', 'strIngredient12': '', 'strIngredient13': '', 'strIngredient14': '', 'strIngredient15': '', 'strIngredient16': '', 'strIngredient17': '', 'strIngredient18': '', 'strIngredient19': '', 'strIngredient20': '', 'strMeasure1': '6 cut thick slices', 'strMeasure2': '450g', 'strMeasure3': '225g', 'strMeasure4': '225g', 'strMeasure5': '75g', 'strMeasure6': '40g', 'strMeasure7': '55g', 'strMeasure8': '50g', 'strMeasure9': ' ', 'strMeasure10': ' ', 'strMeasure11': ' ', 'strMeasure12': ' ', 'strMeasure13': ' ', 'strMeasure14': ' ', 'strMeasure15': ' ', 'strMeasure16': ' ', 'strMeasure17': ' ', 'strMeasure18': ' ', 'strMeasure19': ' ', 'strMeasure20': ' ', 'strSource': 'https://goya.es/en/recipes/cassava-pizza', 'strImageSource': None, 'strCreativeCommonsConfirmed': None, 'dateModified': '2025-11-29 17:43:43'}, {'idMeal': '53140', 'strMeal': 'Matambre a la Pizza', 'strMealAlternate': None, 'strCategory': 'Beef', 'strArea': 'Argentina', 'strCountry': 'Argentina', 'strInstructions': "Prepare the Steak: Season the steak with salt and pepper. Grill one side until half-cooked.\r\nAdd Toppings: Spread tomato sauce over the cooked side, then add cheese, oregano, and olives.\r\nFinish Grilling: Grill until the cheese is melted and bubbly.\r\nServe: Slice and serve hot.\r\nPro Tips:\r\n\r\nTenderize the matambre by scoring it lightly on both sides. This helps it cook more evenly and absorb the flavors.\r\nPrecook the matambre on the grill before adding the toppings to ensure it's fully cooked without burning the cheese.", 'strMealThumb': 'https://www.themealdb.com/images/media/meals/wf49qs1763075222.jpg', 'strTags': None, 'strYoutube': 'https://www.youtube.com/watch?v=X5UxDaNHD30', 'strIngredient1': 'Beef Flank Steak', 'strIngredient2': 'Tomato Sauce', 'strIngredient3': 'Mozzarella', 'strIngredient4': 'Oregano', 'strIngredient5': 'Green Olives', 'strIngredient6': 'Salt', 'strIngredient7': 'Pepper', 'strIngredient8': '', 'strIngredient9': '', 'strIngredient10': '', 'strIngredient11': '', 'strIngredient12': '', 'strIngredient13': '', 'strIngredient14': '', 'strIngredient15': '', 'strIngredient16': '', 'strIngredient17': '', 'strIngredient18': '', 'strIngredient19': '', 'strIngredient20': '', 'strMeasure1': '1 kg', 'strMeasure2': '200g', 'strMeasure3': '200g', 'strMeasure4': '1 tbsp', 'strMeasure5': '100g ', 'strMeasure6': 'To taste', 'strMeasure7': 'To taste', 'strMeasure8': ' ', 'strMeasure9': ' ', 'strMeasure10': ' ', 'strMeasure11': ' ', 'strMeasure12': ' ', 'strMeasure13': ' ', 'strMeasure14': ' ', 'strMeasure15': ' ', 'strMeasure16': ' ', 'strMeasure17': ' ', 'strMeasure18': ' ', 'strMeasure19': ' ', 'strMeasure20': ' ', 'strSource': 'https://www.munchery.com/blog/the-ten-iconic-dishes-of-argentina-and-how-to-cook-them-at-home/', 'strImageSource': None, 'strCreativeCommonsConfirmed': None, 'dateModified': '2025-11-13 11:54:27'}, {'idMeal': '53014', 'strMeal': 'Pizza Express Margherita', 'strMealAlternate': None, 'strCategory': 'Miscellaneous', 'strArea': 'Italian', 'strCountry': 'Italy', 'strInstructions': '1 Preheat the oven to 230°C.\r\n\r\n2 Add the sugar and crumble the fresh yeast into warm water.\r\n\r\n3 Allow the mixture to stand for 10 – 15 minutes in a warm place (we find a windowsill on a sunny day works best) until froth develops on the surface.\r\n\r\n4 Sift the flour and salt into a large mixing bowl, make a well in the middle and pour in the yeast mixture and olive oil.\r\n\r\n5 Lightly flour your hands, and slowly mix the ingredients together until they bind.\r\n\r\n6 Generously dust your surface with flour.\r\n\r\n7 Throw down the dough and begin kneading for 10 minutes until smooth, silky and soft.\r\n\r\n8 Place in a lightly oiled, non-stick baking tray (we use a round one, but any shape will do!)\r\n\r\n9 Spread the passata on top making sure you go to the edge.\r\n\r\n10 Evenly place the mozzarella (or other cheese) on top, season with the oregano and black pepper, then drizzle with a little olive oil.\r\n\r\n11 Cook in the oven for 10 – 12 minutes until the cheese slightly colours.\r\n\r\n12 When ready, place the basil leaf on top and tuck in!', 'strMealThumb': 'https://www.themealdb.com/images/media/meals/x0lk931587671540.jpg', 'strTags': None, 'strYoutube': 'https://www.youtube.com/watch?v=Mt5lgUZRoUg', 'strIngredient1': 'Water', 'strIngredient2': 'Sugar', 'strIngredient3': 'Yeast', 'strIngredient4': 'Plain Flour', 'strIngredient5': 'Salt', 'strIngredient6': 'Olive Oil', 'strIngredient7': 'Passata', 'strIngredient8': 'Mozzarella', 'strIngredient9': 'Oregano', 'strIngredient10': 'Basil', 'strIngredient11': 'Black Pepper', 'strIngredient12': '', 'strIngredient13': '', 'strIngredient14': '', 'strIngredient15': '', 'strIngredient16': '', 'strIngredient17': '', 'strIngredient18': '', 'strIngredient19': '', 'strIngredient20': '', 'strMeasure1': '150ml', 'strMeasure2': '1 tsp ', 'strMeasure3': '15g', 'strMeasure4': '225g', 'strMeasure5': '1 1/2 tsp ', 'strMeasure6': 'Drizzle', 'strMeasure7': '80g', 'strMeasure8': '70g', 'strMeasure9': 'Peeled and Sliced', 'strMeasure10': 'Leaves', 'strMeasure11': 'Pinch', 'strMeasure12': ' ', 'strMeasure13': ' ', 'strMeasure14': ' ', 'strMeasure15': ' ', 'strMeasure16': ' ', 'strMeasure17': ' ', 'strMeasure18': ' ', 'strMeasure19': ' ', 'strMeasure20': ' ', 'strSource': 'https://www.dailymail.co.uk/femail/food/article-8240361/Pizza-Express-release-secret-recipe-Margherita-Pizza-make-home.html', 'strImageSource': None, 'strCreativeCommonsConfirmed': None, 'dateModified': None}]}</code></pre>
 </div>
 </div>
 </div>

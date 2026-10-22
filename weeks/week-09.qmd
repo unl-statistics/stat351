@@ -25,5 +25,4 @@ October 19-25, 2026
 
 - Lab: [Appropriate Graphics](../assignment-repos/06-good-graphics/index.qmd)
 - [Lab goals](../assignment-repos/06-good-graphics/tilt.qmd)
-- [Screencast pseudocode script due!](../assignment-repos/screencast/index.qmd)
 

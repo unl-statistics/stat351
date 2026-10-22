@@ -230,7 +230,7 @@
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>doc <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="at">css =</span> <span class="st">"li"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>{xml_nodeset (215)}
+<pre><code>{xml_nodeset (226)}
  [1] &lt;li id="n-mainpage-description" class="mw-list-item"&gt;&lt;a href="/wiki/Main ...
  [2] &lt;li id="n-contents" class="mw-list-item"&gt;&lt;a href="/wiki/Wikipedia:Conten ...
  [3] &lt;li id="n-currentevents" class="mw-list-item"&gt;&lt;a href="/wiki/Portal:Curr ...
@@ -265,7 +265,7 @@
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>doc <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="at">css =</span> <span class="st">"#mw-content-text li"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>{xml_nodeset (132)}
+<pre><code>{xml_nodeset (143)}
  [1] &lt;li id="mwCQ"&gt;\n&lt;a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki ...
  [2] &lt;li id="mwCw"&gt;\n&lt;a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki ...
  [3] &lt;li id="mwDQ"&gt;\n&lt;a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki ...
@@ -290,402 +290,402 @@
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>doc <span class="sc">|&gt;</span> <span class="fu">html_elements</span>(<span class="at">css =</span> <span class="st">".mw-body-content li"</span>) <span class="sc">|&gt;</span> <span class="fu">str</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>List of 132
+<pre><code>List of 143
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c2400&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533924030&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c2d20&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533924950&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c35f0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533925220&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c3ff0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533925c20&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c4ce0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533926910&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c5610&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533927240&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c5f00&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533927b30&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c67f0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533928420&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c7500&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533929130&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c7df0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533929a20&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c86d0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53392a300&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c93c0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53392aff0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39c9cc0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53392b8f0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39ca5d0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53392c200&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39caeb0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53392cae0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39cbba0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53392d7d0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39cda40&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53392f670&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39ce320&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53392ff50&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39cf010&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533930c40&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39d0e70&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533932aa0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39d5500&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533937130&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39d5df0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533937a20&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39d66d0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533938300&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39d6ff0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533938c20&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39d7a20&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533939650&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39d82e0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533939f10&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39d8c00&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53393a830&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39d94d0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53393b100&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39d9dd0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53393ba00&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39da700&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53393c330&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39db130&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53393cd60&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39dba30&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53393d660&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39dc320&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53393df50&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39de540&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533940170&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e03f0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533942020&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e2360&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533943f90&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e2670&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd5339442a0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e2f60&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533944b90&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e3870&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd5339454a0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e4150&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533945d80&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e59c0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd5339475f0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e77f0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533949420&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e80f0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533949d20&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e89d0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53394a600&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e92b0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53394aee0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39e9bb0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53394b7e0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39eba10&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53394d640&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39ec330&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53394df60&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39ee170&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53394fda0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39eea50&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533950680&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39ef340&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533950f70&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39efc60&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533951890&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f0a80&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd5339526b0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f1370&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533952fa0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f1c50&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533953880&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f2530&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533954160&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f2e10&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533954a40&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f3c40&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533955870&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f5ab0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd5339576e0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f63b0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533957fe0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f6c90&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd5339588c0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f7570&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd5339591a0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f7e50&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533959a80&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f8750&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395a380&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f9190&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395adc0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39f9bb0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395b7e0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39fa4b0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395c0e0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39fadc0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395c9f0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39fb690&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395d2c0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39fbf70&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395dba0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39fc850&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395e480&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39fd130&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395ed60&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39fda10&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395f640&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39fe2f0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53395ff20&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39febd0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533960800&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39ff4b0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd5339610e0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd7b39ffd90&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd5339619c0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f04710&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd5339622c0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f04ff0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533962ba0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f058d0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533963480&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f061f0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533963da0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f06ac0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533964670&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f073c0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533964f70&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f07ca0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533965850&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f085a0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533966150&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f08fe0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533966b90&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f098a0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533967450&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f0a1c0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533967d70&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f0aa90&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533968640&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f0b390&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533968f40&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f0d1c0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53396ad70&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f0dee0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53396ba90&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f0ec10&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53396c7c0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f10ad0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53396e680&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f113b0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53396ef60&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f11c90&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd53396f840&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f12570&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533970120&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f143a0&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533971f50&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
  $ :List of 2
-  ..$ node:&lt;pointer: 0x7fd722f16200&gt; 
-  ..$ doc :&lt;pointer: 0x7fd7b39256c0&gt; 
+  ..$ node:&lt;pointer: 0x7fd533973db0&gt; 
+  ..$ doc :&lt;pointer: 0x7fd581fb2020&gt; 
   ..- attr(*, "class")= chr "xml_node"
   [list output truncated]
  - attr(*, "class")= chr "xml_nodeset"</code></pre>
@@ -1311,199 +1311,265 @@
 
 [[100]]
 # A tibble: 1 × 3
-  content                         name                link                      
-  &lt;chr&gt;                           &lt;chr&gt;               &lt;chr&gt;                     
-1 Roland Bryce Ammons (1887–1985) Roland Bryce Ammons https://en.wikipedia.org/…
-
-[[101]]
-# A tibble: 1 × 3
   content                            name                   link                
   &lt;chr&gt;                              &lt;chr&gt;                  &lt;chr&gt;               
 1 William Rowan Hamilton (1805–1865) William Rowan Hamilton https://en.wikipedi…
 
-[[102]]
+[[101]]
 # A tibble: 1 × 3
   content                 name        link                                     
   &lt;chr&gt;                   &lt;chr&gt;       &lt;chr&gt;                                    
 1 Ulisse Dini (1845–1918) Ulisse Dini https://en.wikipedia.org/wiki/Ulisse_Dini
 
-[[103]]
+[[102]]
 # A tibble: 1 × 3
   content                  name         link                                    
   &lt;chr&gt;                    &lt;chr&gt;        &lt;chr&gt;                                   
 1 Guido Fubini (1879–1943) Guido Fubini https://en.wikipedia.org/wiki/Guido_Fub…
 
-[[104]]
+[[103]]
 # A tibble: 2 × 3
   content                        name               link                        
   &lt;chr&gt;                          &lt;chr&gt;              &lt;chr&gt;                       
 1 Tullio Levi-Civita (1873–1941) Tullio Levi-Civita https://en.wikipedia.org/wi…
 2 Tullio Levi-Civita (1873–1941) –                  &lt;NA&gt;                        
 
-[[105]]
+[[104]]
 # A tibble: 1 × 3
   content                    name           link                                
   &lt;chr&gt;                      &lt;chr&gt;          &lt;chr&gt;                               
 1 Giuseppe Peano (1858–1932) Giuseppe Peano https://en.wikipedia.org/wiki/Giuse…
 
-[[106]]
+[[105]]
 # A tibble: 1 × 3
   content                                             name            link      
   &lt;chr&gt;                                               &lt;chr&gt;           &lt;chr&gt;     
 1 Leonida Tonelli (1885–1946), calculus of variations Leonida Tonelli https://e…
 
-[[107]]
+[[106]]
 # A tibble: 1 × 3
   content                  name         link                                    
   &lt;chr&gt;                    &lt;chr&gt;        &lt;chr&gt;                                   
 1 Teiji Takagi (1875–1960) Teiji Takagi https://en.wikipedia.org/wiki/Teiji_Tak…
 
-[[108]]
+[[107]]
 # A tibble: 1 × 3
   content                       name              link                          
   &lt;chr&gt;                         &lt;chr&gt;             &lt;chr&gt;                         
 1 Niels Henrik Abel (1802–1829) Niels Henrik Abel https://en.wikipedia.org/wiki…
 
-[[109]]
+[[108]]
 # A tibble: 1 × 3
   content                       name              link                          
   &lt;chr&gt;                         &lt;chr&gt;             &lt;chr&gt;                         
 1 Ole Peder Arvesen (1895–1991) Ole Peder Arvesen https://en.wikipedia.org/wiki…
 
-[[110]]
+[[109]]
 # A tibble: 1 × 3
   content                name       link                                    
   &lt;chr&gt;                  &lt;chr&gt;      &lt;chr&gt;                                   
 1 Viggo Brun (1885–1978) Viggo Brun https://en.wikipedia.org/wiki/Viggo_Brun
 
-[[111]]
+[[110]]
 # A tibble: 1 × 3
   content                 name        link                                     
   &lt;chr&gt;                   &lt;chr&gt;       &lt;chr&gt;                                    
 1 T.O. Engset (1865–1943) T.O. Engset https://en.wikipedia.org/wiki/T.O._Engset
 
-[[112]]
+[[111]]
 # A tibble: 1 × 3
   content                          name                 link                    
   &lt;chr&gt;                            &lt;chr&gt;                &lt;chr&gt;                   
 1 Axel Sophus Guldberg (1838–1913) Axel Sophus Guldberg https://en.wikipedia.or…
 
-[[113]]
+[[112]]
 # A tibble: 1 × 3
   content                         name                link                      
   &lt;chr&gt;                           &lt;chr&gt;               &lt;chr&gt;                     
 1 Alf Victor Guldberg (1866–1936) Alf Victor Guldberg https://en.wikipedia.org/…
 
-[[114]]
+[[113]]
 # A tibble: 1 × 3
   content                name       link                                    
   &lt;chr&gt;                  &lt;chr&gt;      &lt;chr&gt;                                   
 1 Sophus Lie (1842–1899) Sophus Lie https://en.wikipedia.org/wiki/Sophus_Lie
 
-[[115]]
+[[114]]
 # A tibble: 1 × 3
   content                 name        link                                     
   &lt;chr&gt;                   &lt;chr&gt;       &lt;chr&gt;                                    
 1 Øystein Ore (1899–1968) Øystein Ore https://en.wikipedia.org/wiki/Øystein_Ore
 
-[[116]]
+[[115]]
 # A tibble: 1 × 3
   content                    name           link                                
   &lt;chr&gt;                      &lt;chr&gt;          &lt;chr&gt;                               
 1 Thoralf Skolem (1887–1963) Thoralf Skolem https://en.wikipedia.org/wiki/Thora…
 
-[[117]]
+[[116]]
 # A tibble: 1 × 3
   content                  name         link                                    
   &lt;chr&gt;                    &lt;chr&gt;        &lt;chr&gt;                                   
 1 Carl Størmer (1874–1957) Carl Størmer https://en.wikipedia.org/wiki/Carl_Stør…
 
-[[118]]
+[[117]]
 # A tibble: 1 × 3
   content                                name         link                      
   &lt;chr&gt;                                  &lt;chr&gt;        &lt;chr&gt;                     
 1 Ludwig Sylow (1832–1918), group theory Ludwig Sylow https://en.wikipedia.org/…
 
-[[119]]
+[[118]]
 # A tibble: 1 × 3
   content               name      link                                   
   &lt;chr&gt;                 &lt;chr&gt;     &lt;chr&gt;                                  
 1 Axel Thue (1863–1922) Axel Thue https://en.wikipedia.org/wiki/Axel_Thue
 
-[[120]]
+[[119]]
 # A tibble: 1 × 3
   content                                        name          link             
   &lt;chr&gt;                                          &lt;chr&gt;         &lt;chr&gt;            
 1 Stefan Banach (1892–1945), functional analysis Stefan Banach https://en.wikip…
 
+[[120]]
+# A tibble: 1 × 3
+  content                          name                 link                    
+  &lt;chr&gt;                            &lt;chr&gt;                &lt;chr&gt;                   
+1 Tadeusz Banachiewicz (1882–1954) Tadeusz Banachiewicz https://en.wikipedia.or…
+
 [[121]]
+# A tibble: 1 × 3
+  content                         name                link                      
+  &lt;chr&gt;                           &lt;chr&gt;               &lt;chr&gt;                     
+1 Zygmunt Janiszewski (1888–1920) Zygmunt Janiszewski https://en.wikipedia.org/…
+
+[[122]]
+# A tibble: 1 × 3
+  content                     name            link                              
+  &lt;chr&gt;                       &lt;chr&gt;           &lt;chr&gt;                             
+1 Stefan Kaczmarz (1895–1939) Stefan Kaczmarz https://en.wikipedia.org/wiki/Ste…
+
+[[123]]
 # A tibble: 1 × 3
   content                       name              link                          
   &lt;chr&gt;                         &lt;chr&gt;             &lt;chr&gt;                         
 1 Bronisław Knaster (1893–1980) Bronisław Knaster https://en.wikipedia.org/wiki…
 
-[[122]]
+[[124]]
 # A tibble: 1 × 3
   content                          name                 link                    
   &lt;chr&gt;                            &lt;chr&gt;                &lt;chr&gt;                   
 1 Kazimierz Kuratowski (1896–1980) Kazimierz Kuratowski https://en.wikipedia.or…
 
-[[123]]
+[[125]]
+# A tibble: 1 × 3
+  content                          name                 link                    
+  &lt;chr&gt;                            &lt;chr&gt;                &lt;chr&gt;                   
+1 Stanisław Leśniewski (1886–1939) Stanisław Leśniewski https://en.wikipedia.or…
+
+[[126]]
+# A tibble: 1 × 3
+  content                     name            link                              
+  &lt;chr&gt;                       &lt;chr&gt;           &lt;chr&gt;                             
+1 Jan Łukasiewicz (1878–1956) Jan Łukasiewicz https://en.wikipedia.org/wiki/Jan…
+
+[[127]]
 # A tibble: 1 × 3
   content                         name                link                      
   &lt;chr&gt;                           &lt;chr&gt;               &lt;chr&gt;                     
 1 Stefan Mazurkiewicz (1888–1945) Stefan Mazurkiewicz https://en.wikipedia.org/…
 
-[[124]]
+[[128]]
+# A tibble: 1 × 3
+  content                                      name         link                
+  &lt;chr&gt;                                        &lt;chr&gt;        &lt;chr&gt;               
+1 Jerzy Neyman (1894–1981), statistical theory Jerzy Neyman https://en.wikipedi…
+
+[[129]]
 # A tibble: 1 × 3
   content                      name             link                            
   &lt;chr&gt;                        &lt;chr&gt;            &lt;chr&gt;                           
 1 Juliusz Schauder (1899–1943) Juliusz Schauder https://en.wikipedia.org/wiki/J…
 
-[[125]]
+[[130]]
 # A tibble: 1 × 3
   content                       name              link                          
   &lt;chr&gt;                         &lt;chr&gt;             &lt;chr&gt;                         
 1 Wacław Sierpiński (1882–1969) Wacław Sierpiński https://en.wikipedia.org/wiki…
 
-[[126]]
+[[131]]
+# A tibble: 1 × 3
+  content                     name            link                              
+  &lt;chr&gt;                       &lt;chr&gt;           &lt;chr&gt;                             
+1 Julian Sochocki (1842–1927) Julian Sochocki https://en.wikipedia.org/wiki/Jul…
+
+[[132]]
+# A tibble: 1 × 3
+  content                    name           link                                
+  &lt;chr&gt;                      &lt;chr&gt;          &lt;chr&gt;                               
+1 Hugo Steinhaus (1887–1972) Hugo Steinhaus https://en.wikipedia.org/wiki/Hugo_…
+
+[[133]]
+# A tibble: 1 × 3
+  content                            name                   link                
+  &lt;chr&gt;                              &lt;chr&gt;                  &lt;chr&gt;               
+1 Władysław Ślebodziński (1884–1972) Władysław Ślebodziński https://en.wikipedi…
+
+[[134]]
+# A tibble: 1 × 3
+  content                    name           link                                
+  &lt;chr&gt;                      &lt;chr&gt;          &lt;chr&gt;                               
+1 Jan Śleszyński (1854–1931) Jan Śleszyński https://en.wikipedia.org/wiki/Jan_Ś…
+
+[[135]]
 # A tibble: 1 × 3
   content                       name              link                          
   &lt;chr&gt;                         &lt;chr&gt;             &lt;chr&gt;                         
 1 Stanisław Zaremba (1863–1942) Stanisław Zaremba https://en.wikipedia.org/wiki…
 
-[[127]]
+[[136]]
+# A tibble: 1 × 3
+  content                                           name           link         
+  &lt;chr&gt;                                             &lt;chr&gt;          &lt;chr&gt;        
+1 Antoni Zygmund (1900–1992), mathematical analysis Antoni Zygmund https://en.w…
+
+[[137]]
+# A tibble: 1 × 3
+  content                        name               link                        
+  &lt;chr&gt;                          &lt;chr&gt;              &lt;chr&gt;                       
+1 Kazimierz Żorawski (1866–1953) Kazimierz Żorawski https://en.wikipedia.org/wi…
+
+[[138]]
 # A tibble: 2 × 3
   content                                 name                        link      
   &lt;chr&gt;                                   &lt;chr&gt;                       &lt;chr&gt;     
 1 Sergei Natanovich Bernstein (1880–1968) Sergei Natanovich Bernstein https://e…
 2 Sergei Natanovich Bernstein (1880–1968) –                           &lt;NA&gt;      
 
-[[128]]
+[[139]]
 # A tibble: 1 × 3
   content                       name              link                          
   &lt;chr&gt;                         &lt;chr&gt;             &lt;chr&gt;                         
 1 Pafnuty Chebyshev (1821–1894) Pafnuty Chebyshev https://en.wikipedia.org/wiki…
 
-[[129]]
+[[140]]
 # A tibble: 1 × 3
   content                        name               link                        
   &lt;chr&gt;                          &lt;chr&gt;              &lt;chr&gt;                       
 1 Sofia Kovalevskaia (1850–1891) Sofia Kovalevskaia https://en.wikipedia.org/wi…
 
-[[130]]
+[[141]]
 # A tibble: 1 × 3
   content                        name               link                        
   &lt;chr&gt;                          &lt;chr&gt;              &lt;chr&gt;                       
 1 Aleksandr Lyapunov (1857–1918) Aleksandr Lyapunov https://en.wikipedia.org/wi…
 
-[[131]]
+[[142]]
 # A tibble: 1 × 3
   content                          name                 link                    
   &lt;chr&gt;                            &lt;chr&gt;                &lt;chr&gt;                   
 1 Lars Edvard Phragmén (1863–1937) Lars Edvard Phragmén https://en.wikipedia.or…
 
-[[132]]
+[[143]]
 # A tibble: 1 × 3
   content                       name              link                          
   &lt;chr&gt;                         &lt;chr&gt;             &lt;chr&gt;                         
@@ -1511,7 +1577,7 @@
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>ppl <span class="sc">|&gt;</span> <span class="fu">map_dfr</span>(<span class="at">.f =</span> extract_title_link)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 141 × 3
+<pre><code># A tibble: 152 × 3
    content                                                       name      link 
    &lt;chr&gt;                                                         &lt;chr&gt;     &lt;chr&gt;
  1 Florence Eliza Allen (1876–1960)                              Florence… http…
@@ -1524,11 +1590,11 @@
  8 Edward Kasner (1878–1955)                                     Edward K… http…
  9 Solomon Lefschetz (1884–1972)                                 Solomon … http…
 10 Solomon Lefschetz (1884–1972)                                 –         &lt;NA&gt; 
-# ℹ 131 more rows</code></pre>
+# ℹ 142 more rows</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>ppl <span class="sc">|&gt;</span> <span class="fu">map</span>(<span class="at">.f =</span> extract_title_link) <span class="sc">|&gt;</span> <span class="fu">list_rbind</span>() <span class="sc">|&gt;</span> <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(link))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 130 × 3
+<pre><code># A tibble: 141 × 3
    content                                                       name      link 
    &lt;chr&gt;                                                         &lt;chr&gt;     &lt;chr&gt;
  1 Florence Eliza Allen (1876–1960)                              Florence… http…
@@ -1541,7 +1607,7 @@
  8 Solomon Lefschetz (1884–1972)                                 Solomon … http…
  9 Emilie Martin (1869–1936)                                     Emilie M… http…
 10 E. H. Moore (1862–1932)                                       E. H. Mo… http…
-# ℹ 120 more rows</code></pre>
+# ℹ 131 more rows</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="co"># delete duplicate names:</span></span>
 <span id="cb21-2"><a></a>ppl_plus <span class="ot">&lt;-</span> ppl <span class="sc">|&gt;</span> <span class="fu">map</span>(<span class="at">.f =</span> extract_title_link) <span class="sc">|&gt;</span> <span class="fu">list_rbind</span>() <span class="sc">|&gt;</span></span>
