@@ -476,6 +476,27 @@
     "text": "Adding selectors\nAdd a maxSat2 selector that puts an upper bound on the saturation. To ensure mathematical viability, your maxSat2 selector should have a lower bound of minSat2. Wire your maxSat2 selector to the plot, using the chunk below, which I’ve edited to use variables with 2 at the end to not conflict with the original chart.\n\nviewof space2 = Inputs.select([\"HSL\", \"RGB\"], {label: \"Color space (axes)\", value: \"HSL\"})\n// selector for color saturation/intensity\nviewof minSat2 = Inputs.range([0, 100], {label: \"Min saturation (%)\", value: 0, step: 1})\n\n\n// filter out points based on saturation\nfiltered2 = colors.filter(d =&gt; d.s &gt;= minSat2)\n\n// Create an x variable that's conditional on what is selected,\n// changing both the values and the label accordingly\nxAccessor2 = space === \"HSL\" ? (d) =&gt; d.h : (d) =&gt; d.r\nxLabel2 = space === \"HSL\" ? \"Hue (°)\" : \"Red (0–255)\"\n\n// Create a y variable that's conditional on what is selected,\n// changing both the values and the label accordingly\nyAccessor2 = space === \"HSL\" ? (d) =&gt; d.l : (d) =&gt; d.g\nyLabel2 = space === \"HSL\" ? \"Lightness (%)\" : \"Green (0–255)\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  grid: true, // show coordinate grid\n  color: {legend: false}, // no need for legends when the data is colors\n  marks: [\n    Plot.dot(\n      filtered2, // use filtered data\n      {\n        x: xAccessor2, y: yAccessor2, // specify mappings\n        fill: (d) =&gt; d.hex,\n        stroke: \"#333\", strokeWidth: 0.5, r: 5, // and defaults\n        tip: true,\n        // title = tooltip text. use both color name and hex value\n        title: d =&gt; `${d.color} (${d.hex})\n  HSL: ${d.h.toFixed(0)}, ${d.s.toFixed(0)}%, ${d.l.toFixed(0)}%\n  RGB: ${d.r}, ${d.g}, ${d.b}`\n      }\n    )],\n  x: {label: xLabel2, domain: space === \"HSL\" ? [0, 360] : [0, 255]},\n  y: {label: yLabel2, domain: space === \"HSL\" ? [0, 100] : [0, 255]},\n  caption: space === \"HSL\" ? \"Hue vs. Lightness (filtered by min saturation).\" : \"Red vs. Green (still filtered by HSL saturation).\"\n})"
   },
   {
+    "objectID": "assignment-repos/07-shiny-xkcd/index.html",
+    "href": "assignment-repos/07-shiny-xkcd/index.html",
+    "title": "Lab: XKCD Color Survey",
+    "section": "",
+    "text": "You can see the purpose of this assignment as well as the skills and knowledge you should be using and acquiring, in the Transparency in Learning and Teaching (TILT) document in this repository. The TILT document also contains a checklist for self-reflection that will provide some guidance on how the assignment will be graded."
+  },
+  {
+    "objectID": "assignment-repos/07-shiny-xkcd/index.html#setting-up-and-a-basic-overview",
+    "href": "assignment-repos/07-shiny-xkcd/index.html#setting-up-and-a-basic-overview",
+    "title": "Lab: XKCD Color Survey",
+    "section": "1.1 Setting Up and a basic Overview",
+    "text": "1.1 Setting Up and a basic Overview\nFor this lab, we’ll use the XKCD Color survey data. The TidyTuesday documentation is available here.\n\nThe responses to the color survey are the basis for the 2010 xkcd blog entry Color Survey Results. Read the blog entry, pick two of the described findings and (try to) reproduce them. Show your code. In case you fail to reproduce the described findings describe the obstacle(s) you ran into.\nColors are often reported in form of hexcodes. Hexcodes are a representation of the RGB (red green blue) color model and follow the format #RRGGBB, where RR stands for the amount of red in the color, coded as a hexadecimal number between 0 (= #00) and 255 (= #FF). Similarly, GG and BB encode the amount of green and blue in the color.\n\nThe RGB model allows to encode a total of \\(16^2 \\times 16^2 \\times 16^2 = 2^{24} = 16,777,216\\) ‘different’ colors.\nCreate a data frame rgb_df with variables r, g, and b on a regular grid (i.e. every 10th or every 16th value between 0 and 255). Use the function rgb to create a variable hex of hexcodes created from the r, g, and b values. Describe the resulting chart and remember to fill in the alt-text.\n\n# Your code goes here\n\nrgb_df |&gt; ggplot(aes(x = r, y = g)) + geom_point(aes(colour = hex)) + scale_colour_identity() + facet_wrap(~b)\n\nError:\n! object 'rgb_df' not found\n\n\n\nAn alternative to the RGB color model is the HCL model. It specifies the dimensions hue, chroma, and luminance. Use the function decode_colour from the farver package to create coordinates h, c, l. Include those coordinates in the data frame rgb_df and explore the HCL space visually, similarly to the previous question. Summarise your findings and write an appropriate figure caption and alt text for ?@fig-hcl.\n\n\nhcl &lt;- farver::decode_colour(rgb_df$hex, to =\"hcl\")\n\nError:\n! object 'rgb_df' not found\n\n# Your code goes here\n\n\nThe data set answers includes the hex codes that survey participants (user_id) summarised with one of the five top colors. rank 1 through 5 corresponds to the first five colors in the data set color_ranks, named purple, green, blue, pink, and brown. Include the HCL coordinates in the answers data set and visualize (a sample sample_n) of the answers data set. Describe the outcome. How much variability do you see in the responses for different colors (rank)?\n\nDoes excluding users with a high spam score (spam_prob in users) change the result?\n\n# Your code goes here"
+  },
+  {
+    "objectID": "assignment-repos/07-shiny-xkcd/index.html#now-make-it-shiny",
+    "href": "assignment-repos/07-shiny-xkcd/index.html#now-make-it-shiny",
+    "title": "Lab: XKCD Color Survey",
+    "section": "1.2 Now make it shiny",
+    "text": "1.2 Now make it shiny\nCreate a shiny app in R centered around the xkcd survey. You can pick any aspect you want, but the resulting shiny app should be based on actual data, have at least one chart, and at least two user input widgets that allow the user to interact with the results shown in the chart.\nInclude the code for the app in the file app.R."
+  },
+  {
     "objectID": "assignment-repos/06-good-graphics/index.html",
     "href": "assignment-repos/06-good-graphics/index.html",
     "title": "Lab: Creating Good Graphics",
@@ -743,7 +764,7 @@
     "href": "weeks/week-12.html",
     "title": "Week 12: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "November 09-NA\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\nScreencast due Nov 14",
+    "text": "November 09-15, 2026\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\n\n\n\n\n\nLab: Interactive Graphics with Plotly and Observable\nScreencast due Nov 14",
     "crumbs": [
       "Weekly materials",
       "Week 12 - SQL/SQLite"
@@ -809,7 +830,7 @@
     "href": "weeks/week-10.html",
     "title": "Week 10: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "October 26-01, 2026\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: Play with Shiny, work on Screencast.\n\n\n\n\n\nScreencast pseudocode script due!",
+    "text": "October 26-01, 2026\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\n\n\n\n\n\nLecture: Interactive Graphics: Plotly and Shiny\n\n\n\n\n\nLab: Play with shiny and work on Screencast.\n\n\n\n\n\nScreencast pseudocode script due this week!\nLab: a shiny app of the xkcd survey",
     "crumbs": [
       "Weekly materials",
       "Week 10 - Interactive Graphics"
@@ -842,7 +863,7 @@
     "href": "weeks/week-10.html#tuesday",
     "title": "Week 10: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "Lecture: Interactive Graphics: Shiny and Plotly",
+    "text": "Lecture: Interactive Graphics: Plotly and Shiny",
     "crumbs": [
       "Weekly materials",
       "Week 10 - Interactive Graphics"
@@ -853,7 +874,7 @@
     "href": "weeks/week-10.html#thursday",
     "title": "Week 10: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "Lab: Play with Shiny, work on Screencast.",
+    "text": "Lab: Play with shiny and work on Screencast.",
     "crumbs": [
       "Weekly materials",
       "Week 10 - Interactive Graphics"
@@ -864,7 +885,7 @@
     "href": "weeks/week-10.html#practice-your-skills",
     "title": "Week 10: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "Screencast pseudocode script due!",
+    "text": "Screencast pseudocode script due this week!\nLab: a shiny app of the xkcd survey",
     "crumbs": [
       "Weekly materials",
       "Week 10 - Interactive Graphics"
@@ -1601,7 +1622,7 @@
     "href": "weeks/week-11.html",
     "title": "Week 11: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "November 02-08, 2026\n\n\n\nInteractive Graphics (Shiny)\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: Play with Shiny, work on Screencast.\n\n\n\n\nNone - Play with Shiny!",
+    "text": "November 02-08, 2026\n\n\n\nInteractive Graphics (Shiny)\nObservable JavaScript primer\nObservable from ggplot2\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: a shiny app of the xkcd survey\n\n\n\n\n\nLab: a shiny app of the xkcd survey",
     "crumbs": [
       "Weekly materials",
       "Week 11 - Big Data"
@@ -1612,7 +1633,7 @@
     "href": "weeks/week-11.html#reading",
     "title": "Week 11: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "Interactive Graphics (Shiny)",
+    "text": "Interactive Graphics (Shiny)\nObservable JavaScript primer\nObservable from ggplot2",
     "crumbs": [
       "Weekly materials",
       "Week 11 - Big Data"
@@ -1645,7 +1666,7 @@
     "href": "weeks/week-11.html#thursday",
     "title": "Week 11: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "Lab: Play with Shiny, work on Screencast.",
+    "text": "Lab: a shiny app of the xkcd survey",
     "crumbs": [
       "Weekly materials",
       "Week 11 - Big Data"
@@ -1656,7 +1677,7 @@
     "href": "weeks/week-11.html#practice-your-skills",
     "title": "Week 11: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "None - Play with Shiny!",
+    "text": "Lab: a shiny app of the xkcd survey",
     "crumbs": [
       "Weekly materials",
       "Week 11 - Big Data"
@@ -1858,6 +1879,20 @@
     "title": "Creating Good Graphics TILT Information",
     "section": "Success Criteria",
     "text": "Success Criteria\n\nGeneral Criteria\n\nStudent’s name is included at top of assignment\nDocument compiles on a different machine\nCompiled document is formatted well\nAll code in the document is contained in appropriately formatted code chunks\nCompiled document does not include long sections of printed data, making use of head and tail commands to show only a few rows of data during data cleaning.\nStudent answers are below the --- separator and above the next prompt, or in cases where questions are enumerated, student answers are indicated using the quote indicator, &gt; and the placeholder text Your answer here has been removed and replaced with the answer.\n\n\n\nTask specific Criteria\n\nGraphical Critiques\n\n\nEach chart has an appropriate caption\nEach chart has appropriate alt-text that provides essential information to a visually impaired individual or screen-reader user.\nYAML chunk options are formatted correctly and compile.\nGrammar of graphics table is filled out correctly.\nAnalysis of effective communication in each chart is reasonable.\n\nCharts that ineffectively show changes in vaccine rates over time across different age groups\n\nare identified and\nan explanation of why they are ineffective is provided.\n\nCharts that are appropriate but perhaps suboptimal\n\nhave issues identified and\nwhat would be changed to address the issue is provided and appropriate.\n\n\nGestalt principles of grouping\n\nPrinciples that apply are ID’d for each chart\nPrinciple effectiveness is evaluated\n\nMessage Evaluation\n\nImportant messages from the data set are identified\nComparisons that should be easy to perform are identified\nObstacles are provided (if there are any, if not, “no obstacles” is an ok answer… but be careful with its use.)\n\nImproved chart is created, and changes relative to initial charts are explained.\n\nExplanation focuses on each change and how it improves the chart/makes it easier to read.\n\n\n\nChoose Your Own Adventure\n\n\nPopulation size estimates are calculated correctly for each year of data.\n\nPopulation size is merged into the dataset appropriately\n\nPlot from 1.6 is generated using the real data.\n\nChange to the message when using real data is examined\nAnalysis of change in difficulty when using real data is included\n\nAnnotations\n\nSuggested annotations are reasonable\nAnnotations do not over-clutter the chart\n\nModifications to compare 2023 to 2024 vaccination rates are reasonable\n\nCognitive load considerations are included\nModifications actually make the comparisons easier for the reader\n\nSuggestions for statistical significance are reasonable and explanation is thorough."
+  },
+  {
+    "objectID": "assignment-repos/07-shiny-xkcd/tilt.html",
+    "href": "assignment-repos/07-shiny-xkcd/tilt.html",
+    "title": "TILT: Lab — XKCD Color Survey",
+    "section": "",
+    "text": "In this lab, you will investigate how people describe and categorize colors using data from the XKCD color survey. The final objective is to create a Shiny app that explores an aspect of the survey and communicates results interactively. Shiny apps are valuable tools for communicating findings because they let viewers explore the data, change what is displayed, and engage with the analytical or decision process rather than only receiving a static result.\nCreating a good app requires a strong understanding of the data: its variables, structure, patterns, and limitations. The first part of the lab therefore guides you through the survey data, published findings, and RGB and HCL color representations. This exploration will help you identify an interesting and meaningful question for your app and make informed choices about what the app should show.\nThe lab emphasizes the full data-analysis workflow: understanding a data source, translating questions into reproducible code, visualizing multivariate data, interpreting what a visualization reveals, and communicating results accessibly. You will work with real survey data, where patterns may be messy and reproducing a published result may require judgment about definitions, data processing, or limitations."
+  },
+  {
+    "objectID": "assignment-repos/07-shiny-xkcd/tilt.html#success-criteria",
+    "href": "assignment-repos/07-shiny-xkcd/tilt.html#success-criteria",
+    "title": "TILT: Lab — XKCD Color Survey",
+    "section": "2.1 Success Criteria",
+    "text": "2.1 Success Criteria\n\nGeneral Criteria\n\nStudent’s name is included at top of assignment\nDocument compiles on a different machine\nCompiled document is formatted well\nAll code in the document is contained in appropriately formatted code chunks\nCompiled document does not include long sections of printed data, making use of head and tail commands to show only a few rows of data during data cleaning.\nStudent answers are below the --- separator and above the next prompt, or in cases where questions are enumerated, student answers are indicated using the quote indicator, &gt; and the placeholder text Your answer here has been removed and replaced with the answer.\n\n\n\nTask specific Criteria\n\nRevisit published survey findings. For each of two findings:\n\n\nState the claim you selected and how you translated it into an analysis.\nShow the R code and relevant output or visualization.\nExplain whether your result agrees with the published finding.\nIf you cannot reproduce the finding, describe the obstacle or uncertainty. For example, a difference in definitions, data availability, or the way the data were summarized.\n\nA successful analysis is not simply a matching number. It makes the reasoning and any limitations clear.\n\nBuild and visualize a sampled RGB color space\n\n\nCreate a data frame named rgb_df with r, g, and b values on a regular grid, using a step such as 10 or 16 between 0 and 255.\nUse rgb() to create a hexadecimal color variable named hex.\nwrite an appropriate caption and alt txt:\n\nDescribe what the axes and facets represent.\nInclude that each point represents a color and is drawn in the color it represents.\nExplain how changing the blue value changes the colors shown.\n\n\n\nExplore the HCL color space\n\n\nExpand the rgb_df object by HCL coordinates (h, c, and l).\nUse the previous approach to visualize the dimensions h, c, and l cover.\nwrite an appropriate caption and alt txt:\n\nDescribe what the axes and facets represent.\nInclude that each point represents a color and is drawn in the color it represents.\nExplain how changing the facetted value changes the colors shown.\n\n\n\nExamine the survey responses\n\nThe answers data contain respondents’ (user_id) selections summarized using one of five color ranks. The ranks correspond to the five colors in color_ranks: purple, green, blue, pink, and brown. - [ ] Add HCL coordinates for the reported colors in answers - [ ] Visualize a sample of the responses and describe the results facetted by rank. - [ ] Merge spam_prob from users into the answers data. - [ ] Include a filter for spam_prob to investigate its effect on the visual. Describe the effect.\n\nCreate a Shiny app — the final objective\n\nUse what you learned in the preceding data-exploration tasks to create app.R for an interactive application centered on the XKCD survey data.\n\nActual survey data is used.\nThe app has at least one chart.\nAt least two user input widgets are included and work appropriately.\nInclude labels and enough context for a user to understand the visualization and app."
   },
   {
     "objectID": "assignment-repos/09-arrow/index.html",

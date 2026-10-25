@@ -177,11 +177,12 @@ schedule:
     reading: |
       - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
     class1: |
-      - Lecture: Interactive Graphics: Shiny and Plotly
+      - Lecture: Interactive Graphics: Plotly and Shiny
     class2: |
-      - Lab: Play with Shiny, work on Screencast.
+      - Lab: [Play with shiny](../assignment-repos/07-shiny-xkcd) and work on Screencast.
     assignments: |
-      - [Screencast pseudocode script due!](../assignment-repos/screencast/index.qmd)
+      - [Screencast pseudocode script due this week!](../assignment-repos/screencast/index.qmd)
+      - Lab: [a shiny app of the xkcd survey](../assignment-repos/07-shiny-xkcd)
 
   - week: 11
     name: Shiny and JavaScript Graphics
@@ -193,20 +194,21 @@ schedule:
       - [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
     reading: |
       - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
-    # - [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
-    # - [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
+      - [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
+      - [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
     class1: |
       - Lecture: Interactive Graphics: Shiny and Plotly
     class2: |
-      - Lab: Play with Shiny, work on Screencast.
+      - Lab: [a shiny app of the xkcd survey](../assignment-repos/07-shiny-xkcd)
     assignments: |
-      None - Play with Shiny!
+      - Lab: [a shiny app of the xkcd survey](../assignment-repos/07-shiny-xkcd)
+
 
 
   - week: 12
     name: Shiny and JavaScript Graphics
     start: 2026-11-09
-    end: 2026-11-015
+    end: 2026-11-15
     prepare: |
       - Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
       - [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)

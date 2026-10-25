@@ -16,15 +16,16 @@ October 26-01, 2026
 
 ## 🌮 Tuesday
 
-- Lecture: Interactive Graphics: Shiny and Plotly
+- Lecture: Interactive Graphics: Plotly and Shiny
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: Play with Shiny, work on Screencast.
+- Lab: [Play with shiny](../assignment-repos/07-shiny-xkcd) and work on Screencast.
 
 
 ##  🏋 Practice Your Skills
 
-- [Screencast pseudocode script due!](../assignment-repos/screencast/index.qmd)
+- [Screencast pseudocode script due this week!](../assignment-repos/screencast/index.qmd)
+- Lab: [a shiny app of the xkcd survey](../assignment-repos/07-shiny-xkcd)
 

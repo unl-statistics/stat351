@@ -7,6 +7,8 @@ November 02-08, 2026
 ## 📖 Reading
 
 - [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
+- [Observable JavaScript primer](https://observablehq.com/@observablehq/learn-javascript-introduction)
+- [Observable from ggplot2](https://observablehq.com/@observablehq/plot-from-ggplot2)
 
 
 ## 🥣 Prepare for class
@@ -23,10 +25,10 @@ November 02-08, 2026
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: Play with Shiny, work on Screencast.
+- Lab: [a shiny app of the xkcd survey](../assignment-repos/07-shiny-xkcd)
 
 
 ##  🏋 Practice Your Skills
 
-None - Play with Shiny!
+- Lab: [a shiny app of the xkcd survey](../assignment-repos/07-shiny-xkcd)
 

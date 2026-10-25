@@ -19,3 +19,6 @@
 [submodule "assignment-repos/08-interactive-graphics"]
 	path = assignment-repos/08-interactive-graphics
 	url = git@github.com:stat-assignments/interactive-graphics-ojs.git
+[submodule "assignment-repos/07-shiny-xkcd"]
+	path = assignment-repos/07-shiny-xkcd
+	url = https://github.com/stat-assignments/xkcd-shiny.git
