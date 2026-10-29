@@ -20,7 +20,7 @@ November 02-08, 2026
 
 ## 🌮 Tuesday
 
-- Lecture: Interactive Graphics: Shiny and Plotly
+- Lecture: [Interactive Graphics: Shiny and Plotly](../slides/10-02-plotly.qmd)
 
 
 ## 🌩️ Thursday 🔨 
