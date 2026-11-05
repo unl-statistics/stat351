@@ -586,7 +586,7 @@
     "href": "weeks/week-11.html",
     "title": "Week 11: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "November 02-08, 2026\n\n\n\nInteractive Graphics (Shiny)\nObservable JavaScript primer\nObservable from ggplot2\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: a shiny app of the xkcd survey\n\n\n\n\n\nLab: a shiny app of the xkcd survey",
+    "text": "November 02-08, 2026\n\n\n\nInteractive Graphics (Shiny)\nObservable JavaScript primer\nObservable from ggplot2\n\n\n\n\n\nLook over Shiny documentation to go through the basic tutorial in R and/or python.\nWatch John Tukey demonstrate PRIM-9, a graphics program for an early computer\nWatch Andreas Buja talk about Linked Graphics\n\n\n\n\n\nLecture: Interactive Graphics: Shiny and Plotly\n\n\n\n\n\nLab: a shiny app of the xkcd survey\nfrom the lab: a shiny app of the HCL color model\n\n\n\n\n\nLab: a shiny app of the xkcd survey",
     "crumbs": [
       "Weekly materials",
       "Week 11 - Big Data"
@@ -630,7 +630,7 @@
     "href": "weeks/week-11.html#thursday",
     "title": "Week 11: Shiny and JavaScript Graphics",
     "section": "",
-    "text": "Lab: a shiny app of the xkcd survey",
+    "text": "Lab: a shiny app of the xkcd survey\nfrom the lab: a shiny app of the HCL color model",
     "crumbs": [
       "Weekly materials",
       "Week 11 - Big Data"

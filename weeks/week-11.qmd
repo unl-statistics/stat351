@@ -26,6 +26,7 @@ November 02-08, 2026
 ## 🌩️ Thursday 🔨 
 
 - Lab: [a shiny app of the xkcd survey](../assignment-repos/07-shiny-xkcd)
+- from the lab: [a shiny app of the HCL color model](../slides/code/app.R)
 
 
 ##  🏋 Practice Your Skills
