@@ -1,4 +1,4 @@
-# Week 11: Shiny and JavaScript Graphics
+# Week 11: Interactive Web Applications
 
 
 

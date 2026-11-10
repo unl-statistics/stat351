@@ -1,4 +1,4 @@
-# Week 12: Shiny and JavaScript Graphics
+# Week 12: Approaches to Big Data, SQL and SQLite
 
 
 
@@ -6,28 +6,28 @@ November 09-15, 2026
 
 ## 📖 Reading
 
-- [Interactive Graphics](https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html) (Shiny)
+- [Approaches to Analyzing Big Data](https://umatter.github.io/BigData/approaches-to-analyzing-big-data.html)
+- [Two Domains of Big Data Analytics](https://umatter.github.io/BigData/the-two-domains-of-big-data-analytics.html)
+- [Data Collection and Data Storage](https://umatter.github.io/BigData/data-collection-and-data-storage.html) -- how to create and connect to databases in R.
 
 
 ## 🥣 Prepare for class
 
-- Look over [Shiny documentation](https://shiny.posit.co/) to go through the basic tutorial in [R](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/) and/or [python](https://shiny.posit.co/py/get-started/).
-- [Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer](https://www.youtube.com/watch?v=B7XoW2qiFUA)
-- [Watch Andreas Buja talk about Linked Graphics](https://www.youtube.com/watch?v=MtGYPAq_UEA)
+Don't worry, the chapters from [Big Data Analytics](https://umatter.github.io/BigData/) by Ulrich Matter are much shorter than chapters Dr Vanderplas tends to write ...
+- Practice Material -- [SQL Zoo](https://sqlzoo.net/wiki/SQL_Tutorial) - a guided tutorial through the basics of SQL Queries
 
 
 ## 🌮 Tuesday
 
-- Lecture: Interactive Graphics: Observable
+- We'll work through the Berkeley Statistics [Databases/SQL](https://computing.stat.berkeley.edu/tutorial-databases/) tutorial together in class.
 
 
 ## 🌩️ Thursday 🔨 
 
-- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
+- Work on your screencast - no class in person
 
 
 ##  🏋 Practice Your Skills
 
-- Lab: [Interactive Graphics with Plotly and Observable](../assignment-repos/08-interactive-graphics-js)
-- [Screencast due Nov 14](../assignment-repos/screencast/index.qmd)
+- [Screencast due Nov 12](../assignment-repos/screencast/index.qmd)
 

@@ -4,9 +4,7 @@
 
 November 16-22, 2026
 
-
-
-## 🥣 Prepare for class
+## 📖 Reading
 
 Don't worry, the chapters from [Big Data Analytics](https://umatter.github.io/BigData/) by Ulrich Matter are much shorter than chapters I tend to write. I could probably learn something...
 - [Approaches to Analyzing Big Data](https://umatter.github.io/BigData/approaches-to-analyzing-big-data.html)
@@ -15,9 +13,11 @@ Don't worry, the chapters from [Big Data Analytics](https://umatter.github.io/Bi
 - Practice Material -- [SQL Zoo](https://sqlzoo.net/wiki/SQL_Tutorial) - a guided tutorial through the basics of SQL Queries
 
 
+
+
 ## 🌮 Tuesday
 
-- We'll work through the Berkeley Statistics [Databases/SQL](https://computing.stat.berkeley.edu/tutorial-databases/) tutorial together in class.
+- Lab: [SQL Squid Game](https://datalemur.com/sql-game) -- participation grade. You must be in class to get credit.
 
 
 ## 🌩️ Thursday 🔨 

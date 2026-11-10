@@ -258,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../weeks/week-01.html">Weekly materials</a></li><li class="breadcrumb-item"><a href="../weeks/week-12.html">Week 12 - SQL/SQLite</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../weeks/week-01.html">Weekly materials</a></li><li class="breadcrumb-item"><a href="../weeks/week-12.html">Week 12 - Big Data and SQL/SQLite</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -395,13 +395,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../weeks/week-11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Week 11 - Big Data</span></a>
+ <span class="menu-text">Week 11 - Web-applications with shiny</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../weeks/week-12.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Week 12 - SQL/SQLite</span></a>
+ <span class="menu-text">Week 12 - Big Data and SQL/SQLite</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -434,7 +434,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-12-shiny-and-javascript-graphics" id="toc-week-12-shiny-and-javascript-graphics" class="nav-link active" data-scroll-target="#week-12-shiny-and-javascript-graphics">Week 12: Shiny and JavaScript Graphics</a>
+  <li><a href="#week-12-approaches-to-big-data-sql-and-sqlite" id="toc-week-12-approaches-to-big-data-sql-and-sqlite" class="nav-link active" data-scroll-target="#week-12-approaches-to-big-data-sql-and-sqlite">Week 12: Approaches to Big Data, SQL and SQLite</a>
   <ul class="collapse">
   <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">📖 Reading</a></li>
   <li><a href="#prepare-for-class" id="toc-prepare-for-class" class="nav-link" data-scroll-target="#prepare-for-class">🥣 Prepare for class</a></li>
@@ -446,46 +446,43 @@ ul.task-list li input[type="checkbox"] {
 <div class="toc-actions"><ul><li><a href="https://github.com/unl-statistics/stat351/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../weeks/week-01.html">Weekly materials</a></li><li class="breadcrumb-item"><a href="../weeks/week-12.html">Week 12 - SQL/SQLite</a></li></ol></nav></header>
+<main class="content column-body" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../weeks/week-01.html">Weekly materials</a></li><li class="breadcrumb-item"><a href="../weeks/week-12.html">Week 12 - Big Data and SQL/SQLite</a></li></ol></nav></header>
 
 
 
 
 
-<section id="week-12-shiny-and-javascript-graphics" class="level1">
-<h1>Week 12: Shiny and JavaScript Graphics</h1>
+<section id="week-12-approaches-to-big-data-sql-and-sqlite" class="level1">
+<h1>Week 12: Approaches to Big Data, SQL and SQLite</h1>
 <p>November 09-15, 2026</p>
 <section id="reading" class="level2">
 <h2 class="anchored" data-anchor-id="reading">📖 Reading</h2>
 <ul>
-<li><a href="https://srvanderplas.github.io/stat-computing-r-python/part-advanced-topics/07-intro-interactive-graphics.html">Interactive Graphics</a> (Shiny)</li>
+<li><a href="https://umatter.github.io/BigData/approaches-to-analyzing-big-data.html">Approaches to Analyzing Big Data</a></li>
+<li><a href="https://umatter.github.io/BigData/the-two-domains-of-big-data-analytics.html">Two Domains of Big Data Analytics</a></li>
+<li><a href="https://umatter.github.io/BigData/data-collection-and-data-storage.html">Data Collection and Data Storage</a> – how to create and connect to databases in R.</li>
 </ul>
 </section>
 <section id="prepare-for-class" class="level2">
 <h2 class="anchored" data-anchor-id="prepare-for-class">🥣 Prepare for class</h2>
-<ul>
-<li>Look over <a href="https://shiny.posit.co/">Shiny documentation</a> to go through the basic tutorial in <a href="https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/">R</a> and/or <a href="https://shiny.posit.co/py/get-started/">python</a>.</li>
-<li><a href="https://www.youtube.com/watch?v=B7XoW2qiFUA">Watch John Tukey demonstrate PRIM-9, a graphics program for an early computer</a></li>
-<li><a href="https://www.youtube.com/watch?v=MtGYPAq_UEA">Watch Andreas Buja talk about Linked Graphics</a></li>
-</ul>
+<p>Don’t worry, the chapters from <a href="https://umatter.github.io/BigData/">Big Data Analytics</a> by Ulrich Matter are much shorter than chapters Dr Vanderplas tends to write … - Practice Material – <a href="https://sqlzoo.net/wiki/SQL_Tutorial">SQL Zoo</a> - a guided tutorial through the basics of SQL Queries</p>
 </section>
 <section id="tuesday" class="level2">
 <h2 class="anchored" data-anchor-id="tuesday">🌮 Tuesday</h2>
 <ul>
-<li>Lecture: Interactive Graphics: Observable</li>
+<li>We’ll work through the Berkeley Statistics <a href="https://computing.stat.berkeley.edu/tutorial-databases/">Databases/SQL</a> tutorial together in class.</li>
 </ul>
 </section>
 <section id="thursday" class="level2">
 <h2 class="anchored" data-anchor-id="thursday">🌩️ Thursday 🔨</h2>
 <ul>
-<li>Lab: <a href="../assignment-repos/08-interactive-graphics-js">Interactive Graphics with Plotly and Observable</a></li>
+<li>Work on your screencast - no class in person</li>
 </ul>
 </section>
 <section id="practice-your-skills" class="level2">
 <h2 class="anchored" data-anchor-id="practice-your-skills">🏋 Practice Your Skills</h2>
 <ul>
-<li>Lab: <a href="../assignment-repos/08-interactive-graphics-js">Interactive Graphics with Plotly and Observable</a></li>
-<li><a href="../assignment-repos/screencast/index.html">Screencast due Nov 14</a></li>
+<li><a href="../assignment-repos/screencast/index.html">Screencast due Nov 12</a></li>
 </ul>
 
 
@@ -908,8 +905,8 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation column-body">
   <div class="nav-page nav-page-previous">
-      <a href="../weeks/week-11.html" class="pagination-link" aria-label="Week 11 - Big Data">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 11 - Big Data</span>
+      <a href="../weeks/week-11.html" class="pagination-link" aria-label="Week 11 - Web-applications with shiny">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 11 - Web-applications with shiny</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
